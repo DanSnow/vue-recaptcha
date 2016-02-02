@@ -1,5 +1,9 @@
-let promise = Promise.defer();
+let promise = {};
 let recaptcha = null;
+
+promise.promise = new Promise((resolve) => {
+  promise.resolve = resolve;
+});
 
 window.vueRecaptchaApiLoaded = () => {
   recaptcha = window.grecaptcha;
