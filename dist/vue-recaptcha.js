@@ -160,8 +160,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.assertRecaptchaLoad = assertRecaptchaLoad;
 	exports.render = render;
 	exports.reset = reset;
-	var promise = Promise.defer();
+	var promise = {};
 	var recaptcha = null;
+
+	promise.promise = new Promise(function (resolve) {
+	  promise.resolve = resolve;
+	});
 
 	window.vueRecaptchaApiLoaded = function () {
 	  recaptcha = window.grecaptcha;
