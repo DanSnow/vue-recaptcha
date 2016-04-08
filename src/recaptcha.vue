@@ -23,7 +23,11 @@
     },
     compiled() {
       let self = this;
-      recaptcha.render(this.$els.container, this.key, this.options)
+      let opts = Object.assign({}, this.options, {
+        callback: this.emitVerify,
+        'expired-callback': this.emitExpired
+      });
+      recaptcha.render(this.$els.container, this.key, opts)
         .then((id) => {
           widgetId = id;
           self.$emit('render', widgetId);
@@ -32,6 +36,13 @@
     methods: {
       reset() {
         recaptcha.reset(widgetId);
+      },
+      emitVerify(response) {
+        this.$emit('verify', response);
+      },
+      emitExpired() {
+        console.log(arguments);
+        this.$emit('expired');
       }
     }
   };
