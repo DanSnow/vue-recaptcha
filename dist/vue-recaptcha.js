@@ -84,7 +84,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/snow/Desktop/vue-recaptcha/src/recaptcha.vue"
+	  var id = "/home/snow/Desktop/Project/vue-recaptcha/src/recaptcha.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -130,7 +130,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	  compiled: function compiled() {
 	    var self = this;
-	    recaptcha.render(this.$els.container, this.key, this.options).then(function (id) {
+	    var opts = Object.assign({}, this.options, {
+	      callback: this.emitVerify,
+	      'expired-callback': this.emitExpired
+	    });
+	    recaptcha.render(this.$els.container, this.key, opts).then(function (id) {
 	      widgetId = id;
 	      self.$emit('render', widgetId);
 	    });
@@ -139,6 +143,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  methods: {
 	    reset: function reset() {
 	      recaptcha.reset(widgetId);
+	    },
+	    emitVerify: function emitVerify(response) {
+	      this.$emit('verify', response);
+	    },
+	    emitExpired: function emitExpired() {
+	      console.log(arguments);
+	      this.$emit('expired');
 	    }
 	  }
 	};
