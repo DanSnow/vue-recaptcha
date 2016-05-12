@@ -11,7 +11,7 @@ window.vueRecaptchaApiLoaded = () => {
 };
 
 export function getRecaptcha() {
-  if(recaptcha !== null) {
+  if (recaptcha !== null) {
     return Promise.resolve(recaptcha);
   }
 
@@ -19,13 +19,13 @@ export function getRecaptcha() {
 }
 
 export function checkRecaptchaLoad() {
-  if(window.hasOwnProperty('grecaptcha')) {
+  if (window.hasOwnProperty('grecaptcha')) {
     window.vueRecaptchaApiLoaded();
   }
 }
 
 export function assertRecaptchaLoad() {
-  if(recaptcha === null) {
+  if (recaptcha === null) {
     throw new Error('ReCAPTCHA has not been loaded');
   }
 }
@@ -40,8 +40,8 @@ export function render(ele, key, options) {
 export function reset(widgetId) {
   let args = [];
 
-  if(arguments.length > 0) {
-    if(widgetId === null) {
+  if (arguments.length > 0) {
+    if (widgetId === null) {
       return;
     } else {
       args = [widgetId];
