@@ -1,5 +1,7 @@
 vue-recaptcha
 =============
+[![devDependency Status](https://david-dm.org/DanSnow/vue-recaptcha/dev-status.svg)](https://david-dm.org/DanSnow/vue-recaptcha#info=devDependencies)
+[![peerDependency Status](https://david-dm.org/DanSnow/vue-recaptcha/peer-status.svg)](https://david-dm.org/DanSnow/vue-recaptcha#info=peerDependencies)
 
 ## Description ##
 Google ReCAPTCHA component for vue.
