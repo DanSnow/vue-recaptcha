@@ -15,7 +15,9 @@
       },
       options: {
         type: Object,
-        default: {}
+        default() {
+          return {};
+        }
       }
     },
     created() {
