@@ -82,9 +82,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "/home/snow/Desktop/Project/vue-recaptcha/src/recaptcha.vue"
+	  var id = "_v-48075913/recaptcha.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -123,7 +123,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    options: {
 	      type: Object,
-	      default: {}
+	      default: function _default() {
+	        return {};
+	      }
 	    }
 	  },
 	  created: function created() {
@@ -149,8 +151,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.$emit('verify', response);
 	    },
 	    emitExpired: function emitExpired() {
-	      console.log(arguments);
 	      this.$emit('expired');
+	    }
+	  },
+	  events: {
+	    recaptchaReset: function recaptchaReset() {
+	      this.reset();
 	    }
 	  }
 	};
@@ -212,19 +218,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function reset(widgetId) {
-	  var args = [];
-
-	  if (arguments.length > 0) {
-	    if (widgetId === null) {
-	      return;
-	    } else {
-	      args = [widgetId];
-	    }
+	  if (typeof widgetId === 'undefined') {
+	    return false;
 	  }
-
 	  assertRecaptchaLoad();
-	  getRecaptcha.then(function (recaptcha) {
-	    recaptcha.reset.apply(null, args);
+	  getRecaptcha().then(function (recaptcha) {
+	    recaptcha.reset(widgetId);
 	  });
 	}
 

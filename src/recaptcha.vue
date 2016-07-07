@@ -43,8 +43,12 @@
         this.$emit('verify', response);
       },
       emitExpired() {
-        console.log(arguments);
         this.$emit('expired');
+      }
+    },
+    events: {
+      recaptchaReset() {
+        this.reset();
       }
     }
   };
