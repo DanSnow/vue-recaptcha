@@ -38,18 +38,11 @@ export function render(ele, key, options) {
 }
 
 export function reset(widgetId) {
-  let args = [];
-
-  if (arguments.length > 0) {
-    if (widgetId === null) {
-      return;
-    } else {
-      args = [widgetId];
-    }
+  if (typeof widgetId === 'undefined') {
+    return false;
   }
-
   assertRecaptchaLoad();
-  getRecaptcha.then((recaptcha) => {
-    recaptcha.reset.apply(null, args);
+  getRecaptcha().then((recaptcha) => {
+    recaptcha.reset(widgetId);
   });
 }
