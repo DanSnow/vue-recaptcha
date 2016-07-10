@@ -9,12 +9,12 @@ Google ReCAPTCHA component for vue.
 ## Install ##
 
 ```shell
-$ npm install git+https://github.com/DanSnow/vue-recaptcha.git
+$ npm install vue-recaptcha
 ```
 
 ## Usage ##
 
-Plase this in head to load recaptcha:
+Place this in head to load recaptcha:
 ```html
 <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
 </script>
