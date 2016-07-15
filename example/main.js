@@ -1,4 +1,5 @@
-var app = new Vue({
+/* global Vue: false, VueRecaptcha: false */
+new Vue({ // eslint-disable-line no-new
   el: '#root',
   data: {
     opts: {
