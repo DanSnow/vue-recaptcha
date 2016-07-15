@@ -7,7 +7,8 @@
   <body>
     <h1>This is example to use vue-recaptcha</h1>
     <div id="root">
-      <vue-recaptcha @verify="onVerify" @expired="onExpired" :options="opts"></vue-recaptcha>
+      <vue-recaptcha v-ref:recaptcha @verify="onVerify" @expired="onExpired" :options="opts"></vue-recaptcha>
+      <button @click="resetRecaptcha"> Reset ReCAPTCHA </button>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js" defer></script>
     <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
