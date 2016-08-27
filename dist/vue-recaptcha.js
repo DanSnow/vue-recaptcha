@@ -103,8 +103,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </template>
 	//
 	// <script>
-
-
 	exports.default = {
 	  props: {
 	    key: {
