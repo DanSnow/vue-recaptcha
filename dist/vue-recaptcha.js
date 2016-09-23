@@ -99,7 +99,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	var widgetId = null; // <template>
-	//   <div v-el:container></div>
+	//   <div ref="container"></div>
 	// </template>
 	//
 	// <script>
@@ -119,13 +119,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  created: function created() {
 	    recaptcha.checkRecaptchaLoad();
 	  },
-	  compiled: function compiled() {
+	  mounted: function mounted() {
 	    var self = this;
 	    var opts = Object.assign({}, this.options, {
 	      callback: this.emitVerify,
 	      'expired-callback': this.emitExpired
 	    });
-	    recaptcha.render(this.$els.container, this.key, opts).then(function (id) {
+	    recaptcha.render(this.$refs.container, this.key, opts).then(function (id) {
 	      widgetId = id;
 	      self.$emit('render', widgetId);
 	    });
@@ -219,7 +219,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 4 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div v-el:container></div>\n";
+	module.exports = "\n<div ref=\"container\"></div>\n";
 
 /***/ }
 /******/ ])
