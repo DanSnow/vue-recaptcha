@@ -10,7 +10,7 @@
       <vue-recaptcha v-ref:recaptcha @verify="onVerify" @expired="onExpired" :options="opts"></vue-recaptcha>
       <button @click="resetRecaptcha"> Reset ReCAPTCHA </button>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js" defer></script>
+    <script src="https://unpkg.com/vue@2.0.0-rc.6/dist/vue.min.js" defer></script>
     <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
 </script>
     <script src="../dist/vue-recaptcha.js" defer></script>
