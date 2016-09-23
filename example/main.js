@@ -18,7 +18,6 @@ new Vue({ // eslint-disable-line no-new
     },
     resetRecaptcha() {
       this.$refs.recaptcha.reset(); // Direct call reset method
-      // this.$broadcast('recaptchaReset'); // Or broadcast event
     }
   }
 });

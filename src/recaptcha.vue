@@ -1,5 +1,5 @@
 <template>
-  <div v-el:container></div>
+  <div ref="container"></div>
 </template>
 
 <script>
@@ -23,13 +23,13 @@
     created() {
       recaptcha.checkRecaptchaLoad();
     },
-    compiled() {
-      let self = this;
-      let opts = Object.assign({}, this.options, {
+    mounted() {
+      const self = this;
+      const opts = Object.assign({}, this.options, {
         callback: this.emitVerify,
         'expired-callback': this.emitExpired
       });
-      recaptcha.render(this.$els.container, this.key, opts)
+      recaptcha.render(this.$refs.container, this.key, opts)
         .then((id) => {
           widgetId = id;
           self.$emit('render', widgetId);
