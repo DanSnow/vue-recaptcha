@@ -68,18 +68,27 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(2)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/recaptcha.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(4)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	var __vue_exports__, __vue_options__
+
+	/* script */
+	__vue_exports__ = __webpack_require__(2)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(4)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
 	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	module.exports = __vue_exports__
 
 
 /***/ },
@@ -98,11 +107,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-	var widgetId = null; // <template>
-	//   <div ref="container"></div>
-	// </template>
+	var widgetId = null; //
 	//
-	// <script>
+	//
+	//
+
 	exports.default = {
 	  props: {
 	    key: {
@@ -148,8 +157,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }
 	};
-	// </script>
-
 	module.exports = exports['default'];
 
 /***/ },
@@ -219,7 +226,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 4 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div ref=\"container\"></div>\n";
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    ref: "container"
+	  })
+	}},staticRenderFns: []}
 
 /***/ }
 /******/ ])
