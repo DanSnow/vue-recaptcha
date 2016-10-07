@@ -13,7 +13,7 @@ This version is for Vue2.0. If you need Vue1.x support please reference to [vue-
 ## Install ##
 
 ```shell
-$ npm install vue-recaptcha@next
+$ npm install vue-recaptcha
 ```
 
 ## Usage ##
