@@ -1,48 +1,63 @@
-let promise = {};
-let recaptcha = null;
-
-promise.promise = new Promise((resolve) => {
-  promise.resolve = resolve;
-});
-
-window.vueRecaptchaApiLoaded = () => {
-  recaptcha = window.grecaptcha;
-  promise.resolve(recaptcha);
+const defer = () => {
+  const deferred = {};
+  deferred.promise = new Promise((resolve) => {
+    deferred.resolve = resolve;
+  });
+  return deferred;
 };
 
-export function getRecaptcha() {
-  if (recaptcha !== null) {
-    return Promise.resolve(recaptcha);
-  }
+export function createRecaptcha() {
+  let recaptcha = null;
+  const deferred = defer();
 
-  return promise.promise;
+  return {
+    setRecaptcha(recap) {
+      recaptcha = recap;
+      deferred.resolve(recap);
+    },
+
+    getRecaptcha() {
+      if (recaptcha) {
+        return Promise.resolve(recaptcha);
+      }
+
+      return deferred.promise;
+    },
+
+    render(ele, key, options) {
+      return this.getRecaptcha().then((recap) => {
+        const opts = Object.assign({}, { sitekey: key }, options);
+        return recap.render(ele, opts);
+      });
+    },
+
+    reset(widgetId) {
+      if (typeof widgetId === 'undefined') {
+        return;
+      }
+
+      this.assertRecaptchaLoad();
+      recaptcha.reset(widgetId);
+    },
+
+    checkRecaptchaLoad() {
+      if (window.hasOwnProperty('grecaptcha')) {
+        this.setRecaptcha(window.grecaptcha);
+      }
+    },
+
+    assertRecaptchaLoad() {
+      if (recaptcha === null) {
+        throw new Error('ReCAPTCHA has not been loaded');
+      }
+    }
+  };
 }
 
-export function checkRecaptchaLoad() {
-  if (window.hasOwnProperty('grecaptcha')) {
-    window.vueRecaptchaApiLoaded();
-  }
-}
+const recaptcha = createRecaptcha();
 
-export function assertRecaptchaLoad() {
-  if (recaptcha === null) {
-    throw new Error('ReCAPTCHA has not been loaded');
-  }
-}
+window.vueRecaptchaApiLoaded = () => {
+  recaptcha.setRecaptcha(window.grecaptcha);
+};
 
-export function render(ele, key, options) {
-  return getRecaptcha().then((recaptcha) => {
-    let opts = Object.assign({}, { sitekey: key }, options);
-    return recaptcha.render(ele, opts);
-  });
-}
-
-export function reset(widgetId) {
-  if (typeof widgetId === 'undefined') {
-    return false;
-  }
-  assertRecaptchaLoad();
-  getRecaptcha().then((recaptcha) => {
-    recaptcha.reset(widgetId);
-  });
-}
+export default recaptcha;

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import * as recaptcha from './recaptcha.js';
+  import recaptcha from './recaptcha.js';
 
   let widgetId = null;
 
