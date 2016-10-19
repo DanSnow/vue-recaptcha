@@ -85,6 +85,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
+
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 
@@ -103,9 +104,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _recaptcha = __webpack_require__(3);
 
-	var recaptcha = _interopRequireWildcard(_recaptcha);
+	var _recaptcha2 = _interopRequireDefault(_recaptcha);
 
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var widgetId = null; //
 	//
@@ -126,7 +127,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 	  created: function created() {
-	    recaptcha.checkRecaptchaLoad();
+	    _recaptcha2.default.checkRecaptchaLoad();
 	  },
 	  mounted: function mounted() {
 	    var self = this;
@@ -134,7 +135,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      callback: this.emitVerify,
 	      'expired-callback': this.emitExpired
 	    });
-	    recaptcha.render(this.$refs.container, this.key, opts).then(function (id) {
+	    _recaptcha2.default.render(this.$refs.container, this.key, opts).then(function (id) {
 	      widgetId = id;
 	      self.$emit('render', widgetId);
 	    });
@@ -142,7 +143,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  methods: {
 	    reset: function reset() {
-	      recaptcha.reset(widgetId);
+	      _recaptcha2.default.reset(widgetId);
 	    },
 	    emitVerify: function emitVerify(response) {
 	      this.$emit('verify', response);
@@ -168,59 +169,65 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.getRecaptcha = getRecaptcha;
-	exports.checkRecaptchaLoad = checkRecaptchaLoad;
-	exports.assertRecaptchaLoad = assertRecaptchaLoad;
-	exports.render = render;
-	exports.reset = reset;
-	var promise = {};
-	var recaptcha = null;
-
-	promise.promise = new Promise(function (resolve) {
-	  promise.resolve = resolve;
-	});
-
-	window.vueRecaptchaApiLoaded = function () {
-	  recaptcha = window.grecaptcha;
-	  promise.resolve(recaptcha);
+	exports.createRecaptcha = createRecaptcha;
+	var defer = function defer() {
+	  var deferred = {};
+	  deferred.promise = new Promise(function (resolve) {
+	    deferred.resolve = resolve;
+	  });
+	  return deferred;
 	};
 
-	function getRecaptcha() {
-	  if (recaptcha !== null) {
-	    return Promise.resolve(recaptcha);
-	  }
+	function createRecaptcha() {
+	  var recaptcha = null;
+	  var deferred = defer();
 
-	  return promise.promise;
+	  return {
+	    setRecaptcha: function setRecaptcha(recap) {
+	      recaptcha = recap;
+	      deferred.resolve(recap);
+	    },
+	    getRecaptcha: function getRecaptcha() {
+	      if (recaptcha) {
+	        return Promise.resolve(recaptcha);
+	      }
+
+	      return deferred.promise;
+	    },
+	    render: function render(ele, key, options) {
+	      return this.getRecaptcha().then(function (recap) {
+	        var opts = Object.assign({}, { sitekey: key }, options);
+	        return recap.render(ele, opts);
+	      });
+	    },
+	    reset: function reset(widgetId) {
+	      if (typeof widgetId === 'undefined') {
+	        return;
+	      }
+
+	      this.assertRecaptchaLoad();
+	      recaptcha.reset(widgetId);
+	    },
+	    checkRecaptchaLoad: function checkRecaptchaLoad() {
+	      if (window.hasOwnProperty('grecaptcha')) {
+	        this.setRecaptcha(window.grecaptcha);
+	      }
+	    },
+	    assertRecaptchaLoad: function assertRecaptchaLoad() {
+	      if (recaptcha === null) {
+	        throw new Error('ReCAPTCHA has not been loaded');
+	      }
+	    }
+	  };
 	}
 
-	function checkRecaptchaLoad() {
-	  if (window.hasOwnProperty('grecaptcha')) {
-	    window.vueRecaptchaApiLoaded();
-	  }
-	}
+	var recaptcha = createRecaptcha();
 
-	function assertRecaptchaLoad() {
-	  if (recaptcha === null) {
-	    throw new Error('ReCAPTCHA has not been loaded');
-	  }
-	}
+	window.vueRecaptchaApiLoaded = function () {
+	  recaptcha.setRecaptcha(window.grecaptcha);
+	};
 
-	function render(ele, key, options) {
-	  return getRecaptcha().then(function (recaptcha) {
-	    var opts = Object.assign({}, { sitekey: key }, options);
-	    return recaptcha.render(ele, opts);
-	  });
-	}
-
-	function reset(widgetId) {
-	  if (typeof widgetId === 'undefined') {
-	    return false;
-	  }
-	  assertRecaptchaLoad();
-	  getRecaptcha().then(function (recaptcha) {
-	    recaptcha.reset(widgetId);
-	  });
-	}
+	exports.default = recaptcha;
 
 /***/ },
 /* 4 */
