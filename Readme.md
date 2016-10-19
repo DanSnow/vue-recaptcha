@@ -2,6 +2,7 @@ vue-recaptcha
 =============
 [![devDependencies Status](https://david-dm.org/DanSnow/vue-recaptcha/dev-status.svg)](https://david-dm.org/DanSnow/vue-recaptcha?type=dev)
 [![peerDependencies Status](https://david-dm.org/DanSnow/vue-recaptcha/peer-status.svg)](https://david-dm.org/DanSnow/vue-recaptcha?type=peer)
+[![Build Status](https://travis-ci.org/DanSnow/vue-recaptcha.svg?branch=master)](https://travis-ci.org/DanSnow/vue-recaptcha)
 
 ## Description ##
 Google ReCAPTCHA component for vue.
