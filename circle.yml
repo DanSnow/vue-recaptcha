@@ -8,5 +8,5 @@ deployment:
     commands:
       - npm run compile
       - git add dist/vue-recpatcha.js
-      - git commit -m 'ci: Compile'
+      - "git commit -m 'ci: Compile'"
       - git push
