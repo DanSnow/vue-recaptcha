@@ -1,0 +1,12 @@
+---
+dependencies:
+  pre:
+    - npm install -g npm@3
+deployment:
+  release:
+    branch: master
+    commands:
+      - npm run compile
+      - git add dist/vue-recpatcha.js
+      - git commit -m 'ci: Compile'
+      - git push
