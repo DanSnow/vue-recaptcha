@@ -7,4 +7,6 @@ deployment:
     branch: master
     commands:
       - npm run compile
+      - git config user.email 'DanSnow@users.noreply.github.com'
+      - git config user.name 'DanSnow'
       - "git add dist/vue-recaptcha.js && git commit -m 'ci: Compile' && git push || true"
