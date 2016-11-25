@@ -2,6 +2,9 @@
 dependencies:
   pre:
     - npm install -g npm@3
+    - npm install -g yarn
+  override:
+    - yarn
 deployment:
   release:
     branch: master
