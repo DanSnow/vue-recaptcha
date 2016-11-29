@@ -5,7 +5,7 @@
   "main": "dist/vue-recaptcha.js",
   "scripts": {
     "lint": "eslint .",
-    "compile": "NODE_ENV=production webpack",
+    "compile": "rollup -c",
     "test": "npm run lint && jest"
   },
   "author": "DanSnow",
