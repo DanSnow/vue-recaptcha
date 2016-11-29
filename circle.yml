@@ -12,4 +12,4 @@ deployment:
       - npm run compile
       - git config user.email 'DanSnow@users.noreply.github.com'
       - git config user.name 'circleci'
-      - "git add dist/vue-recaptcha.js && git commit -m 'ci: Compile [skip ci]' && git push || true"
+      - "git add dist && git commit -m 'ci: Compile [skip ci]' && git push || true"
