@@ -15,8 +15,17 @@ This version is for Vue2.0. If you need Vue1.x support please reference to [vue-
 
 ## Install ##
 
+### NPM ###
+
 ```shell
 $ npm install vue-recaptcha
+```
+
+### CDN ###
+```html
+<script src="https://unpkg.com/vue-recaptcha@latest/dist/vue-recaptcha.js"></script>
+<!-- Minify -->
+<script src="https://unpkg.com/vue-recaptcha@latest/dist/vue-recaptcha.min.js"></script>
 ```
 
 ## Usage ##
