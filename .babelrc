@@ -1,4 +1,9 @@
 {
   "presets": [["es2015", { "modules": false }], "stage-0"],
-  "plugins": ["transform-vue-jsx"]
+  "plugins": ["transform-vue-jsx"],
+  "env": {
+    "test": {
+      "presets": ["es2015", "stage-0"]
+    }
+  }
 }
