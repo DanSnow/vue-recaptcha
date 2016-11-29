@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "compile": "rollup -c",
-    "test": "npm run lint && jest"
+    "test": "npm run lint && NODE_ENV='test' jest"
   },
   "author": "DanSnow",
   "license": "MIT",
