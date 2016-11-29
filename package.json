@@ -5,7 +5,7 @@
   "main": "dist/vue-recaptcha.js",
   "scripts": {
     "lint": "eslint .",
-    "compile": "rollup -c",
+    "compile": "rollup -c && rollup -c rollup.min.config.js",
     "test": "npm run lint && NODE_ENV='test' jest"
   },
   "author": "DanSnow",
