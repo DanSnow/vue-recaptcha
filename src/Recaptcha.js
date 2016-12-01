@@ -24,7 +24,7 @@ export default {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     });
-    recaptcha.render(this.$refs.container, this.key, opts)
+    recaptcha.render(this.$refs.container, this.sitekey, opts)
       .then((id) => {
         widgetId = id;
         self.$emit('render', widgetId);
