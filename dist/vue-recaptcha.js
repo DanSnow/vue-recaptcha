@@ -85,7 +85,7 @@ var VueRecaptcha$1 = {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     });
-    recaptcha.render(this.$refs.container, this.key, opts).then(function (id) {
+    recaptcha.render(this.$refs.container, this.sitekey, opts).then(function (id) {
       widgetId = id;
       self.$emit('render', widgetId);
     });
