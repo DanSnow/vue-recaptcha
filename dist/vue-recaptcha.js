@@ -65,7 +65,7 @@ var widgetId = null;
 
 var VueRecaptcha$1 = {
   props: {
-    key: {
+    sitekey: {
       type: String,
       required: true
     },
