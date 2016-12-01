@@ -4,7 +4,7 @@ let widgetId = null;
 
 export default {
   props: {
-    key: {
+    sitekey: {
       type: String,
       required: true
     },
