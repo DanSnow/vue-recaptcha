@@ -1,4 +1,4 @@
-import { createRecaptcha } from '../recaptcha';
+import recaptcha, { createRecaptcha } from '../recaptcha';
 
 const WIDGET_ID = 'widgetId';
 const recaptchaMock = {
@@ -12,6 +12,65 @@ describe('recaptcha', () => {
 
     beforeEach(() => {
       ins = createRecaptcha();
+    });
+
+    describe('#assertRecaptchaLoad', () => {
+      describe('When Recaptcha not loaded', () => {
+        it('Throw', () => {
+          expect(() => {
+            ins.assertRecaptchaLoad();
+          }).toThrow();
+        });
+      });
+
+      describe('When Recaptcha loaded', () => {
+        it('Not throw', () => {
+          ins.setRecaptcha(recaptchaMock);
+          expect(() => {
+            ins.assertRecaptchaLoad();
+          }).not.toThrow();
+        });
+      });
+    });
+
+    describe('#checkRecaptchaLoad', () => {
+      describe('When Recaptcha not loaded', () => {
+        it('Not load Recaptcha into it', () => {
+          ins.checkRecaptchaLoad();
+          expect(() => {
+            ins.assertRecaptchaLoad();
+          }).toThrow();
+        });
+      });
+
+      describe('When Recaptcha loaded', () => {
+        beforeEach(() => {
+          window.grecaptcha = recaptchaMock;
+        });
+        afterEach(() => delete window.grecaptcha);
+
+        it('Load Recaptcha', () => {
+          ins.checkRecaptchaLoad();
+
+          expect(() => {
+            ins.assertRecaptchaLoad();
+          }).not.toThrow();
+        });
+      });
+    });
+
+    describe('#getRecaptcha', () => {
+      describe('Recaptcha not loaded', () => {
+        it('Return defered object', () => {
+          const spy = jest.fn();
+          const promise = ins.getRecaptcha().then(spy);
+          expect(spy).not.toHaveBeenCalled();
+          ins.setRecaptcha(recaptchaMock);
+          return promise.then(() => {
+            expect(spy).toHaveBeenCalled();
+          });
+        });
+      });
     });
 
     describe('#setRecaptcha', () => {
@@ -58,13 +117,39 @@ describe('recaptcha', () => {
     });
 
     describe('#reset', () => {
-      it('Reset ReCAPTCHA', () => {
-        ins.setRecaptcha(recaptchaMock);
+      describe('When pass widget id', () => {
+        it('Reset ReCAPTCHA', () => {
+          jest.resetAllMocks();
+          ins.setRecaptcha(recaptchaMock);
 
-        ins.reset(WIDGET_ID);
+          ins.reset(WIDGET_ID);
 
-        expect(recaptchaMock.reset).toBeCalled();
+          expect(recaptchaMock.reset).toBeCalled();
+        });
       });
+
+      describe('When pass widget id', () => {
+        it('Reset ReCAPTCHA', () => {
+          jest.resetAllMocks();
+          ins.setRecaptcha(recaptchaMock);
+
+          ins.reset();
+
+          expect(recaptchaMock.reset).not.toBeCalled();
+        });
+      });
+    });
+  });
+
+  describe('window.vueRecaptchaApiLoaded', () => {
+    beforeEach(() => {
+      window.grecaptcha = recaptchaMock;
+    });
+    afterEach(() => delete window.grecaptcha);
+
+    it('Load grecaptcha', () => {
+      window.vueRecaptchaApiLoaded();
+      expect(() => recaptcha.assertRecaptchaLoad()).not.toThrow();
     });
   });
 });
