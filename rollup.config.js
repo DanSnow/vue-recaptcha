@@ -15,7 +15,7 @@ export default {
     babel({
       presets: [
         ['es2015', { modules: false }],
-        'stage-0'
+        'stage-2'
       ],
       plugins: [
         'transform-vue-jsx'
