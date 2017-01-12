@@ -63,7 +63,8 @@ describe('recaptcha', () => {
       describe('Recaptcha not loaded', () => {
         it('Return defered object', () => {
           const spy = jest.fn();
-          const promise = ins.getRecaptcha().then(spy);
+          // Since it return thenable, not Promise. Here must wrap it as Promise
+          const promise = Promise.resolve(ins.getRecaptcha()).then(spy);
           expect(spy).not.toHaveBeenCalled();
           ins.setRecaptcha(recaptchaMock);
           return promise.then(() => {
@@ -76,7 +77,7 @@ describe('recaptcha', () => {
     describe('#setRecaptcha', () => {
       it('Set recaptcha', () => {
         ins.setRecaptcha(recaptchaMock);
-        return ins.getRecaptcha((recap) => {
+        return Promise.resolve(ins.getRecaptcha()).then((recap) => {
           expect(recap).toBe(recaptchaMock);
         });
       });
@@ -109,7 +110,7 @@ describe('recaptcha', () => {
 
         ins.setRecaptcha(recaptchaMock);
 
-        return ins.render(ele, key).then((widgetId) => {
+        return ins.render(ele, key, {}, (widgetId) => {
           expect(recaptchaMock.render).toBeCalled();
           expect(widgetId).toBe(WIDGET_ID);
         });

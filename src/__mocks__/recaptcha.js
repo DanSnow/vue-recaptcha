@@ -6,7 +6,7 @@ const grecaptchaMock = {
 
 export default {
   getRecaptcha: jest.fn(() => Promise.resolve(grecaptchaMock)),
-  render: jest.fn(() => Promise.resolve(WIDGET_ID)),
+  render: jest.fn((...args) => args[args.length - 1](WIDGET_ID)),
   reset: jest.fn(),
   checkRecaptchaLoad: jest.fn(),
   assertRecaptchaLoad: jest.fn()

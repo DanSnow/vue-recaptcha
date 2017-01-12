@@ -1,33 +1,57 @@
+import assign from 'object-assign';
+
 const defer = () => {
-  const deferred = {};
-  deferred.promise = new Promise((resolve) => {
-    deferred.resolve = resolve;
-  });
+  let state = false; // Resolved or not
+  let value;
+  const callbacks = [];
+  const resolve = (val) => {
+    if (state) {
+      return;
+    }
+
+    state = true;
+    value = val;
+    callbacks.forEach((cb) => {
+      cb(val);
+    });
+  };
+
+  const then = (cb) => {
+    if (!state) {
+      callbacks.push(cb);
+      return;
+    }
+    cb(value);
+  };
+
+  const deferred = {
+    resolved() {
+      return state;
+    },
+    resolve,
+    promise: {
+      then
+    }
+  };
   return deferred;
 };
 
 export function createRecaptcha() {
-  let recaptcha = null;
   const deferred = defer();
 
   return {
     setRecaptcha(recap) {
-      recaptcha = recap;
       deferred.resolve(recap);
     },
 
     getRecaptcha() {
-      if (recaptcha) {
-        return Promise.resolve(recaptcha);
-      }
-
       return deferred.promise;
     },
 
-    render(ele, key, options) {
-      return this.getRecaptcha().then((recap) => {
-        const opts = Object.assign({}, { sitekey: key }, options);
-        return recap.render(ele, opts);
+    render(ele, key, options, cb) {
+      this.getRecaptcha().then((recap) => {
+        const opts = assign({}, { sitekey: key }, options);
+        cb(recap.render(ele, opts));
       });
     },
 
@@ -37,7 +61,7 @@ export function createRecaptcha() {
       }
 
       this.assertRecaptchaLoad();
-      recaptcha.reset(widgetId);
+      this.getRecaptcha().then((recap) => recap.reset(widgetId));
     },
 
     checkRecaptchaLoad() {
@@ -47,7 +71,7 @@ export function createRecaptcha() {
     },
 
     assertRecaptchaLoad() {
-      if (recaptcha === null) {
+      if (!deferred.resolved()) {
         throw new Error('ReCAPTCHA has not been loaded');
       }
     }

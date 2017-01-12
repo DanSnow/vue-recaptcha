@@ -1,6 +1,5 @@
+import assign from 'object-assign';
 import recaptcha from './recaptcha.js';
-
-let widgetId = null;
 
 export default {
   props: {
@@ -16,23 +15,23 @@ export default {
     }
   },
   created() {
+    this.$widgetId = null;
     recaptcha.checkRecaptchaLoad();
   },
   mounted() {
     const self = this;
-    const opts = Object.assign({}, this.options, {
+    const opts = assign({}, this.options, {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     });
-    recaptcha.render(this.$refs.container, this.sitekey, opts)
-      .then((id) => {
-        widgetId = id;
-        self.$emit('render', widgetId);
-      });
+    recaptcha.render(this.$refs.container, this.sitekey, opts, (id) => {
+      self.$widgetId = id;
+      self.$emit('render', id);
+    });
   },
   methods: {
     reset() {
-      recaptcha.reset(widgetId);
+      recaptcha.reset(this.$widgetId);
     },
     emitVerify(response) {
       this.$emit('verify', response);
