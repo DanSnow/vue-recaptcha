@@ -1,4 +1,4 @@
-import recaptcha, { createRecaptcha } from '../recaptcha';
+import recaptcha, { createRecaptcha } from '../recaptcha-wrapper';
 
 const WIDGET_ID = 'widgetId';
 const recaptchaMock = {

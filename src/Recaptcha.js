@@ -1,5 +1,5 @@
 import assign from 'object-assign';
-import recaptcha from './recaptcha.js';
+import recaptcha from './recaptcha-wrapper';
 
 export default {
   props: {

@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Recaptcha from '../Recaptcha';
-import recaptcha from '../recaptcha';
+import recaptcha from '../recaptcha-wrapper';
+
+jest.mock('../recaptcha-wrapper');
 
 const SITE_KEY = 'sitekey';
 const createVm = (propsData) => {
@@ -9,8 +11,6 @@ const createVm = (propsData) => {
     ...Recaptcha
   }).$mount();
 };
-
-jest.mock('../recaptcha');
 
 describe('Recaptcha', () => {
   it('Should render ReCAPTCHA', () => {
