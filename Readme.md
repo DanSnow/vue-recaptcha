@@ -43,7 +43,7 @@ With `onload` callback, it will notify us when the api is ready for use.
 Then use it in your component
 ```vue
 <template>
-  <vue-recaptcha key="Your key here"></vue-recaptcha>
+  <vue-recaptcha sitekey="Your key here"></vue-recaptcha>
 </template>
 
 <script>
@@ -54,3 +54,7 @@ Then use it in your component
   };
 </script>
 ```
+
+For more information, please reference to [example](example)
+
+[example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
