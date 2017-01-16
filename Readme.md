@@ -10,7 +10,7 @@ vue-recaptcha
 ## Description ##
 Google ReCAPTCHA component for vue.
 
-This version is for Vue2.0. If you need Vue1.x support please reference to [vue-v1.x][vue-v1.x].
+This version is for Vue 2.0. If you need Vue 1.x support please reference to [vue-v1.x][vue-v1.x].
 
 [vue-v1.x]: https://github.com/DanSnow/vue-recaptcha/tree/vue-v1.x
 
