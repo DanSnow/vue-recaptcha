@@ -57,4 +57,22 @@ Then use it in your component
 
 For more information, please reference to [example](example)
 
+## API ##
+
+### Props ###
+- sitekey (required)  
+  ReCAPTCHA site key
+- options (optional)  
+  Any options for Google ReCAPTCHA, please reference to [ReCAPTCHA document](recaptcha-params).  
+  **Notice**: `callback` and `expired-callback` will be override by component for emit event.
+
+### Methods ###
+- reset  
+  Reset ReCAPTCHA instance
+
+### Events ###
+- recaptchaReset
+  Reset ReCAPTCHA instance
+
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
+[recaptcha-params]: https://developers.google.com/recaptcha/docs/display#render_param
