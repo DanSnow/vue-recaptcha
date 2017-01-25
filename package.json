@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "umd": "rollup -c && rollup -c rollup.min.config.js",
-    "build": "NODE_ENV='build' babel --ignore src/__tests__/*,src/__mocks__/* -d lib src",
+    "build": "rm -rf lib && NODE_ENV='build' babel --ignore src/__tests__/*,src/__mocks__/* -d lib src",
     "prepublish": "yarn run build",
     "test": "yarn run lint && NODE_ENV='test' jest"
   },
