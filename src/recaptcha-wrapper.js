@@ -1,5 +1,3 @@
-import assign from 'object-assign';
-
 const defer = () => {
   let state = false; // Resolved or not
   let value;
@@ -50,7 +48,7 @@ export function createRecaptcha() {
 
     render(ele, key, options, cb) {
       this.getRecaptcha().then((recap) => {
-        const opts = assign({}, { sitekey: key }, options);
+        const opts = Object.assign({}, { sitekey: key }, options);
         cb(recap.render(ele, opts));
       });
     },

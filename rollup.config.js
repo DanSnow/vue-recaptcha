@@ -13,13 +13,17 @@ export default {
       main: true
     }),
     babel({
+      babelrc: false,
       presets: [
         ['es2015', { modules: false }],
         'stage-2'
       ],
       plugins: [
-        'transform-vue-jsx'
+        'transform-object-assign',
+        'transform-vue-jsx',
+        'external-helpers'
       ],
+      externalHelpersWhitelist: ['extends'],
       exclude: 'node_modules/**'
     })
   ],

@@ -1,6 +1,6 @@
 {
   "presets": [["es2015", { "modules": false }]],
-  "plugins": ["transform-vue-jsx"],
+  "plugins": ["transform-vue-jsx", "transform-object-assign"],
   "env": {
     "test": {
       "presets": ["es2015", "stage-2"]

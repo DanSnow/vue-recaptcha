@@ -1,4 +1,3 @@
-import assign from 'object-assign';
 import recaptcha from './recaptcha-wrapper';
 
 export default {
@@ -20,7 +19,7 @@ export default {
   },
   mounted() {
     const self = this;
-    const opts = assign({}, this.options, {
+    const opts = Object.assign({}, this.options, {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     });
