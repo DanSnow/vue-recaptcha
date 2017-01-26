@@ -1,5 +1,3 @@
-import commonjs from 'rollup-plugin-commonjs';
-import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 
 export default {
@@ -8,10 +6,6 @@ export default {
   format: 'umd',
   moduleName: 'VueRecaptcha',
   plugins: [
-    commonjs(),
-    nodeResolve({
-      main: true
-    }),
     babel({
       babelrc: false,
       presets: [
