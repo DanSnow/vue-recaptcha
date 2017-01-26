@@ -1,5 +1,7 @@
 vue-recaptcha
 =============
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/DanSnow/vue-recaptcha.svg)](https://greenkeeper.io/)
 [![dependencies Status](https://david-dm.org/DanSnow/vue-recaptcha/status.svg)](https://david-dm.org/DanSnow/vue-recaptcha)
 [![devDependencies Status](https://david-dm.org/DanSnow/vue-recaptcha/dev-status.svg)](https://david-dm.org/DanSnow/vue-recaptcha?type=dev)
 [![peerDependencies Status](https://david-dm.org/DanSnow/vue-recaptcha/peer-status.svg)](https://david-dm.org/DanSnow/vue-recaptcha?type=peer)
