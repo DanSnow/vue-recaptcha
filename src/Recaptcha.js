@@ -47,7 +47,7 @@ export default {
   },
   render (h) {
     return (
-      <div ref="container"></div>
+      <div ref='container' />
     )
   }
 }
