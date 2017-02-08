@@ -101,6 +101,7 @@ window.vueRecaptchaApiLoaded = function () {
 };
 
 var VueRecaptcha$1 = {
+  name: 'VueRecaptcha',
   props: {
     sitekey: {
       type: String,
