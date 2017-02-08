@@ -1,6 +1,7 @@
 import recaptcha from './recaptcha-wrapper';
 
 export default {
+  name: 'VueRecaptcha',
   props: {
     sitekey: {
       type: String,
