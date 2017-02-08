@@ -1,4 +1,4 @@
-import recaptcha from './recaptcha-wrapper';
+import recaptcha from './recaptcha-wrapper'
 
 export default {
   name: 'VueRecaptcha',
@@ -9,45 +9,45 @@ export default {
     },
     options: {
       type: Object,
-      default() {
-        return {};
+      default () {
+        return {}
       }
     }
   },
-  created() {
-    this.$widgetId = null;
-    recaptcha.checkRecaptchaLoad();
+  created () {
+    this.$widgetId = null
+    recaptcha.checkRecaptchaLoad()
   },
-  mounted() {
-    const self = this;
+  mounted () {
+    const self = this
     const opts = Object.assign({}, this.options, {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
-    });
+    })
     recaptcha.render(this.$refs.container, this.sitekey, opts, (id) => {
-      self.$widgetId = id;
-      self.$emit('render', id);
-    });
+      self.$widgetId = id
+      self.$emit('render', id)
+    })
   },
   methods: {
-    reset() {
-      recaptcha.reset(this.$widgetId);
+    reset () {
+      recaptcha.reset(this.$widgetId)
     },
-    emitVerify(response) {
-      this.$emit('verify', response);
+    emitVerify (response) {
+      this.$emit('verify', response)
     },
-    emitExpired() {
-      this.$emit('expired');
+    emitExpired () {
+      this.$emit('expired')
     }
   },
   events: {
-    recaptchaReset() {
-      this.reset();
+    recaptchaReset () {
+      this.reset()
     }
   },
-  render(h) {
+  render (h) {
     return (
       <div ref="container"></div>
-    );
+    )
   }
-};
+}

@@ -1,3 +1,3 @@
-import VueRecaptcha from './Recaptcha';
+import VueRecaptcha from './Recaptcha'
 
-export default VueRecaptcha;
+export default VueRecaptcha

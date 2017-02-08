@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import babel from 'rollup-plugin-babel'
 
 export default {
   entry: 'src/main.js',
@@ -22,4 +22,4 @@ export default {
     })
   ],
   dest: 'dist/vue-recaptcha.js'
-};
+}
