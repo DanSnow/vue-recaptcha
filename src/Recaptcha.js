@@ -16,17 +16,17 @@ export default {
   },
   created () {
     this.$widgetId = null
-    recaptcha.checkRecaptchaLoad()
   },
   mounted () {
-    const self = this
+    recaptcha.checkRecaptchaLoad()
+
     const opts = Object.assign({}, this.options, {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     })
     recaptcha.render(this.$refs.container, this.sitekey, opts, (id) => {
-      self.$widgetId = id
-      self.$emit('render', id)
+      this.$widgetId = id
+      this.$emit('render', id)
     })
   },
   methods: {

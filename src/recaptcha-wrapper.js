@@ -78,8 +78,10 @@ export function createRecaptcha () {
 
 const recaptcha = createRecaptcha()
 
-window.vueRecaptchaApiLoaded = () => {
-  recaptcha.setRecaptcha(window.grecaptcha)
+if (typeof window !== 'undefined') {
+  window.vueRecaptchaApiLoaded = () => {
+    recaptcha.setRecaptcha(window.grecaptcha)
+  }
 }
 
 export default recaptcha
