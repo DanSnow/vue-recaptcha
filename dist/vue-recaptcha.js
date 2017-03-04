@@ -96,9 +96,11 @@ function createRecaptcha() {
 
 var recaptcha = createRecaptcha();
 
-window.vueRecaptchaApiLoaded = function () {
-  recaptcha.setRecaptcha(window.grecaptcha);
-};
+if (typeof window !== 'undefined') {
+  window.vueRecaptchaApiLoaded = function () {
+    recaptcha.setRecaptcha(window.grecaptcha);
+  };
+}
 
 var VueRecaptcha$1 = {
   name: 'VueRecaptcha',
@@ -116,17 +118,19 @@ var VueRecaptcha$1 = {
   },
   created: function created() {
     this.$widgetId = null;
-    recaptcha.checkRecaptchaLoad();
   },
   mounted: function mounted() {
-    var self = this;
+    var _this = this;
+
+    recaptcha.checkRecaptchaLoad();
+
     var opts = _extends({}, this.options, {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     });
     recaptcha.render(this.$refs.container, this.sitekey, opts, function (id) {
-      self.$widgetId = id;
-      self.$emit('render', id);
+      _this.$widgetId = id;
+      _this.$emit('render', id);
     });
   },
 
