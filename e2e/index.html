@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue-recaptcha exmaple</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.min.js" defer></script>
+  </head>
+  <body>
+    <h1>This is example to use vue-recaptcha</h1>
+    <div id="root">
+      <vue-recaptcha
+        ref="recaptcha"
+        @verify="onVerify"
+        @expired="onExpired"
+        :sitekey="opts.sitekey"
+        :options="opts">
+      </vue-recaptcha>
+      <button @click="resetRecaptcha"> Reset ReCAPTCHA </button>
+    </div>
+    <script src="https://unpkg.com/vue@latest/dist/vue.min.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+    </script>
+    <script src="../dist/vue-recaptcha.js" defer></script>
+    <script src="main.js" defer></script>
+  </body>
+</html>
