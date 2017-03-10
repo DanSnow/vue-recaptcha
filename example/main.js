@@ -3,7 +3,7 @@ new Vue({ // eslint-disable-line no-new
   el: '#root',
   data: {
     opts: {
-      sitekey: '<Your sitekey here>'
+      sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
     }
   },
   components: {
