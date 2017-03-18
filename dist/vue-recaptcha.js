@@ -128,7 +128,8 @@ var VueRecaptcha$1 = {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     });
-    recaptcha.render(this.$refs.container, this.sitekey, opts, function (id) {
+    var container = this.$slots.default ? this.$refs.container.children[0] : this.$refs.container;
+    recaptcha.render(container, this.sitekey, opts, function (id) {
       _this.$widgetId = id;
       _this.$emit('render', id);
     });
@@ -151,18 +152,7 @@ var VueRecaptcha$1 = {
     }
   },
   render: function render(h) {
-    if (this.$slots.default) {
-      var container = this.$slots.default[0];
-      return h(container.tag, _extends({}, container.data, {
-        ref: 'container'
-      }), container.children);
-    }
-
-    return h(
-      'div',
-      { ref: 'container' },
-      []
-    );
+    return h('div', { ref: 'container' }, this.$slots.default);
   }
 };
 
