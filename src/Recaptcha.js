@@ -47,6 +47,18 @@ export default {
     }
   },
   render (h) {
+    if (this.$slots.default) {
+      const container = this.$slots.default[0]
+      return h(
+        container.tag,
+        {
+          ...container.data,
+          ref: 'container'
+        },
+        container.children
+      )
+    }
+
     return (
       <div ref='container' />
     )
