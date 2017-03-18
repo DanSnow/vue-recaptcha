@@ -25,7 +25,8 @@ export default {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     }
-    recaptcha.render(this.$refs.container, this.sitekey, opts, (id) => {
+    const container = this.$slots.default ? this.$refs.container.children[0] : this.$refs.container
+    recaptcha.render(container, this.sitekey, opts, (id) => {
       this.$widgetId = id
       this.$emit('render', id)
     })
@@ -47,20 +48,10 @@ export default {
     }
   },
   render (h) {
-    if (this.$slots.default) {
-      const container = this.$slots.default[0]
-      return h(
-        container.tag,
-        {
-          ...container.data,
-          ref: 'container'
-        },
-        container.children
-      )
-    }
-
-    return (
-      <div ref='container' />
+    return h(
+      'div',
+      {ref: 'container'},
+      this.$slots.default
     )
   }
 }
