@@ -20,10 +20,11 @@ export default {
   mounted () {
     recaptcha.checkRecaptchaLoad()
 
-    const opts = Object.assign({}, this.options, {
+    const opts = {
+      ...this.options,
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
-    })
+    }
     recaptcha.render(this.$refs.container, this.sitekey, opts, (id) => {
       this.$widgetId = id
       this.$emit('render', id)
