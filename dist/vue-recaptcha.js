@@ -151,6 +151,13 @@ var VueRecaptcha$1 = {
     }
   },
   render: function render(h) {
+    if (this.$slots.default) {
+      var container = this.$slots.default[0];
+      return h(container.tag, _extends({}, container.data, {
+        ref: 'container'
+      }), container.children);
+    }
+
     return h(
       'div',
       { ref: 'container' },
