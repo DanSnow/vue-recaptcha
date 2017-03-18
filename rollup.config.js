@@ -8,11 +8,9 @@ export default {
   plugins: [
     babel({
       babelrc: false,
-      presets: [
-        ['es2015', { modules: false }],
-        'stage-2'
-      ],
+      presets: [['env', { modules: false }]],
       plugins: [
+        'transform-object-rest-spread',
         'transform-object-assign',
         'transform-vue-jsx',
         'external-helpers'

@@ -1,12 +1,9 @@
 {
-  "presets": [["es2015", { "modules": false }]],
-  "plugins": ["transform-vue-jsx", "transform-object-assign"],
+  "presets": [["env", { "modules": false }]],
+  "plugins": ["transform-vue-jsx", "transform-object-assign", "transform-object-rest-spread"],
   "env": {
     "test": {
-      "presets": ["es2015", "stage-2"]
-    },
-    "build": {
-      "presets": ["es2015"]
+      "presets": ["env"]
     }
   }
 }
