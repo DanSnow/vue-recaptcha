@@ -4,20 +4,6 @@
 	(global.VueRecaptcha = factory());
 }(this, (function () { 'use strict';
 
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
 var defer = function defer() {
   var state = false; // Resolved or not
   var value = void 0;
@@ -65,10 +51,9 @@ function createRecaptcha() {
     getRecaptcha: function getRecaptcha() {
       return deferred.promise;
     },
-    render: function render(ele, key, options, cb) {
+    render: function render(ele, options, cb) {
       this.getRecaptcha().then(function (recap) {
-        var opts = _extends({}, { sitekey: key }, options);
-        cb(recap.render(ele, opts));
+        cb(recap.render(ele, options));
       });
     },
     reset: function reset(widgetId) {
@@ -79,6 +64,16 @@ function createRecaptcha() {
       this.assertRecaptchaLoad();
       this.getRecaptcha().then(function (recap) {
         return recap.reset(widgetId);
+      });
+    },
+    execute: function execute(widgetId) {
+      if (typeof widgetId === 'undefined') {
+        return;
+      }
+
+      this.assertRecaptchaLoad();
+      this.getRecaptcha().then(function (recap) {
+        return recap.execute(widgetId);
       });
     },
     checkRecaptchaLoad: function checkRecaptchaLoad() {
@@ -102,6 +97,20 @@ if (typeof window !== 'undefined') {
   };
 }
 
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
 var VueRecaptcha$1 = {
   name: 'VueRecaptcha',
   props: {
@@ -109,11 +118,17 @@ var VueRecaptcha$1 = {
       type: String,
       required: true
     },
-    options: {
-      type: Object,
-      default: function _default() {
-        return {};
-      }
+    theme: {
+      type: String
+    },
+    badge: {
+      type: String
+    },
+    type: {
+      type: String
+    },
+    size: {
+      type: String
     }
   },
   created: function created() {
@@ -123,13 +138,12 @@ var VueRecaptcha$1 = {
     var _this = this;
 
     recaptcha.checkRecaptchaLoad();
-
-    var opts = _extends({}, this.options, {
+    var opts = _extends({}, this.$props, {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     });
     var container = this.$slots.default ? this.$refs.container.children[0] : this.$refs.container;
-    recaptcha.render(container, this.sitekey, opts, function (id) {
+    recaptcha.render(container, opts, function (id) {
       _this.$widgetId = id;
       _this.$emit('render', id);
     });
@@ -138,6 +152,9 @@ var VueRecaptcha$1 = {
   methods: {
     reset: function reset() {
       recaptcha.reset(this.$widgetId);
+    },
+    execute: function execute() {
+      recaptcha.execute(this.$widgetId);
     },
     emitVerify: function emitVerify(response) {
       this.$emit('verify', response);
