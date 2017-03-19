@@ -129,7 +129,7 @@ describe('recaptcha', () => {
         })
       })
 
-      describe('When pass widget id', () => {
+      describe('When not pass widget id', () => {
         it('Reset ReCAPTCHA', () => {
           jest.resetAllMocks()
           ins.setRecaptcha(recaptchaMock)
