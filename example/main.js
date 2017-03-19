@@ -2,9 +2,7 @@
 new Vue({ // eslint-disable-line no-new
   el: '#root',
   data: {
-    opts: {
-      sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
-    }
+    sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
   },
   components: {
     'vue-recaptcha': VueRecaptcha

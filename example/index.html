@@ -12,7 +12,7 @@
           ref="recaptcha"
           @verify="onVerify"
           @expired="onExpired"
-          :sitekey="opts.sitekey">
+          :sitekey="sitekey">
         </vue-recaptcha>
         <button @click="resetRecaptcha"> Reset ReCAPTCHA </button>
       </div>
@@ -21,7 +21,7 @@
         <vue-recaptcha
           @verify="onVerify"
           @expired="onExpired"
-          :sitekey="opts.sitekey">
+          :sitekey="sitekey">
           <button>Click me</button>
         </vue-recaptcha>
       </div>
@@ -33,7 +33,7 @@
             @verify="onVerify"
             @expired="onExpired"
             size="invisible"
-            :sitekey="opts.sitekey">
+            :sitekey="sitekey">
           </vue-recaptcha>
           <button type="submit">Submit</button>
         </form>
