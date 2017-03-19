@@ -129,6 +129,9 @@ var VueRecaptcha$1 = {
     },
     size: {
       type: String
+    },
+    tabindex: {
+      type: String
     }
   },
   created: function created() {
