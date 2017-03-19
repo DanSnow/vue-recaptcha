@@ -10,6 +10,9 @@ new Vue({ // eslint-disable-line no-new
     'vue-recaptcha': VueRecaptcha
   },
   methods: {
+    onSubmit: function () {
+      this.$refs.invisibleRecaptcha.execute()
+    },
     onVerify: function (response) {
       console.log('Verify: ' + response)
     },
