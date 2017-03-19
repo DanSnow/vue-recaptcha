@@ -73,7 +73,7 @@ With `onload` callback, it will notify us when the api is ready for use.
 </script>
 ```
 
-**Notice:** You should only place one element as `vue-recaptcha` child.
+**Notice:** You could only place one element as `vue-recaptcha` child.
 
 For more information, please reference to [example](example)
 
