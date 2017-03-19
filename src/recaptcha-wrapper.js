@@ -46,10 +46,9 @@ export function createRecaptcha () {
       return deferred.promise
     },
 
-    render (ele, key, options, cb) {
+    render (ele, options, cb) {
       this.getRecaptcha().then((recap) => {
-        const opts = Object.assign({}, { sitekey: key }, options)
-        cb(recap.render(ele, opts))
+        cb(recap.render(ele, options))
       })
     },
 

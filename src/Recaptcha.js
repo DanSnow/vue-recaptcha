@@ -7,11 +7,17 @@ export default {
       type: String,
       required: true
     },
-    options: {
-      type: Object,
-      default () {
-        return {}
-      }
+    theme: {
+      type: String
+    },
+    badge: {
+      type: String
+    },
+    type: {
+      type: String
+    },
+    size: {
+      type: String
     }
   },
   created () {
@@ -19,14 +25,13 @@ export default {
   },
   mounted () {
     recaptcha.checkRecaptchaLoad()
-
     const opts = {
-      ...this.options,
+      ...this.$props,
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     }
     const container = this.$slots.default ? this.$refs.container.children[0] : this.$refs.container
-    recaptcha.render(container, this.sitekey, opts, (id) => {
+    recaptcha.render(container, opts, (id) => {
       this.$widgetId = id
       this.$emit('render', id)
     })
