@@ -31,7 +31,8 @@ $ npm install vue-recaptcha
 
 ## Usage ##
 
-Place this in head to load recaptcha:
+### General ###
+Place this in head to load reCAPTCHA:
 ```html
 <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
 </script>
@@ -40,7 +41,7 @@ Place this in head to load recaptcha:
 With `onload` callback, it will notify us when the api is ready for use.
 ```
 
-Then use it in your component
+### Normal ReCAPTCHA ###
 ```vue
 <template>
   <vue-recaptcha sitekey="Your key here"></vue-recaptcha>
@@ -55,6 +56,25 @@ Then use it in your component
 </script>
 ```
 
+### Bind Challenge to Button ###
+```vue
+<template>
+  <vue-recaptcha sitekey="Your key here">
+    <button>Click me</button>
+  </vue-recaptcha>
+</template>
+
+<script>
+  import VueRecaptcha from 'vue-recaptcha';
+  export default {
+    ...
+    components: { VueRecaptcha }
+  };
+</script>
+```
+
+**Notice:** You should only place one element as `vue-recaptcha` child.
+
 For more information, please reference to [example](example)
 
 ## API ##
@@ -62,13 +82,24 @@ For more information, please reference to [example](example)
 ### Props ###
 - sitekey (required)  
   ReCAPTCHA site key
-- options (optional)  
-  Any options for Google ReCAPTCHA, please reference to [ReCAPTCHA document](recaptcha-params).  
-  **Notice**: `callback` and `expired-callback` will be override by component for emit event.
+- theme (optional)  
+  The color theme for reCAPTCHA
+- type (optional)  
+  The type of reCAPTCHA
+- size (optional)  
+  The size of reCAPTCHA
+- tabindex (optional)  
+  The tabindex of reCAPTCHA
+- badge (optional) (Invisible ReCAPTCHA only)  
+  Position of the reCAPTCHA badge
+
+For more information, please reference to [ReCAPTCHA document](recaptcha-params) and [Invisible ReCAPTCHA document](invisible-recaptcha-params).  
 
 ### Methods ###
 - reset  
-  Reset ReCAPTCHA instance
+  Reset reCAPTCHA instance
+- execute  
+  Invoke reCAPTCHA challenge
 
 ### Events ###
 - recaptchaReset
@@ -76,3 +107,4 @@ For more information, please reference to [example](example)
 
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
 [recaptcha-params]: https://developers.google.com/recaptcha/docs/display#render_param
+[invisible-recaptcha-params]: https://developers.google.com/recaptcha/docs/invisible#render_param
