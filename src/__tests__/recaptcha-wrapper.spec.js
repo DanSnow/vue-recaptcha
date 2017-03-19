@@ -3,7 +3,8 @@ import recaptcha, { createRecaptcha } from '../recaptcha-wrapper'
 const WIDGET_ID = 'widgetId'
 const recaptchaMock = {
   render: jest.fn(() => WIDGET_ID),
-  reset: jest.fn()
+  reset: jest.fn(),
+  execute: jest.fn()
 }
 
 describe('recaptcha', () => {
@@ -130,13 +131,37 @@ describe('recaptcha', () => {
       })
 
       describe('When not pass widget id', () => {
-        it('Reset ReCAPTCHA', () => {
+        it('Do nothing', () => {
           jest.resetAllMocks()
           ins.setRecaptcha(recaptchaMock)
 
           ins.reset()
 
           expect(recaptchaMock.reset).not.toBeCalled()
+        })
+      })
+    })
+
+    describe('#execute', () => {
+      describe('When pass widget id', () => {
+        it('Execute ReCAPTCHA', () => {
+          jest.resetAllMocks()
+          ins.setRecaptcha(recaptchaMock)
+
+          ins.execute(WIDGET_ID)
+
+          expect(recaptchaMock.execute).toBeCalled()
+        })
+      })
+
+      describe('When not pass widget id', () => {
+        it('Do nothing', () => {
+          jest.resetAllMocks()
+          ins.setRecaptcha(recaptchaMock)
+
+          ins.execute()
+
+          expect(recaptchaMock.execute).not.toBeCalled()
         })
       })
     })
