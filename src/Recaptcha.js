@@ -18,6 +18,9 @@ export default {
     },
     size: {
       type: String
+    },
+    tabindex: {
+      type: String
     }
   },
   created () {
