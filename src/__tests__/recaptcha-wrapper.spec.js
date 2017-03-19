@@ -106,11 +106,11 @@ describe('recaptcha', () => {
     describe('#render', () => {
       it('Render ReCAPTCHA', () => {
         const ele = document.createElement('div')
-        const key = 'foo'
+        const sitekey = 'foo'
 
         ins.setRecaptcha(recaptchaMock)
 
-        return ins.render(ele, key, {}, (widgetId) => {
+        return ins.render(ele, {sitekey}, (widgetId) => {
           expect(recaptchaMock.render).toBeCalled()
           expect(widgetId).toBe(WIDGET_ID)
         })

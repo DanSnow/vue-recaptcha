@@ -14,6 +14,6 @@ describe('Recaptcha', () => {
     const wrapper = createWrapper({ sitekey: SITE_KEY })
     expect(recaptcha.checkRecaptchaLoad).toBeCalled()
     expect(recaptcha.render.mock.calls[0][0]).toBe(wrapper.instance().$refs.container)
-    expect(recaptcha.render.mock.calls[0][1]).toBe(SITE_KEY)
+    expect(recaptcha.render.mock.calls[0][1]).toMatchSnapshot('ReCAPTCHA options')
   })
 })
