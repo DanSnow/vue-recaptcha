@@ -40,6 +40,9 @@ export default {
     reset () {
       recaptcha.reset(this.$widgetId)
     },
+    execute () {
+      recaptcha.execute(this.$widgetId)
+    },
     emitVerify (response) {
       this.$emit('verify', response)
     },

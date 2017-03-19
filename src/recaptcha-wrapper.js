@@ -61,6 +61,15 @@ export function createRecaptcha () {
       this.getRecaptcha().then((recap) => recap.reset(widgetId))
     },
 
+    execute (widgetId) {
+      if (typeof widgetId === 'undefined') {
+        return
+      }
+
+      this.assertRecaptchaLoad()
+      this.getRecaptcha().then((recap) => recap.execute(widgetId))
+    },
+
     checkRecaptchaLoad () {
       if (window.hasOwnProperty('grecaptcha')) {
         this.setRecaptcha(window.grecaptcha)
