@@ -6,16 +6,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.min.js" defer></script>
   </head>
   <body>
-    <h1>This is example to use vue-recaptcha</h1>
     <div id="root">
-      <vue-recaptcha
-        ref="recaptcha"
-        @verify="onVerify"
-        @expired="onExpired"
-        :sitekey="opts.sitekey"
-        :options="opts">
-      </vue-recaptcha>
-      <button @click="resetRecaptcha"> Reset ReCAPTCHA </button>
+      <div>
+        <vue-recaptcha
+          ref="recaptcha"
+          @verify="onNormalVerify"
+          :sitekey="sitekey">
+        </vue-recaptcha>
+      </div>
+      <div>
+        <vue-recaptcha
+          @verify="onBindedVerify"
+          :sitekey="sitekey">
+          <button id="binded">Click me</button>
+        </vue-recaptcha>
+      </div>
+      <div>
+        <form id="form" @submit.prevent="onSubmit">
+          <vue-recaptcha
+            ref="invisibleRecaptcha"
+            @verify="onInvisibleVerify"
+            size="invisible"
+            :sitekey="sitekey">
+          </vue-recaptcha>
+          <button id="submit" type="submit" @click.prevent="onSubmit">Submit</button>
+        </form>
+      </div>
     </div>
     <script src="https://unpkg.com/vue@latest/dist/vue.min.js" defer></script>
     <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>

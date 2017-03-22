@@ -1,27 +1,31 @@
 /* global Vue: false, VueRecaptcha: false, sinon: false */
 
-window.verifyCallback = sinon.spy()
+window.normalVerifyCallback = sinon.spy()
+window.bindedVerifyCallback = sinon.spy()
+window.invisibleVerifyCallback = sinon.spy()
+
+function resetSpies () {
+  window.normalVerifyCallback.reset()
+  window.bindedVerifyCallback.reset()
+  window.invisibleVerifyCallback.reset()
+}
+
+window.resetSpies = resetSpies
 
 new Vue({ // eslint-disable-line no-new
   el: '#root',
   data: {
-    opts: {
-      sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
-    }
+    sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
   },
   components: {
     'vue-recaptcha': VueRecaptcha
   },
   methods: {
-    onVerify: function (response) {
-      console.log('Verify: ' + response)
-      window.verifyCallback()
+    onSubmit: function () {
+      this.$refs.invisibleRecaptcha.execute()
     },
-    onExpired: function () {
-      console.log('Expired')
-    },
-    resetRecaptcha () {
-      this.$refs.recaptcha.reset() // Direct call reset method
-    }
+    onNormalVerify: window.normalVerifyCallback,
+    onBindedVerify: window.bindedVerifyCallback,
+    onInvisibleVerify: window.invisibleVerifyCallback
   }
 })
