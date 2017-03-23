@@ -53,11 +53,6 @@ export default {
       this.$emit('expired')
     }
   },
-  events: {
-    recaptchaReset () {
-      this.reset()
-    }
-  },
   render (h) {
     return h(
       'div',
