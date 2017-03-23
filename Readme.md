@@ -101,10 +101,6 @@ For more information, please reference to [ReCAPTCHA document](recaptcha-params)
 - execute  
   Invoke reCAPTCHA challenge
 
-### Events ###
-- recaptchaReset
-  Reset ReCAPTCHA instance
-
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
 [recaptcha-params]: https://developers.google.com/recaptcha/docs/display#render_param
 [invisible-recaptcha-params]: https://developers.google.com/recaptcha/docs/invisible#render_param
