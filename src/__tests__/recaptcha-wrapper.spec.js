@@ -102,9 +102,6 @@ describe('recaptcha', () => {
     describe('#reset', () => {
       describe('When pass widget id', () => {
         it('Reset ReCAPTCHA', () => {
-          jest.resetAllMocks()
-          ins.setRecaptcha(recaptchaMock)
-
           ins.reset(WIDGET_ID)
 
           expect(recaptchaMock.reset).toBeCalled()
@@ -113,22 +110,21 @@ describe('recaptcha', () => {
 
       describe('When not pass widget id', () => {
         it('Do nothing', () => {
-          jest.resetAllMocks()
-          ins.setRecaptcha(recaptchaMock)
-
           ins.reset()
 
           expect(recaptchaMock.reset).not.toBeCalled()
         })
+      })
+
+      beforeEach(() => {
+        jest.resetAllMocks()
+        ins.setRecaptcha(recaptchaMock)
       })
     })
 
     describe('#execute', () => {
       describe('When pass widget id', () => {
         it('Execute ReCAPTCHA', () => {
-          jest.resetAllMocks()
-          ins.setRecaptcha(recaptchaMock)
-
           ins.execute(WIDGET_ID)
 
           expect(recaptchaMock.execute).toBeCalled()
@@ -137,13 +133,15 @@ describe('recaptcha', () => {
 
       describe('When not pass widget id', () => {
         it('Do nothing', () => {
-          jest.resetAllMocks()
-          ins.setRecaptcha(recaptchaMock)
-
           ins.execute()
 
           expect(recaptchaMock.execute).not.toBeCalled()
         })
+      })
+
+      beforeEach(() => {
+        jest.resetAllMocks()
+        ins.setRecaptcha(recaptchaMock)
       })
     })
   })
