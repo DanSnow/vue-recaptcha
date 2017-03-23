@@ -85,7 +85,6 @@ describe('recaptcha', () => {
       })
     })
 
-
     describe('#render', () => {
       it('Render ReCAPTCHA', () => {
         const ele = document.createElement('div')
