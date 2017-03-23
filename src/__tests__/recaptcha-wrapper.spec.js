@@ -16,17 +16,18 @@ describe('recaptcha', () => {
     })
 
     describe('#assertRecaptchaLoad', () => {
-      describe('When Recaptcha not loaded', () => {
-        it('Throw', () => {
+      describe('When ReCAPTCHA not loaded', () => {
+        it('Throw error', () => {
           expect(() => {
             ins.assertRecaptchaLoad()
           }).toThrow()
         })
       })
 
-      describe('When Recaptcha loaded', () => {
-        it('Not throw', () => {
+      describe('When ReCAPTCHA loaded', () => {
+        it('Not throw error', () => {
           ins.setRecaptcha(recaptchaMock)
+
           expect(() => {
             ins.assertRecaptchaLoad()
           }).not.toThrow()
@@ -84,25 +85,6 @@ describe('recaptcha', () => {
       })
     })
 
-    describe('#assertRecaptchaLoad', () => {
-      describe('When ReCAPTCHA not loaded', () => {
-        it('Throw error', () => {
-          expect(() => {
-            ins.assertRecaptchaLoad()
-          }).toThrow()
-        })
-      })
-
-      describe('When ReCAPTCHA loaded', () => {
-        it('Not throw error', () => {
-          ins.setRecaptcha(recaptchaMock)
-
-          expect(() => {
-            ins.assertRecaptchaLoad()
-          }).not.toThrow()
-        })
-      })
-    })
 
     describe('#render', () => {
       it('Render ReCAPTCHA', () => {
