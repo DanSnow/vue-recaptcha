@@ -166,11 +166,6 @@ var VueRecaptcha$1 = {
       this.$emit('expired');
     }
   },
-  events: {
-    recaptchaReset: function recaptchaReset() {
-      this.reset();
-    }
-  },
   render: function render(h) {
     return h('div', { ref: 'container' }, this.$slots.default);
   }
