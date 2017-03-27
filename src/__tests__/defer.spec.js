@@ -18,6 +18,19 @@ describe('defer', () => {
       deferred.resolve(value)
       expect(fn).toBeCalledWith(value)
     })
+
+    it('Wont resolve twice', () => {
+      const deferred = defer()
+      const fn = jest.fn()
+      const value = 42
+      const value2 = 24
+
+      deferred.promise.then(fn)
+
+      deferred.resolve(value)
+      deferred.resolve(value2)
+      expect(fn).toBeCalledWith(value)
+    })
   })
 
   describe('#resolved', () => {
