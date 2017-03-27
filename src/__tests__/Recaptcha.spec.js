@@ -1,6 +1,6 @@
 import {mount} from 'avoriaz'
 import Recaptcha from '../Recaptcha'
-import recaptcha from '../recaptcha-wrapper'
+import recaptcha, {WIDGET_ID} from '../recaptcha-wrapper'
 
 jest.mock('../recaptcha-wrapper')
 
@@ -33,5 +33,15 @@ describe('Recaptcha', () => {
     expect(expired).toBeCalled()
 
     wrapper.instance().$off()
+  })
+
+  it('Can reset/execute', () => {
+    expect(recaptcha.reset).not.toBeCalled()
+    wrapper.instance().reset()
+    expect(recaptcha.reset).toBeCalledWith(WIDGET_ID)
+
+    expect(recaptcha.execute).not.toBeCalled()
+    wrapper.instance().execute()
+    expect(recaptcha.execute).toBeCalledWith(WIDGET_ID)
   })
 })
