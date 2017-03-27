@@ -10,10 +10,28 @@ const createWrapper = (propsData) => {
 }
 
 describe('Recaptcha', () => {
+  const wrapper = createWrapper({ sitekey: SITE_KEY })
+
   it('Should render ReCAPTCHA', () => {
-    const wrapper = createWrapper({ sitekey: SITE_KEY })
     expect(recaptcha.checkRecaptchaLoad).toBeCalled()
     expect(recaptcha.render.mock.calls[0][0]).toBe(wrapper.instance().$refs.container)
     expect(recaptcha.render.mock.calls[0][1]).toMatchSnapshot('ReCAPTCHA options')
+  })
+
+  it('Emit events', () => {
+    const verify = jest.fn()
+    const expired = jest.fn()
+    wrapper.instance().$on('verify', verify)
+    wrapper.instance().$on('expired', expired)
+
+    expect(verify).not.toBeCalled()
+    wrapper.instance().emitVerify()
+    expect(verify).toBeCalled()
+
+    expect(expired).not.toBeCalled()
+    wrapper.instance().emitExpired()
+    expect(expired).toBeCalled()
+
+    wrapper.instance().$off()
   })
 })
