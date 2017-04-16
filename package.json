@@ -5,7 +5,8 @@
   "module": "src/main.js",
   "main": "dist/vue-recaptcha.js",
   "scripts": {
-    "lint": "eslint .",
+    "precommit": "lint-staged",
+    "lint": "prettier-eslint --write {e2e,example,src}/**/*.js",
     "umd": "rollup -c && rollup -c rollup.min.config.js",
     "test": "yarn run lint && NODE_ENV='test' jest"
   },
@@ -24,6 +25,12 @@
   },
   "bugs": {
     "url": "https://github.com/DanSnow/vue-recaptcha/issues"
+  },
+  "lint-staged": {
+    "{e2e,example,src}/**/*.js": [
+      "prettier-eslint --write",
+      "git add"
+    ]
   },
   "peerDependencies": {
     "vue": "^2.0.0"
@@ -50,9 +57,12 @@
     "eslint-plugin-react": "^6.10.3",
     "eslint-plugin-standard": "^3.0.1",
     "http-server": "^0.9.0",
+    "husky": "^0.13.3",
     "jest": "^19.0.2",
+    "lint-staged": "^3.4.0",
     "nightmare": "^2.10.0",
     "nightmare-iframe-manager": "^0.0.4",
+    "prettier-eslint-cli": "^3.3.0",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-uglify": "^1.0.1",
