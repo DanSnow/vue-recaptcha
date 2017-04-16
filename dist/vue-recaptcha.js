@@ -134,9 +134,6 @@ var VueRecaptcha$1 = {
       type: String
     }
   },
-  created: function created() {
-    this.$widgetId = null;
-  },
   mounted: function mounted() {
     var _this = this;
 
