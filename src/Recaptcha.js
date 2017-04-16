@@ -23,9 +23,6 @@ export default {
       type: String
     }
   },
-  created () {
-    this.$widgetId = null
-  },
   mounted () {
     recaptcha.checkRecaptchaLoad()
     const opts = {
