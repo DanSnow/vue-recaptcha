@@ -1,5 +1,6 @@
 /* global Vue: false, VueRecaptcha: false */
-new Vue({ // eslint-disable-line no-new
+// eslint-disable-next-line no-new
+new Vue({
   el: '#root',
   data: {
     sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'

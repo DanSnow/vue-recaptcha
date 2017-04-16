@@ -13,7 +13,7 @@ export function createRecaptcha () {
     },
 
     render (ele, options, cb) {
-      this.getRecaptcha().then((recap) => {
+      this.getRecaptcha().then(recap => {
         cb(recap.render(ele, options))
       })
     },
@@ -24,7 +24,7 @@ export function createRecaptcha () {
       }
 
       this.assertRecaptchaLoad()
-      this.getRecaptcha().then((recap) => recap.reset(widgetId))
+      this.getRecaptcha().then(recap => recap.reset(widgetId))
     },
 
     execute (widgetId) {
@@ -33,7 +33,7 @@ export function createRecaptcha () {
       }
 
       this.assertRecaptchaLoad()
-      this.getRecaptcha().then((recap) => recap.execute(widgetId))
+      this.getRecaptcha().then(recap => recap.execute(widgetId))
     },
 
     checkRecaptchaLoad () {

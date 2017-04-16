@@ -5,17 +5,21 @@ import recaptcha, {WIDGET_ID} from '../recaptcha-wrapper'
 jest.mock('../recaptcha-wrapper')
 
 const SITE_KEY = 'sitekey'
-const createWrapper = (propsData) => {
+const createWrapper = propsData => {
   return mount(Recaptcha, {propsData})
 }
 
 describe('Recaptcha', () => {
-  const wrapper = createWrapper({ sitekey: SITE_KEY })
+  const wrapper = createWrapper({sitekey: SITE_KEY})
 
   it('Should render ReCAPTCHA', () => {
     expect(recaptcha.checkRecaptchaLoad).toBeCalled()
-    expect(recaptcha.render.mock.calls[0][0]).toBe(wrapper.instance().$refs.container)
-    expect(recaptcha.render.mock.calls[0][1]).toMatchSnapshot('ReCAPTCHA options')
+    expect(recaptcha.render.mock.calls[0][0]).toBe(
+      wrapper.instance().$refs.container
+    )
+    expect(recaptcha.render.mock.calls[0][1]).toMatchSnapshot(
+      'ReCAPTCHA options'
+    )
   })
 
   it('Emit events', () => {

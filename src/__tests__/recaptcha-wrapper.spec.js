@@ -1,4 +1,4 @@
-import recaptcha, { createRecaptcha } from '../recaptcha-wrapper'
+import recaptcha, {createRecaptcha} from '../recaptcha-wrapper'
 
 const WIDGET_ID = 'widgetId'
 const recaptchaMock = {
@@ -79,7 +79,7 @@ describe('recaptcha', () => {
     describe('#setRecaptcha', () => {
       it('Set recaptcha', () => {
         ins.setRecaptcha(recaptchaMock)
-        return Promise.resolve(ins.getRecaptcha()).then((recap) => {
+        return Promise.resolve(ins.getRecaptcha()).then(recap => {
           expect(recap).toBe(recaptchaMock)
         })
       })
@@ -92,7 +92,7 @@ describe('recaptcha', () => {
 
         ins.setRecaptcha(recaptchaMock)
 
-        return ins.render(ele, {sitekey}, (widgetId) => {
+        return ins.render(ele, {sitekey}, widgetId => {
           expect(recaptchaMock.render).toBeCalled()
           expect(widgetId).toBe(WIDGET_ID)
         })

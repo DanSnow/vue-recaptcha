@@ -2,19 +2,19 @@ const defer = () => {
   let state = false // Resolved or not
   let value
   const callbacks = []
-  const resolve = (val) => {
+  const resolve = val => {
     if (state) {
       return
     }
 
     state = true
     value = val
-    callbacks.forEach((cb) => {
+    callbacks.forEach(cb => {
       cb(val)
     })
   }
 
-  const then = (cb) => {
+  const then = cb => {
     if (!state) {
       callbacks.push(cb)
       return

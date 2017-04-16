@@ -62,10 +62,10 @@ describe('e2e', () => {
     })
 
     const nightmareInitial = nightmare
-        .goto('http://localhost:8080/e2e/index.html')
-        .wait(1000) // Wait for recaptcha loaded
+      .goto('http://localhost:8080/e2e/index.html')
+      .wait(1000) // Wait for recaptcha loaded
 
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       server = HttpServer.createServer({
         root: path.resolve(__dirname, '..')
       })
