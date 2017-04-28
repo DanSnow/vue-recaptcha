@@ -9,9 +9,9 @@ const defer = () => {
 
     state = true
     value = val
-    callbacks.forEach(cb => {
-      cb(val)
-    })
+    for (let i = 0, len = callbacks.length; i < len; i++) {
+      callbacks[i](val)
+    }
   }
 
   const then = cb => {
