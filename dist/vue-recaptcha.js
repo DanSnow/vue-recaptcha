@@ -15,9 +15,9 @@ var defer = function defer() {
 
     state = true;
     value = val;
-    callbacks.forEach(function (cb) {
-      cb(val);
-    });
+    for (var i = 0, len = callbacks.length; i < len; i++) {
+      callbacks[i](val);
+    }
   };
 
   var then = function then(cb) {
