@@ -32,6 +32,9 @@
       "git add"
     ]
   },
+  "jest": {
+    "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/e2e/"]
+  },
   "peerDependencies": {
     "vue": "^2.0.0"
   },
