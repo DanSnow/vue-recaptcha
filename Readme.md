@@ -96,10 +96,18 @@ For more information, please reference to [example](example)
 For more information, please reference to [ReCAPTCHA document](recaptcha-params) and [Invisible ReCAPTCHA document](invisible-recaptcha-params).  
 
 ### Methods ###
+
 - reset  
   Reset reCAPTCHA instance
 - execute  
   Invoke reCAPTCHA challenge
+
+### Events ###
+
+- verify
+  Emit on reCAPTCHA verified
+- expired
+  Emit on reCAPTCHA expired
 
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
 [recaptcha-params]: https://developers.google.com/recaptcha/docs/display#render_param
