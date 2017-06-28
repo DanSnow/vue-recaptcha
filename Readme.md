@@ -12,6 +12,23 @@ Google ReCAPTCHA component for vue.
 
 This version is for Vue 2.0. If you need Vue 1.x support please reference to [vue-v1.x][vue-v1.x].
 
+<!-- TOC -->
+
+- [Description](#description)
+- [Install](#install)
+  - [NPM](#npm)
+  - [CDN](#cdn)
+- [Usage](#usage)
+  - [General](#general)
+  - [Normal ReCAPTCHA](#normal-recaptcha)
+  - [Bind Challenge to Button](#bind-challenge-to-button)
+- [API](#api)
+  - [Props](#props)
+  - [Methods](#methods)
+  - [Events](#events)
+
+<!-- /TOC -->
+
 [vue-v1.x]: https://github.com/DanSnow/vue-recaptcha/tree/vue-v1.x
 
 ## Install ##
