@@ -121,9 +121,10 @@ For more information, please reference to [ReCAPTCHA document](recaptcha-params)
 
 ### Events ###
 
-- verify
+- verify(response)
   Emit on reCAPTCHA verified
-- expired
+  `response` is the successful reCAPTCHA response
+- expired()
   Emit on reCAPTCHA expired
 
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
