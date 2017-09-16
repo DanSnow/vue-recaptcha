@@ -97,8 +97,6 @@ if (typeof window !== 'undefined') {
   };
 }
 
-var babelHelpers = {};
-
 var _extends = Object.assign || function (target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i];
@@ -112,8 +110,6 @@ var _extends = Object.assign || function (target) {
 
   return target;
 };
-
-babelHelpers;
 
 var VueRecaptcha$1 = {
   name: 'VueRecaptcha',
