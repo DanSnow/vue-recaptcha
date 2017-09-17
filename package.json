@@ -8,7 +8,7 @@
     "precommit": "lint-staged",
     "lint": "prettier-eslint --write {e2e,example,src}/**/*.js",
     "umd": "rollup -c && rollup -c rollup.min.config.js",
-    "test": "yarn run lint && NODE_ENV='test' jest"
+    "test": "yarn run lint && NODE_ENV='test' yarn run jest"
   },
   "author": "DanSnow",
   "license": "MIT",
