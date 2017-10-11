@@ -110,7 +110,7 @@ For more information, please reference to [example](example)
 - badge (optional) (Invisible ReCAPTCHA only)  
   Position of the reCAPTCHA badge
 
-For more information, please reference to [ReCAPTCHA document](recaptcha-params) and [Invisible ReCAPTCHA document](invisible-recaptcha-params).  
+For more information, please reference to [ReCAPTCHA document][recaptcha-params] and [Invisible ReCAPTCHA document][invisible-recaptcha-params].  
 
 ### Methods ###
 
