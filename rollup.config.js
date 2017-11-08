@@ -1,14 +1,17 @@
 import babel from 'rollup-plugin-babel'
 
 export default {
-  entry: 'src/main.js',
+  input: 'src/main.js',
   exports: 'default',
-  format: 'umd',
-  moduleName: 'VueRecaptcha',
+  output: {
+    format: 'umd',
+    file: 'dist/vue-recaptcha.js'
+  },
+  name: 'VueRecaptcha',
   plugins: [
     babel({
       babelrc: false,
-      presets: [['env', { modules: false }]],
+      presets: [['env', {modules: false}]],
       plugins: [
         'transform-object-rest-spread',
         'transform-object-assign',
@@ -18,6 +21,5 @@ export default {
       externalHelpersWhitelist: ['extends'],
       exclude: 'node_modules/**'
     })
-  ],
-  dest: 'dist/vue-recaptcha.js'
+  ]
 }
