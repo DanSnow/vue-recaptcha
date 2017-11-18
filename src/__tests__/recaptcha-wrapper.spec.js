@@ -1,35 +1,42 @@
-import recaptcha, {createRecaptcha} from '../recaptcha-wrapper'
+import recaptcha, { createRecaptcha } from '../recaptcha-wrapper'
 
 const WIDGET_ID = 'widgetId'
-const recaptchaMock = {
-  render: jest.fn(() => WIDGET_ID),
-  reset: jest.fn(),
-  execute: jest.fn()
+function createMock () {
+  return {
+    render: jest.fn(() => WIDGET_ID),
+    reset: jest.fn(),
+    execute: jest.fn()
+  }
 }
 
 describe('recaptcha', () => {
   describe('#createRecaptcha', () => {
     let ins
+    let recaptchaMock
 
     beforeEach(() => {
+      recaptchaMock = createMock()
       ins = createRecaptcha()
+      window.grecaptcha = recaptchaMock
     })
 
-    describe('#assertRecaptchaLoad', () => {
+    afterEach(() => delete window.grecaptcha)
+
+    describe('#assertLoaded', () => {
       describe('When ReCAPTCHA not loaded', () => {
         it('Throw error', () => {
           expect(() => {
-            ins.assertRecaptchaLoad()
+            ins.assertLoaded()
           }).toThrow()
         })
       })
 
       describe('When ReCAPTCHA loaded', () => {
         it('Not throw error', () => {
-          ins.setRecaptcha(recaptchaMock)
+          ins.notify()
 
           expect(() => {
-            ins.assertRecaptchaLoad()
+            ins.assertLoaded()
           }).not.toThrow()
         })
       })
@@ -37,38 +44,37 @@ describe('recaptcha', () => {
 
     describe('#checkRecaptchaLoad', () => {
       describe('When Recaptcha not loaded', () => {
+        beforeEach(() => {
+          delete window.grecaptcha
+        })
+
         it('Not load Recaptcha into it', () => {
           ins.checkRecaptchaLoad()
           expect(() => {
-            ins.assertRecaptchaLoad()
+            ins.assertLoaded()
           }).toThrow()
         })
       })
 
       describe('When Recaptcha loaded', () => {
-        beforeEach(() => {
-          window.grecaptcha = recaptchaMock
-        })
-        afterEach(() => delete window.grecaptcha)
-
         it('Load Recaptcha', () => {
           ins.checkRecaptchaLoad()
 
           expect(() => {
-            ins.assertRecaptchaLoad()
+            ins.assertLoaded()
           }).not.toThrow()
         })
       })
     })
 
-    describe('#getRecaptcha', () => {
-      describe('Recaptcha not loaded', () => {
+    describe('#wait', () => {
+      describe('When recaptcha not loaded', () => {
         it('Return defered object', () => {
           const spy = jest.fn()
           // Since it return thenable, not Promise. Here must wrap it as Promise
-          const promise = Promise.resolve(ins.getRecaptcha()).then(spy)
+          const promise = Promise.resolve(ins.wait()).then(spy)
           expect(spy).not.toHaveBeenCalled()
-          ins.setRecaptcha(recaptchaMock)
+          ins.notify()
           return promise.then(() => {
             expect(spy).toHaveBeenCalled()
           })
@@ -76,12 +82,10 @@ describe('recaptcha', () => {
       })
     })
 
-    describe('#setRecaptcha', () => {
-      it('Set recaptcha', () => {
-        ins.setRecaptcha(recaptchaMock)
-        return Promise.resolve(ins.getRecaptcha()).then(recap => {
-          expect(recap).toBe(recaptchaMock)
-        })
+    describe('#notify', () => {
+      it('Resolve the deferred', () => {
+        ins.notify()
+        return Promise.resolve(ins.wait())
       })
     })
 
@@ -90,9 +94,9 @@ describe('recaptcha', () => {
         const ele = document.createElement('div')
         const sitekey = 'foo'
 
-        ins.setRecaptcha(recaptchaMock)
+        ins.notify()
 
-        return ins.render(ele, {sitekey}, widgetId => {
+        return ins.render(ele, { sitekey }, widgetId => {
           expect(recaptchaMock.render).toBeCalled()
           expect(widgetId).toBe(WIDGET_ID)
         })
@@ -118,7 +122,7 @@ describe('recaptcha', () => {
 
       beforeEach(() => {
         jest.resetAllMocks()
-        ins.setRecaptcha(recaptchaMock)
+        ins.notify()
       })
     })
 
@@ -140,21 +144,15 @@ describe('recaptcha', () => {
       })
 
       beforeEach(() => {
-        jest.resetAllMocks()
-        ins.setRecaptcha(recaptchaMock)
+        ins.notify()
       })
     })
   })
 
   describe('window.vueRecaptchaApiLoaded', () => {
-    beforeEach(() => {
-      window.grecaptcha = recaptchaMock
-    })
-    afterEach(() => delete window.grecaptcha)
-
     it('Load grecaptcha', () => {
       window.vueRecaptchaApiLoaded()
-      expect(() => recaptcha.assertRecaptchaLoad()).not.toThrow()
+      expect(() => recaptcha.assertLoaded()).not.toThrow()
     })
   })
 })

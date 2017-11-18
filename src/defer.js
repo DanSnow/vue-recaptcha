@@ -1,6 +1,5 @@
 const defer = () => {
   let state = false // Resolved or not
-  let value
   const callbacks = []
   const resolve = val => {
     if (state) {
@@ -8,7 +7,6 @@ const defer = () => {
     }
 
     state = true
-    value = val
     for (let i = 0, len = callbacks.length; i < len; i++) {
       callbacks[i](val)
     }
@@ -19,7 +17,7 @@ const defer = () => {
       callbacks.push(cb)
       return
     }
-    cb(value)
+    cb()
   }
 
   const deferred = {

@@ -4,17 +4,17 @@ export function createRecaptcha () {
   const deferred = defer()
 
   return {
-    setRecaptcha (recap) {
-      deferred.resolve(recap)
+    notify () {
+      deferred.resolve()
     },
 
-    getRecaptcha () {
+    wait () {
       return deferred.promise
     },
 
     render (ele, options, cb) {
-      this.getRecaptcha().then(recap => {
-        cb(recap.render(ele, options))
+      this.wait().then(() => {
+        cb(window.grecaptcha.render(ele, options))
       })
     },
 
@@ -23,8 +23,8 @@ export function createRecaptcha () {
         return
       }
 
-      this.assertRecaptchaLoad()
-      this.getRecaptcha().then(recap => recap.reset(widgetId))
+      this.assertLoaded()
+      this.wait().then(() => window.grecaptcha.reset(widgetId))
     },
 
     execute (widgetId) {
@@ -32,17 +32,17 @@ export function createRecaptcha () {
         return
       }
 
-      this.assertRecaptchaLoad()
-      this.getRecaptcha().then(recap => recap.execute(widgetId))
+      this.assertLoaded()
+      this.wait().then(() => window.grecaptcha.execute(widgetId))
     },
 
     checkRecaptchaLoad () {
       if (window.hasOwnProperty('grecaptcha')) {
-        this.setRecaptcha(window.grecaptcha)
+        this.notify()
       }
     },
 
-    assertRecaptchaLoad () {
+    assertLoaded () {
       if (!deferred.resolved()) {
         throw new Error('ReCAPTCHA has not been loaded')
       }
@@ -53,9 +53,7 @@ export function createRecaptcha () {
 const recaptcha = createRecaptcha()
 
 if (typeof window !== 'undefined') {
-  window.vueRecaptchaApiLoaded = () => {
-    recaptcha.setRecaptcha(window.grecaptcha)
-  }
+  window.vueRecaptchaApiLoaded = recaptcha.notify
 }
 
 export default recaptcha
