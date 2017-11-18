@@ -6,7 +6,6 @@
 
 var defer = function defer() {
   var state = false; // Resolved or not
-  var value = void 0;
   var callbacks = [];
   var resolve = function resolve(val) {
     if (state) {
@@ -14,7 +13,6 @@ var defer = function defer() {
     }
 
     state = true;
-    value = val;
     for (var i = 0, len = callbacks.length; i < len; i++) {
       callbacks[i](val);
     }
@@ -25,7 +23,7 @@ var defer = function defer() {
       callbacks.push(cb);
       return;
     }
-    cb(value);
+    cb();
   };
 
   var deferred = {
@@ -45,15 +43,15 @@ function createRecaptcha() {
   var deferred = defer();
 
   return {
-    setRecaptcha: function setRecaptcha(recap) {
-      deferred.resolve(recap);
+    notify: function notify() {
+      deferred.resolve();
     },
-    getRecaptcha: function getRecaptcha() {
+    wait: function wait() {
       return deferred.promise;
     },
     render: function render(ele, options, cb) {
-      this.getRecaptcha().then(function (recap) {
-        cb(recap.render(ele, options));
+      this.wait().then(function () {
+        cb(window.grecaptcha.render(ele, options));
       });
     },
     reset: function reset(widgetId) {
@@ -61,9 +59,9 @@ function createRecaptcha() {
         return;
       }
 
-      this.assertRecaptchaLoad();
-      this.getRecaptcha().then(function (recap) {
-        return recap.reset(widgetId);
+      this.assertLoaded();
+      this.wait().then(function () {
+        return window.grecaptcha.reset(widgetId);
       });
     },
     execute: function execute(widgetId) {
@@ -71,17 +69,17 @@ function createRecaptcha() {
         return;
       }
 
-      this.assertRecaptchaLoad();
-      this.getRecaptcha().then(function (recap) {
-        return recap.execute(widgetId);
+      this.assertLoaded();
+      this.wait().then(function () {
+        return window.grecaptcha.execute(widgetId);
       });
     },
     checkRecaptchaLoad: function checkRecaptchaLoad() {
       if (window.hasOwnProperty('grecaptcha')) {
-        this.setRecaptcha(window.grecaptcha);
+        this.notify();
       }
     },
-    assertRecaptchaLoad: function assertRecaptchaLoad() {
+    assertLoaded: function assertLoaded() {
       if (!deferred.resolved()) {
         throw new Error('ReCAPTCHA has not been loaded');
       }
@@ -92,9 +90,7 @@ function createRecaptcha() {
 var recaptcha = createRecaptcha();
 
 if (typeof window !== 'undefined') {
-  window.vueRecaptchaApiLoaded = function () {
-    recaptcha.setRecaptcha(window.grecaptcha);
-  };
+  window.vueRecaptchaApiLoaded = recaptcha.notify;
 }
 
 var _extends = Object.assign || function (target) {
