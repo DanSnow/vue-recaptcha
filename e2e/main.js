@@ -1,22 +1,13 @@
-/* global Vue: false, VueRecaptcha: false, sinon: false */
-
-window.normalVerifyCallback = sinon.spy()
-window.bindedVerifyCallback = sinon.spy()
-window.invisibleVerifyCallback = sinon.spy()
-
-function resetSpies () {
-  window.normalVerifyCallback.reset()
-  window.bindedVerifyCallback.reset()
-  window.invisibleVerifyCallback.reset()
-}
-
-window.resetSpies = resetSpies
+/* global Vue: false, VueRecaptcha: false */
 
 // eslint-disable-next-line no-new
 new Vue({
   el: '#root',
   data: {
-    sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+    sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+    normalVerified: false,
+    bindedVerified: false,
+    invisibleVerified: false
   },
   components: {
     'vue-recaptcha': VueRecaptcha
@@ -25,8 +16,14 @@ new Vue({
     onSubmit: function () {
       this.$refs.invisibleRecaptcha.execute()
     },
-    onNormalVerify: window.normalVerifyCallback,
-    onBindedVerify: window.bindedVerifyCallback,
-    onInvisibleVerify: window.invisibleVerifyCallback
+    onNormalVerify () {
+      this.normalVerified = true
+    },
+    onBindedVerify () {
+      this.bindedVerified = true
+    },
+    onInvisibleVerify () {
+      this.invisibleVerified = true
+    }
   }
 })

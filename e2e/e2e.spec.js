@@ -1,88 +1,72 @@
-import path from 'path'
-import Nightmare from 'nightmare'
 import HttpServer from 'http-server'
-import nightmareIFrame from 'nightmare-iframe-manager'
-
-nightmareIFrame(Nightmare)
+import path from 'path'
+import puppeteer from 'puppeteer'
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000 // Set timeout
 
+const URL = 'http://localhost:8080/e2e/index.html'
+
 describe('e2e', () => {
-  let nightmare
+  let browser
+  let page
   let server
-  const extractSpyResult = () => {
-    return [
-      window.normalVerifyCallback.calledOnce,
-      window.bindedVerifyCallback.calledOnce,
-      window.invisibleVerifyCallback.calledOnce
-    ]
-  }
 
   describe('Normal reCAPTCHA', () => {
     it('work', async () => {
-      let spyResult = await nightmare
-        .enterIFrame('iframe[name=undefined]')
-        .click('.recaptcha-checkbox')
-        .exitIFrame()
-        .wait(2000) // Wait for verified
-        .evaluate(extractSpyResult)
+      const frames = await page.frames()
+      const recaptchaFrame = frames[1]
 
-      expect(spyResult).toEqual([true, false, false])
+      const $recaptcha = await recaptchaFrame.$('.recaptcha-checkbox')
+      await $recaptcha.click()
+      return page.waitFor('#normal-verified')
     })
   })
 
   describe('Binded reCAPTCHA', () => {
     it('work', async () => {
-      let spyResult = await nightmare
-        .click('#binded')
-        .wait(2000) // Wait for verified
-        .evaluate(extractSpyResult)
-
-      expect(spyResult).toEqual([false, true, false])
+      const $btn = await page.$('#binded')
+      await $btn.click()
+      return page.waitFor('#binded-verified')
     })
   })
 
   describe('Invisible reCAPTCHA', () => {
     it('work', async () => {
-      let spyResult = await nightmare
-        .click('#submit')
-        .wait(2000) // Wait for verified
-        .evaluate(extractSpyResult)
-
-      expect(spyResult).toEqual([false, false, true])
+      const $btn = await page.$('#submit')
+      await $btn.click()
+      return page.waitFor('#invisible-verified')
     })
   })
 
   beforeAll(() => {
     // Setup http-server
-    nightmare = new Nightmare({
-      webPreferences: {
-        webSecurity: false // Need for access iframe
-      }
-    })
+    return Promise.all([
+      puppeteer
+        .launch({ headless: false })
+        .then(instance => {
+          browser = instance
+          return browser.newPage()
+        })
+        .then(x => (page = x)),
+      new Promise(resolve => {
+        server = HttpServer.createServer({
+          root: path.resolve(__dirname, '..')
+        })
 
-    const nightmareInitial = nightmare
-      .goto('http://localhost:8080/e2e/index.html')
-      .wait(1000) // Wait for recaptcha loaded
-
-    return new Promise(resolve => {
-      server = HttpServer.createServer({
-        root: path.resolve(__dirname, '..')
+        server.listen(8080, () => {
+          resolve()
+        })
       })
-
-      server.listen(8080, async () => {
-        await nightmareInitial
-        resolve()
-      })
-    })
+    ])
   })
 
-  beforeEach(() => {
-    return nightmare.evaluate(() => window.resetSpies())
+  beforeEach(async () => {
+    await page.goto(URL)
+    await page.waitFor(3000)
   })
 
   afterAll(() => {
     server.close()
-    return nightmare.end()
+    return browser.close()
   })
 })

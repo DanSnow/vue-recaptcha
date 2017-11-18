@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>vue-recaptcha exmaple</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sinon.js/1.15.4/sinon.min.js" defer></script>
   </head>
   <body>
     <div id="root">
@@ -13,6 +12,7 @@
           @verify="onNormalVerify"
           :sitekey="sitekey">
         </vue-recaptcha>
+        <div id="normal-verified" v-if="normalVerified">success</div>
       </div>
       <div>
         <vue-recaptcha
@@ -20,6 +20,7 @@
           :sitekey="sitekey">
           <button id="binded">Click me</button>
         </vue-recaptcha>
+        <div id="binded-verified" v-if="bindedVerified">success</div>
       </div>
       <div>
         <form id="form" @submit.prevent="onSubmit">
@@ -30,6 +31,7 @@
             :sitekey="sitekey">
           </vue-recaptcha>
           <button id="submit" type="submit" @click.prevent="onSubmit">Submit</button>
+          <div id="invisible-verified" v-if="invisibleVerified">success</div>
         </form>
       </div>
     </div>
