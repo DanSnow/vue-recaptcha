@@ -9,6 +9,7 @@ vue-recaptcha
 
 ## Description ##
 Google ReCAPTCHA component for vue.
+If you like this project, please leave a star on github.
 
 This version is for Vue 2.0. If you need Vue 1.x support please reference to [vue-v1.x][vue-v1.x].
 
@@ -26,6 +27,10 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
   - [Props](#props)
   - [Methods](#methods)
   - [Events](#events)
+- [Faq](#faq)
+  - [What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"?](#what-is-recaptcha-couldnt-find-user-provided-function-vuerecaptchaapiloaded)
+  - [How to test vue-recaptcha?](#how-to-test-vue-recaptcha)
+  - [How about an e2e testing (or integration testing)?](#how-about-an-e2e-testing-or-integration-testing)
 
 <!-- /TOC -->
 
@@ -129,7 +134,23 @@ For more information, please reference to [ReCAPTCHA document][recaptcha-params]
 - render(id)
   Emit on reCAPTCHA mounted on DOM 
   `id` is the widget id of the component
-  
+
+## Faq ##
+
+### What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"? ###
+
+It's because google's recaptcha have been loaded before your app.
+You can simply ignore it because vue-recaptcha can still detect and render recaptcha.
+If you care about this, try to move the script tag of recatpcha after to your app.
+
+### How to test vue-recaptcha? ###
+
+You can mock `window.grecaptcha` to bypass google's recaptcha.
+Here is an [example](example/__tests__/example.spec.js) which work with [jest](https://facebook.github.io/jest/).
+
+### How about an e2e testing (or integration testing)? ###
+
+Please refernece to [recaptcha's faq](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha-v2-what-should-i-do).
 
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
 [recaptcha-params]: https://developers.google.com/recaptcha/docs/display#render_param
