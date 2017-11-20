@@ -27,7 +27,7 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
   - [Props](#props)
   - [Methods](#methods)
   - [Events](#events)
-- [Faq](#faq)
+- [FAQ](#faq)
   - [What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"?](#what-is-recaptcha-couldnt-find-user-provided-function-vuerecaptchaapiloaded)
   - [How to test vue-recaptcha?](#how-to-test-vue-recaptcha)
   - [How about an e2e testing (or integration testing)?](#how-about-an-e2e-testing-or-integration-testing)
@@ -135,7 +135,7 @@ For more information, please reference to [ReCAPTCHA document][recaptcha-params]
   Emit on reCAPTCHA mounted on DOM 
   `id` is the widget id of the component
 
-## Faq ##
+## FAQ ##
 
 ### What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"? ###
 
