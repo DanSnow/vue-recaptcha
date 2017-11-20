@@ -30,9 +30,7 @@ export default {
       callback: this.emitVerify,
       'expired-callback': this.emitExpired
     }
-    const container = this.$slots.default
-      ? this.$refs.container.children[0]
-      : this.$refs.container
+    const container = this.$slots.default ? this.$el.children[0] : this.$el
     recaptcha.render(container, opts, id => {
       this.$widgetId = id
       this.$emit('render', id)
@@ -53,6 +51,6 @@ export default {
     }
   },
   render (h) {
-    return h('div', {ref: 'container'}, this.$slots.default)
+    return h('div', {}, this.$slots.default)
   }
 }

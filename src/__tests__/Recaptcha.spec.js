@@ -1,22 +1,21 @@
-import {mount} from 'avoriaz'
+import recaptcha, { WIDGET_ID } from '../recaptcha-wrapper'
+
 import Recaptcha from '../Recaptcha'
-import recaptcha, {WIDGET_ID} from '../recaptcha-wrapper'
+import { mount } from 'avoriaz'
 
 jest.mock('../recaptcha-wrapper')
 
 const SITE_KEY = 'sitekey'
 const createWrapper = propsData => {
-  return mount(Recaptcha, {propsData})
+  return mount(Recaptcha, { propsData })
 }
 
 describe('Recaptcha', () => {
-  const wrapper = createWrapper({sitekey: SITE_KEY})
+  const wrapper = createWrapper({ sitekey: SITE_KEY })
 
   it('Should render ReCAPTCHA', () => {
     expect(recaptcha.checkRecaptchaLoad).toBeCalled()
-    expect(recaptcha.render.mock.calls[0][0]).toBe(
-      wrapper.instance().$refs.container
-    )
+    expect(recaptcha.render.mock.calls[0][0]).toBe(wrapper.instance().$el)
     expect(recaptcha.render.mock.calls[0][1]).toMatchSnapshot(
       'ReCAPTCHA options'
     )
