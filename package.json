@@ -2,13 +2,13 @@
   "name": "vue-recaptcha",
   "version": "1.0.0",
   "description": "ReCAPTCHA vue component",
-  "module": "src/main.js",
+  "module": "dist/vue-recaptcha.es.js",
   "main": "dist/vue-recaptcha.js",
   "scripts": {
     "precommit": "lint-staged",
     "lint": "prettier-eslint --write {e2e,example,src}/**/*.js",
-    "umd": "rollup -c && rollup -c rollup.min.config.js",
     "test": "yarn lint && NODE_ENV='test' yarn jest"
+    "build": "rollup -c",
   },
   "author": "DanSnow",
   "license": "MIT",
