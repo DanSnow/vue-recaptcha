@@ -2,13 +2,15 @@
   "name": "vue-recaptcha",
   "version": "1.0.0",
   "description": "ReCAPTCHA vue component",
+  "types": "types/index.d.ts",
   "module": "dist/vue-recaptcha.es.js",
   "main": "dist/vue-recaptcha.js",
   "scripts": {
     "precommit": "lint-staged",
     "lint": "prettier-eslint --write {e2e,example,src}/**/*.js",
-    "test": "yarn lint && NODE_ENV='test' yarn jest"
     "build": "rollup -c",
+    "test": "yarn lint && NODE_ENV='test' yarn jest && yarn test:types",
+    "test:types": "tsc -p types/tests"
   },
   "author": "DanSnow",
   "license": "MIT",
@@ -63,6 +65,7 @@
     "rollup": "^0.52.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-uglify": "^2.0.0",
+    "typescript": "^2.6.2",
     "vue": "^2.5.13",
     "vue-template-compiler": "^2.5.13"
   },
