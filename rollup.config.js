@@ -1,6 +1,7 @@
 import babel from 'rollup-plugin-babel'
+import uglify from 'rollup-plugin-uglify'
 
-export default {
+const base = {
   input: 'src/index.js',
   exports: 'default',
   output: {
@@ -15,7 +16,6 @@ export default {
       plugins: [
         'transform-object-rest-spread',
         'transform-object-assign',
-        'transform-vue-jsx',
         'external-helpers'
       ],
       externalHelpersWhitelist: ['extends'],
@@ -23,3 +23,20 @@ export default {
     })
   ]
 }
+
+const minify = Object.assign({}, base, {
+  output: {
+    format: 'umd',
+    file: 'dist/vue-recaptcha.min.js'
+  },
+  plugins: [...base.plugins, uglify()]
+})
+
+const es = Object.assign({}, base, {
+  output: {
+    format: 'es',
+    file: 'dist/vue-recaptcha.es.js'
+  }
+})
+
+export default [base, minify, es]

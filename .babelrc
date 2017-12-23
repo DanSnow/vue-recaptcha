@@ -1,6 +1,6 @@
 {
-  "presets": [["env", { "modules": false }]],
-  "plugins": ["transform-vue-jsx", "transform-object-assign", "transform-object-rest-spread"],
+  "presets": [["env", {"modules": false}]],
+  "plugins": ["transform-object-assign", "transform-object-rest-spread"],
   "env": {
     "test": {
       "presets": ["env"]

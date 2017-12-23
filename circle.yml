@@ -23,7 +23,7 @@ deployment:
   release:
     branch: master
     commands:
-      - yarn run umd
+      - yarn build
       - git config user.email 'DanSnow@users.noreply.github.com'
       - git config user.name 'circleci'
       - "git add dist && git commit -m 'ci: Compile [skip ci]' && git push || true"
