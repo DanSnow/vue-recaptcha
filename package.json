@@ -1,6 +1,6 @@
 {
   "name": "vue-recaptcha",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "ReCAPTCHA vue component",
   "types": "types/index.d.ts",
   "module": "dist/vue-recaptcha.es.js",
@@ -29,10 +29,16 @@
     "url": "https://github.com/DanSnow/vue-recaptcha/issues"
   },
   "lint-staged": {
-    "{e2e,example,src}/**/*.js": ["prettier-eslint --write", "git add"]
+    "{e2e,example,src}/**/*.js": [
+      "prettier-eslint --write",
+      "git add"
+    ]
   },
   "jest": {
-    "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/e2e/"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/e2e/"
+    ]
   },
   "peerDependencies": {
     "vue": "^2.0.0"
