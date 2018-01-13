@@ -107,7 +107,7 @@ var _extends = Object.assign || function (target) {
   return target;
 };
 
-var VueRecaptcha$1 = {
+var VueRecaptcha = {
   name: 'VueRecaptcha',
   props: {
     sitekey: {
@@ -164,6 +164,6 @@ var VueRecaptcha$1 = {
   }
 };
 
-return VueRecaptcha$1;
+return VueRecaptcha;
 
 })));
