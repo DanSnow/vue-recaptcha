@@ -20,8 +20,7 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
   - [NPM](#npm)
   - [CDN](#cdn)
 - [Usage](#usage)
-  - [General](#general)
-  - [Normal ReCAPTCHA](#normal-recaptcha)
+  - [Get started](#get-started)
   - [Bind Challenge to Button](#bind-challenge-to-button)
 - [API](#api)
   - [Props](#props)
@@ -53,7 +52,7 @@ $ npm install --save vue-recaptcha
 
 ## Usage ##
 
-### General ###
+### Get started ###
 Place this in head to load reCAPTCHA:
 ```html
 <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
@@ -63,7 +62,8 @@ Place this in head to load reCAPTCHA:
 With `onload` callback, it will notify us when the api is ready for use.
 ```
 
-### Normal ReCAPTCHA ###
+Then include `vue-recaptcha` in your app.
+
 ```vue
 <template>
   <vue-recaptcha sitekey="Your key here"></vue-recaptcha>
