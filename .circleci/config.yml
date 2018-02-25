@@ -26,6 +26,8 @@ jobs:
           command: yarn test:ci
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+      - store_test_results:
+          path: reports/junit/js-test-results.xml
   deploy:
     docker:
       - image: circleci/node:9
