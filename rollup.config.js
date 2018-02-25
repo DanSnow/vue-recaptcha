@@ -3,12 +3,12 @@ import uglify from 'rollup-plugin-uglify'
 
 const base = {
   input: 'src/index.js',
-  exports: 'default',
   output: {
+    name: 'VueRecaptcha',
     format: 'umd',
-    file: 'dist/vue-recaptcha.js'
+    file: 'dist/vue-recaptcha.js',
+    exports: 'default'
   },
-  name: 'VueRecaptcha',
   plugins: [
     babel({
       babelrc: false,
@@ -25,18 +25,18 @@ const base = {
 }
 
 const minify = Object.assign({}, base, {
-  output: {
+  output: Object.assign({}, base.output, {
     format: 'umd',
     file: 'dist/vue-recaptcha.min.js'
-  },
+  }),
   plugins: [...base.plugins, uglify()]
 })
 
 const es = Object.assign({}, base, {
-  output: {
+  output: Object.assign({}, base.output, {
     format: 'es',
     file: 'dist/vue-recaptcha.es.js'
-  }
+  })
 })
 
 export default [base, minify, es]
