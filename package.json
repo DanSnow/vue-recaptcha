@@ -7,9 +7,11 @@
   "main": "dist/vue-recaptcha.js",
   "scripts": {
     "precommit": "lint-staged",
-    "lint": "prettier-eslint --write {e2e,example,src}/**/*.js",
+    "lint": "prettier-eslint --write {e2e,example,src}/**/*.js && eslint .",
     "build": "rollup -c",
-    "test": "yarn lint && NODE_ENV='test' yarn jest && yarn test:types",
+    "test": "yarn lint && jest && yarn test:types",
+    "test:ci":
+      "yarn lint && jest --ci --testResultsProcessor='jest-junit' && yarn test:types",
     "test:types": "tsc -p types/tests"
   },
   "author": "DanSnow",
@@ -29,16 +31,10 @@
     "url": "https://github.com/DanSnow/vue-recaptcha/issues"
   },
   "lint-staged": {
-    "{e2e,example,src}/**/*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "{e2e,example,src}/**/*.js": ["prettier-eslint --write", "git add"]
   },
   "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "<rootDir>/e2e/"
-    ]
+    "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/e2e/"]
   },
   "peerDependencies": {
     "vue": "^2.0.0"
@@ -65,6 +61,7 @@
     "http-server": "^0.11.0",
     "husky": "^0.14.3",
     "jest": "^22.0.4",
+    "jest-junit": "^3.6.0",
     "lint-staged": "^7.0.0",
     "prettier-eslint-cli": "^4.6.1",
     "puppeteer": "^1.0.0",
