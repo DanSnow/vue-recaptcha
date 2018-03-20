@@ -82,8 +82,8 @@ Then include `vue-recaptcha` in your app.
 ```vue
 <template>
   <vue-recaptcha sitekey="Your key here">
-    <button>Click me</button>
   </vue-recaptcha>
+  <button>Click me</button>
 </template>
 
 <script>
