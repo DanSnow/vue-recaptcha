@@ -56,7 +56,7 @@ export function createRecaptcha () {
 			addGoogleRecaptcaScript.src = recaptchaSrc;
 			document.getElementsByTagName('head')[0].appendChild(addGoogleRecaptcaScript);
 		}
-	}
+	},
 
     checkRecaptchaLoad () {
       if (window.hasOwnProperty('grecaptcha')) {
