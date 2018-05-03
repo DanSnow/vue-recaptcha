@@ -37,7 +37,10 @@ export function createRecaptcha () {
     },
 
     checkRecaptchaLoad () {
-      if (window.hasOwnProperty('grecaptcha')) {
+      if (
+        window.hasOwnProperty('grecaptcha') &&
+        window.grecaptcha.hasOwnProperty('render')
+      ) {
         this.notify()
       }
     },
