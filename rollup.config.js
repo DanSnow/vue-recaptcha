@@ -1,5 +1,5 @@
 import babel from 'rollup-plugin-babel'
-import uglify from 'rollup-plugin-uglify'
+import {terser} from 'rollup-plugin-terser'
 
 const base = {
   input: 'src/index.js',
@@ -24,19 +24,23 @@ const base = {
   ]
 }
 
-const minify = Object.assign({}, base, {
-  output: Object.assign({}, base.output, {
+const minify = {
+  ...base,
+  output: {
+    ...base.output,
     format: 'umd',
     file: 'dist/vue-recaptcha.min.js'
-  }),
-  plugins: [...base.plugins, uglify()]
-})
+  },
+  plugins: [...base.plugins, terser()]
+}
 
-const es = Object.assign({}, base, {
-  output: Object.assign({}, base.output, {
+const es = {
+  ...base,
+  output: {
+    ...base.output,
     format: 'es',
     file: 'dist/vue-recaptcha.es.js'
-  })
-})
+  }
+}
 
 export default [base, minify, es]
