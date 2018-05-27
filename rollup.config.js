@@ -12,13 +12,8 @@ const base = {
   plugins: [
     babel({
       babelrc: false,
-      presets: [['env', {modules: false}]],
-      plugins: [
-        'transform-object-rest-spread',
-        'transform-object-assign',
-        'external-helpers'
-      ],
-      externalHelpersWhitelist: ['extends'],
+      presets: [['@babel/preset-env', {modules: false, loose: true}]],
+      plugins: [['@babel/plugin-proposal-object-rest-spread', {loose: true}]],
       exclude: 'node_modules/**'
     })
   ]
