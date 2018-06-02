@@ -1,7 +1,7 @@
 import recaptcha, { WIDGET_ID } from '../recaptcha-wrapper'
 
 import Recaptcha from '../Recaptcha'
-import { mount } from 'avoriaz'
+import { mount } from '@vue/test-utils'
 
 jest.mock('../recaptcha-wrapper')
 
@@ -15,36 +15,29 @@ describe('Recaptcha', () => {
 
   it('Should render ReCAPTCHA', () => {
     expect(recaptcha.checkRecaptchaLoad).toBeCalled()
-    expect(recaptcha.render.mock.calls[0][0]).toBe(wrapper.instance().$el)
+    expect(recaptcha.render.mock.calls[0][0]).toBe(wrapper.vm.$el)
     expect(recaptcha.render.mock.calls[0][1]).toMatchSnapshot(
       'ReCAPTCHA options'
     )
   })
 
   it('Emit events', () => {
-    const verify = jest.fn()
-    const expired = jest.fn()
-    wrapper.instance().$on('verify', verify)
-    wrapper.instance().$on('expired', expired)
+    expect(wrapper.emitted()).not.toContainKey('verify')
+    wrapper.vm.emitVerify()
+    expect(wrapper.emitted().verify).toBeTruthy()
 
-    expect(verify).not.toBeCalled()
-    wrapper.instance().emitVerify()
-    expect(verify).toBeCalled()
-
-    expect(expired).not.toBeCalled()
-    wrapper.instance().emitExpired()
-    expect(expired).toBeCalled()
-
-    wrapper.instance().$off()
+    expect(wrapper.emitted()).not.toContainKey('expired')
+    wrapper.vm.emitExpired()
+    expect(wrapper.emitted().expired).toBeTruthy()
   })
 
   it('Can reset/execute', () => {
     expect(recaptcha.reset).not.toBeCalled()
-    wrapper.instance().reset()
+    wrapper.vm.reset()
     expect(recaptcha.reset).toBeCalledWith(WIDGET_ID)
 
     expect(recaptcha.execute).not.toBeCalled()
-    wrapper.instance().execute()
+    wrapper.vm.execute()
     expect(recaptcha.execute).toBeCalledWith(WIDGET_ID)
   })
 })
