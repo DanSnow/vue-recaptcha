@@ -1,5 +1,5 @@
 import VueRecaptcha from '../../src'
-import { mount } from 'avoriaz'
+import { mount } from '@vue/test-utils'
 
 const WIDGET_ID = 'widgetId'
 
