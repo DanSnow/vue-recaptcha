@@ -23,11 +23,9 @@ jobs:
             - ~/.cache/yarn
       - run:
           name: Test
-          command: yarn test:ci
-          environment:
-            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+          command: yarn test
       - store_test_results:
-          path: reports/junit/js-test-results.xml
+          path: reports
   deploy:
     docker:
       - image: circleci/node:10

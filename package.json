@@ -10,7 +10,6 @@
     "lint": "prettier-eslint --write {e2e,example,src}/**/*.js && eslint .",
     "build": "rollup -c",
     "test": "yarn lint && jest && yarn test:types",
-    "test:ci": "yarn lint && jest --ci --testResultsProcessor='jest-junit' && yarn test:types",
     "test:types": "tsc -p types/tests"
   },
   "author": "DanSnow",
@@ -30,15 +29,18 @@
     "url": "https://github.com/DanSnow/vue-recaptcha/issues"
   },
   "lint-staged": {
-    "{e2e,example,src}/**/*.js": [
-      "prettier-eslint --write",
-      "git add"
-    ]
+    "{e2e,example,src}/**/*.js": ["prettier-eslint --write", "git add"]
   },
   "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "<rootDir>/e2e/"
+    "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/e2e/"],
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "output": "reports/jest/results.xml"
+        }
+      ]
     ]
   },
   "peerDependencies": {
