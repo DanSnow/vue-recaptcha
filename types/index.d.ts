@@ -7,6 +7,7 @@ declare class VueRecaptcha extends Vue {
   type?: string
   size?: string
   tabindex?: string
+  hl?: string
 
   reset(): void
   execute(): void

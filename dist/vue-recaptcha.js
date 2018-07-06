@@ -131,6 +131,9 @@
       size: {
         type: String
       },
+      hl: {
+        type: String
+      },
       tabindex: {
         type: String
       }
