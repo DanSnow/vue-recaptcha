@@ -24,6 +24,7 @@ export default {
     }
   },
   mounted () {
+	recaptcha.loadRecaptcha()
     recaptcha.checkRecaptchaLoad()
     const opts = {
       ...this.$props,
