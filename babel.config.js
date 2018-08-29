@@ -5,7 +5,7 @@ module.exports = {
     [
       '@babel/preset-env',
       {
-        modules: __TEST__,
+        modules: __TEST__ ? 'commonjs' : false,
         loose: true
       }
     ]
