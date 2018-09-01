@@ -7,6 +7,8 @@ vue-recaptcha
 [![npm version](https://img.shields.io/npm/v/vue-recaptcha.svg?style=flat)](https://www.npmjs.com/package/vue-recaptcha)
 [![npm downloads](https://img.shields.io/npm/dm/vue-recaptcha.svg?style=flat)](https://www.npmjs.com/package/vue-recaptcha)
 
+<a href="https://www.buymeacoffee.com/4bLIeMVjZ" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
 ## Description ##
 Google ReCAPTCHA component for vue.
 If you like this package, please leave a star on github.
