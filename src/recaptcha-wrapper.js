@@ -15,7 +15,7 @@ export function createRecaptcha () {
     render (ele, options, cb) {
       this.wait().then(() => {
         if (!window.grecaptcha) {
-	         alert('ReCAPTCHA has not been loaded. Please refresh the page to reload it.');
+          throw new Error('ReCAPTCHA has not been loaded')
 	      }
         cb(window.grecaptcha.render(ele, options))
       })
