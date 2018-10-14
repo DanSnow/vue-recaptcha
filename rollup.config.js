@@ -7,7 +7,7 @@ const base = {
     name: 'VueRecaptcha',
     format: 'umd',
     file: 'dist/vue-recaptcha.js',
-    exports: 'default'
+    exports: 'named'
   },
   plugins: [
     babel({

@@ -1,12 +1,12 @@
 /* global Vue: false, VueRecaptcha: false */
+
+Vue.use(VueRecaptcha.default)
+
 // eslint-disable-next-line no-new
 new Vue({
   el: '#root',
   data: {
     sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
-  },
-  components: {
-    'vue-recaptcha': VueRecaptcha
   },
   methods: {
     onSubmit: function () {

@@ -13,9 +13,6 @@ export default {
     badge: {
       type: String
     },
-    type: {
-      type: String
-    },
     size: {
       type: String
     },
@@ -24,7 +21,7 @@ export default {
     }
   },
   mounted () {
-    recaptcha.checkRecaptchaLoad()
+    this.loadRecaptcha()
     const opts = {
       ...this.$props,
       callback: this.emitVerify,
@@ -39,6 +36,9 @@ export default {
   methods: {
     reset () {
       recaptcha.reset(this.$widgetId)
+    },
+    loadRecaptcha () {
+      recaptcha.checkRecaptchaLoad()
     },
     execute () {
       recaptcha.execute(this.$widgetId)

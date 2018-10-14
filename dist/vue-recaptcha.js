@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global.VueRecaptcha = factory());
-}(this, (function () { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (factory((global.VueRecaptcha = {})));
+}(this, (function (exports) { 'use strict';
 
   function _extends() {
     _extends = Object.assign || function (target) {
@@ -125,9 +125,6 @@
       badge: {
         type: String
       },
-      type: {
-        type: String
-      },
       size: {
         type: String
       },
@@ -138,7 +135,7 @@
     mounted: function mounted() {
       var _this = this;
 
-      recaptcha.checkRecaptchaLoad();
+      this.loadRecaptcha();
 
       var opts = _extends({}, this.$props, {
         callback: this.emitVerify,
@@ -156,6 +153,9 @@
       reset: function reset() {
         recaptcha.reset(this.$widgetId);
       },
+      loadRecaptcha: function loadRecaptcha() {
+        recaptcha.checkRecaptchaLoad();
+      },
       execute: function execute() {
         recaptcha.execute(this.$widgetId);
       },
@@ -171,6 +171,43 @@
     }
   };
 
-  return VueRecaptcha;
+  var URL = 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit';
+  var loaded = false;
+  function loadRecaptcha(lang) {
+    if (loaded) {
+      return;
+    }
+
+    loaded = true;
+    var $script = document.createElement('script');
+
+    if (lang) {
+      $script.src = URL + ("&hl=" + lang);
+    } else {
+      $script.src = URL;
+    }
+
+    $script.async = true;
+    document.head.appendChild($script);
+  }
+
+  var index = {
+    install: function install(Vue, options) {
+      if (options === void 0) {
+        options = {};
+      }
+
+      Vue.component('vue-recaptcha', VueRecaptcha);
+
+      VueRecaptcha.methods.loadRecaptcha = function () {
+        loadRecaptcha(options.language);
+      };
+    }
+  };
+
+  exports.VueRecaptcha = VueRecaptcha;
+  exports.default = index;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 
 })));

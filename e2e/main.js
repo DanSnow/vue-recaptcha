@@ -2,6 +2,8 @@
 
 // eslint-disable-next-line no-unused-vars
 function bootstrap () {
+  Vue.use(VueRecaptcha.default)
+
   // eslint-disable-next-line no-new
   new Vue({
     el: '#root',
@@ -10,9 +12,6 @@ function bootstrap () {
       normalVerified: false,
       bindedVerified: false,
       invisibleVerified: false
-    },
-    components: {
-      'vue-recaptcha': VueRecaptcha
     },
     methods: {
       onSubmit: function () {

@@ -119,9 +119,6 @@ var VueRecaptcha = {
     badge: {
       type: String
     },
-    type: {
-      type: String
-    },
     size: {
       type: String
     },
@@ -132,7 +129,7 @@ var VueRecaptcha = {
   mounted: function mounted() {
     var _this = this;
 
-    recaptcha.checkRecaptchaLoad();
+    this.loadRecaptcha();
 
     var opts = _extends({}, this.$props, {
       callback: this.emitVerify,
@@ -150,6 +147,9 @@ var VueRecaptcha = {
     reset: function reset() {
       recaptcha.reset(this.$widgetId);
     },
+    loadRecaptcha: function loadRecaptcha() {
+      recaptcha.checkRecaptchaLoad();
+    },
     execute: function execute() {
       recaptcha.execute(this.$widgetId);
     },
@@ -165,4 +165,39 @@ var VueRecaptcha = {
   }
 };
 
-export default VueRecaptcha;
+var URL = 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit';
+var loaded = false;
+function loadRecaptcha(lang) {
+  if (loaded) {
+    return;
+  }
+
+  loaded = true;
+  var $script = document.createElement('script');
+
+  if (lang) {
+    $script.src = URL + ("&hl=" + lang);
+  } else {
+    $script.src = URL;
+  }
+
+  $script.async = true;
+  document.head.appendChild($script);
+}
+
+var index = {
+  install: function install(Vue, options) {
+    if (options === void 0) {
+      options = {};
+    }
+
+    Vue.component('vue-recaptcha', VueRecaptcha);
+
+    VueRecaptcha.methods.loadRecaptcha = function () {
+      loadRecaptcha(options.language);
+    };
+  }
+};
+
+export default index;
+export { VueRecaptcha };

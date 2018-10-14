@@ -19,11 +19,13 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
 
 - [Description](#description)
 - [Install](#install)
-  - [NPM](#npm)
+  - [NPM (Recommend)](#npm-recommend)
   - [CDN](#cdn)
 - [Usage](#usage)
   - [Get started](#get-started)
   - [Bind Challenge to Button](#bind-challenge-to-button)
+  - [Configure Language](#configure-language)
+  - [Advanced Usage](#advanced-usage)
 - [API](#api)
   - [Props](#props)
   - [Methods](#methods)
@@ -39,7 +41,7 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
 
 ## Install ##
 
-### NPM ###
+### NPM (Recommend) ###
 
 ```shell
 $ npm install --save vue-recaptcha
@@ -55,13 +57,22 @@ $ npm install --save vue-recaptcha
 ## Usage ##
 
 ### Get started ###
-Place this in head to load reCAPTCHA:
-```html
-<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
-</script>
+```javascript
+import Vue from 'vue'
+import VueRecaptcha from 'vue-recaptcha'
+
+Vue.use(VueRecaptcha)
 ```
-```
-With `onload` callback, it will notify us when the api is ready for use.
+
+If you are still using commonjs or load the `vue-recaptcha` from CDN, you'll need:
+
+```javascript
+// commonjs
+const Vue = require('vue')
+const VueRecaptcha = require('VueRecaptcha').default
+Vue.use(VueRecaptcha)
+// CDN
+Vue.use(VueRecaptcha.default)
 ```
 
 Then include `vue-recaptcha` in your app.
@@ -72,10 +83,8 @@ Then include `vue-recaptcha` in your app.
 </template>
 
 <script>
-  import VueRecaptcha from 'vue-recaptcha';
   export default {
     ...
-    components: { VueRecaptcha }
   };
 </script>
 ```
@@ -89,10 +98,8 @@ Then include `vue-recaptcha` in your app.
 </template>
 
 <script>
-  import VueRecaptcha from 'vue-recaptcha';
   export default {
     ...
-    components: { VueRecaptcha }
   };
 </script>
 ```
@@ -101,21 +108,52 @@ Then include `vue-recaptcha` in your app.
 
 For more information, please reference to [example](example)
 
+### Configure Language ###
+
+By default recaptcha will automatically detect user's language.
+If you need to force the component to render in another language, you can configure it like this:
+
+```javascript
+import Vue from 'vue'
+import VueRecaptcha from 'vue-recaptcha'
+
+Vue.use(VueRecaptcha, {language: 'en'})
+```
+
+Please notice that it's not possible to change recaptcha language without page reload.
+
+### Advanced Usage ###
+
+You can directly import `VueRecaptcha` component like this:
+
+```vue
+<template>
+  <vue-recaptcha sitekey="Your key here"></vue-recaptcha>
+</template>
+<script>
+  import {VueRecaptcha} from 'vue-recaptcha'
+  export default {
+    components: {VueRecaptcha}
+  }
+</script>
+```
+
+This will disable the "autoload the recaptcha api" if you doesn't install the `VueRecaptcha` plugin.
+
 ## API ##
 
 ### Props ###
+
 - sitekey (required)  
   ReCAPTCHA site key
 - theme (optional)  
-  The color theme for reCAPTCHA
-- type (optional)  
-  The type of reCAPTCHA
+  The color theme for reCAPTCHA, default is `light`, available values: `dark`, `light`
 - size (optional)  
-  The size of reCAPTCHA
+  The size of reCAPTCHA, default is `normal`, available values: `normal`, `compact`, `invisible`
 - tabindex (optional)  
-  The tabindex of reCAPTCHA
+  The tabindex of reCAPTCHA, default is `0`
 - badge (optional) (Invisible ReCAPTCHA only)  
-  Position of the reCAPTCHA badge
+  Position of the reCAPTCHA badge, default is `bottomright`, available values: `bottomright`, `bottomleft`, `inline`
 
 For more information, please reference to [ReCAPTCHA document][recaptcha-params] and [Invisible ReCAPTCHA document][invisible-recaptcha-params].  
 
