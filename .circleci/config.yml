@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/vue-recaptcha
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:11
     steps:
       - checkout
       - restore_cache:
