@@ -7,18 +7,18 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: yarn-cache-{{ checksum "yarn.lock" }}
+          key: yarn-cache-v1-{{ checksum "yarn.lock" }}
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
       - run:
           name: Install depencies
           command: yarn install
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - save_cache:
-          key: yarn-cache-{{ checksum "yarn.lock" }}
+          key: yarn-cache-v1-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run:
@@ -33,18 +33,18 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: yarn-cache-{{ checksum "yarn.lock" }}
+          key: yarn-cache-v1-{{ checksum "yarn.lock" }}
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
       - run:
           name: Install depencies
           command: yarn install
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - save_cache:
-          key: yarn-cache-{{ checksum "yarn.lock" }}
+          key: yarn-cache-v1-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
       - run:
