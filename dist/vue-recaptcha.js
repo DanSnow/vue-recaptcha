@@ -1,8 +1,8 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.VueRecaptcha = {})));
-}(this, (function (exports) { 'use strict';
+  factory(global.VueRecaptcha = {});
+}(typeof self !== 'undefined' ? self : this, function (exports) { 'use strict';
 
   function _extends() {
     _extends = Object.assign || function (target) {
@@ -210,4 +210,4 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
