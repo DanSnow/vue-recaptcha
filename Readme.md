@@ -9,11 +9,17 @@ vue-recaptcha
 
 <a href="https://www.buymeacoffee.com/4bLIeMVjZ" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
-## Description ##
+Description
+-----------
+
 Google ReCAPTCHA component for vue.
 If you like this package, please leave a star on github.
 
 This version is for Vue 2.0. If you need Vue 1.x support please reference to [vue-v1.x][vue-v1.x].
+
+### reCAPTCHA V3
+
+**Notice**: This project currently not supporting reCAPTCHA v3.
 
 <!-- TOC -->
 
