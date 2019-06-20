@@ -107,6 +107,24 @@ Then include `vue-recaptcha` in your app.
 
 For more information, please reference to [example](example)
 
+### Auto-load `<script>`
+
+If `loadRecaptchaScript` props is set to `true`, vue-recaptcha will inject the required `<script>` tag. This means that manually placing the `<script>` tag is unneccessary.
+
+```vue
+<template>
+  <vue-recaptcha sitekey="Your key here" :loadRecaptchaScript="true"></vue-recaptcha>
+</template>
+
+<script>
+  import VueRecaptcha from 'vue-recaptcha';
+  export default {
+    ...
+    components: { VueRecaptcha }
+  };
+</script>
+```
+
 ## API ##
 
 ### Props ###
@@ -122,6 +140,15 @@ For more information, please reference to [example](example)
   The tabindex of reCAPTCHA
 - badge (optional) (Invisible ReCAPTCHA only)  
   Position of the reCAPTCHA badge
+- loadRecaptchaScript (optional)  
+  If `loadRecaptchaScript` is set to `true`, vue-recaptcha will inject the required `<script>` tag  
+  Default: `false`
+- recaptchaHost (optional)  
+  Set this to change the reCAPTCHA domain if neccessary, as described in [ReCAPTCHA support][recaptcha-global]  
+  Default: `www.google.com`
+- recaptchaScriptId (optional)  
+  Set this to change the injected `<script>` id. This should only be changed if it conflicts with existing id  
+  Default: `__RECAPTCHA_SCRIPT`
 
 For more information, please reference to [ReCAPTCHA document][recaptcha-params] and [Invisible ReCAPTCHA document][invisible-recaptcha-params].  
 
@@ -163,3 +190,4 @@ Please refernece to [recaptcha's faq](https://developers.google.com/recaptcha/do
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
 [recaptcha-params]: https://developers.google.com/recaptcha/docs/display#render_param
 [invisible-recaptcha-params]: https://developers.google.com/recaptcha/docs/invisible#render_param
+[recaptcha-global]: https://developers.google.com/recaptcha/docs/faq#can-i-use-recaptcha-globally
