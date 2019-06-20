@@ -36,7 +36,7 @@ export default {
     }
   },
   beforeMount () {
-    if (loadRecaptchaScript) {
+    if (this.loadRecaptchaScript) {
       if (!document.getElementById(this.recaptchaScriptId)) {
         // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
         const script = document.createElement('script')
