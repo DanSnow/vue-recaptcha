@@ -19,8 +19,7 @@ function bootstrap (loadScript) {
       // If `loadRecaptchaScript` is not set to `true`, we'll need to load it manually
       if (!this.loadScript) {
         const $script = document.createElement('script')
-        $script.src =
-          'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit'
+        $script.src = 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit'
         $script.async = true
         $script.defer = true
         document.head.appendChild($script)

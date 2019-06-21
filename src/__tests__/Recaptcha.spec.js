@@ -16,9 +16,7 @@ describe('Recaptcha', () => {
   it('Should render ReCAPTCHA', () => {
     expect(recaptcha.checkRecaptchaLoad).toBeCalled()
     expect(recaptcha.render.mock.calls[0][0]).toBe(wrapper.vm.$el)
-    expect(recaptcha.render.mock.calls[0][1]).toMatchSnapshot(
-      'ReCAPTCHA options'
-    )
+    expect(recaptcha.render.mock.calls[0][1]).toMatchSnapshot('ReCAPTCHA options')
   })
 
   it('Emit events', () => {
