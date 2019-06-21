@@ -21,6 +21,32 @@ export default {
     },
     tabindex: {
       type: String
+    },
+    loadRecaptchaScript: {
+      type: Boolean,
+      default: false
+    },
+    recaptchaScriptId: {
+      type: String,
+      default: '__RECAPTCHA_SCRIPT'
+    },
+    recaptchaHost: {
+      type: String,
+      default: 'www.google.com'
+    }
+  },
+  beforeMount () {
+    if (this.loadRecaptchaScript) {
+      if (!document.getElementById(this.recaptchaScriptId)) {
+        // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
+        const script = document.createElement('script')
+        script.id = this.recaptchaScriptId
+        script.src = `https://${this.recaptchaHost}/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit`
+        script.async = true
+        script.defer = true
+
+        document.head.appendChild(script)
+      }
     }
   },
   mounted () {
