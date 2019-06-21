@@ -133,6 +133,31 @@
       },
       tabindex: {
         type: String
+      },
+      loadRecaptchaScript: {
+        type: Boolean,
+        "default": false
+      },
+      recaptchaScriptId: {
+        type: String,
+        "default": '__RECAPTCHA_SCRIPT'
+      },
+      recaptchaHost: {
+        type: String,
+        "default": 'www.google.com'
+      }
+    },
+    beforeMount: function beforeMount() {
+      if (this.loadRecaptchaScript) {
+        if (!document.getElementById(this.recaptchaScriptId)) {
+          // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
+          var script = document.createElement('script');
+          script.id = this.recaptchaScriptId;
+          script.src = "https://" + this.recaptchaHost + "/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit";
+          script.async = true;
+          script.defer = true;
+          document.head.appendChild(script);
+        }
       }
     },
     mounted: function mounted() {
