@@ -1,15 +1,16 @@
 import { createServer } from 'http-server'
+import { format } from 'util'
 import path from 'path'
 import puppeteer from 'puppeteer'
 
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000 // Set timeout
+jest.setTimeout(20000) // Set timeout
 
 const URL = 'http://localhost:8080/e2e/index.html'
 
 let page
 
-function runE2ETest (script) {
-  describe(script, () => {
+function runE2ETest (script, loadScript) {
+  describe(`with ${format({ script, loadScript })}`, () => {
     describe('Normal reCAPTCHA', () => {
       it('work', async () => {
         const frames = await page.frames()
@@ -42,19 +43,20 @@ function runE2ETest (script) {
       await page.waitFor('#normal-verified', { polling: 'mutation' })
       await page.$eval(
         'body',
-        ($el, script) =>
+        ($el, script, loadScript) =>
           new Promise(resolve => {
             let $script = document.createElement('script')
             $script.defer = true
             $script.src = `../dist/${script}`
             $script.addEventListener('load', () => {
               // eslint-disable-next-line no-undef
-              bootstrap()
+              bootstrap(loadScript)
               resolve()
             })
             $el.appendChild($script)
           }),
-        script
+        script,
+        loadScript
       )
       await page.waitFor(3000)
     })
@@ -64,8 +66,10 @@ function runE2ETest (script) {
 describe('e2e', () => {
   let browser
   let server
-  runE2ETest('vue-recaptcha.js')
-  runE2ETest('vue-recaptcha.min.js')
+  runE2ETest('vue-recaptcha.js', false)
+  runE2ETest('vue-recaptcha.min.js', false)
+  runE2ETest('vue-recaptcha.js', true)
+  runE2ETest('vue-recaptcha.min.js', true)
 
   beforeAll(() => {
     // Setup http-server

@@ -10,6 +10,7 @@
         <vue-recaptcha
           ref="recaptcha"
           @verify="onNormalVerify"
+          :load-recaptcha-script="loadScript"
           :sitekey="sitekey">
         </vue-recaptcha>
         <div id="normal-verified" v-if="normalVerified">success</div>
@@ -17,6 +18,7 @@
       <div>
         <vue-recaptcha
           @verify="onBindedVerify"
+          :load-recaptcha-script="loadScript"
           :sitekey="sitekey">
           <button id="binded">Click me</button>
         </vue-recaptcha>
@@ -28,6 +30,7 @@
             ref="invisibleRecaptcha"
             @verify="onInvisibleVerify"
             size="invisible"
+            :load-recaptcha-script="loadScript"
             :sitekey="sitekey">
           </vue-recaptcha>
           <button id="submit" type="submit" @click.prevent="onSubmit">Submit</button>
@@ -36,7 +39,6 @@
       </div>
     </div>
     <script src="https://unpkg.com/vue@latest/dist/vue.min.js" defer></script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
     <script src="main.js" defer></script>
   </body>
 </html>
