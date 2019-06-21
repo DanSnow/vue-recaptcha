@@ -30,6 +30,7 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
 - [Usage](#usage)
   - [Get started](#get-started)
   - [Bind Challenge to Button](#bind-challenge-to-button)
+  - [Auto-load `<script>`](#auto-load-script)
 - [API](#api)
   - [Props](#props)
   - [Methods](#methods)
