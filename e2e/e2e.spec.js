@@ -75,7 +75,7 @@ describe('e2e', () => {
     // Setup http-server
     return Promise.all([
       puppeteer
-        .launch({ headless: false })
+        .launch()
         .then(instance => {
           browser = instance
           return browser.newPage()

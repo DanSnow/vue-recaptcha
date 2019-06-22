@@ -38,4 +38,14 @@ describe('Recaptcha', () => {
     wrapper.vm.execute()
     expect(recaptcha.execute).toBeCalledWith(WIDGET_ID)
   })
+
+  it('will load recaptcha script when `loadRecaptchaScript` set to `true`', () => {
+    const id = 'RECAPTCHA_SCRIPT_ID'
+    createWrapper({
+      sitekey: SITE_KEY,
+      loadRecaptchaScript: true,
+      recaptchaScriptId: id
+    })
+    expect(document.getElementById(id)).not.toBe(null)
+  })
 })
