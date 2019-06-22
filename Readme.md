@@ -12,6 +12,8 @@ vue-recaptcha
 Description
 -----------
 
+**Notice:** The document on github is always reference to master branch. For stable version, please read the document at [NPM](https://www.npmjs.com/package/vue-recaptcha).
+
 Google ReCAPTCHA component for vue.
 If you like this package, please leave a star on github.
 
