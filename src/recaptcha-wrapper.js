@@ -1,5 +1,7 @@
 import defer from './defer'
 
+const ownProp = Object.prototype.hasOwnProperty
+
 export function createRecaptcha () {
   const deferred = defer()
 
@@ -37,7 +39,7 @@ export function createRecaptcha () {
     },
 
     checkRecaptchaLoad () {
-      if (window.hasOwnProperty('grecaptcha') && window.grecaptcha.hasOwnProperty('render')) {
+      if (ownProp.call(window, 'grecaptcha') && ownProp.call(window.grecaptcha, 'render')) {
         this.notify()
       }
     },

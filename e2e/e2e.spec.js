@@ -45,7 +45,7 @@ function runE2ETest (script, loadScript) {
         'body',
         ($el, script, loadScript) =>
           new Promise(resolve => {
-            let $script = document.createElement('script')
+            const $script = document.createElement('script')
             $script.defer = true
             $script.src = `../dist/${script}`
             $script.addEventListener('load', () => {
