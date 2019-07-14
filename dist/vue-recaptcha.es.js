@@ -54,6 +54,7 @@ var defer = function defer() {
   return deferred;
 };
 
+var ownProp = Object.prototype.hasOwnProperty;
 function createRecaptcha() {
   var deferred = defer();
   return {
@@ -89,7 +90,7 @@ function createRecaptcha() {
       });
     },
     checkRecaptchaLoad: function checkRecaptchaLoad() {
-      if (window.hasOwnProperty('grecaptcha') && window.grecaptcha.hasOwnProperty('render')) {
+      if (ownProp.call(window, 'grecaptcha') && ownProp.call(window.grecaptcha, 'render')) {
         this.notify();
       }
     },
