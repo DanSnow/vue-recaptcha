@@ -54,7 +54,8 @@ export default {
     const opts = {
       ...this.$props,
       callback: this.emitVerify,
-      'expired-callback': this.emitExpired
+      'expired-callback': this.emitExpired,
+      'error-callback': this.emitError
     }
     const container = this.$slots.default ? this.$el.children[0] : this.$el
     recaptcha.render(container, opts, id => {
@@ -74,6 +75,9 @@ export default {
     },
     emitExpired () {
       this.$emit('expired')
+    },
+    emitError () {
+      this.$emit('error')
     }
   },
   render (h) {
