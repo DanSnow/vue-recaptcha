@@ -162,7 +162,8 @@ var VueRecaptcha = {
 
     var opts = _extends({}, this.$props, {
       callback: this.emitVerify,
-      'expired-callback': this.emitExpired
+      'expired-callback': this.emitExpired,
+      'error-callback': this.emitError
     });
 
     var container = this.$slots["default"] ? this.$el.children[0] : this.$el;
@@ -184,6 +185,9 @@ var VueRecaptcha = {
     },
     emitExpired: function emitExpired() {
       this.$emit('expired');
+    },
+    emitError: function emitError() {
+      this.$emit('error');
     }
   },
   render: function render(h) {
