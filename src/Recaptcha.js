@@ -36,7 +36,7 @@ export default {
     },
     language:{
       type:String,
-      default:'en'
+      default:''
     }
   },
   beforeMount () {
