@@ -45,7 +45,7 @@ export default {
         // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
         const script = document.createElement('script')
         script.id = this.recaptchaScriptId
-        script.src = `https://${this.recaptchaHost}/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit&hl={this.language}`
+        script.src = `https://${this.recaptchaHost}/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit&hl=${this.language}`
         script.async = true
         script.defer = true
 
