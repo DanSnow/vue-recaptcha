@@ -157,7 +157,7 @@ The following props will only work when `loadRecaptchaScript` is set as `true`
   Default: `__RECAPTCHA_SCRIPT`
 - language (optional)
   Set this to change the reCAPTCHA language if necessary, as described in [ReCAPTCHA support][recaptcha-global]
-  Default: '' `// user browser language by default
+  Default: '' `// user browser language by default`  
   **Notice**: It'll not work as you expecting when you change this props dynamicly. Since it's impossible to change the language without a full page reloading
 
 For more information, please reference to [ReCAPTCHA document][recaptcha-params] and [Invisible ReCAPTCHA document][invisible-recaptcha-params].
