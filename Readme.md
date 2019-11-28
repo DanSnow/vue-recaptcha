@@ -152,6 +152,9 @@ If `loadRecaptchaScript` props is set to `true`, vue-recaptcha will inject the r
 - recaptchaScriptId (optional)  
   Set this to change the injected `<script>` id. This should only be changed if it conflicts with existing id  
   Default: `__RECAPTCHA_SCRIPT`
+- language (optional)  
+  Set this to change the reCAPTCHA language if necessary, as described in [ReCAPTCHA support][recaptcha-global],  
+  Default: '' ```// user browser language by default```
 
 For more information, please reference to [ReCAPTCHA document][recaptcha-params] and [Invisible ReCAPTCHA document][invisible-recaptcha-params].  
 
