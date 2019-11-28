@@ -146,6 +146,9 @@ If `loadRecaptchaScript` props is set to `true`, vue-recaptcha will inject the r
 - loadRecaptchaScript (optional)
   If `loadRecaptchaScript` is set to `true`, vue-recaptcha will inject the required `<script>` tag
   Default: `false`
+
+The following props will only work when `loadRecaptchaScript` is set as `true`
+
 - recaptchaHost (optional)
   Set this to change the reCAPTCHA domain if neccessary, as described in [ReCAPTCHA support][recaptcha-global]
   Default: `www.google.com`
