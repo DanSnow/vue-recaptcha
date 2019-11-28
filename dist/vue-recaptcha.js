@@ -146,6 +146,10 @@
       recaptchaHost: {
         type: String,
         "default": 'www.google.com'
+      },
+      language: {
+        type: String,
+        "default": ''
       }
     },
     beforeMount: function beforeMount() {
@@ -154,7 +158,7 @@
           // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
           var script = document.createElement('script');
           script.id = this.recaptchaScriptId;
-          script.src = "https://" + this.recaptchaHost + "/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit";
+          script.src = "https://" + this.recaptchaHost + "/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit&hl=" + this.language;
           script.async = true;
           script.defer = true;
           document.head.appendChild(script);
