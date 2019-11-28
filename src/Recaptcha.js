@@ -34,9 +34,9 @@ export default {
       type: String,
       default: 'www.google.com'
     },
-    language:{
-      type:String,
-      default:''
+    language: {
+      type: String,
+      default: ''
     }
   },
   beforeMount () {
