@@ -170,7 +170,7 @@
 
       recaptcha.checkRecaptchaLoad();
 
-      var opts = _extends(_extends({}, this.$props), {}, {
+      var opts = _extends({}, this.$props, {
         callback: this.emitVerify,
         'expired-callback': this.emitExpired,
         'error-callback': this.emitError
