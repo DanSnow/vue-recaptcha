@@ -1,48 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>vue-recaptcha exmaple</title>
   </head>
   <body>
     <h1>This is example to use vue-recaptcha</h1>
     <div id="root">
       <div>
-        <vue-recaptcha
-          ref="recaptcha"
-          @verify="onVerify"
-          @expired="onExpired"
-          :sitekey="sitekey">
-        </vue-recaptcha>
-        <button @click="resetRecaptcha"> Reset ReCAPTCHA </button>
+        <vue-recaptcha ref="recaptcha" @verify="onVerify" @expired="onExpired" :sitekey="sitekey"> </vue-recaptcha>
+        <button @click="resetRecaptcha">Reset ReCAPTCHA</button>
       </div>
       <div>
-        <h3> Bind ReCAPTCHA to button </h3>
-        <vue-recaptcha
-          @verify="onVerify"
-          @expired="onExpired"
-          :sitekey="sitekey">
+        <h3>Bind ReCAPTCHA to button</h3>
+        <vue-recaptcha @verify="onVerify" @expired="onExpired" :sitekey="sitekey">
           <button>Click me</button>
         </vue-recaptcha>
       </div>
       <div>
-        <h3> Invisible ReCAPTCHA </h3>
+        <h3>Invisible ReCAPTCHA</h3>
         <form @submit.prevent="onSubmit">
           <vue-recaptcha
             ref="invisibleRecaptcha"
             @verify="onVerify"
             @expired="onExpired"
             size="invisible"
-            :sitekey="sitekey">
+            :sitekey="sitekey"
+          >
           </vue-recaptcha>
           <button type="submit">Submit</button>
         </form>
       </div>
     </div>
-    <script src="https://unpkg.com/vue@latest/dist/vue.js" defer></script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
-    </script>
+    <script src="https://unpkg.com/vue@3.0.0-rc.2/dist/vue.global.js" defer></script>
+    <script
+      src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit"
+      async
+      defer
+    ></script>
     <script src="../dist/vue-recaptcha.js" defer></script>
-    <script src="main.js" defer></script>
+    <script src="example/main.js" defer></script>
   </body>
 </html>

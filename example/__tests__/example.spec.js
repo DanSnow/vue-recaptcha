@@ -20,22 +20,17 @@ function createMock() {
 
 describe('Example spec', () => {
   let wrapper
-  let verify
-  let expired
+
   beforeEach(() => {
     window.grecaptcha = createMock()
-    verify = jest.fn()
-    expired = jest.fn()
     wrapper = mount(VueRecaptcha, {
-      propsData: { sitekey: 'sitekey' },
+      props: { sitekey: 'sitekey' },
     })
-    wrapper.vm.$on('verify', verify)
-    wrapper.vm.$on('expired', expired)
   })
 
   it('Should render recaptcha', () => {
     expect(window.grecaptcha.render).toBeCalled()
-    expect(wrapper.vm.$widgetId).toBe(WIDGET_ID)
+    expect(wrapper.vm.widgetId).toBe(WIDGET_ID)
   })
 
   it('Should call execute', () => {
@@ -50,11 +45,11 @@ describe('Example spec', () => {
 
   it('Should emit verify', () => {
     window.grecaptcha._verify()
-    expect(verify).toBeCalled()
+    expect(wrapper.emitted('verify').length).toBe(1)
   })
 
   it('Should emit expired', () => {
     window.grecaptcha._expire()
-    expect(expired).toBeCalled()
+    expect(wrapper.emitted('expired').length).toBe(1)
   })
 })

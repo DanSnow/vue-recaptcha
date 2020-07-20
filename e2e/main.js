@@ -2,16 +2,14 @@
 
 // eslint-disable-next-line no-unused-vars
 function bootstrap(loadScript) {
-  // eslint-disable-next-line no-new
-  new Vue({
-    el: '#root',
-    data: {
+  const app = Vue.createApp({
+    data: () => ({
       sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
       normalVerified: false,
       bindedVerified: false,
       invisibleVerified: false,
       loadScript,
-    },
+    }),
     components: {
       VueRecaptcha,
     },
@@ -40,4 +38,5 @@ function bootstrap(loadScript) {
       },
     },
   })
+  app.mount('#root')
 }
