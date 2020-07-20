@@ -8,7 +8,11 @@ const base = {
     format: 'umd',
     file: 'dist/vue-recaptcha.js',
     exports: 'default',
+    globals: {
+      vue: 'Vue',
+    },
   },
+  external: ['vue'],
   plugins: [
     babel({
       babelrc: false,
