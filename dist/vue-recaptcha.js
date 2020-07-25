@@ -156,7 +156,7 @@
       var slots = _ref.slots,
           emit = _ref.emit;
       var root = vue.ref(null);
-      var $widgetId = vue.ref(null);
+      var widgetId = vue.ref(null);
 
       var emitVerify = function emitVerify(response) {
         emit('verify', response);
@@ -191,27 +191,30 @@
           'error-callback': emitError
         });
 
-        var container = slots["default"] ? vue.unref(root).children[0] : vue.unref(root);
+        var $root = vue.unref(root);
+        var container = slots["default"] ? $root.children[0] : $root;
         recaptcha.render(container, opts, function (id) {
-          $widgetId.value = id;
+          widgetId.value = id;
           emit('render', id);
         });
       });
       return {
         root: root,
-        $widgetId: $widgetId,
+        widgetId: widgetId,
         reset: function reset() {
-          recaptcha.reset(vue.unref($widgetId));
+          recaptcha.reset(vue.unref(widgetId));
         },
         execute: function execute() {
-          recaptcha.execute(vue.unref($widgetId));
+          recaptcha.execute(vue.unref(widgetId));
         }
       };
     },
     render: function render() {
+      var _this$$slots$default, _this$$slots;
+
       return vue.h('div', {
         ref: 'root'
-      }, this.$slots["default"]);
+      }, (_this$$slots$default = (_this$$slots = this.$slots)["default"]) == null ? void 0 : _this$$slots$default.call(_this$$slots));
     }
   });
 
