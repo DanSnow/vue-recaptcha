@@ -191,7 +191,8 @@
           'error-callback': emitError
         });
 
-        var container = slots["default"] ? vue.unref(root).children[0] : vue.unref(root);
+        var $root = vue.unref(root);
+        var container = slots["default"] ? $root.children[0] : $root;
         recaptcha.render(container, opts, function (id) {
           widgetId.value = id;
           emit('render', id);
@@ -209,9 +210,11 @@
       };
     },
     render: function render() {
+      var _this$$slots$default, _this$$slots;
+
       return vue.h('div', {
         ref: 'root'
-      }, this.$slots["default"]);
+      }, (_this$$slots$default = (_this$$slots = this.$slots)["default"]) == null ? void 0 : _this$$slots$default.call(_this$$slots));
     }
   });
 
