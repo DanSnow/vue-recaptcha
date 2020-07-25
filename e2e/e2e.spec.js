@@ -15,9 +15,10 @@ function runE2ETest(script, loadScript) {
     describe('Normal reCAPTCHA', () => {
       it('work', async () => {
         const frames = await page.frames()
-        const recaptchaFrame = frames[1]
+        const recaptchaFrame = frames.find((frame) => frame.url().includes('anchor'))
 
         const $recaptcha = await recaptchaFrame.$('.recaptcha-checkbox')
+        expect($recaptcha).toBeTruthy()
         await $recaptcha.click()
         return page.waitForSelector('#normal-verified')
       })
@@ -76,7 +77,10 @@ describe('e2e', () => {
     // Setup http server & puppeteer
     return Promise.all([
       puppeteer
-        .launch()
+        .launch({
+          headless: false,
+          args: ['--disable-web-security', '--disable-features=IsolateOrigins,site-per-process'],
+        })
         .then((instance) => {
           browser = instance
           return browser.newPage()
