@@ -19,6 +19,10 @@ describe('Recaptcha', () => {
     expect(recaptcha.render.mock.calls[0][1]).toMatchSnapshot('ReCAPTCHA options')
   })
 
+  it('Expose $widgetId', () => {
+    expect(Object.prototype.hasOwnProperty.call(wrapper.vm, '$widgetId')).toBe(true)
+  })
+
   // it('Emit events', () => {
   //   expect(wrapper.emitted()).not.toContainKey('verify')
   //   wrapper.vm.emitVerify()
