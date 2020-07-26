@@ -78,7 +78,6 @@ describe('e2e', () => {
     return Promise.all([
       puppeteer
         .launch({
-          headless: false,
           args: ['--disable-web-security', '--disable-features=IsolateOrigins,site-per-process'],
         })
         .then((instance) => {
