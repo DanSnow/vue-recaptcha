@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
@@ -99,6 +100,11 @@ module.exports = {
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
+=======
+module.exports = {
+  testPathIgnorePatterns: ['/node_modules/'],
+  setupFilesAfterEnv: ['jest-extended'],
+>>>>>>> chore: Move config to config file
   reporters: [
     'default',
     [
@@ -108,6 +114,7 @@ module.exports = {
       },
     ],
   ],
+<<<<<<< HEAD
 
   // Automatically reset mock state between every test
   // resetMocks: false,
@@ -199,4 +206,6 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+=======
+>>>>>>> chore: Move config to config file
 }
