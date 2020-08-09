@@ -77,7 +77,7 @@ export default defineComponent({
         'expired-callback': emitExpired,
         'error-callback': emitError,
       }
-      const $root = unref(root)
+      const $root = root.value
       const container = slots.default ? $root.children[0] : $root
       recaptcha.render(container, opts, (id) => {
         widgetId.value = id
