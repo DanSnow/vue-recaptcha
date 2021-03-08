@@ -37,8 +37,7 @@
   },
   "lint-staged": {
     "{e2e,example,src}/**/*.js": [
-      "prettier-eslint --write",
-      "git add"
+      "eslint --fix"
     ]
   },
   "jest": {

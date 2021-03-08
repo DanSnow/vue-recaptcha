@@ -1,5 +1,9 @@
 {
-  "extends": ["standard", "standard-jsx"],
+  "extends": ["standard", "standard-jsx", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
   "env": {
     "browser": true
   }
