@@ -5,41 +5,41 @@ export default {
   props: {
     sitekey: {
       type: String,
-      required: true
+      required: true,
     },
     theme: {
-      type: String
+      type: String,
     },
     badge: {
-      type: String
+      type: String,
     },
     type: {
-      type: String
+      type: String,
     },
     size: {
-      type: String
+      type: String,
     },
     tabindex: {
-      type: String
+      type: String,
     },
     loadRecaptchaScript: {
       type: Boolean,
-      default: false
+      default: false,
     },
     recaptchaScriptId: {
       type: String,
-      default: '__RECAPTCHA_SCRIPT'
+      default: '__RECAPTCHA_SCRIPT',
     },
     recaptchaHost: {
       type: String,
-      default: 'www.google.com'
+      default: 'www.google.com',
     },
     language: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
-  beforeMount () {
+  beforeMount() {
     if (this.loadRecaptchaScript) {
       if (!document.getElementById(this.recaptchaScriptId)) {
         // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
@@ -53,38 +53,38 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted() {
     recaptcha.checkRecaptchaLoad()
     const opts = {
       ...this.$props,
       callback: this.emitVerify,
       'expired-callback': this.emitExpired,
-      'error-callback': this.emitError
+      'error-callback': this.emitError,
     }
     const container = this.$slots.default ? this.$el.children[0] : this.$el
-    recaptcha.render(container, opts, id => {
+    recaptcha.render(container, opts, (id) => {
       this.$widgetId = id
       this.$emit('render', id)
     })
   },
   methods: {
-    reset () {
+    reset() {
       recaptcha.reset(this.$widgetId)
     },
-    execute () {
+    execute() {
       recaptcha.execute(this.$widgetId)
     },
-    emitVerify (response) {
+    emitVerify(response) {
       this.$emit('verify', response)
     },
-    emitExpired () {
+    emitExpired() {
       this.$emit('expired')
     },
-    emitError () {
+    emitError() {
       this.$emit('error')
-    }
+    },
   },
-  render (h) {
+  render(h) {
     return h('div', {}, this.$slots.default)
-  }
+  },
 }

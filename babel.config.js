@@ -7,16 +7,16 @@ module.exports = {
       {
         modules: __TEST__ ? 'commonjs' : false,
         loose: true,
-        targets: __TEST__ ? { node: 'current' } : undefined
-      }
-    ]
+        targets: __TEST__ ? { node: 'current' } : undefined,
+      },
+    ],
   ],
   plugins: [
     [
       '@babel/plugin-proposal-object-rest-spread',
       {
-        loose: true
-      }
-    ]
-  ]
+        loose: true,
+      },
+    ],
+  ],
 }

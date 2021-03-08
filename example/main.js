@@ -3,10 +3,10 @@
 new Vue({
   el: '#root',
   data: {
-    sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+    sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
   },
   components: {
-    'vue-recaptcha': VueRecaptcha
+    'vue-recaptcha': VueRecaptcha,
   },
   methods: {
     onSubmit: function () {
@@ -18,8 +18,8 @@ new Vue({
     onExpired: function () {
       console.log('Expired')
     },
-    resetRecaptcha () {
+    resetRecaptcha() {
       this.$refs.recaptcha.reset() // Direct call reset method
-    }
-  }
+    },
+  },
 })

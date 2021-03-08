@@ -1,7 +1,7 @@
 /* global Vue: false, VueRecaptcha: false */
 
 // eslint-disable-next-line no-unused-vars
-function bootstrap (loadScript) {
+function bootstrap(loadScript) {
   // eslint-disable-next-line no-new
   new Vue({
     el: '#root',
@@ -10,12 +10,12 @@ function bootstrap (loadScript) {
       normalVerified: false,
       bindedVerified: false,
       invisibleVerified: false,
-      loadScript
+      loadScript,
     },
     components: {
-      VueRecaptcha
+      VueRecaptcha,
     },
-    mounted () {
+    mounted() {
       // If `loadRecaptchaScript` is not set to `true`, we'll need to load it manually
       if (!this.loadScript) {
         const $script = document.createElement('script')
@@ -29,15 +29,15 @@ function bootstrap (loadScript) {
       onSubmit: function () {
         this.$refs.invisibleRecaptcha.execute()
       },
-      onNormalVerify () {
+      onNormalVerify() {
         this.normalVerified = true
       },
-      onBindedVerify () {
+      onBindedVerify() {
         this.bindedVerified = true
       },
-      onInvisibleVerify () {
+      onInvisibleVerify() {
         this.invisibleVerified = true
-      }
-    }
+      },
+    },
   })
 }

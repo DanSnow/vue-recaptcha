@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 
 const WIDGET_ID = 'widgetId'
 
-function createMock () {
+function createMock() {
   return {
     render: jest.fn(function (ele, options) {
       // Save the callback
@@ -14,7 +14,7 @@ function createMock () {
     execute: jest.fn(function () {
       this._verify()
     }),
-    reset: jest.fn()
+    reset: jest.fn(),
   }
 }
 
@@ -27,7 +27,7 @@ describe('Example spec', () => {
     verify = jest.fn()
     expired = jest.fn()
     wrapper = mount(VueRecaptcha, {
-      propsData: { sitekey: 'sitekey' }
+      propsData: { sitekey: 'sitekey' },
     })
     wrapper.vm.$on('verify', verify)
     wrapper.vm.$on('expired', expired)

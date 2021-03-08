@@ -9,7 +9,7 @@ const URL = 'http://localhost:8080/e2e/index.html'
 
 let page
 
-function runE2ETest (script, loadScript) {
+function runE2ETest(script, loadScript) {
   describe(`with ${format({ script, loadScript })}`, () => {
     describe('Normal reCAPTCHA', () => {
       it('work', async () => {
@@ -44,7 +44,7 @@ function runE2ETest (script, loadScript) {
       await page.$eval(
         'body',
         ($el, script, loadScript) =>
-          new Promise(resolve => {
+          new Promise((resolve) => {
             const $script = document.createElement('script')
             $script.defer = true
             $script.src = `../dist/${script}`
@@ -76,20 +76,20 @@ describe('e2e', () => {
     return Promise.all([
       puppeteer
         .launch()
-        .then(instance => {
+        .then((instance) => {
           browser = instance
           return browser.newPage()
         })
-        .then(x => (page = x)),
-      new Promise(resolve => {
+        .then((x) => (page = x)),
+      new Promise((resolve) => {
         server = createServer({
-          root: path.resolve(__dirname, '..')
+          root: path.resolve(__dirname, '..'),
         })
 
         server.listen(8080, () => {
           resolve()
         })
-      })
+      }),
     ])
   })
 

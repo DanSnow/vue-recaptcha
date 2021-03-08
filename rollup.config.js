@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel'
+import babel from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 
 const base = {
@@ -7,16 +7,17 @@ const base = {
     name: 'VueRecaptcha',
     format: 'umd',
     file: 'dist/vue-recaptcha.js',
-    exports: 'default'
+    exports: 'default',
   },
   plugins: [
     babel({
       babelrc: false,
+      babelHelpers: 'bundled',
       presets: [['@babel/preset-env', { modules: false, loose: true }]],
       plugins: [['@babel/plugin-proposal-object-rest-spread', { loose: true }]],
-      exclude: 'node_modules/**'
-    })
-  ]
+      exclude: 'node_modules/**',
+    }),
+  ],
 }
 
 const minify = {
@@ -24,9 +25,9 @@ const minify = {
   output: {
     ...base.output,
     format: 'umd',
-    file: 'dist/vue-recaptcha.min.js'
+    file: 'dist/vue-recaptcha.min.js',
   },
-  plugins: [...base.plugins, terser()]
+  plugins: [...base.plugins, terser()],
 }
 
 const es = {
@@ -34,8 +35,8 @@ const es = {
   output: {
     ...base.output,
     format: 'es',
-    file: 'dist/vue-recaptcha.es.js'
-  }
+    file: 'dist/vue-recaptcha.es.js',
+  },
 }
 
 export default [base, minify, es]

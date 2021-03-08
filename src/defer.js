@@ -1,7 +1,7 @@
 const defer = () => {
   let state = false // Resolved or not
   const callbacks = []
-  const resolve = val => {
+  const resolve = (val) => {
     if (state) {
       return
     }
@@ -12,7 +12,7 @@ const defer = () => {
     }
   }
 
-  const then = cb => {
+  const then = (cb) => {
     if (!state) {
       callbacks.push(cb)
       return
@@ -21,13 +21,13 @@ const defer = () => {
   }
 
   const deferred = {
-    resolved () {
+    resolved() {
       return state
     },
     resolve,
     promise: {
-      then
-    }
+      then,
+    },
   }
   return deferred
 }

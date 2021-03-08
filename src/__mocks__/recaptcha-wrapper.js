@@ -1,7 +1,7 @@
 export const WIDGET_ID = 'widgetId'
 const grecaptchaMock = {
   render: jest.fn(() => WIDGET_ID),
-  reset: jest.fn()
+  reset: jest.fn(),
 }
 
 export default {
@@ -10,5 +10,5 @@ export default {
   reset: jest.fn(),
   execute: jest.fn(),
   checkRecaptchaLoad: jest.fn(),
-  assertRecaptchaLoad: jest.fn()
+  assertRecaptchaLoad: jest.fn(),
 }
