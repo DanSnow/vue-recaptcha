@@ -3494,9 +3494,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.21.0":
-  version: 7.21.0
-  resolution: "eslint@npm:7.21.0"
+"eslint@npm:7.22.0":
+  version: 7.22.0
+  resolution: "eslint@npm:7.22.0"
   dependencies:
     "@babel/code-frame": 7.12.11
     "@eslint/eslintrc": ^0.4.0
@@ -3515,7 +3515,7 @@ __metadata:
     file-entry-cache: ^6.0.1
     functional-red-black-tree: ^1.0.1
     glob-parent: ^5.0.0
-    globals: ^12.1.0
+    globals: ^13.6.0
     ignore: ^4.0.6
     import-fresh: ^3.0.0
     imurmurhash: ^0.1.4
@@ -3523,7 +3523,7 @@ __metadata:
     js-yaml: ^3.13.1
     json-stable-stringify-without-jsonify: ^1.0.1
     levn: ^0.4.1
-    lodash: ^4.17.20
+    lodash: ^4.17.21
     minimatch: ^3.0.4
     natural-compare: ^1.4.0
     optionator: ^0.9.1
@@ -3537,7 +3537,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: aa8fd50cddc4ab259e2d0ff8f43f0601060543c12e335d76ee074bf25ad02a885bea9d48a367de736d3bdb871de7eb62e6d67930c0173cc46280ddd0f236e740
+  checksum: 9be0a215b6b1e2941318b3e0c11ada8ba9a4adacf5960ab916d07f1d619828af40cba00e8ed7d151b8c715ba8ea81f4c2a56e46a2558d9795788b4f410a95ec4
   languageName: node
   linkType: hard
 
@@ -4148,6 +4148,15 @@ __metadata:
   dependencies:
     type-fest: ^0.8.1
   checksum: 9df75e1f0ef801281023a7932d1b12e1a71217dbe9d789f342b41ba9fa70181c85b496ef897577223c7e271a964d092cade1b9058e7a49be6aab0fdc9713a090
+  languageName: node
+  linkType: hard
+
+"globals@npm:^13.6.0":
+  version: 13.6.0
+  resolution: "globals@npm:13.6.0"
+  dependencies:
+    type-fest: ^0.20.2
+  checksum: 0322d9c1b210be233060aa79592bc65c45572237be8dbedabf830dbd70120ac21f8721309a396782463e60c4cc0b92a6476a348b4b13e481f35e361195328b8e
   languageName: node
   linkType: hard
 
@@ -5793,7 +5802,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20":
+"lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 4983720b9abca930a4a46f18db163d7dad8dd00dbed6db0cc7b499b33b717cce69f80928b27bbb1ff2cbd3b19d251ee90669a8b5ea466072ca81c2ebe91e7468
@@ -8270,6 +8279,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"type-fest@npm:^0.20.2":
+  version: 0.20.2
+  resolution: "type-fest@npm:0.20.2"
+  checksum: 1f887bc6150e632fb772fd28e33c22a4ab036c6f484fa9ac2e2115f6cae9d62bba7ca0368e3332b539d85bd2c8391c7bff22ad410abcbc9ab3774d61e250b210
+  languageName: node
+  linkType: hard
+
 "type-fest@npm:^0.6.0":
   version: 0.6.0
   resolution: "type-fest@npm:0.6.0"
@@ -8497,7 +8513,7 @@ typescript@4.2.3:
     "@rollup/plugin-babel": 5.3.0
     "@vue/test-utils": 1.1.3
     babel-jest: 26.6.3
-    eslint: 7.21.0
+    eslint: 7.22.0
     eslint-config-prettier: 8.1.0
     eslint-config-standard: 16.0.2
     eslint-config-standard-jsx: 10.0.0
