@@ -1,4 +1,4 @@
-import { defineComponent, h, onMounted, ref, unref } from 'vue'
+import { defineComponent, h, onMounted, ref } from 'vue-demi'
 
 import recaptcha from './recaptcha-wrapper'
 
@@ -41,6 +41,8 @@ export default defineComponent({
       default: '',
     },
   },
+  emits: ['verify', 'expired', 'error'],
+
   setup(props, { slots, emit }) {
     const root = ref(null)
     const widgetId = ref(null)
@@ -89,10 +91,10 @@ export default defineComponent({
       root,
       widgetId,
       reset() {
-        recaptcha.reset(unref(widgetId))
+        recaptcha.reset(widgetId.value)
       },
       execute() {
-        recaptcha.execute(unref(widgetId))
+        recaptcha.execute(widgetId.value)
       },
     }
   },
