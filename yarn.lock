@@ -1814,6 +1814,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/composition-api@npm:^1.0.0-rc.5":
+  version: 1.4.1
+  resolution: "@vue/composition-api@npm:1.4.1"
+  dependencies:
+    tslib: ^2.3.1
+  peerDependencies:
+    vue: ">= 2.5 < 3"
+  checksum: 762f9af63980c99b8a12cca0c6f758b67d07e1a148172057fa7dafc39c093d4f708c77ca1853f4fd69c24aefd3b655654296cce8e65070b97a041f1969d94045
+  languageName: node
+  linkType: hard
+
 "@vue/reactivity@npm:3.2.23":
   version: 3.2.23
   resolution: "@vue/reactivity@npm:3.2.23"
@@ -1876,7 +1887,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/test-utils@npm:^2.0.0-beta.0":
+"@vue/test-utils@npm:^2.0.0-rc.4":
   version: 2.0.0-rc.17
   resolution: "@vue/test-utils@npm:2.0.0-rc.17"
   peerDependencies:
@@ -6946,6 +6957,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "tslib@npm:2.3.1"
+  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+  languageName: node
+  linkType: hard
+
 "tslib@npm:~2.1.0":
   version: 2.1.0
   resolution: "tslib@npm:2.1.0"
@@ -7184,7 +7202,8 @@ __metadata:
     "@babel/preset-env": 7.16.4
     "@rollup/plugin-babel": 5.3.0
     "@vue/compiler-dom": ^3.1.4
-    "@vue/test-utils": ^2.0.0-beta.0
+    "@vue/composition-api": ^1.0.0-rc.5
+    "@vue/test-utils": ^2.0.0-rc.4
     babel-jest: 27.4.2
     eslint: 8.4.0
     eslint-config-prettier: 8.3.0
