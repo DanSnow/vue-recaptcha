@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('vue')) :
-  typeof define === 'function' && define.amd ? define(['vue'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.VueRecaptcha = factory(global.Vue));
-}(this, (function (vue) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'vue'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.VueRecaptcha = {}, global.Vue));
+}(this, (function (exports, vue) { 'use strict';
 
   function _extends() {
     _extends = Object.assign || function (target) {
@@ -27,7 +27,7 @@
 
     var callbacks = [];
 
-    var resolve = function resolve(val) {
+    var resolve = function resolve() {
       if (state) {
         return;
       }
@@ -35,7 +35,7 @@
       state = true;
 
       for (var i = 0, len = callbacks.length; i < len; i++) {
-        callbacks[i](val);
+        callbacks[i]();
       }
     };
 
@@ -113,7 +113,7 @@
     window.vueRecaptchaApiLoaded = recaptcha.notify;
   }
 
-  var VueRecaptcha = vue.defineComponent({
+  var Recaptcha = vue.defineComponent({
     name: 'VueRecaptcha',
     props: {
       sitekey: {
@@ -152,6 +152,7 @@
         "default": ''
       }
     },
+    emits: ['render', 'verify', 'expired', 'error'],
     setup: function setup(props, _ref) {
       var slots = _ref.slots,
           emit = _ref.emit;
@@ -191,7 +192,7 @@
           'error-callback': emitError
         });
 
-        var $root = vue.unref(root);
+        var $root = root.value;
         var container = slots["default"] ? $root.children[0] : $root;
         recaptcha.render(container, opts, function (id) {
           widgetId.value = id;
@@ -202,10 +203,10 @@
         root: root,
         widgetId: widgetId,
         reset: function reset() {
-          recaptcha.reset(vue.unref(widgetId));
+          recaptcha.reset(widgetId.value);
         },
         execute: function execute() {
-          recaptcha.execute(vue.unref(widgetId));
+          recaptcha.execute(widgetId.value);
         }
       };
     },
@@ -218,6 +219,8 @@
     }
   });
 
-  return VueRecaptcha;
+  exports.VueRecaptcha = Recaptcha;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 
 })));

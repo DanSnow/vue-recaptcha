@@ -1,4 +1,4 @@
-import { defineComponent, ref, onMounted, unref, h } from 'vue';
+import { defineComponent, ref, onMounted, h } from 'vue-demi';
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -23,7 +23,7 @@ var defer = function defer() {
 
   var callbacks = [];
 
-  var resolve = function resolve(val) {
+  var resolve = function resolve() {
     if (state) {
       return;
     }
@@ -31,7 +31,7 @@ var defer = function defer() {
     state = true;
 
     for (var i = 0, len = callbacks.length; i < len; i++) {
-      callbacks[i](val);
+      callbacks[i]();
     }
   };
 
@@ -109,7 +109,7 @@ if (typeof window !== 'undefined') {
   window.vueRecaptchaApiLoaded = recaptcha.notify;
 }
 
-var VueRecaptcha = defineComponent({
+var Recaptcha = defineComponent({
   name: 'VueRecaptcha',
   props: {
     sitekey: {
@@ -148,6 +148,7 @@ var VueRecaptcha = defineComponent({
       "default": ''
     }
   },
+  emits: ['render', 'verify', 'expired', 'error'],
   setup: function setup(props, _ref) {
     var slots = _ref.slots,
         emit = _ref.emit;
@@ -187,7 +188,7 @@ var VueRecaptcha = defineComponent({
         'error-callback': emitError
       });
 
-      var $root = unref(root);
+      var $root = root.value;
       var container = slots["default"] ? $root.children[0] : $root;
       recaptcha.render(container, opts, function (id) {
         widgetId.value = id;
@@ -198,10 +199,10 @@ var VueRecaptcha = defineComponent({
       root: root,
       widgetId: widgetId,
       reset: function reset() {
-        recaptcha.reset(unref(widgetId));
+        recaptcha.reset(widgetId.value);
       },
       execute: function execute() {
-        recaptcha.execute(unref(widgetId));
+        recaptcha.execute(widgetId.value);
       }
     };
   },
@@ -214,4 +215,4 @@ var VueRecaptcha = defineComponent({
   }
 });
 
-export default VueRecaptcha;
+export { Recaptcha as VueRecaptcha };
