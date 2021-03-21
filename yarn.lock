@@ -7158,6 +7158,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"vue-demi@npm:^0.7.3":
+  version: 0.7.5
+  resolution: "vue-demi@npm:0.7.5"
+  peerDependencies:
+    "@vue/composition-api": ^1.0.0-beta.1
+    vue: ^2.6.0 || >=3.0.0-rc.1
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+  bin:
+    vue-demi-fix: bin/vue-demi-fix.js
+    vue-demi-switch: bin/vue-demi-switch.js
+  checksum: 6f7eed9db42e89d1f2a62ef10b3d77ec5d8db4c4fa7d04d87e5c74467052f1a79612ee203707e6c01d8fcfb0c986a9b84335395e18189cb2b2acabeb48e92fac
+  languageName: node
+  linkType: hard
+
 "vue-recaptcha@workspace:.":
   version: 0.0.0-use.local
   resolution: "vue-recaptcha@workspace:."
@@ -7192,13 +7208,18 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     serve-handler: ^6.1.3
     typescript: 4.5.2
-    vue: ^3.0.0-rc.2
+    vue: ^3.0.7
+    vue-demi: ^0.7.3
   peerDependencies:
-    vue: ^3.0.0
+    "@vue/composition-api": ^1.0.0-beta.1
+    vue: ^2.0.0 || ^3.0.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
   languageName: unknown
   linkType: soft
 
-"vue@npm:^3.0.0-rc.2":
+"vue@npm:^3.0.7":
   version: 3.2.23
   resolution: "vue@npm:3.2.23"
   dependencies:
