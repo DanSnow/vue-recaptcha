@@ -41,7 +41,7 @@ export default defineComponent({
       default: '',
     },
   },
-  emits: ['verify', 'expired', 'error'],
+  emits: ['render', 'verify', 'expired', 'error'],
 
   setup(props, { slots, emit }) {
     const root = ref(null)
