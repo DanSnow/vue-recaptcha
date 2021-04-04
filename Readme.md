@@ -1,6 +1,5 @@
 vue-recaptcha
 =============
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=DanSnow/vue-recaptcha)](https://dependabot.com)
 [![devDependencies Status](https://david-dm.org/DanSnow/vue-recaptcha/dev-status.svg)](https://david-dm.org/DanSnow/vue-recaptcha?type=dev)
 [![peerDependencies Status](https://david-dm.org/DanSnow/vue-recaptcha/peer-status.svg)](https://david-dm.org/DanSnow/vue-recaptcha?type=peer)
 [![CircleCI](https://circleci.com/gh/DanSnow/vue-recaptcha.svg?style=shield)](https://circleci.com/gh/DanSnow/vue-recaptcha)
