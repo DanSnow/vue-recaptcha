@@ -12,7 +12,10 @@
     "test": "yarn lint && yarn test:unit && yarn test:types",
     "test:unit": "jest src",
     "test:e2e": "jest e2e",
-    "test:types": "tsc -p types/tests"
+    "test:types": "tsc -p types/tests",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
   },
   "author": "DanSnow",
   "license": "MIT",
@@ -29,11 +32,6 @@
   },
   "bugs": {
     "url": "https://github.com/DanSnow/vue-recaptcha/issues"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "{e2e,example,src}/**/*.js": [
@@ -79,11 +77,12 @@
     "eslint-plugin-promise": "4.3.1",
     "eslint-plugin-react": "7.23.1",
     "http-server": "0.12.3",
-    "husky": "4.3.8",
+    "husky": "6.0.0",
     "jest": "26.6.3",
     "jest-extended": "0.11.5",
     "jest-junit": "12.0.0",
     "lint-staged": "10.5.4",
+    "pinst": "2.1.6",
     "prettier": "2.2.1",
     "puppeteer": "8.0.0",
     "rollup": "2.44.0",
