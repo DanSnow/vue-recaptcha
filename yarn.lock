@@ -5598,15 +5598,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-junit@npm:12.1.0":
-  version: 12.1.0
-  resolution: "jest-junit@npm:12.1.0"
+"jest-junit@npm:12.2.0":
+  version: 12.2.0
+  resolution: "jest-junit@npm:12.2.0"
   dependencies:
     mkdirp: ^1.0.4
     strip-ansi: ^5.2.0
-    uuid: ^3.3.3
+    uuid: ^8.3.2
     xml: ^1.0.1
-  checksum: bce72e259dd3723abb637b1f4bffd754269ee3240977849168b8ebf2c59f1f2e20d5c746cb04d05d771ad0236202d301da2f5acd5bede1faf7987ad91be6e321
+  checksum: 6009d37379a346ccd884326ae227b926bc689249fa7bd0d93bd1f0004ed356ee2525a8eeb07b93b5e7adcfcae58b245afa5e8387129bf7e941dbf7d719a527b9
   languageName: node
   linkType: hard
 
@@ -9008,7 +9008,7 @@ typescript@4.3.2:
   languageName: node
   linkType: hard
 
-"uuid@npm:^3.3.2, uuid@npm:^3.3.3":
+"uuid@npm:^3.3.2":
   version: 3.4.0
   resolution: "uuid@npm:3.4.0"
   bin:
@@ -9023,6 +9023,15 @@ typescript@4.3.2:
   bin:
     uuid: dist/bin/uuid
   checksum: a2bdb8a3eb80a53506e9657e7e1f70d7600562bf43fa010a645fd1deb7de1686df61c496c6f9826bac4be8db4d1ac1b976dd6fdf3bd083207eec1674507936fb
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^8.3.2":
+  version: 8.3.2
+  resolution: "uuid@npm:8.3.2"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: aed2bcef341f95635f308fea8831fb9038b18c485fe7e71feb89d2e05602dfecad0cb6f2246fae096d4da425cca6e8a71056f28abd97ad98cf770a2018853248
   languageName: node
   linkType: hard
 
@@ -9090,7 +9099,7 @@ typescript@4.3.2:
     husky: 6.0.0
     jest: 26.6.3
     jest-extended: 0.11.5
-    jest-junit: 12.1.0
+    jest-junit: 12.2.0
     lint-staged: 11.0.0
     pinst: 2.1.6
     prettier: 2.3.1
