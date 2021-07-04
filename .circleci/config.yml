@@ -1,9 +1,11 @@
-version: 2
+version: 2.1
+orbs:
+  puppeteer: threetreeslight/puppeteer@0.1.2
 jobs:
   build:
     working_directory: ~/vue-recaptcha
     docker:
-      - image: circleci/node:14
+      - image: circleci/node:16
     steps:
       - checkout
       - restore_cache:
