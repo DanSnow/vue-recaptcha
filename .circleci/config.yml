@@ -37,7 +37,7 @@ jobs:
           path: reports
   deploy:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:16
     working_directory: ~/vue-recaptcha
     steps:
       - checkout
