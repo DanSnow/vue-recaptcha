@@ -18,7 +18,7 @@ function runE2ETest(script, loadScript) {
 
         const $recaptcha = await recaptchaFrame.$('.recaptcha-checkbox')
         await $recaptcha.click()
-        return page.waitFor('#normal-verified')
+        return page.waitForSelector('#normal-verified')
       })
     })
 
@@ -26,7 +26,7 @@ function runE2ETest(script, loadScript) {
       it('work', async () => {
         const $btn = await page.$('#binded')
         await $btn.click()
-        return page.waitFor('#binded-verified')
+        return page.waitForSelector('#binded-verified')
       })
     })
 
@@ -34,13 +34,13 @@ function runE2ETest(script, loadScript) {
       it('work', async () => {
         const $btn = await page.$('#submit')
         await $btn.click()
-        return page.waitFor('#invisible-verified')
+        return page.waitForSelector('#invisible-verified')
       })
     })
 
     beforeEach(async () => {
       await page.goto(URL)
-      await page.waitFor('#normal-verified', { polling: 'mutation' })
+      await page.waitForSelector('#normal-verified', { polling: 'mutation' })
       await page.$eval(
         'body',
         ($el, script, loadScript) =>
@@ -58,7 +58,7 @@ function runE2ETest(script, loadScript) {
         script,
         loadScript
       )
-      await page.waitFor(3000)
+      await page.waitForTimeout(3000)
     })
   })
 }
