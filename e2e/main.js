@@ -11,7 +11,7 @@ function bootstrap(loadScript) {
       loadScript,
     }),
     components: {
-      VueRecaptcha,
+      VueRecaptcha: VueRecaptcha.VueRecaptcha,
     },
     mounted() {
       // If `loadRecaptchaScript` is not set to `true`, we'll need to load it manually
