@@ -1,18 +1,10 @@
 /* global Vue: false, VueRecaptcha: false */
 // eslint-disable-next-line no-new
-<<<<<<< HEAD
-new Vue({
-  el: '#root',
-  data: {
-    sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
-  },
-=======
 
 const app = Vue.createApp({
   data: () => ({
     sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
   }),
->>>>>>> feat!: Support vue v3
   components: {
     'vue-recaptcha': VueRecaptcha,
   },
