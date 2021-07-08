@@ -24,22 +24,24 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
 
 <!-- TOC -->
 
-- [Description](#description)
-- [Install](#install)
-  - [NPM](#npm)
-  - [CDN](#cdn)
-- [Usage](#usage)
-  - [Get started](#get-started)
-  - [Bind Challenge to Button](#bind-challenge-to-button)
-  - [Auto-load `<script>`](#auto-load-script)
-- [API](#api)
-  - [Props](#props)
-  - [Methods](#methods)
-  - [Events](#events)
-- [FAQ](#faq)
-  - [What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"?](#what-is-recaptcha-couldnt-find-user-provided-function-vuerecaptchaapiloaded)
-  - [How to test vue-recaptcha?](#how-to-test-vue-recaptcha)
-  - [How about an e2e testing (or integration testing)?](#how-about-an-e2e-testing-or-integration-testing)
+- [vue-recaptcha](#vue-recaptcha)
+  - [Description](#description)
+    - [reCAPTCHA V3](#recaptcha-v3)
+  - [Install](#install)
+    - [NPM](#npm)
+    - [CDN](#cdn)
+  - [Usage](#usage)
+    - [Get started](#get-started)
+    - [Bind Challenge to Button](#bind-challenge-to-button)
+    - [Auto-load `<script>`](#auto-load-script)
+  - [API](#api)
+    - [Props](#props)
+    - [Methods](#methods)
+    - [Events](#events)
+  - [FAQ](#faq)
+    - [What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"?](#what-is-recaptcha-couldnt-find-user-provided-function-vuerecaptchaapiloaded)
+    - [How to test vue-recaptcha?](#how-to-test-vue-recaptcha)
+    - [How about an e2e testing (or integration testing)?](#how-about-an-e2e-testing-or-integration-testing)
 
 <!-- /TOC -->
 
@@ -170,17 +172,26 @@ For more information, please reference to [ReCAPTCHA document][recaptcha-params]
 
 ### Events ###
 
-- verify(response)
+- `verify(response)` –
   Emit on reCAPTCHA verified
   `response` is the successful reCAPTCHA response
-- expired()
+- `expired()` –
   Emit on reCAPTCHA expired
-- render(id)
+- `render(id)` –
   Emit on reCAPTCHA mounted on DOM
   `id` is the widget id of the component
-- error()
+- `error()` –
   Emit when reCAPTCHA encounters an error
 
+  ```html
+  <vue-recaptcha
+    :siteKey="siteKey"
+    @verify="verifyMethod"
+    @expired="expiredMethod"
+    @render="renderMethod"
+    @error="errorMethod">
+  </vue-recaptcha>
+  ```
 ## FAQ ##
 
 ### What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"? ###
@@ -196,7 +207,7 @@ Here is an [example](example/__tests__/example.spec.js) which work with [jest](h
 
 ### How about an e2e testing (or integration testing)? ###
 
-Please refernece to [recaptcha's faq](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha-v2-what-should-i-do).
+Please reference to [recaptcha's FAQ](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha-v2-what-should-i-do).
 
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
 [recaptcha-params]: https://developers.google.com/recaptcha/docs/display#render_param
