@@ -132,31 +132,31 @@ If `loadRecaptchaScript` props is set to `true`, vue-recaptcha will inject the r
 ## API ##
 
 ### Props ###
-- sitekey (required)
+- `sitekey` (required) –
   ReCAPTCHA site key
-- theme (optional)
+- `theme` (optional) –
   The color theme for reCAPTCHA
-- type (optional)
+- `type` (optional) –
   The type of reCAPTCHA
-- size (optional)
+- `size` (optional) –
   The size of reCAPTCHA
-- tabindex (optional)
+- `tabindex` (optional) –
   The tabindex of reCAPTCHA
-- badge (optional) (Invisible ReCAPTCHA only)
+- `badge` (optional) (Invisible ReCAPTCHA only) –
   Position of the reCAPTCHA badge
-- loadRecaptchaScript (optional)
+- `loadRecaptchaScript` (optional) –
   If `loadRecaptchaScript` is set to `true`, vue-recaptcha will inject the required `<script>` tag
   Default: `false`
 
 The following props will only work when `loadRecaptchaScript` is set as `true`
 
-- recaptchaHost (optional)
+- `recaptchaHost` (optional) –
   Set this to change the reCAPTCHA domain if neccessary, as described in [ReCAPTCHA support][recaptcha-global]
   Default: `www.google.com`
-- recaptchaScriptId (optional)
+- `recaptchaScriptId` (optional) –
   Set this to change the injected `<script>` id. This should only be changed if it conflicts with existing id
   Default: `__RECAPTCHA_SCRIPT`
-- language (optional)
+- `language` (optional) –
   Set this to change the reCAPTCHA language if necessary, as described in [ReCAPTCHA support][recaptcha-global]
   Default: '' `// user browser language by default`  
   **Notice**: It'll not work as you expecting when you change this props dynamicly. Since it's impossible to change the language without a full page reloading
@@ -165,9 +165,9 @@ For more information, please reference to [ReCAPTCHA document][recaptcha-params]
 
 ### Methods ###
 
-- reset
+- `reset` –
   Reset reCAPTCHA instance
-- execute
+- `execute` –
   Invoke reCAPTCHA challenge
 
 ### Events ###
