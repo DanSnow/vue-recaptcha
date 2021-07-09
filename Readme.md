@@ -24,22 +24,24 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
 
 <!-- TOC -->
 
-- [Description](#description)
-- [Install](#install)
-  - [NPM](#npm)
-  - [CDN](#cdn)
-- [Usage](#usage)
-  - [Get started](#get-started)
-  - [Bind Challenge to Button](#bind-challenge-to-button)
-  - [Auto-load `<script>`](#auto-load-script)
-- [API](#api)
-  - [Props](#props)
-  - [Methods](#methods)
-  - [Events](#events)
-- [FAQ](#faq)
-  - [What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"?](#what-is-recaptcha-couldnt-find-user-provided-function-vuerecaptchaapiloaded)
-  - [How to test vue-recaptcha?](#how-to-test-vue-recaptcha)
-  - [How about an e2e testing (or integration testing)?](#how-about-an-e2e-testing-or-integration-testing)
+- [vue-recaptcha](#vue-recaptcha)
+  - [Description](#description)
+    - [reCAPTCHA V3](#recaptcha-v3)
+  - [Install](#install)
+    - [NPM](#npm)
+    - [CDN](#cdn)
+  - [Usage](#usage)
+    - [Get started](#get-started)
+    - [Bind Challenge to Button](#bind-challenge-to-button)
+    - [Auto-load `<script>`](#auto-load-script)
+  - [API](#api)
+    - [Props](#props)
+    - [Methods](#methods)
+    - [Events](#events)
+  - [FAQ](#faq)
+    - [What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"?](#what-is-recaptcha-couldnt-find-user-provided-function-vuerecaptchaapiloaded)
+    - [How to test vue-recaptcha?](#how-to-test-vue-recaptcha)
+    - [How about an e2e testing (or integration testing)?](#how-about-an-e2e-testing-or-integration-testing)
 
 <!-- /TOC -->
 
@@ -130,31 +132,31 @@ If `loadRecaptchaScript` props is set to `true`, vue-recaptcha will inject the r
 ## API ##
 
 ### Props ###
-- sitekey (required)
+- `sitekey` (required) –
   ReCAPTCHA site key
-- theme (optional)
+- `theme` (optional) –
   The color theme for reCAPTCHA
-- type (optional)
+- `type` (optional) –
   The type of reCAPTCHA
-- size (optional)
+- `size` (optional) –
   The size of reCAPTCHA
-- tabindex (optional)
+- `tabindex` (optional) –
   The tabindex of reCAPTCHA
-- badge (optional) (Invisible ReCAPTCHA only)
+- `badge` (optional) (Invisible ReCAPTCHA only) –
   Position of the reCAPTCHA badge
-- loadRecaptchaScript (optional)
+- `loadRecaptchaScript` (optional) –
   If `loadRecaptchaScript` is set to `true`, vue-recaptcha will inject the required `<script>` tag
   Default: `false`
 
 The following props will only work when `loadRecaptchaScript` is set as `true`
 
-- recaptchaHost (optional)
+- `recaptchaHost` (optional) –
   Set this to change the reCAPTCHA domain if neccessary, as described in [ReCAPTCHA support][recaptcha-global]
   Default: `www.google.com`
-- recaptchaScriptId (optional)
+- `recaptchaScriptId` (optional) –
   Set this to change the injected `<script>` id. This should only be changed if it conflicts with existing id
   Default: `__RECAPTCHA_SCRIPT`
-- language (optional)
+- `language` (optional) –
   Set this to change the reCAPTCHA language if necessary, as described in [ReCAPTCHA support][recaptcha-global]
   Default: '' `// user browser language by default`  
   **Notice**: It'll not work as you expecting when you change this props dynamicly. Since it's impossible to change the language without a full page reloading
@@ -163,24 +165,33 @@ For more information, please reference to [ReCAPTCHA document][recaptcha-params]
 
 ### Methods ###
 
-- reset
+- `reset` –
   Reset reCAPTCHA instance
-- execute
+- `execute` –
   Invoke reCAPTCHA challenge
 
 ### Events ###
 
-- verify(response)
+- `verify(response)` –
   Emit on reCAPTCHA verified
   `response` is the successful reCAPTCHA response
-- expired()
+- `expired()` –
   Emit on reCAPTCHA expired
-- render(id)
+- `render(id)` –
   Emit on reCAPTCHA mounted on DOM
   `id` is the widget id of the component
-- error()
+- `error()` –
   Emit when reCAPTCHA encounters an error
 
+  ```html
+  <vue-recaptcha
+    :siteKey="siteKey"
+    @verify="verifyMethod"
+    @expired="expiredMethod"
+    @render="renderMethod"
+    @error="errorMethod">
+  </vue-recaptcha>
+  ```
 ## FAQ ##
 
 ### What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"? ###
@@ -196,7 +207,7 @@ Here is an [example](example/__tests__/example.spec.js) which work with [jest](h
 
 ### How about an e2e testing (or integration testing)? ###
 
-Please refernece to [recaptcha's faq](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha-v2-what-should-i-do).
+Please reference to [recaptcha's FAQ](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha-v2-what-should-i-do).
 
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
 [recaptcha-params]: https://developers.google.com/recaptcha/docs/display#render_param
