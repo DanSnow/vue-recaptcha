@@ -13,7 +13,7 @@
     "test:unit": "jest src",
     "test:e2e": "jest e2e",
     "test:types": "tsc -p types/tests",
-    "postinstall": "husky install",
+    "prepare": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
