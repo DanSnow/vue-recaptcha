@@ -3170,20 +3170,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ecstatic@npm:^3.3.2":
-  version: 3.3.2
-  resolution: "ecstatic@npm:3.3.2"
-  dependencies:
-    he: ^1.1.1
-    mime: ^1.6.0
-    minimist: ^1.1.0
-    url-join: ^2.0.5
-  bin:
-    ecstatic: ./lib/ecstatic.js
-  checksum: a6185a71daa21e8bdbaca3117e9eda90edc40d85c34eb1c0af3209a162cd8385624f15e46940f1dcfe96bad01fc82fa0df09caa51d7a052637eb22dd11c1426f
-  languageName: node
-  linkType: hard
-
 "editorconfig@npm:^0.15.3":
   version: 0.15.3
   resolution: "editorconfig@npm:0.15.3"
@@ -4252,7 +4238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"he@npm:^1.1.0, he@npm:^1.1.1":
+"he@npm:^1.1.0":
   version: 1.2.0
   resolution: "he@npm:1.2.0"
   bin:
@@ -4306,24 +4292,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-server@npm:0.12.3":
-  version: 0.12.3
-  resolution: "http-server@npm:0.12.3"
+"http-server@npm:0.13.0":
+  version: 0.13.0
+  resolution: "http-server@npm:0.13.0"
   dependencies:
     basic-auth: ^1.0.3
     colors: ^1.4.0
     corser: ^2.0.1
-    ecstatic: ^3.3.2
+    he: ^1.1.0
     http-proxy: ^1.18.0
+    mime: ^1.6.0
     minimist: ^1.2.5
     opener: ^1.5.1
     portfinder: ^1.0.25
     secure-compare: 3.0.1
     union: ~0.5.0
+    url-join: ^2.0.5
   bin:
     hs: bin/http-server
     http-server: bin/http-server
-  checksum: cbb1f5b9261f7018372f1356bcd2c8a67c8e8aaed9d0c47adcf28e7cb31f866a339285bc5a544bb85ece5ea12807ce9b86c6e465afea2a2195888672d4dd25f9
+  checksum: 847c5d79ee58bcff13e2c5d71587cd7da6f4dba5464b9fc499e05f41c93315b22f6cce7534b6b30630c0ba6ac0b51ac8536e42179d28bbcdb993ebd23ff6d1f4
   languageName: node
   linkType: hard
 
@@ -6025,7 +6013,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.1.0, minimist@npm:^1.2.0, minimist@npm:^1.2.5":
+"minimist@npm:^1.2.0, minimist@npm:^1.2.5":
   version: 1.2.5
   resolution: "minimist@npm:1.2.5"
   checksum: b77b8590147a4e217ff34266236bc39de23b52e6e33054076991ff674c7397a1380a7bde11111916f16f003a94aaa7e4f3d92595a32189644ff607fabc65a5b6
@@ -8431,7 +8419,7 @@ typescript@4.3.5:
     eslint-plugin-prettier: 3.4.0
     eslint-plugin-promise: 5.1.0
     eslint-plugin-react: 7.24.0
-    http-server: 0.12.3
+    http-server: 0.13.0
     husky: 7.0.1
     jest: 27.0.6
     jest-extended: 0.11.5
