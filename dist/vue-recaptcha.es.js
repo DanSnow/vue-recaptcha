@@ -199,4 +199,4 @@ var VueRecaptcha = {
   }
 };
 
-export default VueRecaptcha;
+export { VueRecaptcha as default };
