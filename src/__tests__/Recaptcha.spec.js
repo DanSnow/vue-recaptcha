@@ -20,11 +20,11 @@ describe('Recaptcha', () => {
   })
 
   it('Emit events', () => {
-    expect(wrapper.emitted()).not.toContainKey('verify')
+    expect(wrapper.emitted()).not.toHaveProperty('verify')
     wrapper.vm.emitVerify()
     expect(wrapper.emitted().verify).toBeTruthy()
 
-    expect(wrapper.emitted()).not.toContainKey('expired')
+    expect(wrapper.emitted()).not.toHaveProperty('expired')
     wrapper.vm.emitExpired()
     expect(wrapper.emitted().expired).toBeTruthy()
   })
