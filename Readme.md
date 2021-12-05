@@ -81,10 +81,32 @@ Include `vue-recaptcha` in your app.
 </template>
 
 <script>
-  import VueRecaptcha from 'vue-recaptcha';
+  import { VueRecaptcha } from 'vue-recaptcha';
   export default {
     ...
     components: { VueRecaptcha }
+  };
+</script>
+```
+
+### Manually call challenge ###
+
+```vue
+<template>
+  <vue-recaptcha ref="recaptcha" sitekey="Your key here" />
+</template>
+
+<script>
+  import { VueRecaptcha } from 'vue-recaptcha';
+  export default {
+    components: { VueRecaptcha }
+
+    methods: {
+      onEvent() {
+        // when you need a reCAPTCHA challenge
+        this.$refs.recaptcha.execute();
+      }
+    }
   };
 </script>
 ```
@@ -98,7 +120,7 @@ Include `vue-recaptcha` in your app.
 </template>
 
 <script>
-  import VueRecaptcha from 'vue-recaptcha';
+  import { VueRecaptcha } from 'vue-recaptcha';
   export default {
     ...
     components: { VueRecaptcha }
@@ -106,7 +128,7 @@ Include `vue-recaptcha` in your app.
 </script>
 ```
 
-**Notice:** You could only place one element as `vue-recaptcha` child.
+**Notice:** You could only place ONE element as `vue-recaptcha` child.
 
 For more information, please reference to [example](example)
 
