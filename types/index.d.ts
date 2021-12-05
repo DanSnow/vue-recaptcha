@@ -17,4 +17,4 @@ declare class VueRecaptcha {
   reset(): void
 }
 
-export default VueRecaptcha
+export { VueRecaptcha }

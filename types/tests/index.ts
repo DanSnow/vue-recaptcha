@@ -1,5 +1,5 @@
 import { createApp, h } from 'vue'
-import VueRecaptcha from '../'
+import { VueRecaptcha } from '../'
 
 createApp({
   render() {
