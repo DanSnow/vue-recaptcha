@@ -1,14 +1,14 @@
 const defer = () => {
   let state = false // Resolved or not
   const callbacks = []
-  const resolve = (val) => {
+  const resolve = () => {
     if (state) {
       return
     }
 
     state = true
     for (let i = 0, len = callbacks.length; i < len; i++) {
-      callbacks[i](val)
+      callbacks[i]()
     }
   }
 

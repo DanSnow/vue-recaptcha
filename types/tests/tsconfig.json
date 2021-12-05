@@ -5,13 +5,7 @@
     "moduleResolution": "node",
     "strict": true,
     "noEmit": true,
-    "lib": [
-      "es6",
-      "dom"
-    ]
+    "lib": ["es2020", "dom"]
   },
-  "include": [
-    "*.ts",
-    "../*.d.ts"
-  ]
+  "include": ["*.ts", "../*.d.ts"]
 }

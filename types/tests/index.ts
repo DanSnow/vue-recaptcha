@@ -1,8 +1,8 @@
-import Vue from 'vue'
+import { createApp, h } from 'vue'
 import VueRecaptcha from '../'
 
-const app = new Vue({
-  render (h) {
-    return h(VueRecaptcha, {props: {sitekey: 'foo'}})
-  }
+createApp({
+  render() {
+    return h(VueRecaptcha, { sitekey: 'foo' })
+  },
 })

@@ -1,6 +1,8 @@
+import { defineComponent, h, onMounted, ref } from 'vue-demi'
+
 import recaptcha from './recaptcha-wrapper'
 
-export default {
+export default defineComponent({
   name: 'VueRecaptcha',
   props: {
     sitekey: {
@@ -24,7 +26,7 @@ export default {
     },
     loadRecaptchaScript: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     recaptchaScriptId: {
       type: String,
@@ -39,52 +41,64 @@ export default {
       default: '',
     },
   },
-  beforeMount() {
-    if (this.loadRecaptchaScript) {
-      if (!document.getElementById(this.recaptchaScriptId)) {
-        // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
-        const script = document.createElement('script')
-        script.id = this.recaptchaScriptId
-        script.src = `https://${this.recaptchaHost}/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit&hl=${this.language}`
-        script.async = true
-        script.defer = true
+  emits: ['render', 'verify', 'expired', 'error'],
 
-        document.head.appendChild(script)
+  setup(props, { slots, emit }) {
+    const root = ref(null)
+    const widgetId = ref(null)
+
+    const emitVerify = (response) => {
+      emit('verify', response)
+    }
+    const emitExpired = () => {
+      emit('expired')
+    }
+    const emitError = () => {
+      emit('error')
+    }
+
+    onMounted(() => {
+      recaptcha.checkRecaptchaLoad()
+
+      if (props.loadRecaptchaScript) {
+        if (!document.getElementById(props.recaptchaScriptId)) {
+          // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
+          const script = document.createElement('script')
+          script.id = props.recaptchaScriptId
+          script.src = `https://${props.recaptchaHost}/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit&hl=${props.language}`
+          script.async = true
+          script.defer = true
+
+          document.head.appendChild(script)
+        }
       }
-    }
-  },
-  mounted() {
-    recaptcha.checkRecaptchaLoad()
-    const opts = {
-      ...this.$props,
-      callback: this.emitVerify,
-      'expired-callback': this.emitExpired,
-      'error-callback': this.emitError,
-    }
-    const container = this.$slots.default ? this.$el.children[0] : this.$el
-    recaptcha.render(container, opts, (id) => {
-      this.$widgetId = id
-      this.$emit('render', id)
+
+      const opts = {
+        ...props,
+        callback: emitVerify,
+        'expired-callback': emitExpired,
+        'error-callback': emitError,
+      }
+      const $root = root.value
+      const container = slots.default ? $root.children[0] : $root
+      recaptcha.render(container, opts, (id) => {
+        widgetId.value = id
+        emit('render', id)
+      })
     })
+
+    return {
+      root,
+      widgetId,
+      reset() {
+        recaptcha.reset(widgetId.value)
+      },
+      execute() {
+        recaptcha.execute(widgetId.value)
+      },
+    }
   },
-  methods: {
-    reset() {
-      recaptcha.reset(this.$widgetId)
-    },
-    execute() {
-      recaptcha.execute(this.$widgetId)
-    },
-    emitVerify(response) {
-      this.$emit('verify', response)
-    },
-    emitExpired() {
-      this.$emit('expired')
-    },
-    emitError() {
-      this.$emit('error')
-    },
+  render() {
+    return h('div', { ref: 'root' }, this.$slots.default?.())
   },
-  render(h) {
-    return h('div', {}, this.$slots.default)
-  },
-}
+})

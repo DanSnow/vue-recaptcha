@@ -1,15 +1,20 @@
-import Vue from 'vue'
-
-declare class VueRecaptcha extends Vue {
+interface Props {
   sitekey: string
   theme?: string
   badge?: string
   type?: string
   size?: string
   tabindex?: string
+  loadRecaptchaScript?: boolean
+  recaptchaScriptId?: string
+  recaptchaHost?: string
+  language?: string
+}
 
-  reset(): void
+declare class VueRecaptcha {
+  $props: Props
   execute(): void
+  reset(): void
 }
 
 export default VueRecaptcha

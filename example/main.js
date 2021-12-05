@@ -1,10 +1,10 @@
 /* global Vue: false, VueRecaptcha: false */
 // eslint-disable-next-line no-new
-new Vue({
-  el: '#root',
-  data: {
+
+const app = Vue.createApp({
+  data: () => ({
     sitekey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
-  },
+  }),
   components: {
     'vue-recaptcha': VueRecaptcha,
   },
@@ -23,3 +23,5 @@ new Vue({
     },
   },
 })
+
+app.mount('#root')

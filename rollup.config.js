@@ -1,5 +1,6 @@
 import babel from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
+import resolve from '@rollup/plugin-node-resolve'
 
 const base = {
   input: 'src/index.js',
@@ -7,8 +8,11 @@ const base = {
     name: 'VueRecaptcha',
     format: 'umd',
     file: 'dist/vue-recaptcha.js',
-    exports: 'default',
+    globals: {
+      vue: 'Vue',
+    },
   },
+  external: ['vue'],
   plugins: [
     babel({
       babelrc: false,
@@ -16,6 +20,9 @@ const base = {
       presets: [['@babel/preset-env', { modules: false, loose: true }]],
       plugins: [['@babel/plugin-proposal-object-rest-spread', { loose: true }]],
       exclude: 'node_modules/**',
+    }),
+    resolve({
+      resolveOnly: ['vue-demi'],
     }),
   ],
 }
@@ -37,6 +44,8 @@ const es = {
     format: 'es',
     file: 'dist/vue-recaptcha.es.js',
   },
+  external: ['vue', 'vue-demi'],
+  plugins: [base.plugins[0]],
 }
 
 export default [base, minify, es]

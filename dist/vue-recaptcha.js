@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.VueRecaptcha = factory());
-})(this, (function () { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'vue'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.VueRecaptcha = {}, global.Vue));
+})(this, (function (exports, vue) { 'use strict';
 
   function _extends() {
     _extends = Object.assign || function (target) {
@@ -27,7 +27,7 @@
 
     var callbacks = [];
 
-    var resolve = function resolve(val) {
+    var resolve = function resolve() {
       if (state) {
         return;
       }
@@ -35,7 +35,7 @@
       state = true;
 
       for (var i = 0, len = callbacks.length; i < len; i++) {
-        callbacks[i](val);
+        callbacks[i]();
       }
     };
 
@@ -113,7 +113,7 @@
     window.vueRecaptchaApiLoaded = recaptcha.notify;
   }
 
-  var VueRecaptcha = {
+  var Recaptcha = vue.defineComponent({
     name: 'VueRecaptcha',
     props: {
       sitekey: {
@@ -152,59 +152,75 @@
         "default": ''
       }
     },
-    beforeMount: function beforeMount() {
-      if (this.loadRecaptchaScript) {
-        if (!document.getElementById(this.recaptchaScriptId)) {
-          // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
-          var script = document.createElement('script');
-          script.id = this.recaptchaScriptId;
-          script.src = "https://" + this.recaptchaHost + "/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit&hl=" + this.language;
-          script.async = true;
-          script.defer = true;
-          document.head.appendChild(script);
+    emits: ['render', 'verify', 'expired', 'error'],
+    setup: function setup(props, _ref) {
+      var slots = _ref.slots,
+          emit = _ref.emit;
+      var root = vue.ref(null);
+      var widgetId = vue.ref(null);
+
+      var emitVerify = function emitVerify(response) {
+        emit('verify', response);
+      };
+
+      var emitExpired = function emitExpired() {
+        emit('expired');
+      };
+
+      var emitError = function emitError() {
+        emit('error');
+      };
+
+      vue.onMounted(function () {
+        recaptcha.checkRecaptchaLoad();
+
+        if (props.loadRecaptchaScript) {
+          if (!document.getElementById(props.recaptchaScriptId)) {
+            // Note: vueRecaptchaApiLoaded load callback name is per the latest documentation
+            var script = document.createElement('script');
+            script.id = props.recaptchaScriptId;
+            script.src = "https://" + props.recaptchaHost + "/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit&hl=" + props.language;
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+          }
         }
-      }
-    },
-    mounted: function mounted() {
-      var _this = this;
 
-      recaptcha.checkRecaptchaLoad();
+        var opts = _extends({}, props, {
+          callback: emitVerify,
+          'expired-callback': emitExpired,
+          'error-callback': emitError
+        });
 
-      var opts = _extends({}, this.$props, {
-        callback: this.emitVerify,
-        'expired-callback': this.emitExpired,
-        'error-callback': this.emitError
+        var $root = root.value;
+        var container = slots["default"] ? $root.children[0] : $root;
+        recaptcha.render(container, opts, function (id) {
+          widgetId.value = id;
+          emit('render', id);
+        });
       });
-
-      var container = this.$slots["default"] ? this.$el.children[0] : this.$el;
-      recaptcha.render(container, opts, function (id) {
-        _this.$widgetId = id;
-
-        _this.$emit('render', id);
-      });
+      return {
+        root: root,
+        widgetId: widgetId,
+        reset: function reset() {
+          recaptcha.reset(widgetId.value);
+        },
+        execute: function execute() {
+          recaptcha.execute(widgetId.value);
+        }
+      };
     },
-    methods: {
-      reset: function reset() {
-        recaptcha.reset(this.$widgetId);
-      },
-      execute: function execute() {
-        recaptcha.execute(this.$widgetId);
-      },
-      emitVerify: function emitVerify(response) {
-        this.$emit('verify', response);
-      },
-      emitExpired: function emitExpired() {
-        this.$emit('expired');
-      },
-      emitError: function emitError() {
-        this.$emit('error');
-      }
-    },
-    render: function render(h) {
-      return h('div', {}, this.$slots["default"]);
+    render: function render() {
+      var _this$$slots$default, _this$$slots;
+
+      return vue.h('div', {
+        ref: 'root'
+      }, (_this$$slots$default = (_this$$slots = this.$slots)["default"]) == null ? void 0 : _this$$slots$default.call(_this$$slots));
     }
-  };
+  });
 
-  return VueRecaptcha;
+  exports.VueRecaptcha = Recaptcha;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
