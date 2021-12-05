@@ -16,7 +16,7 @@ Description
 Google ReCAPTCHA component for vue.
 If you like this package, please leave a star on github.
 
-This version is for Vue 2.0. If you need Vue 1.x support please reference to [vue-v1.x][vue-v1.x].
+This version is for Vue 3 and 2.
 
 ### reCAPTCHA V3
 
@@ -45,8 +45,6 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
 
 <!-- /TOC -->
 
-[vue-v1.x]: https://github.com/DanSnow/vue-recaptcha/tree/vue-v1.x
-
 ## Install ##
 
 ### NPM ###
@@ -55,26 +53,27 @@ This version is for Vue 2.0. If you need Vue 1.x support please reference to [vu
 $ npm install --save vue-recaptcha
 ```
 
+### Yarn ###
+
+```shell
+$ yarn add vue-recaptcha
+```
+
 ### CDN ###
 ```html
-<script src="https://unpkg.com/vue-recaptcha@latest/dist/vue-recaptcha.js"></script>
+<!-- Make sure you load the vue-demi first -->
+<script src="https://unpkg.com/vue-demi@0.12.1/lib/index.iife.js"></script>
+
+<!-- Then load vue-recaptcha -->
+<script src="https://unpkg.com/vue-recaptcha@^2/dist/vue-recaptcha.js"></script>
 <!-- Minify -->
-<script src="https://unpkg.com/vue-recaptcha@latest/dist/vue-recaptcha.min.js"></script>
+<script src="https://unpkg.com/vue-recaptcha@^2/dist/vue-recaptcha.min.js"></script>
 ```
 
 ## Usage ##
 
 ### Get started ###
-Place this in head to load reCAPTCHA:
-```html
-<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
-</script>
-```
-```
-With `onload` callback, it will notify us when the api is ready for use.
-```
-
-Then include `vue-recaptcha` in your app.
+Include `vue-recaptcha` in your app.
 
 ```vue
 <template>
@@ -111,24 +110,6 @@ Then include `vue-recaptcha` in your app.
 
 For more information, please reference to [example](example)
 
-### Auto-load `<script>`
-
-If `loadRecaptchaScript` props is set to `true`, vue-recaptcha will inject the required `<script>` tag. This means that manually placing the `<script>` tag is unneccessary.
-
-```vue
-<template>
-  <vue-recaptcha sitekey="Your key here" :loadRecaptchaScript="true"></vue-recaptcha>
-</template>
-
-<script>
-  import VueRecaptcha from 'vue-recaptcha';
-  export default {
-    ...
-    components: { VueRecaptcha }
-  };
-</script>
-```
-
 ## API ##
 
 ### Props ###
@@ -145,8 +126,9 @@ If `loadRecaptchaScript` props is set to `true`, vue-recaptcha will inject the r
 - `badge` (optional) (Invisible ReCAPTCHA only) –
   Position of the reCAPTCHA badge
 - `loadRecaptchaScript` (optional) –
-  If `loadRecaptchaScript` is set to `true`, vue-recaptcha will inject the required `<script>` tag
-  Default: `false`
+  If `loadRecaptchaScript` when set this to `true`, vue-recaptcha will inject the required `<script>` tag automatically.
+  Disable this by setting this to `false`, and you need to inject the `<script>` tag manually. Please refer to [Manually load script](#manually-load-script) for more information.
+  Default: `true`
 
 The following props will only work when `loadRecaptchaScript` is set as `true`
 
@@ -159,7 +141,7 @@ The following props will only work when `loadRecaptchaScript` is set as `true`
 - `language` (optional) –
   Set this to change the reCAPTCHA language if necessary, as described in [ReCAPTCHA support][recaptcha-global]
   Default: '' `// user browser language by default`  
-  **Notice**: It'll not work as you expecting when you change this props dynamicly. Since it's impossible to change the language without a full page reloading
+  **Notice**: It'll not work as you expecting when you change this props dynamically. Since it's impossible to change the language without a full page reloading
 
 For more information, please reference to [ReCAPTCHA document][recaptcha-params] and [Invisible ReCAPTCHA document][invisible-recaptcha-params].
 
@@ -208,6 +190,17 @@ Here is an [example](example/__tests__/example.spec.js) which work with [jest](h
 ### How about an e2e testing (or integration testing)? ###
 
 Please reference to [recaptcha's FAQ](https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha-v2-what-should-i-do).
+
+### Manually load `<script>`
+
+Place this in head to load reCAPTCHA:
+```html
+<script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+</script>
+```
+```
+With `onload` callback, it will notify us when the api is ready for use.
+```
 
 [example]: https://github.com/DanSnow/vue-recaptcha/tree/master/example
 [recaptcha-params]: https://developers.google.com/recaptcha/docs/display#render_param
