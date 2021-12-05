@@ -74,17 +74,16 @@ describe('e2e', () => {
   runE2ETest('vue-recaptcha.min.js', true)
 
   beforeAll(() => {
+    async function launchPuppeteer() {
+      browser = await puppeteer.launch({
+        args: ['--disable-web-security', '--disable-features=IsolateOrigins,site-per-process'],
+      })
+      page = await browser.newPage()
+    }
+
     // Setup http server & puppeteer
     return Promise.all([
-      puppeteer
-        .launch({
-          args: ['--disable-web-security', '--disable-features=IsolateOrigins,site-per-process'],
-        })
-        .then((instance) => {
-          browser = instance
-          return browser.newPage()
-        })
-        .then((x) => (page = x)),
+      launchPuppeteer(),
       new Promise((resolve) => {
         server = createServer((request, response) => {
           return handler(request, response, { public: path.resolve(__dirname, '..') })
