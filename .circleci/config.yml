@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  test:
     working_directory: ~/vue-recaptcha
     docker:
       - image: circleci/node:16-browsers
@@ -22,42 +22,15 @@ jobs:
           paths:
             - ~/.cache/yarn
       - run:
+          name: Build
+          command: yarn build
+      - run:
           name: Test
           command: yarn test
       - store_test_results:
           path: reports
-  deploy:
-    docker:
-      - image: circleci/node:16
-    working_directory: ~/vue-recaptcha
-    steps:
-      - checkout
-      - restore_cache:
-          key: yarn-cache-v1-{{ checksum "yarn.lock" }}
-      - restore_cache:
-          key: dependency-cache-v1-{{ checksum "package.json" }}
-      - run:
-          name: Install depencies
-          command: yarn install
-      - save_cache:
-          key: dependency-cache-v1-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
-      - save_cache:
-          key: yarn-cache-v1-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-      - run:
-          command: |
-            yarn build
 workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
+      - test
