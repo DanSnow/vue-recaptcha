@@ -133,7 +133,7 @@ var Recaptcha = defineComponent({
     },
     loadRecaptchaScript: {
       type: Boolean,
-      "default": false
+      "default": true
     },
     recaptchaScriptId: {
       type: String,
