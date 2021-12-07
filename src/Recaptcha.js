@@ -99,6 +99,13 @@ export default defineComponent({
     }
   },
   render() {
-    return h('div', { ref: 'root' }, this.$slots.default?.())
+    const defaultSlot = this.$slots.default
+    let defaultContent
+    if (typeof defaultSlot === 'function') {
+      defaultContent = defaultSlot()
+    } else {
+      defaultContent = defaultSlot
+    }
+    return h('div', { ref: 'root' }, defaultContent)
   },
 })
