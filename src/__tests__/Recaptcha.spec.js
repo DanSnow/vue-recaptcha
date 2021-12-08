@@ -1,9 +1,8 @@
 import recaptcha, { WIDGET_ID } from '../recaptcha-wrapper'
 import { isVue2 } from 'vue-demi'
+import { mount } from '@vue/test-utils'
 
 import Recaptcha from '../Recaptcha'
-
-const mount = isVue2 ? require('@vue/test-utils2').mount : require('@vue/test-utils').mount
 
 jest.mock('../recaptcha-wrapper')
 

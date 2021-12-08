@@ -1,7 +1,5 @@
 import { VueRecaptcha } from '../../src'
-import { isVue2 } from 'vue-demi'
-
-const mount = isVue2 ? require('@vue/test-utils2').mount : require('@vue/test-utils').mount
+import { mount } from '@vue/test-utils'
 
 const WIDGET_ID = 'widgetId'
 
