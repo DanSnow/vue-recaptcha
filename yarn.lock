@@ -48,7 +48,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.16.0, @babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.16.0, @babel/core@npm:^7.7.2, @babel/core@npm:^7.7.5":
+"@babel/core@npm:7.16.0, @babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.7.2, @babel/core@npm:^7.7.5":
   version: 7.16.0
   resolution: "@babel/core@npm:7.16.0"
   dependencies:
@@ -1131,7 +1131,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:7.16.4, @babel/preset-env@npm:^7.16.4":
+"@babel/preset-env@npm:7.16.4":
   version: 7.16.4
   resolution: "@babel/preset-env@npm:7.16.4"
   dependencies:
@@ -1814,7 +1814,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/composition-api@npm:1.4.1, @vue/composition-api@npm:^1.4.1":
+"@vue/composition-api@npm:1.4.1":
   version: 1.4.1
   resolution: "@vue/composition-api@npm:1.4.1"
   dependencies:
@@ -1887,16 +1887,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/test-utils@npm:2.0.0-rc.17":
-  version: 2.0.0-rc.17
-  resolution: "@vue/test-utils@npm:2.0.0-rc.17"
-  peerDependencies:
-    vue: ^3.0.1
-  checksum: 10353beda28316a983a31edc83fac6fb76ce7f6959eef1fd5a71db3806f652d83554efa8d2b50095c00c7faa3fc5f1ef3b64d97399bf8d445fd05b2aef47d4cb
-  languageName: node
-  linkType: hard
-
-"@vue/test-utils@npm:^1.3.0":
+"@vue/test-utils@npm:1.3.0":
   version: 1.3.0
   resolution: "@vue/test-utils@npm:1.3.0"
   dependencies:
@@ -1907,6 +1898,15 @@ __metadata:
     vue: 2.x
     vue-template-compiler: ^2.x
   checksum: 5f93a1ce3aeb60d93fcf4ea7b28a2d4a327a8309441e87fa1e6c1314106287603d0f2868a084096b7b3db32cc69bba18974f8ba3a19212c7732c05e4da726f61
+  languageName: node
+  linkType: hard
+
+"@vue/test-utils@npm:2.0.0-rc.17":
+  version: 2.0.0-rc.17
+  resolution: "@vue/test-utils@npm:2.0.0-rc.17"
+  peerDependencies:
+    vue: ^3.0.1
+  checksum: 10353beda28316a983a31edc83fac6fb76ce7f6959eef1fd5a71db3806f652d83554efa8d2b50095c00c7faa3fc5f1ef3b64d97399bf8d445fd05b2aef47d4cb
   languageName: node
   linkType: hard
 
@@ -4811,7 +4811,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:27.4.3, jest@npm:^27.4.3":
+"jest@npm:27.4.3":
   version: 27.4.3
   resolution: "jest@npm:27.4.3"
   dependencies:
@@ -7003,7 +7003,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-demi@npm:^0.12.1":
+"vue-demi@npm:0.12.1, vue-demi@npm:^0.12.1":
   version: 0.12.1
   resolution: "vue-demi@npm:0.12.1"
   peerDependencies:
@@ -7062,7 +7062,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"vue-template-compiler@npm:^2.6.14":
+"vue-template-compiler@npm:2.6.14":
   version: 2.6.14
   resolution: "vue-template-compiler@npm:2.6.14"
   dependencies:
@@ -7076,17 +7076,24 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vue2-test@workspace:vue2-test"
   dependencies:
-    "@babel/core": ^7.16.0
-    "@babel/plugin-proposal-object-rest-spread": ^7.16.0
-    "@babel/preset-env": ^7.16.4
-    "@vue/composition-api": ^1.4.1
-    "@vue/test-utils": ^1.3.0
-    jest: ^27.4.3
-    vue: ^2.6.14
-    vue-demi: ^0.12.1
-    vue-template-compiler: ^2.6.14
+    "@babel/core": 7.16.0
+    "@babel/plugin-proposal-object-rest-spread": 7.16.0
+    "@babel/preset-env": 7.16.4
+    "@vue/composition-api": 1.4.1
+    "@vue/test-utils": 1.3.0
+    jest: 27.4.3
+    vue: 2.6.14
+    vue-demi: 0.12.1
+    vue-template-compiler: 2.6.14
   languageName: unknown
   linkType: soft
+
+"vue@npm:2.6.14":
+  version: 2.6.14
+  resolution: "vue@npm:2.6.14"
+  checksum: 23524a1bdca094d62cb3491a46317eed75184b5d61d28fa846ea5d2b241c1cc7084fc67ee259d47a50a6d0bbc33ecaceb7bb52bff81312fe7da07263f3419942
+  languageName: node
+  linkType: hard
 
 "vue@npm:3.2.24":
   version: 3.2.24
@@ -7098,13 +7105,6 @@ __metadata:
     "@vue/server-renderer": 3.2.24
     "@vue/shared": 3.2.24
   checksum: 9a8560a794ae8d62a3041d648cf35525e328553313d06a6fa38722c2e4e87faee1bde57df36c152addec4f4ea6fa2e33b58f1296cc12c41a8c2a63202b51fc10
-  languageName: node
-  linkType: hard
-
-"vue@npm:^2.6.14":
-  version: 2.6.14
-  resolution: "vue@npm:2.6.14"
-  checksum: 23524a1bdca094d62cb3491a46317eed75184b5d61d28fa846ea5d2b241c1cc7084fc67ee259d47a50a6d0bbc33ecaceb7bb52bff81312fe7da07263f3419942
   languageName: node
   linkType: hard
 
