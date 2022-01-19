@@ -626,7 +626,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.16.4":
+"@babel/parser@npm:^7.16.4, @babel/parser@npm:^7.16.8":
   version: 7.16.8
   resolution: "@babel/parser@npm:7.16.8"
   bin:
@@ -641,15 +641,6 @@ __metadata:
   bin:
     parser: ./bin/babel-parser.js
   checksum: e664ff1edda164ab3f3c97fc1dd1a8930b0fba9981cbf873d3f25a22d16d50e2efcfaf81daeefa978bff2c4f268d34832f6817c8bc4e03594c3f43beba92fb68
-  languageName: node
-  linkType: hard
-
-"@babel/parser@npm:^7.16.8":
-  version: 7.16.8
-  resolution: "@babel/parser@npm:7.16.8"
-  bin:
-    parser: ./bin/babel-parser.js
-  checksum: f6bc2eb1f298fcb81db34c2d343fd05d8c59dbc5419a88c1cb4d298c7a3863e4d54f5a4f38a40e1aa979e4ce355816348730b471c1d787d424ed52b270fc7be0
   languageName: node
   linkType: hard
 
@@ -5431,9 +5422,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:12.1.7":
-  version: 12.1.7
-  resolution: "lint-staged@npm:12.1.7"
+"lint-staged@npm:12.2.1":
+  version: 12.2.1
+  resolution: "lint-staged@npm:12.2.1"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
@@ -5450,7 +5441,7 @@ __metadata:
     yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 3d0757706c8b0ca3f004bb2ffa89a9d5fc97ccdebfa4cde29a9636c661538780e194b99cbc5e4b8b89b13986187b33c97e009b09014511bbd45ee05ba557d0eb
+  checksum: e75c70b3c5476d73475ec1a95847b67c2172005cfd6018e28876def7f46a6d329031d2441ad952e9b70a601b935040d2b5d67c058d3192bb997b1129913bb5e3
   languageName: node
   linkType: hard
 
@@ -7435,7 +7426,7 @@ __metadata:
     husky: 7.0.4
     jest: 27.4.7
     jest-junit: 13.0.0
-    lint-staged: 12.1.7
+    lint-staged: 12.2.1
     pinst: 2.1.6
     prettier: 2.5.1
     puppeteer: 12.0.1
