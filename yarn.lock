@@ -2157,6 +2157,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/compiler-core@npm:3.2.28":
+  version: 3.2.28
+  resolution: "@vue/compiler-core@npm:3.2.28"
+  dependencies:
+    "@babel/parser": ^7.16.4
+    "@vue/shared": 3.2.28
+    estree-walker: ^2.0.2
+    source-map: ^0.6.1
+  checksum: 0bcc8075efada475e239fbac9e4c63b2798bcae1ea7fec668aa71ea3590bb464ffa2e725dd0b3d0bb0d7ba937de485acfed3a7559cb6e396a2544bcd5490a2a0
+  languageName: node
+  linkType: hard
+
 "@vue/compiler-dom@npm:3.2.27":
   version: 3.2.27
   resolution: "@vue/compiler-dom@npm:3.2.27"
@@ -2164,6 +2176,16 @@ __metadata:
     "@vue/compiler-core": 3.2.27
     "@vue/shared": 3.2.27
   checksum: 715b60b396010932677050239a86a3f63fe0835adc73298b0805f7c8e9dc333426ba6ee5fcdaf885e6fd91f9d3f5452d32555fa61a8ea93cf3185ceb6532f8c3
+  languageName: node
+  linkType: hard
+
+"@vue/compiler-dom@npm:3.2.28":
+  version: 3.2.28
+  resolution: "@vue/compiler-dom@npm:3.2.28"
+  dependencies:
+    "@vue/compiler-core": 3.2.28
+    "@vue/shared": 3.2.28
+  checksum: 5b9826f7d9a510463a2fdd9d3e292cfc2f63870b3ab8e7af5b51891344027161cda8d1278189dcbea24480e377c61e4581cb122b14b4a2478ee012b052ac5adf
   languageName: node
   linkType: hard
 
@@ -2265,6 +2287,13 @@ __metadata:
   version: 3.2.27
   resolution: "@vue/shared@npm:3.2.27"
   checksum: ab5b1ffd27e75b00d4ea952fd47a8237b86d02d1f336beecc25e3823bb9e15d57ac15d4899c5309e339ce8da72c9f35e30fe25d3f3106f670854c0fefc0dee9b
+  languageName: node
+  linkType: hard
+
+"@vue/shared@npm:3.2.28":
+  version: 3.2.28
+  resolution: "@vue/shared@npm:3.2.28"
+  checksum: d0d0ee2d6a3637a295cfe9ef1f7aee06697dd45485d25d2acd19a0824a6b5c40de58f6efc1470727ac97a258d8b6f0cf8d9cd986a552f986718838c325f61e83
   languageName: node
   linkType: hard
 
@@ -7411,7 +7440,7 @@ __metadata:
     "@babel/plugin-proposal-object-rest-spread": 7.16.7
     "@babel/preset-env": 7.16.8
     "@rollup/plugin-babel": 5.3.0
-    "@vue/compiler-dom": 3.2.27
+    "@vue/compiler-dom": 3.2.28
     "@vue/composition-api": 1.4.4
     "@vue/test-utils": 2.0.0-rc.18
     babel-jest: 27.4.6
