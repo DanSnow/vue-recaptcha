@@ -1,3 +1,5 @@
+import Vue from "vue"
+
 interface Props {
   sitekey: string
   theme?: string
@@ -11,7 +13,7 @@ interface Props {
   language?: string
 }
 
-declare class VueRecaptcha {
+declare class VueRecaptcha extends Vue {
   $props: Props
   execute(): void
   reset(): void
