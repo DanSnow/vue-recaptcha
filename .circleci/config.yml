@@ -1,4 +1,6 @@
 version: 2.1
+orbs: 
+  browser-tools: circleci/browser-tools@1.2.5
 jobs:
   test:
     working_directory: ~/vue-recaptcha
@@ -6,6 +8,7 @@ jobs:
       - image: cimg/node:16.14-browsers
     steps:
       - checkout
+      - browser-tools/install-chrome
       - restore_cache:
           key: yarn-cache-v1-{{ checksum "yarn.lock" }}
       - restore_cache:
