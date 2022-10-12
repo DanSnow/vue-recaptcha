@@ -29,11 +29,12 @@ This version is for Vue 3 and 2.
     - [reCAPTCHA V3](#recaptcha-v3)
   - [Install](#install)
     - [NPM](#npm)
+    - [Yarn](#yarn)
     - [CDN](#cdn)
   - [Usage](#usage)
     - [Get started](#get-started)
+    - [Manually call challenge](#manually-call-challenge)
     - [Bind Challenge to Button](#bind-challenge-to-button)
-    - [Auto-load `<script>`](#auto-load-script)
   - [API](#api)
     - [Props](#props)
     - [Methods](#methods)
@@ -42,6 +43,7 @@ This version is for Vue 3 and 2.
     - [What is "ReCAPTCHA couldn't find user-provided function: vueRecaptchaApiLoaded"?](#what-is-recaptcha-couldnt-find-user-provided-function-vuerecaptchaapiloaded)
     - [How to test vue-recaptcha?](#how-to-test-vue-recaptcha)
     - [How about an e2e testing (or integration testing)?](#how-about-an-e2e-testing-or-integration-testing)
+    - [Manually load `<script>`](#manually-load-script)
 
 <!-- /TOC -->
 
@@ -162,7 +164,7 @@ The following props will only work when `loadRecaptchaScript` is set as `true`
   Default: `__RECAPTCHA_SCRIPT`
 - `language` (optional) –
   Set this to change the reCAPTCHA language if necessary, as described in [ReCAPTCHA support][recaptcha-global]
-  Default: '' `// user browser language by default`  
+  Default: '' `// user browser language by default`
   **Notice**: It'll not work as you expecting when you change this props dynamically. Since it's impossible to change the language without a full page reloading
 
 For more information, please reference to [ReCAPTCHA document][recaptcha-params] and [Invisible ReCAPTCHA document][invisible-recaptcha-params].
@@ -189,7 +191,7 @@ For more information, please reference to [ReCAPTCHA document][recaptcha-params]
 
   ```html
   <vue-recaptcha
-    :siteKey="siteKey"
+    :sitekey="sitekey"
     @verify="verifyMethod"
     @expired="expiredMethod"
     @render="renderMethod"
