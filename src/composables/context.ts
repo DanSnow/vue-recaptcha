@@ -50,7 +50,7 @@ export function useAssertV2SiteKey(): string {
 
 export function useAssertV3SiteKey(): string {
   const ctx = useRecaptchaContext()
-  invariant(ctx.options.v3SiteKey, 'Your config is not compatible with recaptcha v3, please provide v2SiteKey')
+  invariant(ctx.options.v3SiteKey, 'Your config is not compatible with recaptcha v3, please provide v3SiteKey')
   return ctx.options.v3SiteKey
 }
 
