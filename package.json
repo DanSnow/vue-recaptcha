@@ -8,6 +8,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
+    "dev": "vite",
     "build": "unbuild",
     "test": "vitest",
     "prepack": "yarn build",
@@ -22,6 +23,11 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
+    },
+    "./head": {
+      "import": "./dist/head.mjs",
+      "require": "./dist/head.cjs",
+      "types": "./dist/head.d.ts"
     }
   },
   "keywords": [

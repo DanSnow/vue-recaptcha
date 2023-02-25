@@ -1,8 +1,8 @@
 import { createPlugin } from './plugin'
-import { createUnheadRecaptcha } from './script-manager/unhead'
+import { createHeadRecaptcha } from './script-manager/head'
 
 export * from './api'
 
 // plugin
-const plugin = createPlugin(createUnheadRecaptcha)
+const plugin = createPlugin(createHeadRecaptcha)
 export { plugin as default, plugin as VueRecaptchaPlugin }

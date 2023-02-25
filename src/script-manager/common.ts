@@ -48,6 +48,10 @@ export interface RecaptchaParams {
   [k: string]: string | undefined
 }
 
+export interface ScriptManagerFactory {
+  (params: RecaptchaParams): () => void
+}
+
 export const recaptchaLoaded = pDefer()
 
 if (typeof window !== 'undefined') {
