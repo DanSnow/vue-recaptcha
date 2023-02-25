@@ -2,17 +2,14 @@
   "name": "vue-recaptcha",
   "version": "2.0.3",
   "description": "ReCAPTCHA vue component",
-  "types": "types/index.d.ts",
-  "module": "dist/vue-recaptcha.es.js",
-  "main": "dist/vue-recaptcha.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "main": "./dist/index.cjs",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "build": "rollup -c",
-    "test": "jest",
-    "test:unit": "jest src",
-    "test:e2e": "jest e2e",
-    "test:types": "tsc -p types/tests",
+    "build": "unbuild",
+    "test": "vitest",
     "prepack": "yarn build",
     "prepare": "husky install",
     "prepublishOnly": "pinst --disable",
@@ -20,16 +17,19 @@
   },
   "author": "DanSnow",
   "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "keywords": [
     "vue",
     "component",
     "vue-component",
     "google-recaptcha",
     "recaptcha"
-  ],
-  "workspaces": [
-    ".",
-    "vue2-test"
   ],
   "repository": {
     "type": "git",
@@ -43,37 +43,33 @@
     "vue": "^2.0.0 || ^3.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.21.0",
-    "@babel/core": "7.21.0",
-    "@babel/plugin-proposal-object-rest-spread": "7.20.7",
-    "@babel/preset-env": "7.20.2",
-    "@rollup/plugin-babel": "6.0.3",
+    "@antfu/eslint-config-vue": "^0.35.3",
+    "@playwright/test": "^1.31.1",
+    "@unhead/vue": "^1.1.5",
+    "@vitejs/plugin-vue": "^4.0.0",
     "@vue/compiler-dom": "3.2.47",
     "@vue/composition-api": "1.7.1",
     "@vue/test-utils": "2.2.7",
     "babel-jest": "27.5.1",
     "eslint": "8.34.0",
     "eslint-config-prettier": "8.6.0",
-    "eslint-config-standard": "17.0.0",
-    "eslint-import-resolver-node": "0.3.7",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-promise": "6.1.1",
     "husky": "8.0.3",
-    "jest": "27.5.1",
-    "jest-junit": "15.0.0",
     "lint-staged": "13.1.2",
     "pinst": "3.0.0",
     "prettier": "2.8.4",
-    "puppeteer": "17.1.3",
-    "rollup": "3.17.2",
-    "rollup-plugin-terser": "7.0.2",
-    "serve-handler": "6.1.5",
-    "typescript": "4.9.5",
+    "typescript": "^4.9.5",
+    "unbuild": "^1.1.2",
+    "unhead": "^1.1.2",
+    "vite": "^4.1.4",
+    "vitest": "^0.28.5",
     "vue": "3.2.47"
   },
   "dependencies": {
+    "@vueuse/shared": "^9.13.0",
+    "defu": "^6.1.2",
+    "p-defer": "^4.0.0",
+    "std-env": "^3.3.2",
+    "type-fest": "^3.6.0",
     "vue-demi": "^0.13.11"
   },
   "peerDependenciesMeta": {
