@@ -10,3 +10,6 @@ export { default as ChallengeV2 } from './components/ChallengeV2.vue'
 export { default as ChallengeV3 } from './components/ChallengeV3.vue'
 export { default as Checkbox } from './components/Checkbox.vue'
 export { default as RecaptchaScript } from './components/RecaptchaScript.vue'
+
+// plugin
+export { createPlugin } from './plugin'

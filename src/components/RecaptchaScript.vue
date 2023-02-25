@@ -1,8 +1,15 @@
 <script setup lang="ts">
 import { useRecaptchaContext } from '../composables/context'
-const { useScriptProvider } = useRecaptchaContext()
+import { warn } from '../utils'
 
-useScriptProvider()
+const ctx = useRecaptchaContext()
+
+if (ctx.scriptInjected) {
+  warn('<RecaptchaScript /> is used multiple time')
+} else {
+  ctx.scriptInjected = true
+  ctx.useScriptProvider()
+}
 </script>
 
 <template />

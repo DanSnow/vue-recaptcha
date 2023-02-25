@@ -1,6 +1,7 @@
 import { LiteralUnion, Opaque } from 'type-fest'
 import pDefer from 'p-defer'
 import { warn } from '../utils'
+import defu from 'defu'
 
 export type RecaptchaCallback = '__vueRecaptchaLoaded'
 
@@ -53,9 +54,10 @@ export interface ScriptManagerFactory {
 }
 
 export const recaptchaLoaded = pDefer()
+const ONLOAD_KEY: RecaptchaCallback = '__vueRecaptchaLoaded' as const
 
 if (typeof window !== 'undefined') {
-  window.__vueRecaptchaLoaded = () => {
+  window[ONLOAD_KEY] = () => {
     recaptchaLoaded.resolve()
   }
 }
@@ -64,15 +66,16 @@ export function toQueryString(params: RecaptchaParams) {
   return new URLSearchParams(normalizeParams(params)).toString()
 }
 
-export function normalizeParams(params: RecaptchaParams): string[][] {
+export function normalizeParams(raw: RecaptchaParams): string[][] {
+  const params = defu(raw, { onload: ONLOAD_KEY, render: 'explicit' })
   if (params.render === 'onload') {
     warn('passing `onload` as `render` param is not allowed')
     params.render = 'explicit'
   }
 
-  if (params.onload !== '__vueRecaptchaLoaded') {
+  if (params.onload !== ONLOAD_KEY) {
     warn('passing `onload` param with other value is not allowed')
-    params.onload = '__vueRecaptchaLoaded'
+    params.onload = ONLOAD_KEY
   }
 
   return toStringPair(params)
