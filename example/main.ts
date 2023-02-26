@@ -7,8 +7,7 @@ const app = createApp(App)
 
 app.use(createHead())
 app.use(VueRecaptchaPlugin, {
-  // v2SiteKey: '6LeBHhcTAAAAALGH4-_9sXkLGaWToSIf6sg5Mcgj',
-  v2SiteKey: '6Lc1tbIkAAAAAKzlAUh456wbsgY8f12n9FWLJq2F',
+  v2SiteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
   v3SiteKey: '6LejC9kZAAAAAFQyq2IjCq0eK4g88GkixXr4_BGs',
 })
 
