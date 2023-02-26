@@ -11,6 +11,7 @@
     "dev": "vite",
     "build": "unbuild",
     "test": "vitest",
+    "doc:dev": "nuxi dev docs",
     "prepack": "yarn build",
     "prepare": "husky install",
     "prepublishOnly": "pinst --disable",
@@ -44,9 +45,12 @@
   "bugs": {
     "url": "https://github.com/DanSnow/vue-recaptcha/issues"
   },
+  "workspaces": [
+    ".",
+    "docs"
+  ],
   "peerDependencies": {
-    "@vue/composition-api": "^1.0.0-beta.1",
-    "vue": "^2.0.0 || ^3.0.0"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config-vue": "^0.35.3",
@@ -61,6 +65,7 @@
     "eslint-config-prettier": "8.6.0",
     "husky": "8.0.3",
     "lint-staged": "13.1.2",
+    "nuxi": "^3.2.2",
     "pinst": "3.0.0",
     "prettier": "2.8.4",
     "typescript": "^4.9.5",
@@ -71,6 +76,8 @@
     "vue": "3.2.47"
   },
   "dependencies": {
+    "@nuxt/kit": "^3.2.2",
+    "@nuxt/schema": "^3.2.2",
     "@vueuse/shared": "^9.13.0",
     "defu": "^6.1.2",
     "p-defer": "^4.0.0",
