@@ -19,6 +19,13 @@ export interface UseChallengeV2Input {
   options?: RecaptchaV2OptionsInput
 }
 
+export enum RecaptchaV2State {
+  Init = 'init',
+  Verified = 'verified',
+  Expired = 'expired',
+  Error = 'error',
+}
+
 export function useChallengeV2({ root = ref(), options = {} }: UseChallengeV2Input) {
   const siteKey = useAssertV2SiteKey()
   const widgetID = ref<WidgetID>()
@@ -27,6 +34,7 @@ export function useChallengeV2({ root = ref(), options = {} }: UseChallengeV2Inp
   const expired = createEventHook<void>()
   const error = createEventHook<Error>()
   const rootRef = resolveRef(root)
+  const state = ref(RecaptchaV2State.Init)
 
   whenever(rootRef, async (el) => {
     const id = await proxy.render(el, {
@@ -39,19 +47,33 @@ export function useChallengeV2({ root = ref(), options = {} }: UseChallengeV2Inp
     widgetID.value = id
   })
 
+  verify.on(() => {
+    state.value = RecaptchaV2State.Verified
+  })
+
+  expired.on(() => {
+    state.value = RecaptchaV2State.Expired
+  })
+
+  error.on(() => {
+    state.value = RecaptchaV2State.Error
+  })
+
   return {
     root: rootRef,
     widgetID,
     execute() {
-      if (widgetID.value) {
+      if (typeof widgetID.value !== 'undefined') {
         proxy.execute(widgetID.value)
       }
     },
     reset() {
-      if (widgetID.value) {
+      state.value = RecaptchaV2State.Init
+      if (typeof widgetID.value !== 'undefined') {
         proxy.reset(widgetID.value)
       }
     },
+    state,
     onVerify: verify.on,
     onExpired: expired.on,
     onError: error.on,

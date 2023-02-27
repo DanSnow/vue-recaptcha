@@ -28,7 +28,7 @@ const emit = defineEmits<{
   (event: 'update:modelValue', response: string | null): void
 }>()
 
-const { root, reset, execute, isError, isExpired, isVerified } = useComponentV2(
+const { root, reset, state, execute, isError, isExpired, isVerified } = useComponentV2(
   { ...props.options, size: 'invisible' },
   toRef(props, 'modelValue'),
   emit
@@ -52,6 +52,7 @@ defineExpose({
       v-bind="{
         execute,
         widgetId,
+        state,
         reset,
         isError,
         isExpired,
