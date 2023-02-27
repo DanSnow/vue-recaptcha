@@ -1,6 +1,8 @@
 <template>
-  <AppLayout>
-    <NuxtPage />
+  <div>
+    <AppLayout>
+      <NuxtPage />
+    </AppLayout>
     <RecaptchaScript />
-  </AppLayout>
+  </div>
 </template>
