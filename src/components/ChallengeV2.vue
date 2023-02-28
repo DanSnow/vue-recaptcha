@@ -1,21 +1,21 @@
 <script setup lang="ts">
 import { toRef } from 'vue-demi'
-import { RecaptchaV2InvisibleOptionsInput } from '../composables/challenge-v2'
 import { WidgetID } from '../script-manager/common'
 import { useComponentV2 } from '../composables/component-v2'
 
 const props = withDefaults(
   defineProps<{
     as?: string
-    options?: RecaptchaV2InvisibleOptionsInput
     widgetId?: WidgetID
+    badge?: 'bottomright' | 'bottomleft' | 'inline'
+    tabindex?: string
     autoExecute?: boolean
     modelValue?: string | null
   }>(),
   {
     as: 'div',
     autoExecute: true,
-    options: () => ({ size: 'invisible' }),
+    badge: 'bottomright',
   }
 )
 
@@ -29,7 +29,11 @@ const emit = defineEmits<{
 }>()
 
 const { root, reset, state, execute, isError, isExpired, isVerified } = useComponentV2(
-  { ...props.options, size: 'invisible' },
+  {
+    size: 'invisible',
+    badge: props.badge,
+    tabindex: props.tabindex,
+  },
   toRef(props, 'modelValue'),
   emit
 )

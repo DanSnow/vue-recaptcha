@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RecaptchaV2CheckboxOptionsInput } from '../composables/challenge-v2'
 import { WidgetID } from '../script-manager/common'
 import { useComponentV2 } from '../composables/component-v2'
 import { toRef } from 'vue-demi'
@@ -7,12 +6,16 @@ import { toRef } from 'vue-demi'
 const props = withDefaults(
   defineProps<{
     as?: string
-    options?: RecaptchaV2CheckboxOptionsInput
     widgetId?: WidgetID
+    size?: 'normal' | 'compact'
+    theme?: 'dark' | 'light'
+    tabindex?: string
     modelValue?: string | null
   }>(),
   {
     as: 'div',
+    size: 'normal',
+    theme: 'light',
   }
 )
 
@@ -25,7 +28,15 @@ const emit = defineEmits<{
   (event: 'update:modelValue', response: string | null): void
 }>()
 
-const { root } = useComponentV2(props.options, toRef(props, 'modelValue'), emit)
+const { root } = useComponentV2(
+  {
+    theme: props.theme,
+    size: props.size,
+    tabindex: props.tabindex,
+  },
+  toRef(props, 'modelValue'),
+  emit
+)
 </script>
 
 <template>

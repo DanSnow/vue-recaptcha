@@ -12,7 +12,7 @@ type OmitKeys = 'sitekey' | 'callback' | 'expired-callback' | 'error-callback'
 
 export type RecaptchaV2CheckboxOptionsInput = Omit<RecaptchaV2CheckboxOptions, OmitKeys>
 export type RecaptchaV2InvisibleOptionsInput = Omit<RecaptchaV2InvisibleOptions, OmitKeys>
-export type RecaptchaV2OptionsInput = Omit<RecaptchaV2Options, OmitKeys>
+export type RecaptchaV2OptionsInput = RecaptchaV2CheckboxOptionsInput | RecaptchaV2InvisibleOptionsInput
 
 export interface UseChallengeV2Input {
   root?: MaybeComputedRef<Element | undefined>
