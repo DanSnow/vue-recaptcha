@@ -12,6 +12,17 @@ interface Emits {
   (event: 'update:modelValue', response: string | null): void
 }
 
+export interface UseComponentV2Return {
+  root: Ref<HTMLElement | null>
+  widgetID: Ref<WidgetID | null>
+  state: Ref<RecaptchaV2State>
+  isError: Ref<boolean>
+  isExpired: Ref<boolean>
+  isVerified: Ref<boolean>
+  reset: () => void
+  execute: () => void
+}
+
 export function useComponentV2(
   options: RecaptchaV2OptionsInput | undefined,
   modelValue: Ref<string | null | undefined>,

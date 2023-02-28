@@ -5,11 +5,26 @@ import { toRef } from 'vue-demi'
 
 const props = withDefaults(
   defineProps<{
+    /**
+     * what element to render
+     */
     as?: string
+    /**
+     * @ignore
+     */
     widgetId?: WidgetID
+    /**
+     * size for reCAPTCHA checkbox
+     */
     size?: 'normal' | 'compact'
+    /**
+     * theme for reCAPTCHA checkbox
+     */
     theme?: 'dark' | 'light'
     tabindex?: string
+    /**
+     * response of reCAPTCHA
+     */
     modelValue?: string | null
   }>(),
   {
