@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   alias: {
     '#recaptcha': resolver.resolve('../src'),
   },
-  modules: ['@unocss/nuxt', ['../src/nuxt', { _globalComponent: true }]],
+  modules: ['@unocss/nuxt', '@vueuse/nuxt', ['../src/nuxt', { _globalComponent: true }]],
   unocss: {
     // presets
     uno: true, // enabled `@unocss/preset-uno`
