@@ -1,3 +1,4 @@
+import { defineNuxtConfig } from 'nuxt/config'
 import { createResolver } from '@nuxt/kit'
 
 const resolver = createResolver(import.meta.url)
@@ -7,7 +8,17 @@ export default defineNuxtConfig({
   alias: {
     '#recaptcha': resolver.resolve('../src'),
   },
-  modules: [['../src/nuxt', { _globalComponent: true }]],
+  modules: ['@unocss/nuxt', ['../src/nuxt', { _globalComponent: true }]],
+  unocss: {
+    // presets
+    uno: true, // enabled `@unocss/preset-uno`
+    icons: true, // enabled `@unocss/preset-icons`
+    attributify: true, // enabled `@unocss/preset-attributify`,
+
+    // core options
+    shortcuts: [],
+    rules: [],
+  },
   runtimeConfig: {
     public: {
       recaptcha: {

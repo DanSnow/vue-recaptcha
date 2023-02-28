@@ -6,10 +6,12 @@ const map = {
   [RecaptchaV2State.Expired]: 'Expired',
   [RecaptchaV2State.Error]: 'Error',
 }
+
+const response = ref()
 </script>
 
 <template>
-  <RecaptchaChallengeV2 v-slot="{ state, execute }">
-    <button @click="execute">{{ map[state] }}</button>
+  <RecaptchaChallengeV2 v-slot="{ state }" v-model="response">
+    <PrimaryButton>{{ map[state] }}{{ response ? ` ${response.slice(0, 6)}...` : '' }}</PrimaryButton>
   </RecaptchaChallengeV2>
 </template>
