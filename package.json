@@ -1,6 +1,6 @@
 {
   "name": "vue-recaptcha",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0-alpha.2",
   "description": "ReCAPTCHA vue component",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.mjs",
@@ -20,6 +20,9 @@
   },
   "author": "DanSnow",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -30,6 +33,11 @@
       "import": "./dist/head.mjs",
       "require": "./dist/head.cjs",
       "types": "./dist/head.d.ts"
+    },
+    "./nuxt": {
+      "import": "./dist/nuxt.mjs",
+      "require": "./dist/nuxt.cjs",
+      "types": "./dist/nuxt.d.ts"
     }
   },
   "keywords": [
