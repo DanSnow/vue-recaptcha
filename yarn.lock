@@ -54,7 +54,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antfu/eslint-config-vue@npm:^0.36.0":
+"@antfu/eslint-config-vue@npm:0.36.0":
   version: 0.36.0
   resolution: "@antfu/eslint-config-vue@npm:0.36.0"
   dependencies:
@@ -1029,7 +1029,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt-themes/docus@npm:^1.9.1":
+"@nuxt-themes/docus@npm:1.9.1":
   version: 1.9.1
   resolution: "@nuxt-themes/docus@npm:1.9.1"
   dependencies:
@@ -1335,7 +1335,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@playwright/test@npm:^1.31.2":
+"@playwright/test@npm:1.31.2":
   version: 1.31.2
   resolution: "@playwright/test@npm:1.31.2"
   dependencies:
@@ -1810,7 +1810,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/vue@npm:^1.1.15":
+"@unhead/vue@npm:1.1.15, @unhead/vue@npm:^1.1.15":
   version: 1.1.15
   resolution: "@unhead/vue@npm:1.1.15"
   dependencies:
@@ -1885,7 +1885,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unocss/nuxt@npm:^0.50.3":
+"@unocss/nuxt@npm:0.50.3":
   version: 0.50.3
   resolution: "@unocss/nuxt@npm:0.50.3"
   dependencies:
@@ -2127,7 +2127,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:^4.0.0":
+"@vitejs/plugin-vue@npm:4.0.0, @vitejs/plugin-vue@npm:^4.0.0":
   version: 4.0.0
   resolution: "@vitejs/plugin-vue@npm:4.0.0"
   peerDependencies:
@@ -2220,12 +2220,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@vue-recaptcha/doc@workspace:docs"
   dependencies:
-    "@nuxt-themes/docus": ^1.9.1
-    "@unocss/nuxt": ^0.50.3
+    "@nuxt-themes/docus": 1.9.1
+    "@unocss/nuxt": 0.50.3
     "@vueuse/nuxt": ^9.13.0
-    gh-pages: ^5.0.0
+    gh-pages: 5.0.0
     mermaid: ^10.0.2
-    nuxt: ^3.2.3
+    nuxt: 3.2.3
     ofetch: ^1.0.1
     vee-validate: ^4.7.4
     vue-recaptcha: "workspace:^"
@@ -5835,7 +5835,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gh-pages@npm:^5.0.0":
+"gh-pages@npm:5.0.0":
   version: 5.0.0
   resolution: "gh-pages@npm:5.0.0"
   dependencies:
@@ -5921,7 +5921,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.3":
+"glob@npm:^7.0.3, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.2.0":
   version: 7.2.3
   resolution: "glob@npm:7.2.3"
   dependencies:
@@ -5932,20 +5932,6 @@ __metadata:
     once: ^1.3.0
     path-is-absolute: ^1.0.0
   checksum: 29452e97b38fa704dabb1d1045350fb2467cf0277e155aa9ff7077e90ad81d1ea9d53d3ee63bd37c05b09a065e90f16aec4a65f5b8de401d1dac40bc5605d133
-  languageName: node
-  linkType: hard
-
-"glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.2.0":
-  version: 7.2.0
-  resolution: "glob@npm:7.2.0"
-  dependencies:
-    fs.realpath: ^1.0.0
-    inflight: ^1.0.4
-    inherits: 2
-    minimatch: ^3.0.4
-    once: ^1.3.0
-    path-is-absolute: ^1.0.0
-  checksum: 78a8ea942331f08ed2e055cb5b9e40fe6f46f579d7fd3d694f3412fe5db23223d29b7fee1575440202e9a7ff9a72ab106a39fee39934c7bedafe5e5f8ae20134
   languageName: node
   linkType: hard
 
@@ -8825,7 +8811,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxi@npm:3.2.3, nuxi@npm:^3.2.3":
+"nuxi@npm:3.2.3":
   version: 3.2.3
   resolution: "nuxi@npm:3.2.3"
   dependencies:
@@ -8876,7 +8862,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt@npm:^3.2.3":
+"nuxt@npm:3.2.3":
   version: 3.2.3
   resolution: "nuxt@npm:3.2.3"
   dependencies:
@@ -11527,7 +11513,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.9.4, typescript@npm:^4.9.5":
+"typescript@npm:4.9.5, typescript@npm:^4.9.4, typescript@npm:^4.9.5":
   version: 4.9.5
   resolution: "typescript@npm:4.9.5"
   bin:
@@ -11537,7 +11523,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.9.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.9.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
   resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"
   bin:
@@ -11566,7 +11552,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unbuild@npm:^1.1.2":
+"unbuild@npm:1.1.2, unbuild@npm:^1.1.2":
   version: 1.1.2
   resolution: "unbuild@npm:1.1.2"
   dependencies:
@@ -12076,7 +12062,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^3.0.0 || ^4.0.0, vite@npm:^4.1.4, vite@npm:~4.1.4":
+"vite@npm:4.1.4, vite@npm:^3.0.0 || ^4.0.0, vite@npm:~4.1.4":
   version: 4.1.4
   resolution: "vite@npm:4.1.4"
   dependencies:
@@ -12114,7 +12100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:^0.29.2":
+"vitest@npm:0.29.2":
   version: 0.29.2
   resolution: "vitest@npm:0.29.2"
   dependencies:
@@ -12291,12 +12277,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vue-recaptcha@workspace:."
   dependencies:
-    "@antfu/eslint-config-vue": ^0.36.0
+    "@antfu/eslint-config-vue": 0.36.0
     "@nuxt/kit": ^3.2.3
     "@nuxt/schema": ^3.2.3
-    "@playwright/test": ^1.31.2
-    "@unhead/vue": ^1.1.15
-    "@vitejs/plugin-vue": ^4.0.0
+    "@playwright/test": 1.31.2
+    "@unhead/vue": 1.1.15
+    "@vitejs/plugin-vue": 4.0.0
     "@vue/compiler-dom": 3.2.47
     "@vue/composition-api": 1.7.1
     "@vue/test-utils": 2.3.0
@@ -12306,16 +12292,16 @@ __metadata:
     eslint-config-prettier: 8.6.0
     husky: 8.0.3
     lint-staged: 13.1.2
-    nuxi: ^3.2.3
+    nuxi: 3.2.3
     p-defer: ^4.0.0
     pinst: 3.0.0
     prettier: 2.8.4
     std-env: ^3.3.2
     type-fest: ^3.6.1
-    typescript: ^4.9.5
-    unbuild: ^1.1.2
-    vite: ^4.1.4
-    vitest: ^0.29.2
+    typescript: 4.9.5
+    unbuild: 1.1.2
+    vite: 4.1.4
+    vitest: 0.29.2
     vue: 3.2.47
     vue-demi: ^0.13.11
   peerDependencies:
