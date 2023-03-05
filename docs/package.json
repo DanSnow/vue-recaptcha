@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "publish": "yarn generate && gh-pages -d dist"
+    "publish": "yarn generate && touch .output/public/.nojekyll && gh-pages -d dist -t"
   },
   "dependencies": {
     "@vueuse/nuxt": "^9.13.0",
