@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { ChallengeV2, ChallengeV3, Checkbox, RecaptchaScript } from '../src'
+import { ChallengeV2, ChallengeV3, Checkbox, useRecaptchaProvider } from '../src'
+
+useRecaptchaProvider()
 
 const checkboxWidgetID = ref()
 const checkboxResponse = ref()

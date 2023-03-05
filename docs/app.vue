@@ -1,8 +1,11 @@
+<script setup lang="ts">
+useRecaptchaProvider()
+</script>
+
 <template>
   <div>
     <AppLayout>
       <NuxtPage />
     </AppLayout>
-    <RecaptchaScript />
   </div>
 </template>
