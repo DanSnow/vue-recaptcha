@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { whenever } from '@vueuse/shared'
+import { reactive } from 'vue-demi'
 import { useChallengeV3 } from '../composables/challenge-v3'
 
 const props = withDefaults(
@@ -21,6 +22,22 @@ const emit = defineEmits<{
 
 const { response, execute } = useChallengeV3(props.action)
 
+interface SlotApi {
+  /**
+   * reCAPTCHA v3 response
+   */
+  response: string | undefined
+  /**
+   * execute reCAPTCHA v3 challenge
+   */
+  execute: () => Promise<string>
+}
+
+const slotApi: SlotApi = reactive({
+  response,
+  execute,
+})
+
 whenever(response, (res) => {
   emit('update:modelValue', res)
 })
@@ -34,11 +51,6 @@ function onClick() {
 
 <template>
   <component :is="as" @click="onClick">
-    <slot
-      v-bind="{
-        execute,
-        response,
-      }"
-    />
+    <slot v-bind="slotApi" />
   </component>
 </template>

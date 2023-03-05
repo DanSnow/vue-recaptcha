@@ -2,7 +2,6 @@ import { defineNuxtModule, addComponent, addImports, createResolver, addPlugin }
 import type { RecaptchaOptionsInput } from './api'
 
 const COMPONENTS = {
-  RecaptchaScript: 'RecaptchaScript',
   RecaptchaCheckbox: 'Checkbox',
   RecaptchaChallengeV2: 'ChallengeV2',
   RecaptchaChallengeV3: 'ChallengeV3',
@@ -48,6 +47,10 @@ export default defineNuxtModule({
       {
         from: resolver.resolve('./composables/challenge-v3'),
         name: 'useChallengeV3',
+      },
+      {
+        from: resolver.resolve('./composables/script-provider'),
+        name: 'useRecaptchaProvider',
       },
     ])
 
