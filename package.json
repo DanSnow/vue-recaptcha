@@ -12,6 +12,7 @@
     "build": "unbuild",
     "test": "vitest",
     "doc:dev": "nuxi dev docs",
+    "doc:publish": "yarn workspace @vue-recaptcha/doc publish",
     "prepack": "yarn build",
     "prepare": "husky install",
     "prepublishOnly": "pinst --disable",
