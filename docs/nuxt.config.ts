@@ -6,7 +6,7 @@ const resolver = createResolver(import.meta.url)
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
   app: {
-    baseURL: '/vue-recaptcha',
+    baseURL: '/vue-recaptcha/',
   },
   alias: {
     '#recaptcha': resolver.resolve('../src'),

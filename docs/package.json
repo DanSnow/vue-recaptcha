@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "nuxt dev",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "publish": "yarn generate && gh-pages -d dist"
   },
   "dependencies": {
     "@vueuse/nuxt": "^9.13.0",
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@nuxt-themes/docus": "^1.9.1",
     "@unocss/nuxt": "^0.50.3",
+    "gh-pages": "^5.0.0",
     "nuxt": "^3.2.3"
   }
 }
