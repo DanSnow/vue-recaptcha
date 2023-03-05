@@ -1,11 +1,6 @@
-import { MaybeComputedRef, whenever, createEventHook, resolveRef } from '@vueuse/shared'
-import { ref } from 'vue-demi'
-import {
-  RecaptchaV2CheckboxOptions,
-  RecaptchaV2InvisibleOptions,
-  RecaptchaV2Options,
-  WidgetID,
-} from '../script-manager/common'
+import { MaybeComputedRef, whenever, createEventHook, resolveRef, EventHookOn } from '@vueuse/shared'
+import { Ref, ref } from 'vue-demi'
+import { RecaptchaV2CheckboxOptions, RecaptchaV2InvisibleOptions, WidgetID } from '../script-manager/common'
 import { useAssertV2SiteKey, useRecaptchaProxy } from './context'
 
 type OmitKeys = 'sitekey' | 'callback' | 'expired-callback' | 'error-callback'
@@ -15,7 +10,13 @@ export type RecaptchaV2InvisibleOptionsInput = Omit<RecaptchaV2InvisibleOptions,
 export type RecaptchaV2OptionsInput = RecaptchaV2CheckboxOptionsInput | RecaptchaV2InvisibleOptionsInput
 
 export interface UseChallengeV2Input {
+  /**
+   * root to mount reCAPTCHA
+   */
   root?: MaybeComputedRef<Element | undefined>
+  /**
+   * Option that pass to reCAPTCHA render
+   */
   options?: RecaptchaV2OptionsInput
 }
 
@@ -26,7 +27,45 @@ export enum RecaptchaV2State {
   Error = 'error',
 }
 
-export function useChallengeV2({ root = ref(), options = {} }: UseChallengeV2Input) {
+export interface UseChallengeV2Return {
+  /**
+   * root element ref to mount reCAPTCHA
+   */
+  root: Ref<Element | undefined>
+  /**
+   * reCAPTCHA widget id
+   */
+  widgetID: Ref<WidgetID | undefined>
+
+  /**
+   * state of reCAPTCHA
+   */
+  state: Ref<RecaptchaV2State>
+
+  /**
+   * the verified event
+   */
+  onVerify: EventHookOn<string>
+  /**
+   * the expired event
+   */
+  onExpired: EventHookOn<void>
+  /**
+   * the error event
+   */
+  onError: EventHookOn<Error>
+
+  /**
+   * execute the challenge
+   */
+  execute: () => void
+  /**
+   * reset reCAPTCHA
+   */
+  reset: () => void
+}
+
+export function useChallengeV2({ root = ref(), options = {} }: UseChallengeV2Input): UseChallengeV2Return {
   const siteKey = useAssertV2SiteKey()
   const widgetID = ref<WidgetID>()
   const proxy = useRecaptchaProxy()
