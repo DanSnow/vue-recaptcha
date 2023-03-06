@@ -1,5 +1,7 @@
+process.env.ESLINT_TSCONFIG = 'tsconfig.json'
+
 module.exports = {
-  extends: ['@antfu/vue', 'prettier', 'prettier/prettier'],
+  extends: ['@antfu', 'prettier', 'prettier/prettier'],
   plugins: ['prettier'],
   rules: {
     'prettier/prettier': 'error',
