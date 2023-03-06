@@ -16,4 +16,7 @@ jobs:
     - name: Install dependencies
       run: yarn
     - name: Build and publish document
-      run: yarn workspace @vue-recaptcha/doc publish
+      run: yarn workspace @vue-recaptcha/doc publish -u "github-actions-bot <support+actions@github.com>"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
