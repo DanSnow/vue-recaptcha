@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { reactive, toRef } from 'vue-demi'
-import { WidgetID } from '../script-manager/common'
+import type { WidgetID } from '../script-manager/common'
 import { useComponentV2 } from '../composables/component-v2'
-import { RecaptchaV2State } from '../api'
+import type { RecaptchaV2State } from '../api'
 
 const props = withDefaults(
   defineProps<{

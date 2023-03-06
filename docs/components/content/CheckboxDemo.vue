@@ -7,6 +7,6 @@ const response = ref()
   <div>
     <ThemeButton v-model="theme" @click="response = ''" />
     <div>{{ response ? 'Verified' : 'Please click the checkbox' }}</div>
-    <RecaptchaCheckbox :key="theme" :theme="theme" v-model="response" />
+    <RecaptchaCheckbox :key="theme" v-model="response" :theme="theme" />
   </div>
 </template>

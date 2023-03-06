@@ -1,10 +1,47 @@
 {
   "name": "vue-recaptcha",
   "version": "3.0.0-alpha.2",
+  "packageManager": "yarn@3.4.1",
   "description": "ReCAPTCHA vue component",
-  "types": "./dist/index.d.ts",
-  "module": "./dist/index.mjs",
+  "author": "DanSnow",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanSnow/vue-recaptcha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DanSnow/vue-recaptcha/issues"
+  },
+  "keywords": [
+    "vue",
+    "component",
+    "vue-component",
+    "google-recaptcha",
+    "recaptcha"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./head": {
+      "types": "./dist/head.d.ts",
+      "require": "./dist/head.cjs",
+      "import": "./dist/head.mjs"
+    },
+    "./nuxt": {
+      "types": "./dist/nuxt.d.ts",
+      "require": "./dist/nuxt.cjs",
+      "import": "./dist/nuxt.mjs"
+    }
+  },
   "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -18,48 +55,27 @@
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
-  "author": "DanSnow",
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
-    },
-    "./head": {
-      "import": "./dist/head.mjs",
-      "require": "./dist/head.cjs",
-      "types": "./dist/head.d.ts"
-    },
-    "./nuxt": {
-      "import": "./dist/nuxt.mjs",
-      "require": "./dist/nuxt.cjs",
-      "types": "./dist/nuxt.d.ts"
-    }
-  },
-  "keywords": [
-    "vue",
-    "component",
-    "vue-component",
-    "google-recaptcha",
-    "recaptcha"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DanSnow/vue-recaptcha.git"
-  },
-  "bugs": {
-    "url": "https://github.com/DanSnow/vue-recaptcha/issues"
-  },
   "workspaces": [
     ".",
     "docs"
   ],
   "peerDependencies": {
     "vue": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.2.3",
+    "@nuxt/schema": "^3.2.3",
+    "@vueuse/shared": "^9.13.0",
+    "defu": "^6.1.2",
+    "p-defer": "^4.0.0",
+    "std-env": "^3.3.2",
+    "type-fest": "^3.6.1",
+    "vue-demi": "^0.13.11"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
@@ -83,21 +99,5 @@
     "vite": "4.1.4",
     "vitest": "0.29.2",
     "vue": "3.2.47"
-  },
-  "dependencies": {
-    "@nuxt/kit": "^3.2.3",
-    "@nuxt/schema": "^3.2.3",
-    "@vueuse/shared": "^9.13.0",
-    "defu": "^6.1.2",
-    "p-defer": "^4.0.0",
-    "std-env": "^3.3.2",
-    "type-fest": "^3.6.1",
-    "vue-demi": "^0.13.11"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
-  },
-  "packageManager": "yarn@3.4.1"
+  }
 }

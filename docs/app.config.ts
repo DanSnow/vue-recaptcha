@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 export default defineAppConfig({
   docus: {
     title: 'vue-recaptcha',

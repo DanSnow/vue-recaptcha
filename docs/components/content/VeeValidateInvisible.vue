@@ -22,8 +22,8 @@ const onSubmit = handleSubmit(async (values) => {
 <template>
   <form class="flex flex-col gap-2" @submit="onSubmit">
     <div>
-      <input class="border border-blue p-1" type="text" placeholder="Your name" v-model="nameValue" />
-      <div class="text-red" v-if="nameError">{{ nameError }}</div>
+      <input v-model="nameValue" class="border border-blue p-1" type="text" placeholder="Your name" />
+      <div v-if="nameError" class="text-red">{{ nameError }}</div>
     </div>
     <div>
       <RecaptchaChallengeV2 v-model="response">

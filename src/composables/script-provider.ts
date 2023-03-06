@@ -1,7 +1,7 @@
 import { onMounted } from 'vue-demi'
-import { useRecaptchaContext } from './context'
 import { checkRecaptchaLoad } from '../script-manager/common'
 import { warn } from '../utils'
+import { useRecaptchaContext } from './context'
 
 export interface UseRecaptchaProviderInput {
   _warnMessage?: string

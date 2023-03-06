@@ -1,6 +1,8 @@
-import { MaybeComputedRef, whenever, createEventHook, resolveRef, EventHookOn } from '@vueuse/shared'
-import { Ref, ref } from 'vue-demi'
-import { RecaptchaV2CheckboxOptions, RecaptchaV2InvisibleOptions, WidgetID } from '../script-manager/common'
+import type { EventHookOn, MaybeComputedRef } from '@vueuse/shared'
+import { createEventHook, resolveRef, whenever } from '@vueuse/shared'
+import type { Ref } from 'vue-demi'
+import { ref } from 'vue-demi'
+import type { RecaptchaV2CheckboxOptions, RecaptchaV2InvisibleOptions, WidgetID } from '../script-manager/common'
 import { useAssertV2SiteKey, useRecaptchaProxy } from './context'
 
 type OmitKeys = 'sitekey' | 'callback' | 'expired-callback' | 'error-callback'

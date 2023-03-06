@@ -11,6 +11,7 @@ onMounted(() => {
   })
 })
 </script>
+
 <template>
   <DocsPageLayout>
     <slot />

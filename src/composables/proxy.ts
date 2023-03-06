@@ -1,6 +1,7 @@
+import type { Ref } from 'vue-demi'
 import { invariant } from '../utils'
-import { recaptchaLoaded, RecaptchaV2Options, WidgetID } from '../script-manager/common'
-import { Ref } from 'vue-demi'
+import type { RecaptchaV2Options, WidgetID } from '../script-manager/common'
+import { recaptchaLoaded } from '../script-manager/common'
 
 export interface RecaptchaProxy {
   render(ele: Element, options: RecaptchaV2Options): Promise<WidgetID>
@@ -39,6 +40,7 @@ export function createRecaptchaProxy(isReady: Ref<boolean>): RecaptchaProxy {
       }
 
       await wait()
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-argument
       return window.grecaptcha.execute(widgetId, options as any) as any
     },
   }

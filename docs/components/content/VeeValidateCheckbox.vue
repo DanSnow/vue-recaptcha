@@ -20,12 +20,12 @@ const onSubmit = handleSubmit((values) => {
 <template>
   <form class="flex flex-col gap-2" @submit="onSubmit">
     <div>
-      <input class="border border-blue p-1" type="text" placeholder="Your name" v-model="nameValue" />
-      <div class="text-red" v-if="nameError">{{ nameError }}</div>
+      <input v-model="nameValue" class="border border-blue p-1" type="text" placeholder="Your name" />
+      <div v-if="nameError" class="text-red">{{ nameError }}</div>
     </div>
     <div>
       <RecaptchaCheckbox v-model="recaptchaValue" />
-      <div class="text-red" v-if="recaptchaError">{{ recaptchaError }}</div>
+      <div v-if="recaptchaError" class="text-red">{{ recaptchaError }}</div>
     </div>
     <div>
       <PrimaryButton type="submit">Submit</PrimaryButton>

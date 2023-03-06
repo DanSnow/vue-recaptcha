@@ -15,7 +15,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <pre class="mermaid" v-if="show">
+  <pre v-if="show" class="mermaid">
     <ContentSlot :use="$slots.default" unwrap="p" />
   </pre>
 </template>

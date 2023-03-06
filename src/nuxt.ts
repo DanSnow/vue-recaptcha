@@ -1,4 +1,4 @@
-import { defineNuxtModule, addComponent, addImports, createResolver, addPlugin } from '@nuxt/kit'
+import { addComponent, addImports, addPlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
 import type { RecaptchaOptionsInput } from './api'
 
 const COMPONENTS = {
@@ -13,7 +13,11 @@ declare module '@nuxt/schema' {
   }
 }
 
-export default defineNuxtModule({
+export interface ModuleOptions {
+  _globalComponent: boolean
+}
+
+export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'vue-recaptcha',
     compatibility: {

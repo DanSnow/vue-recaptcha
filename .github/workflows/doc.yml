@@ -9,19 +9,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16
-    - name: Install dependencies
-      run: yarn
-    - name: Build and publish document
-      run: yarn workspace @vue-recaptcha/doc generate
-    - name: Create nojekyll
-      run: touch ./docs/.output/public
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3.9.2
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/.output/public
-
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: yarn
+      - name: Build and publish document
+        run: yarn workspace @vue-recaptcha/doc generate
+      - name: Create nojekyll
+        run: touch ./docs/.output/public
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.9.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.output/public

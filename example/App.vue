@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import { ChallengeV2, ChallengeV3, Checkbox, useRecaptchaProvider } from '../src'
 
 useRecaptchaProvider()
@@ -34,7 +34,7 @@ const challengeV3Verified = computed(() => !!challengeV3Response.value)
     </div>
     <div id="v3">
       <h2>Challenge v3</h2>
-      <ChallengeV3 action="submit" v-model="challengeV3Response" v-slot="{ execute }">
+      <ChallengeV3 v-model="challengeV3Response" action="submit">
         <button>Submit</button>
       </ChallengeV3>
       <div>response: {{ challengeV3Response }}</div>

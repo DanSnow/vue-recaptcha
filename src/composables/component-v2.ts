@@ -1,7 +1,9 @@
 import { whenever } from '@vueuse/shared'
-import { computed, Ref, watch } from 'vue-demi'
-import { WidgetID } from '../script-manager/common'
-import { RecaptchaV2OptionsInput, RecaptchaV2State, useChallengeV2 } from './challenge-v2'
+import type { Ref } from 'vue-demi'
+import { computed, watch } from 'vue-demi'
+import type { WidgetID } from '../script-manager/common'
+import type { RecaptchaV2OptionsInput } from './challenge-v2'
+import { RecaptchaV2State, useChallengeV2 } from './challenge-v2'
 
 interface Emits {
   (event: 'load', widgetID: WidgetID): void
