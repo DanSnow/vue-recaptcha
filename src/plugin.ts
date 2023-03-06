@@ -2,9 +2,9 @@ import { ref } from 'vue-demi'
 import { Plugin } from 'vue-demi'
 import { normalizeOptions, RecaptchaContextKey, RecaptchaOptionsInput } from './composables/context'
 import { createRecaptchaProxy } from './composables/proxy'
-import { checkRecaptchaLoad, recaptchaLoaded, ScriptManagerFactory } from './script-manager/common'
+import { checkRecaptchaLoad, recaptchaLoaded, ScriptLoaderFactory } from './script-manager/common'
 
-export function createPlugin(scriptManagerFactory: ScriptManagerFactory): Plugin<[RecaptchaOptionsInput]> {
+export function createPlugin(scriptManagerFactory: ScriptLoaderFactory): Plugin<[RecaptchaOptionsInput]> {
   return {
     install(app, options) {
       const isReady = ref(false)

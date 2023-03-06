@@ -1,14 +1,15 @@
 import { useHead } from '@unhead/vue'
-import { RecaptchaParams, toQueryString } from './common'
+import type { RecaptchaParams, ScriptLoaderOptions } from './common'
+import { defineScriptLoader, toQueryString } from './common'
 
-export function createUnheadRecaptcha(params: RecaptchaParams) {
+export const createUnheadRecaptcha = defineScriptLoader((params: RecaptchaParams, options: ScriptLoaderOptions) => {
   return () => {
     useHead({
       link: [
         {
           key: 'vue-recaptcha-google',
           rel: 'preconnect',
-          href: 'https://www.google.com',
+          href: options.useRecaptchaNet ? 'https://www.recaptcha.net' : 'https://www.google.com',
         },
         {
           key: 'vue-recaptcha-gstatic',
@@ -20,11 +21,12 @@ export function createUnheadRecaptcha(params: RecaptchaParams) {
       script: [
         {
           key: 'vue-recaptcha',
-          src: `https://www.google.com/recaptcha/api.js?${toQueryString(params)}`,
+          src: `${options.recaptchaApiURL}?${toQueryString(params)}`,
           async: true,
           defer: true,
+          nonce: options.nonce,
         },
       ],
     })
   }
-}
+})

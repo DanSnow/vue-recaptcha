@@ -1,14 +1,18 @@
 import { onMounted } from 'vue'
-import { RecaptchaParams, toQueryString } from './common'
+import type { RecaptchaParams } from './common'
+import { defineScriptLoader, toQueryString } from './common'
 
-export function createHeadRecaptcha(params: RecaptchaParams) {
+export const createHeadRecaptcha = defineScriptLoader((params: RecaptchaParams, options) => {
   return () => {
     onMounted(() => {
       const script = document.createElement('script')
-      script.src = `https://www.google.com/recaptcha/api.js?${toQueryString(params)}`
+      script.src = `${options.recaptchaApiURL}?${toQueryString(params)}`
       script.async = true
       script.defer = true
+      if (options.nonce) {
+        script.nonce = options.nonce
+      }
       document.head.append(script)
     })
   }
-}
+})

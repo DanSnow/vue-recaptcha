@@ -1,7 +1,7 @@
-import { LiteralUnion, Opaque } from 'type-fest'
+import type { LiteralUnion, Opaque } from 'type-fest'
 import pDefer from 'p-defer'
-import { warn } from '../utils'
 import defu from 'defu'
+import { warn } from '../utils'
 
 export type RecaptchaCallback = '__vueRecaptchaLoaded'
 
@@ -49,8 +49,41 @@ export interface RecaptchaParams {
   [k: string]: string | undefined
 }
 
-export interface ScriptManagerFactory {
-  (params: RecaptchaParams): () => void
+export interface ScriptLoaderOptionsInput {
+  useRecaptchaNet?: boolean
+  recaptchaApiURL?: string
+  nonce?: string
+}
+
+export interface ScriptLoaderOptions {
+  useRecaptchaNet?: boolean
+  recaptchaApiURL: string
+  nonce?: string
+}
+
+export interface ScriptLoaderFactory {
+  (params: RecaptchaParams, options: ScriptLoaderOptions): () => void
+}
+
+export interface NormalizedScriptLoaderFactory {
+  (params: RecaptchaParams, options?: ScriptLoaderOptions): () => void
+}
+
+export function defineScriptLoader(fn: ScriptLoaderFactory): NormalizedScriptLoaderFactory {
+  return (params, options) => {
+    return fn(params, normalizeScriptLoaderOptions(options))
+  }
+}
+
+function normalizeScriptLoaderOptions(options: ScriptLoaderOptionsInput = {}): ScriptLoaderOptions {
+  return {
+    ...options,
+    recaptchaApiURL:
+      options.recaptchaApiURL ??
+      (options.useRecaptchaNet
+        ? 'https://www.recaptcha.net/recaptcha/api.js'
+        : 'https://www.google.com/recaptcha/api.js'),
+  }
 }
 
 export const recaptchaLoaded = pDefer()
