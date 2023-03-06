@@ -1,0 +1,19 @@
+name: Build document
+
+on:
+  push:
+    branches:
+      - v3
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Install dependencies
+      run: yarn
+    - name: Build and publish document
+      run: yarn workspace @vue-recaptcha/doc publish
