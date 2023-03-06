@@ -1,18 +1,20 @@
-import { inject, InjectionKey } from 'vue-demi'
-import { Ref } from 'vue-demi'
-import { RecaptchaParams } from '../script-manager/common'
+import type { InjectionKey, Ref } from 'vue-demi'
+import { inject } from 'vue-demi'
+import type { RecaptchaParams, ScriptLoaderOptionsInput } from '../script-manager/common'
 import { invariant, warn } from '../utils'
-import { RecaptchaProxy } from './proxy'
+import type { RecaptchaProxy } from './proxy'
 
 export interface RecaptchaOptionsInput {
   v2SiteKey?: string | undefined
   v3SiteKey?: string | undefined
+  loaderOptions?: ScriptLoaderOptionsInput
   params?: Omit<RecaptchaParams, 'render'>
 }
 
 export interface RecaptchaOptions {
   v2SiteKey?: string | undefined
   v3SiteKey?: string | undefined
+  loaderOptions: ScriptLoaderOptionsInput
   params: RecaptchaParams
 }
 
@@ -62,6 +64,7 @@ export function normalizeOptions(input: RecaptchaOptionsInput): RecaptchaOptions
 
   return {
     ...input,
+    loaderOptions: input.loaderOptions ?? {},
     params: {
       ...input.params,
       render: input.v3SiteKey ?? 'explicit',

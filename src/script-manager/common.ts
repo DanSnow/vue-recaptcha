@@ -65,14 +65,20 @@ export interface ScriptLoaderFactory {
   (params: RecaptchaParams, options: ScriptLoaderOptions): () => void
 }
 
+export const SCRIPT_LOADER_FACTORY_TAG = Symbol('script-loader')
+
 export interface NormalizedScriptLoaderFactory {
+  [SCRIPT_LOADER_FACTORY_TAG]: true
   (params: RecaptchaParams, options?: ScriptLoaderOptions): () => void
 }
 
 export function defineScriptLoader(fn: ScriptLoaderFactory): NormalizedScriptLoaderFactory {
-  return (params, options) => {
+  const factory: any = (params: RecaptchaParams, options?: ScriptLoaderOptionsInput) => {
     return fn(params, normalizeScriptLoaderOptions(options))
   }
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  factory[SCRIPT_LOADER_FACTORY_TAG] = true
+  return factory as NormalizedScriptLoaderFactory
 }
 
 function normalizeScriptLoaderOptions(options: ScriptLoaderOptionsInput = {}): ScriptLoaderOptions {

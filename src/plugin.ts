@@ -1,10 +1,13 @@
+import type { Plugin } from 'vue-demi'
 import { ref } from 'vue-demi'
-import { Plugin } from 'vue-demi'
-import { normalizeOptions, RecaptchaContextKey, RecaptchaOptionsInput } from './composables/context'
+import type { RecaptchaOptionsInput } from './composables/context'
+import { RecaptchaContextKey, normalizeOptions } from './composables/context'
 import { createRecaptchaProxy } from './composables/proxy'
-import { checkRecaptchaLoad, recaptchaLoaded, ScriptLoaderFactory } from './script-manager/common'
+import type { NormalizedScriptLoaderFactory } from './script-manager/common'
+import { checkRecaptchaLoad, recaptchaLoaded } from './script-manager/common'
+import { warn } from './utils'
 
-export function createPlugin(scriptManagerFactory: ScriptLoaderFactory): Plugin<[RecaptchaOptionsInput]> {
+export function createPlugin(scriptLoaderFactory: NormalizedScriptLoaderFactory): Plugin<[RecaptchaOptionsInput]> {
   return {
     install(app, options) {
       const isReady = ref(false)
@@ -14,7 +17,7 @@ export function createPlugin(scriptManagerFactory: ScriptLoaderFactory): Plugin<
         isReady.value = true
       }
 
-      waitLoaded()
+      waitLoaded().catch((error) => warn('fail to load reCAPTCHA script', error))
       checkRecaptchaLoad()
 
       const opt = normalizeOptions(options)
@@ -23,7 +26,7 @@ export function createPlugin(scriptManagerFactory: ScriptLoaderFactory): Plugin<
         isReady,
         scriptInjected: false,
         proxy: createRecaptchaProxy(isReady),
-        useScriptProvider: scriptManagerFactory(opt.params),
+        useScriptProvider: scriptLoaderFactory(opt.params, opt.loaderOptions),
         options: opt,
       })
     },
