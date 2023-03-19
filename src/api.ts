@@ -15,5 +15,6 @@ export { default as Checkbox } from './components/Checkbox.vue'
 // plugin
 export { createPlugin } from './plugin'
 
-// types
-export type { RecaptchaParams } from './script-manager/common'
+// script loader
+export type { RecaptchaParams, ScriptLoaderFactory, ScriptLoaderOptions } from './script-manager/common'
+export { defineScriptLoader, toQueryString } from './script-manager/common'

@@ -53,35 +53,46 @@ export interface ScriptLoaderOptionsInput {
   useRecaptchaNet?: boolean
   recaptchaApiURL?: string
   nonce?: string
+  params: RecaptchaParams
 }
 
 export interface ScriptLoaderOptions {
+  /**
+   * you can use recaptcha.net instead of google.com, if you set recaptchaApiURL, this option will be ignored
+   */
   useRecaptchaNet?: boolean
+  /**
+   * you can use your own recaptcha api url, if you set this option, useRecaptchaNet will be ignored
+   */
   recaptchaApiURL: string
+  /**
+   * nonce for script tag
+   */
   nonce?: string
+  /**
+   * params for recaptcha api
+   */
+  params: RecaptchaParams
 }
 
 export interface ScriptLoaderFactory {
-  (params: RecaptchaParams, options: ScriptLoaderOptions): () => void
+  (options: ScriptLoaderOptions): () => void
 }
-
-export const SCRIPT_LOADER_FACTORY_TAG = Symbol('script-loader')
 
 export interface NormalizedScriptLoaderFactory {
-  [SCRIPT_LOADER_FACTORY_TAG]: true
-  (params: RecaptchaParams, options?: ScriptLoaderOptions): () => void
+  (options: ScriptLoaderOptionsInput): () => void
 }
 
+/**
+ *  Helper function for define your own loadScript function
+ */
 export function defineScriptLoader(fn: ScriptLoaderFactory): NormalizedScriptLoaderFactory {
-  const factory: any = (params: RecaptchaParams, options?: ScriptLoaderOptionsInput) => {
-    return fn(params, normalizeScriptLoaderOptions(options))
+  return (options: ScriptLoaderOptionsInput) => {
+    return fn(normalizeScriptLoaderOptions(options))
   }
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-  factory[SCRIPT_LOADER_FACTORY_TAG] = true
-  return factory as NormalizedScriptLoaderFactory
 }
 
-function normalizeScriptLoaderOptions(options: ScriptLoaderOptionsInput = {}): ScriptLoaderOptions {
+function normalizeScriptLoaderOptions(options: ScriptLoaderOptionsInput): ScriptLoaderOptions {
   return {
     ...options,
     recaptchaApiURL:

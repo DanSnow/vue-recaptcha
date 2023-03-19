@@ -1,12 +1,11 @@
 import { onMounted } from 'vue'
-import type { RecaptchaParams } from './common'
 import { defineScriptLoader, toQueryString } from './common'
 
-export const createHeadRecaptcha = defineScriptLoader((params: RecaptchaParams, options) => {
+export const createHeadRecaptcha = defineScriptLoader((options) => {
   return () => {
     onMounted(() => {
       const script = document.createElement('script')
-      script.src = `${options.recaptchaApiURL}?${toQueryString(params)}`
+      script.src = `${options.recaptchaApiURL}?${toQueryString(options.params)}`
       script.async = true
       script.defer = true
       if (options.nonce) {

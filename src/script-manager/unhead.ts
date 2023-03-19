@@ -1,8 +1,8 @@
 import { useHead } from '@unhead/vue'
-import type { RecaptchaParams, ScriptLoaderOptions } from './common'
+import type { ScriptLoaderOptions } from './common'
 import { defineScriptLoader, toQueryString } from './common'
 
-export const createUnheadRecaptcha = defineScriptLoader((params: RecaptchaParams, options: ScriptLoaderOptions) => {
+export const createUnheadRecaptcha = defineScriptLoader((options: ScriptLoaderOptions) => {
   return () => {
     useHead({
       link: [
@@ -21,7 +21,7 @@ export const createUnheadRecaptcha = defineScriptLoader((params: RecaptchaParams
       script: [
         {
           key: 'vue-recaptcha',
-          src: `${options.recaptchaApiURL}?${toQueryString(params)}`,
+          src: `${options.recaptchaApiURL}?${toQueryString(options.params)}`,
           async: true,
           defer: true,
           nonce: options.nonce,

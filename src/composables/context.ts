@@ -7,15 +7,13 @@ import type { RecaptchaProxy } from './proxy'
 export interface RecaptchaOptionsInput {
   v2SiteKey?: string | undefined
   v3SiteKey?: string | undefined
-  loaderOptions?: ScriptLoaderOptionsInput
-  params?: Omit<RecaptchaParams, 'render'>
+  loaderOptions?: ScriptLoaderOptionsInput & { params?: RecaptchaParams }
 }
 
 export interface RecaptchaOptions {
   v2SiteKey?: string | undefined
   v3SiteKey?: string | undefined
   loaderOptions: ScriptLoaderOptionsInput
-  params: RecaptchaParams
 }
 
 export interface RecaptchaContext {
@@ -64,10 +62,12 @@ export function normalizeOptions(input: RecaptchaOptionsInput): RecaptchaOptions
 
   return {
     ...input,
-    loaderOptions: input.loaderOptions ?? {},
-    params: {
-      ...input.params,
-      render: input.v3SiteKey ?? 'explicit',
+    loaderOptions: {
+      ...input.loaderOptions,
+      params: {
+        ...input.loaderOptions?.params,
+        render: input.v3SiteKey ?? 'explicit',
+      },
     },
   }
 }

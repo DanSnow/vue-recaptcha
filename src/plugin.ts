@@ -26,7 +26,7 @@ export function createPlugin(scriptLoaderFactory: NormalizedScriptLoaderFactory)
         isReady,
         scriptInjected: false,
         proxy: createRecaptchaProxy(isReady),
-        useScriptProvider: scriptLoaderFactory(opt.params, opt.loaderOptions),
+        useScriptProvider: scriptLoaderFactory(opt.loaderOptions),
         options: opt,
       })
     },
