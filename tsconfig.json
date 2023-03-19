@@ -103,6 +103,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["./src"],
-  "exclude": ["./dist"]
+  "include": ["./src/**/*.ts", "./src/**/*.vue", "vite.config.ts", "playwright.config.ts", "build.config.ts"],
+  "exclude": ["./dist/**/*"]
 }

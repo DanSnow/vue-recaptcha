@@ -92,7 +92,7 @@ export function defineScriptLoader(fn: ScriptLoaderFactory): NormalizedScriptLoa
   }
 }
 
-function normalizeScriptLoaderOptions(options: ScriptLoaderOptionsInput): ScriptLoaderOptions {
+export function normalizeScriptLoaderOptions(options: ScriptLoaderOptionsInput): ScriptLoaderOptions {
   return {
     ...options,
     recaptchaApiURL:
