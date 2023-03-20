@@ -17,6 +17,8 @@ jobs:
         run: yarn
       - name: Build and publish document
         run: yarn workspace @vue-recaptcha/doc generate
+        env:
+          NODE_OPTIONS: --max-old-space-size=8192
       - name: Create nojekyll
         run: touch ./docs/.output/public
       - name: Deploy
