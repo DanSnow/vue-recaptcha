@@ -1389,51 +1389,51 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt-themes/docus@npm:1.9.9":
-  version: 1.9.9
-  resolution: "@nuxt-themes/docus@npm:1.9.9"
+"@nuxt-themes/docus@npm:1.9.10":
+  version: 1.9.10
+  resolution: "@nuxt-themes/docus@npm:1.9.10"
   dependencies:
-    "@nuxt-themes/elements": ^0.9.0
-    "@nuxt-themes/tokens": ^1.9.0
-    "@nuxt-themes/typography": ^0.10.0
+    "@nuxt-themes/elements": ^0.9.3
+    "@nuxt-themes/tokens": ^1.9.1
+    "@nuxt-themes/typography": ^0.10.1
     "@nuxt/content": ^2.5.2
-    "@nuxthq/studio": ^0.8.5
+    "@nuxthq/studio": ^0.9.2
     "@vueuse/nuxt": ^9.13.0
-  checksum: b14fa60dd8ea1fe6ff9d485975ab2060fddce0db1237615773ba5383a39b17e6f5ba43a74c937c40e0a8a5a906694cafa857e176ba262a193af48a004e758bac
+  checksum: deaa5d3f469a4367cdcb292d3872a55ba43a4ce7a21107a97d9061be2de6069ba136e4d0d659703361d9f21869374f196113cca915f92f0a50abbd645bc737d3
   languageName: node
   linkType: hard
 
-"@nuxt-themes/elements@npm:^0.9.0":
-  version: 0.9.0
-  resolution: "@nuxt-themes/elements@npm:0.9.0"
+"@nuxt-themes/elements@npm:^0.9.3":
+  version: 0.9.3
+  resolution: "@nuxt-themes/elements@npm:0.9.3"
   dependencies:
     "@nuxt-themes/tokens": ^1.9.0
     "@vueuse/core": ^9.13.0
-  checksum: c87482fd9d6539e8f4e43d66f293f89dc37299c56b36bdc93ba1b4d4fca068effba16776379804313dc0fb0676da8983684d81c93e3c03b7dc322b584db7f8c1
+  checksum: 4b34f33e46deee4b3024ed49d1daa9df60db8e2c93b197892769ef6d8017889d9220b8b5426f070310a4ff3f2d182e064f3178b6a29ba1c7063b1e186acb1ac7
   languageName: node
   linkType: hard
 
-"@nuxt-themes/tokens@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "@nuxt-themes/tokens@npm:1.9.0"
+"@nuxt-themes/tokens@npm:^1.9.0, @nuxt-themes/tokens@npm:^1.9.1":
+  version: 1.9.1
+  resolution: "@nuxt-themes/tokens@npm:1.9.1"
   dependencies:
     "@nuxtjs/color-mode": ^3.2.0
     "@vueuse/core": ^9.13.0
-    pinceau: ^0.18.0
-  checksum: c72a221488d4e374ea0cf9c40254213632b7dbfd59fd82f33af9a6cf29ee40f110dcfaf7a90dabb1e164ddc1ac7bb33b64b4b6097158853653cb0acd12003796
+    pinceau: ^0.18.8
+  checksum: a7e5efa7aa21d444c36bb8503557546aa4134d9b79cfa70bfc38855217fcdd8cedf80f23fae7884320202032864fb403e1831dfa0452f647bdf9c8186ca220f5
   languageName: node
   linkType: hard
 
-"@nuxt-themes/typography@npm:^0.10.0":
-  version: 0.10.0
-  resolution: "@nuxt-themes/typography@npm:0.10.0"
+"@nuxt-themes/typography@npm:^0.10.1":
+  version: 0.10.1
+  resolution: "@nuxt-themes/typography@npm:0.10.1"
   dependencies:
     "@nuxtjs/color-mode": ^3.2.0
     nuxt-config-schema: ^0.4.5
-    nuxt-icon: ^0.3.2
+    nuxt-icon: ^0.3.3
     pinceau: ^0.18.8
     ufo: ^1.1.1
-  checksum: 5932caf604ed0cd8106968f52d8a2541153831cf0cdb926c22f7971be52c79e2b0fb5ae8d45636f8c1eace320312294aa4e73f46e4f3e7fed08cd4d1fe15676c
+  checksum: ae0ef0507c855d1824ad45246b8e99f4015926838cab51d408db95e4e1a45212ecdf181a987a56074518e59097eada8579707fb9621e14984f8abdd418200fc4
   languageName: node
   linkType: hard
 
@@ -1513,7 +1513,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.3.1, @nuxt/kit@npm:^3.0.0, @nuxt/kit@npm:^3.2.0, @nuxt/kit@npm:^3.2.3, @nuxt/kit@npm:^3.3.1":
+"@nuxt/kit@npm:3.3.1, @nuxt/kit@npm:^3.0.0, @nuxt/kit@npm:^3.2.0, @nuxt/kit@npm:^3.3.1":
   version: 3.3.1
   resolution: "@nuxt/kit@npm:3.3.1"
   dependencies:
@@ -1664,17 +1664,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxthq/studio@npm:^0.8.5":
-  version: 0.8.5
-  resolution: "@nuxthq/studio@npm:0.8.5"
+"@nuxthq/studio@npm:^0.9.2":
+  version: 0.9.2
+  resolution: "@nuxthq/studio@npm:0.9.2"
   dependencies:
-    "@nuxt/kit": ^3.2.3
+    "@nuxt/kit": ^3.3.1
     defu: ^6.1.2
-    nuxt-component-meta: ^0.4.3
+    nuxt-component-meta: ^0.5.1
     nuxt-config-schema: ^0.4.5
     socket.io-client: ^4.6.1
     ufo: ^1.1.1
-  checksum: 540b4d477c53d72219627dbd896dda6aa5da89e1df8838d6c9c335b9e938e63d8a5defa0fd005508bcfa8b400cea1417c0634884da78b8a74221d0105f71f8a1
+  checksum: cb8a0444bef547969899262d159fb6e5e3e65bfd0bc2d29b53bbc02f130835be31155024351f9cb28a16b658b92565c8b7ef3d80ae49e46e644004b11b8004c1
   languageName: node
   linkType: hard
 
@@ -2567,30 +2567,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volar/language-core@npm:1.3.0-alpha.0":
-  version: 1.3.0-alpha.0
-  resolution: "@volar/language-core@npm:1.3.0-alpha.0"
-  dependencies:
-    "@volar/source-map": 1.3.0-alpha.0
-  checksum: e7bb647bddcaf5c5d36c2a46f79f18c62346dc49df2a6d5ebe50a52e59f8a7a480d39d48252166aa00661b4faf6949b0b4541861a13626c8af7704c0f27633e5
-  languageName: node
-  linkType: hard
-
 "@volar/language-core@npm:1.4.0-alpha.4":
   version: 1.4.0-alpha.4
   resolution: "@volar/language-core@npm:1.4.0-alpha.4"
   dependencies:
     "@volar/source-map": 1.4.0-alpha.4
   checksum: 0786176f4b93a34d5f756f122144bffe6ce92b26ad2181862c4b7947895c6f4d1f43786d853875bf8660cfb08c1a50e56d1b65b55e1bd711ce4674c489181ed1
-  languageName: node
-  linkType: hard
-
-"@volar/source-map@npm:1.3.0-alpha.0":
-  version: 1.3.0-alpha.0
-  resolution: "@volar/source-map@npm:1.3.0-alpha.0"
-  dependencies:
-    muggle-string: ^0.2.2
-  checksum: e3b3821ee4b01441be601dbc8150d1dc88850831e3c3ab154b58fdbffd478075d88bdcfdac2930f61425b229fd7d515278a3482427b5df2fc595715a7857d423
   languageName: node
   linkType: hard
 
@@ -2609,23 +2591,6 @@ __metadata:
   dependencies:
     "@volar/language-core": 1.4.0-alpha.4
   checksum: 90a74e8900cef5b8b82cf4179088325f62700db44b57c6c7a323517c05acf8844a94f01afdf3ef639cc9abbfa8b4a0fa1c9fe2cd1b2aec3dcce7289e8eac53ce
-  languageName: node
-  linkType: hard
-
-"@volar/vue-language-core@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@volar/vue-language-core@npm:1.2.0"
-  dependencies:
-    "@volar/language-core": 1.3.0-alpha.0
-    "@volar/source-map": 1.3.0-alpha.0
-    "@vue/compiler-dom": ^3.2.47
-    "@vue/compiler-sfc": ^3.2.47
-    "@vue/reactivity": ^3.2.47
-    "@vue/shared": ^3.2.47
-    minimatch: ^6.1.6
-    muggle-string: ^0.2.2
-    vue-template-compiler: ^2.7.14
-  checksum: bec3c4d9cf4ea83708592812aa9ff32d18958ed49f31ce735c772ddac28d21396abe0035d318bfa96462bf57cfbc7f45270371fdc094875a9ebb9f1e5670ebf8
   languageName: node
   linkType: hard
 
@@ -2660,7 +2625,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@vue-recaptcha/doc@workspace:docs"
   dependencies:
-    "@nuxt-themes/docus": 1.9.9
+    "@nuxt-themes/docus": 1.9.10
     "@unocss/nuxt": 0.50.6
     "@vueuse/nuxt": ^9.13.0
     gh-pages: 5.0.0
@@ -9453,19 +9418,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt-component-meta@npm:^0.4.3":
-  version: 0.4.3
-  resolution: "nuxt-component-meta@npm:0.4.3"
+"nuxt-component-meta@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "nuxt-component-meta@npm:0.5.1"
   dependencies:
-    "@nuxt/kit": ^3.0.0
+    "@nuxt/kit": ^3.3.1
     scule: ^1.0.0
-    typescript: ^4.9.4
-    vue-component-meta: ^1.0.18
-  checksum: d76cb03a7a0d19543d1ce5e99e39c67111920a2a56501c50606194b450cd581ccded16d6f4902fd6f8588e7b55d223b614ef585aaddcbc32582755b86c0edf82
+    typescript: ^5.0.2
+    vue-component-meta: ^1.2.0
+  checksum: a6c7b51cbb51e08a4f4664965f728913274f9b49f18d19c21676f7f558b1f48597724cb5baf73336f09e83ab3448a54b9d6dd1f84e87516fb20a770a0299a20a
   languageName: node
   linkType: hard
 
-"nuxt-config-schema@npm:^0.4.4, nuxt-config-schema@npm:^0.4.5":
+"nuxt-config-schema@npm:^0.4.5":
   version: 0.4.5
   resolution: "nuxt-config-schema@npm:0.4.5"
   dependencies:
@@ -9479,14 +9444,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt-icon@npm:^0.3.2":
-  version: 0.3.2
-  resolution: "nuxt-icon@npm:0.3.2"
+"nuxt-icon@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "nuxt-icon@npm:0.3.3"
   dependencies:
     "@iconify/vue": ^4.1.0
-    "@nuxt/kit": ^3.2.0
-    nuxt-config-schema: ^0.4.4
-  checksum: 8351d0d24bdf670cc36b0b74528eebc6741a2b18627595a7371455a98456f2ea98952748fa47925d57d8ea8b769674b3ff0ac739533f0a5eee75f7d03df0093f
+    "@nuxt/kit": ^3.3.1
+    nuxt-config-schema: ^0.4.5
+  checksum: 7e4d8719de57486b03fd6e9c6cfc3702166a2ba4ecc1e89a6fecbc1cdee49d5f52a81fcd16b37ff9e0c8144060acbed17bcb1a30710c91837c211aa901388a70
   languageName: node
   linkType: hard
 
@@ -9996,7 +9961,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pinceau@npm:^0.18.0, pinceau@npm:^0.18.8":
+"pinceau@npm:^0.18.8":
   version: 0.18.8
   resolution: "pinceau@npm:0.18.8"
   dependencies:
@@ -12224,7 +12189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.0.2":
+"typescript@npm:5.0.2, typescript@npm:^5.0.2":
   version: 5.0.2
   resolution: "typescript@npm:5.0.2"
   bin:
@@ -12234,7 +12199,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.9.4, typescript@npm:^4.9.5":
+"typescript@npm:^4.9.5":
   version: 4.9.5
   resolution: "typescript@npm:4.9.5"
   bin:
@@ -12244,7 +12209,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.0.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@5.0.2#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.2#~builtin<compat/typescript>":
   version: 5.0.2
   resolution: "typescript@patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"
   bin:
@@ -12254,7 +12219,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.9.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
   version: 4.9.5
   resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"
   bin:
@@ -13061,16 +13026,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-component-meta@npm:^1.0.18":
-  version: 1.2.0
-  resolution: "vue-component-meta@npm:1.2.0"
+"vue-component-meta@npm:^1.2.0":
+  version: 1.3.4
+  resolution: "vue-component-meta@npm:1.3.4"
   dependencies:
-    "@volar/language-core": 1.3.0-alpha.0
-    "@volar/vue-language-core": 1.2.0
+    "@volar/language-core": 1.4.0-alpha.4
+    "@volar/vue-language-core": 1.3.4
     typesafe-path: ^0.2.2
   peerDependencies:
     typescript: "*"
-  checksum: 84e011d7179df970fe5b5308ee4242757b63f1ca8aabc2a592019bd625c9dc3b4cd4a3283010316f8f2faeaa993f20a093fe64974ce2fa37a4bfbcea187f659b
+  checksum: e9c980bf2bfb6d10e45e0274145983fac216737dc250db796fc48db7a3cfffad8620fa4da0fffa8b028d9435b674fb72a4fbcd054b422def72a8a33f82af281e
   languageName: node
   linkType: hard
 
