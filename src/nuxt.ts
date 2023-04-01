@@ -1,4 +1,4 @@
-import { addComponent, addImports, addPlugin, createResolver, defineNuxtModule } from '@nuxt/kit'
+import { addComponent, addImports, addPlugin, createResolver, defineNuxtModule, useNuxt } from '@nuxt/kit'
 import type { RecaptchaOptionsInput } from './api'
 
 const COMPONENTS = {
@@ -25,7 +25,9 @@ export default defineNuxtModule<ModuleOptions>({
     },
   },
   async setup(opt) {
+    const nuxt = useNuxt()
     const resolver = createResolver(import.meta.url)
+    nuxt.options.build.transpile.push(resolver.resolve('.'))
 
     for (const [name, fileName] of Object.entries(COMPONENTS)) {
       await addComponent({
