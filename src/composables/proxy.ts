@@ -1,6 +1,6 @@
 import type { Ref } from 'vue-demi'
 import { invariant } from '../utils'
-import type { RecaptchaV2Options, WidgetID } from '../script-manager/common'
+import type { GRecaptcha, RecaptchaV2Options, WidgetID } from '../script-manager/common'
 import { recaptchaLoaded } from '../script-manager/common'
 
 export interface RecaptchaProxy {
@@ -10,7 +10,7 @@ export interface RecaptchaProxy {
   execute(widgetId?: WidgetID | undefined): void
 }
 
-export function createRecaptchaProxy(isReady: Ref<boolean>): RecaptchaProxy {
+export function createRecaptchaProxy(isReady: Ref<boolean>, getRecaptcha: () => GRecaptcha): RecaptchaProxy {
   function assertLoaded() {
     invariant(isReady.value, 'ReCAPTCHA is not loaded')
   }
@@ -23,7 +23,7 @@ export function createRecaptchaProxy(isReady: Ref<boolean>): RecaptchaProxy {
   return {
     async render(ele: Element, options: RecaptchaV2Options) {
       await wait()
-      return window.grecaptcha.render(ele, options)
+      return getRecaptcha().render(ele, options)
     },
 
     reset(widgetId?: WidgetID | undefined) {
@@ -31,7 +31,7 @@ export function createRecaptchaProxy(isReady: Ref<boolean>): RecaptchaProxy {
         return
       }
       assertLoaded()
-      window.grecaptcha.reset(widgetId)
+      getRecaptcha().reset(widgetId)
     },
 
     async execute(widgetId?: WidgetID | undefined | string, options?: { action: string }) {
@@ -41,7 +41,7 @@ export function createRecaptchaProxy(isReady: Ref<boolean>): RecaptchaProxy {
 
       await wait()
       // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-argument
-      return window.grecaptcha.execute(widgetId, options as any) as any
+      return getRecaptcha().execute(widgetId, options as any) as any
     },
   }
 }
