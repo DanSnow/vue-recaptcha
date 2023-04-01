@@ -20,6 +20,7 @@ export interface ModuleOptions {
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'vue-recaptcha',
+    configKey: 'recaptcha',
     compatibility: {
       nuxt: '^3.0.0',
     },
