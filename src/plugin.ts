@@ -3,11 +3,18 @@ import { ref } from 'vue-demi'
 import type { RecaptchaOptionsInput } from './composables/context'
 import { RecaptchaContextKey, normalizeOptions } from './composables/context'
 import { createRecaptchaProxy } from './composables/proxy'
-import type { NormalizedScriptLoaderFactory } from './script-manager/common'
+import type { GRecaptcha, NormalizedScriptLoaderFactory } from './script-manager/common'
 import { checkRecaptchaLoad, recaptchaLoaded } from './script-manager/common'
 import { warn } from './utils'
 
-export function createPlugin(scriptLoaderFactory: NormalizedScriptLoaderFactory): Plugin<[RecaptchaOptionsInput]> {
+export interface CreatePluginOptions {
+  getRecaptcha?: () => GRecaptcha
+}
+
+export function createPlugin(
+  scriptLoaderFactory: NormalizedScriptLoaderFactory,
+  { getRecaptcha = () => window.grecaptcha }: CreatePluginOptions = {}
+): Plugin<[RecaptchaOptionsInput]> {
   return {
     install(app, options) {
       const isReady = ref(false)
@@ -25,7 +32,7 @@ export function createPlugin(scriptLoaderFactory: NormalizedScriptLoaderFactory)
       app.provide(RecaptchaContextKey, {
         isReady,
         scriptInjected: false,
-        proxy: createRecaptchaProxy(isReady),
+        proxy: createRecaptchaProxy(isReady, getRecaptcha),
         useScriptProvider: scriptLoaderFactory(opt.loaderOptions),
         options: opt,
       })

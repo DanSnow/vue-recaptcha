@@ -36,7 +36,7 @@ export interface GRecaptcha {
 
 declare global {
   interface Window {
-    grecaptcha: GRecaptcha
+    grecaptcha: GRecaptcha & { enterprise?: GRecaptcha }
     __vueRecaptchaLoaded: () => void
   }
 }
