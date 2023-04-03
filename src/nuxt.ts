@@ -1,4 +1,4 @@
-import { addComponent, addImports, addPlugin, createResolver, defineNuxtModule, useNuxt } from '@nuxt/kit'
+import { addComponent, addImports, addPlugin, createResolver, defineNuxtModule, useLogger, useNuxt } from '@nuxt/kit'
 import type { RecaptchaOptionsInput } from './api'
 
 const COMPONENTS = {
@@ -14,6 +14,8 @@ declare module '@nuxt/schema' {
 }
 
 export interface ModuleOptions {
+  enterprise: boolean
+  installPlugin: boolean
   _globalComponent: boolean
 }
 
@@ -25,7 +27,13 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt: '^3.0.0',
     },
   },
+  defaults: {
+    enterprise: false,
+    installPlugin: true,
+    _globalComponent: false,
+  },
   async setup(opt) {
+    const logger = useLogger('vue-recaptcha')
     const nuxt = useNuxt()
     const resolver = createResolver(import.meta.url)
     nuxt.options.build.transpile.push(resolver.resolve('.'))
@@ -61,8 +69,21 @@ export default defineNuxtModule<ModuleOptions>({
       },
     ])
 
-    addPlugin({
-      src: resolver.resolve('./nuxt-plugin'),
-    })
+    if (!opt.installPlugin) {
+      if (opt.enterprise) {
+        logger.warn('`enterprise` option is ignored when `installPlugin` is false')
+      }
+      return
+    }
+
+    if (opt.enterprise) {
+      addPlugin({
+        src: resolver.resolve('./nuxt-enterprise-plugin'),
+      })
+    } else {
+      addPlugin({
+        src: resolver.resolve('./nuxt-plugin'),
+      })
+    }
   },
 })
