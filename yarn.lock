@@ -1219,20 +1219,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-alias@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "@rollup/plugin-alias@npm:4.0.3"
-  dependencies:
-    slash: ^4.0.0
-  peerDependencies:
-    rollup: ^1.20.0||^2.0.0||^3.0.0
-  peerDependenciesMeta:
-    rollup:
-      optional: true
-  checksum: 3efabf35bfe2a40722609397328513dcb72ed4e2d1e35082cd1c60b231af9041214285b3e74d8702e0f00e214ee5ef3022fbc442a1beb8d1b641e85cf2b10cbf
-  languageName: node
-  linkType: hard
-
 "@rollup/plugin-alias@npm:^5.0.0":
   version: 5.0.0
   resolution: "@rollup/plugin-alias@npm:5.0.0"
@@ -1247,9 +1233,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-commonjs@npm:^24.0.1":
-  version: 24.0.1
-  resolution: "@rollup/plugin-commonjs@npm:24.0.1"
+"@rollup/plugin-commonjs@npm:^24.0.1, @rollup/plugin-commonjs@npm:^24.1.0":
+  version: 24.1.0
+  resolution: "@rollup/plugin-commonjs@npm:24.1.0"
   dependencies:
     "@rollup/pluginutils": ^5.0.1
     commondir: ^1.0.1
@@ -1262,7 +1248,7 @@ __metadata:
   peerDependenciesMeta:
     rollup:
       optional: true
-  checksum: ff5b09f5c350640fe6836fcc97bf5c5612bf78b26eaaad01bf1aee955f0b136135d1a8950a02f680779aec1f16f2c6b6cf89d6080e84ed09be62737abb6b3a5f
+  checksum: 42faafc9bc8e04d75c86bb50d693ebb9c5eee19bf9ab3c09780b872547d12ff5ea85cfec7da75f5176d0aa4b5233101f667f44b85b331450a7bb14c95180852e
   languageName: node
   linkType: hard
 
@@ -1296,7 +1282,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-node-resolve@npm:^15.0.1, @rollup/plugin-node-resolve@npm:^15.0.2":
+"@rollup/plugin-node-resolve@npm:^15.0.2":
   version: 15.0.2
   resolution: "@rollup/plugin-node-resolve@npm:15.0.2"
   dependencies:
@@ -3499,10 +3485,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"consola@npm:^3.0.0, consola@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "consola@npm:3.0.1"
-  checksum: 0d06afe3119ecb6b45ebb04506881942dbc70656c0abf2a7b15b6af35b9b0233f722999913ac3fb91dd118b9ff5c0158050cb77d83a829cd124eab421addcefd
+"consola@npm:^3.0.0, consola@npm:^3.0.1, consola@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "consola@npm:3.0.2"
+  checksum: e82503d738d410e36aca1543a37fb8ca385cd38c86b8fb055086f3df223ab1c353cea4e649b46169b5b7e9a7a61997f2693a57611522331d50a7811a372a816e
   languageName: node
   linkType: hard
 
@@ -11479,7 +11465,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.0.4, typescript@npm:^5.0.2, typescript@npm:^5.0.3":
+"typescript@npm:5.0.4, typescript@npm:^5.0.2, typescript@npm:^5.0.4":
   version: 5.0.4
   resolution: "typescript@npm:5.0.4"
   bin:
@@ -11489,7 +11475,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.0.4#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.2#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@5.0.4#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.2#~builtin<compat/typescript>, typescript@patch:typescript@^5.0.4#~builtin<compat/typescript>":
   version: 5.0.4
   resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"
   bin:
@@ -11518,21 +11504,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unbuild@npm:1.2.0, unbuild@npm:^1.1.2":
-  version: 1.2.0
-  resolution: "unbuild@npm:1.2.0"
+"unbuild@npm:1.2.1, unbuild@npm:^1.1.2":
+  version: 1.2.1
+  resolution: "unbuild@npm:1.2.1"
   dependencies:
-    "@rollup/plugin-alias": ^4.0.3
-    "@rollup/plugin-commonjs": ^24.0.1
+    "@rollup/plugin-alias": ^5.0.0
+    "@rollup/plugin-commonjs": ^24.1.0
     "@rollup/plugin-json": ^6.0.0
-    "@rollup/plugin-node-resolve": ^15.0.1
+    "@rollup/plugin-node-resolve": ^15.0.2
     "@rollup/plugin-replace": ^5.0.2
     "@rollup/pluginutils": ^5.0.2
     chalk: ^5.2.0
-    consola: ^2.15.3
+    consola: ^3.0.2
     defu: ^6.1.2
-    esbuild: ^0.17.14
-    globby: ^13.1.3
+    esbuild: ^0.17.16
+    globby: ^13.1.4
     hookable: ^5.5.3
     jiti: ^1.18.2
     magic-string: ^0.30.0
@@ -11545,11 +11531,11 @@ __metadata:
     rollup: ^3.20.2
     rollup-plugin-dts: ^5.3.0
     scule: ^1.0.0
-    typescript: ^5.0.3
+    typescript: ^5.0.4
     untyped: ^1.3.2
   bin:
     unbuild: dist/cli.mjs
-  checksum: 93232b56f9563d6d94fa82a2e79700f517b53a8ba433d3a60feb950de9b390af9752ae22d3d5fe18f7ca4c6edf281318a278241772272db85b10c35029c915a3
+  checksum: 183aff70af75ac4ac3c4dafa0929898783c38143a7040a5a24ed359c4245ef260a4a66f42d44ee3afc7870eca50ff6bb659ed034caf8204d2be07bbc1e4ae76f
   languageName: node
   linkType: hard
 
@@ -12321,7 +12307,7 @@ __metadata:
     std-env: ^3.3.2
     type-fest: ^3.6.1
     typescript: 5.0.4
-    unbuild: 1.2.0
+    unbuild: 1.2.1
     vite: 4.2.1
     vitest: 0.30.1
     vue: 3.2.47
