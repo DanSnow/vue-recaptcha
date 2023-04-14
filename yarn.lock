@@ -2390,12 +2390,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:9.13.0, @vueuse/shared@npm:^9.13.0":
+"@vueuse/shared@npm:9.13.0":
   version: 9.13.0
   resolution: "@vueuse/shared@npm:9.13.0"
   dependencies:
     vue-demi: "*"
   checksum: e53e7312bdd2030b7970afcf4d3dc3f9a47f7721a92ccb51c364d23246233cb54758f7ddacbdb9ac63d1e86ec82e97d06cb53b05a4b8d43be877d16ab61dd9bb
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "@vueuse/shared@npm:10.0.0"
+  dependencies:
+    vue-demi: ">=0.14.0"
+  checksum: 38beaaa83005a1a56cd57e30d2aea860ae7281e43565c82b971d2d921636dc91448e194670bcc75f09f0eb3741ac626c0c6bc1ebbbd9e32d9c23074f5fd81dd7
   languageName: node
   linkType: hard
 
@@ -12239,7 +12248,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-demi@npm:*, vue-demi@npm:^0.14.0":
+"vue-demi@npm:*, vue-demi@npm:>=0.14.0, vue-demi@npm:^0.14.0":
   version: 0.14.0
   resolution: "vue-demi@npm:0.14.0"
   peerDependencies:
@@ -12293,7 +12302,7 @@ __metadata:
     "@vue/compiler-dom": 3.2.47
     "@vue/composition-api": 1.7.1
     "@vue/test-utils": 2.3.2
-    "@vueuse/shared": ^9.13.0
+    "@vueuse/shared": ^10.0.0
     defu: ^6.1.2
     eslint: 8.38.0
     eslint-config-prettier: 8.8.0
