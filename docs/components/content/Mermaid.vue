@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import mermaid from 'mermaid'
+
 const show = ref(false)
 
 onMounted(async () => {

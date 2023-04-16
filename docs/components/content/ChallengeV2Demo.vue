@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RecaptchaV2State } from '#recaptcha'
+
 const map = {
   [RecaptchaV2State.Init]: 'Click to Challenge',
   [RecaptchaV2State.Verified]: 'Verified',
