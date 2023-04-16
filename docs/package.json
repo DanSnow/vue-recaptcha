@@ -7,12 +7,12 @@
     "publish": "yarn generate && touch .output/public/.nojekyll && gh-pages -d dist -t"
   },
   "dependencies": {
-    "@vueuse/nuxt": "^9.13.0",
+    "@vueuse/nuxt": "^10.0.2",
     "mermaid": "^10.0.2",
     "ofetch": "^1.0.1",
-    "vee-validate": "^4.8.3",
+    "vee-validate": "^4.8.5",
     "vue-recaptcha": "workspace:^",
-    "yup": "^1.0.2"
+    "yup": "^1.1.1"
   },
   "devDependencies": {
     "@nuxt-themes/docus": "1.10.1",

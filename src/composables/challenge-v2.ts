@@ -1,5 +1,5 @@
-import type { EventHookOn, MaybeComputedRef } from '@vueuse/shared'
-import { createEventHook, resolveRef, whenever } from '@vueuse/shared'
+import type { EventHookOn, MaybeRefOrGetter } from '@vueuse/shared'
+import { createEventHook, toRef, whenever } from '@vueuse/shared'
 import type { Ref } from 'vue-demi'
 import { ref } from 'vue-demi'
 import type { RecaptchaV2CheckboxOptions, RecaptchaV2InvisibleOptions, WidgetID } from '../script-manager/common'
@@ -15,7 +15,7 @@ export interface UseChallengeV2Input {
   /**
    * root to mount reCAPTCHA
    */
-  root?: MaybeComputedRef<Element | undefined>
+  root?: MaybeRefOrGetter<Element | undefined>
   /**
    * Option that pass to reCAPTCHA render
    */
@@ -74,15 +74,18 @@ export function useChallengeV2({ root = ref(), options = {} }: UseChallengeV2Inp
   const verify = createEventHook<string>()
   const expired = createEventHook<void>()
   const error = createEventHook<Error>()
-  const rootRef = resolveRef(root)
+  const rootRef = toRef(root)
   const state = ref(RecaptchaV2State.Init)
 
   whenever(rootRef, async (el) => {
     const id = await proxy.render(el, {
       ...options,
       sitekey: siteKey,
+      // eslint-disable-next-line @typescript-eslint/no-misused-promises
       callback: verify.trigger,
+      // eslint-disable-next-line @typescript-eslint/no-misused-promises
       'expired-callback': expired.trigger,
+      // eslint-disable-next-line @typescript-eslint/no-misused-promises
       'error-callback': error.trigger,
     })
     widgetID.value = id
