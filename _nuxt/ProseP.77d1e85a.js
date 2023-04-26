@@ -1,1 +1,0 @@
-import{z as n,o as t,i as o,a1 as r}from"./entry.cf631c4a.js";const a={};function c(e,s){return t(),o("p",null,[r(e.$slots,"default",{},void 0,!0)])}const f=n(a,[["render",c],["__scopeId","data-v-fb25b4f3"]]);export{f as default};
