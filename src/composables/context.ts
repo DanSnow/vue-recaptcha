@@ -24,7 +24,7 @@ export interface RecaptchaContext {
   options: RecaptchaOptions
 }
 
-export const RecaptchaContextKey: InjectionKey<RecaptchaContext> = Symbol('vue-recaptcha-context')
+export const RecaptchaContextKey = 'vue-recaptcha-context' as unknown as InjectionKey<RecaptchaContext>
 
 export function useRecaptchaContext() {
   const context = inject(RecaptchaContextKey)
