@@ -39,6 +39,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@antfu/eslint-config-basic@npm:0.38.6":
+  version: 0.38.6
+  resolution: "@antfu/eslint-config-basic@npm:0.38.6"
+  dependencies:
+    eslint-plugin-antfu: 0.38.6
+    eslint-plugin-eslint-comments: ^3.2.0
+    eslint-plugin-html: ^7.1.0
+    eslint-plugin-import: ^2.27.5
+    eslint-plugin-jsonc: ^2.7.0
+    eslint-plugin-markdown: ^3.0.0
+    eslint-plugin-n: ^15.7.0
+    eslint-plugin-no-only-tests: ^3.1.0
+    eslint-plugin-promise: ^6.1.1
+    eslint-plugin-unicorn: ^46.0.0
+    eslint-plugin-unused-imports: ^2.0.0
+    eslint-plugin-yml: ^1.5.0
+    jsonc-eslint-parser: ^2.2.0
+    yaml-eslint-parser: ^1.2.0
+  peerDependencies:
+    eslint: ">=7.4.0"
+  checksum: 8c9a634ed7ff196db763d29b84944448eeab27415999e9d85f0ae9da817ebd8889736bda67537c242a84a49c758e57e41bab4784578c150131bf02a5f11d6298
+  languageName: node
+  linkType: hard
+
 "@antfu/eslint-config-ts@npm:0.38.5":
   version: 0.38.5
   resolution: "@antfu/eslint-config-ts@npm:0.38.5"
@@ -51,6 +75,21 @@ __metadata:
     eslint: ">=7.4.0"
     typescript: ">=3.9"
   checksum: d02b4b7d4f381f50a204df3a3870093cccdc783e4175d3acef87aac68a600d82ffa8ef845e6d9c1515423dc74aae7304ffe008b8d4d8b15404bf007211e8013f
+  languageName: node
+  linkType: hard
+
+"@antfu/eslint-config-ts@npm:0.38.6":
+  version: 0.38.6
+  resolution: "@antfu/eslint-config-ts@npm:0.38.6"
+  dependencies:
+    "@antfu/eslint-config-basic": 0.38.6
+    "@typescript-eslint/eslint-plugin": ^5.59.0
+    "@typescript-eslint/parser": ^5.59.0
+    eslint-plugin-jest: ^27.2.1
+  peerDependencies:
+    eslint: ">=7.4.0"
+    typescript: ">=3.9"
+  checksum: f5371fef192fbf56a8f2bb8d36fca7f274dffa95c29a166cde331c676d07938067dfd7c9e91003198f35a6fc1b22eba546fe80d6c862183c86715a6178544152
   languageName: node
   linkType: hard
 
@@ -68,11 +107,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antfu/eslint-config@npm:0.38.5":
-  version: 0.38.5
-  resolution: "@antfu/eslint-config@npm:0.38.5"
+"@antfu/eslint-config-vue@npm:0.38.6":
+  version: 0.38.6
+  resolution: "@antfu/eslint-config-vue@npm:0.38.6"
   dependencies:
-    "@antfu/eslint-config-vue": 0.38.5
+    "@antfu/eslint-config-basic": 0.38.6
+    "@antfu/eslint-config-ts": 0.38.6
+    eslint-plugin-vue: ^9.11.0
+    local-pkg: ^0.4.3
+  peerDependencies:
+    eslint: ">=7.4.0"
+  checksum: c42273ab61114c7e6df655a24c19c9fe90d37ebafcc899b0e58bcf449133ca170fb444a7eb85dcd417f8d754d141010d9023e8f7a112a531b5c7fa44fabc0666
+  languageName: node
+  linkType: hard
+
+"@antfu/eslint-config@npm:0.38.6":
+  version: 0.38.6
+  resolution: "@antfu/eslint-config@npm:0.38.6"
+  dependencies:
+    "@antfu/eslint-config-vue": 0.38.6
     "@typescript-eslint/eslint-plugin": ^5.59.0
     "@typescript-eslint/parser": ^5.59.0
     eslint-plugin-eslint-comments: ^3.2.0
@@ -88,7 +141,7 @@ __metadata:
     yaml-eslint-parser: ^1.2.0
   peerDependencies:
     eslint: ">=7.4.0"
-  checksum: 6786339cffafa87e9c8b949b2544c6cba5c44377d301b37ac793885d2727055ddbecc15f61cc10dffeeb3e634cd054e728d751c5b32f5468eabf920fed8c5961
+  checksum: 3315ba829b69558990f7407be734f32bb8fb0ebb9c23d7d1b7b9df996f258f619688f7fccc046f3a06e789700bcdce6f5e08523d18dda7f35eae857c48de2b4d
   languageName: node
   linkType: hard
 
@@ -4939,6 +4992,15 @@ __metadata:
   dependencies:
     "@typescript-eslint/utils": ^5.59.0
   checksum: 3ea8e3065288db44f6a08179d19c9e6d4bb4de4249be3ae3bcb3a1a059b4261a6db753bc4765d3b87aef058339d7fdcb16cecf7958010f6167f6a0ebc0dc9ccb
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-antfu@npm:0.38.6":
+  version: 0.38.6
+  resolution: "eslint-plugin-antfu@npm:0.38.6"
+  dependencies:
+    "@typescript-eslint/utils": ^5.59.0
+  checksum: b30759c67716fbee731e8ffd05119c3e85f67a21636b3aeb06ae74c3618d8060382582b1d4704abb80f01e30b72994af16f9f6da1381f04262a5dd42189a76fe
   languageName: node
   linkType: hard
 
@@ -12406,7 +12468,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vue-recaptcha@workspace:."
   dependencies:
-    "@antfu/eslint-config": 0.38.5
+    "@antfu/eslint-config": 0.38.6
     "@antfu/eslint-config-vue": 0.38.5
     "@nuxt/kit": ^3.4.3
     "@nuxt/schema": ^3.4.3
