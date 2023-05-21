@@ -15,30 +15,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antfu/eslint-config-basic@npm:0.39.0":
-  version: 0.39.0
-  resolution: "@antfu/eslint-config-basic@npm:0.39.0"
-  dependencies:
-    eslint-plugin-antfu: 0.39.0
-    eslint-plugin-eslint-comments: ^3.2.0
-    eslint-plugin-html: ^7.1.0
-    eslint-plugin-import: ^2.27.5
-    eslint-plugin-jsonc: ^2.7.0
-    eslint-plugin-markdown: ^3.0.0
-    eslint-plugin-n: ^15.7.0
-    eslint-plugin-no-only-tests: ^3.1.0
-    eslint-plugin-promise: ^6.1.1
-    eslint-plugin-unicorn: ^46.0.0
-    eslint-plugin-unused-imports: ^2.0.0
-    eslint-plugin-yml: ^1.5.0
-    jsonc-eslint-parser: ^2.2.0
-    yaml-eslint-parser: ^1.2.0
-  peerDependencies:
-    eslint: ">=7.4.0"
-  checksum: ec765c8bfb3a117bc3858e5f243a850e00ce8b4391d7d7d93f18535e1e3eb83f3df3d159bcff6af76118924af11b4e50433291c97f1fd43e75475c1ed5075577
-  languageName: node
-  linkType: hard
-
 "@antfu/eslint-config-basic@npm:0.39.1":
   version: 0.39.1
   resolution: "@antfu/eslint-config-basic@npm:0.39.1"
@@ -63,21 +39,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antfu/eslint-config-ts@npm:0.39.0":
-  version: 0.39.0
-  resolution: "@antfu/eslint-config-ts@npm:0.39.0"
-  dependencies:
-    "@antfu/eslint-config-basic": 0.39.0
-    "@typescript-eslint/eslint-plugin": ^5.59.0
-    "@typescript-eslint/parser": ^5.59.0
-    eslint-plugin-jest: ^27.2.1
-  peerDependencies:
-    eslint: ">=7.4.0"
-    typescript: ">=3.9"
-  checksum: c7a9bf7c7c7ed87291277a2a2c38c89e3ead35a0b8028c36dbc11b348c34506dc0c1cfd4fd7e0436e5fe96e4dfa618ba2ec74bb4c61d9ae368f49b42d800ea35
-  languageName: node
-  linkType: hard
-
 "@antfu/eslint-config-ts@npm:0.39.1":
   version: 0.39.1
   resolution: "@antfu/eslint-config-ts@npm:0.39.1"
@@ -90,20 +51,6 @@ __metadata:
     eslint: ">=7.4.0"
     typescript: ">=3.9"
   checksum: 982fb47a814a23a73261ecc8c808473b22b7ca820976b76b0f23392e20985b25df0711f86ad4451f2513865004b9a773370498f5e2f14d9cf75f83ad61345d6f
-  languageName: node
-  linkType: hard
-
-"@antfu/eslint-config-vue@npm:0.39.0":
-  version: 0.39.0
-  resolution: "@antfu/eslint-config-vue@npm:0.39.0"
-  dependencies:
-    "@antfu/eslint-config-basic": 0.39.0
-    "@antfu/eslint-config-ts": 0.39.0
-    eslint-plugin-vue: ^9.11.0
-    local-pkg: ^0.4.3
-  peerDependencies:
-    eslint: ">=7.4.0"
-  checksum: ed365135ed15d7ebd4ecec18906a097b6bd806fdf3ebcbc52e531eb80246eceb3af2e30453632ce013969c38b39014df3600ca9271491507c33170b0fea9f580
   languageName: node
   linkType: hard
 
@@ -4976,15 +4923,6 @@ __metadata:
     eslint:
       optional: true
   checksum: 74c6dfea7641ebcfe174be61168541a11a14aa8d72e515f5f09af55cd0d0862686104b0524aa4b8e0ce66418a44aa38a94d2588743db5fd07a6b49ffd16921d2
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-antfu@npm:0.39.0":
-  version: 0.39.0
-  resolution: "eslint-plugin-antfu@npm:0.39.0"
-  dependencies:
-    "@typescript-eslint/utils": ^5.59.0
-  checksum: ffdcc73190e0d821b8aa4bc7dcb35be138679dc502238b21b36075e8e553a1de97817ac097bb8f149c184d6050e86f58c3ffe5ca1634576c620922b37116c322
   languageName: node
   linkType: hard
 
@@ -12529,7 +12467,7 @@ __metadata:
   resolution: "vue-recaptcha@workspace:."
   dependencies:
     "@antfu/eslint-config": 0.39.1
-    "@antfu/eslint-config-vue": 0.39.0
+    "@antfu/eslint-config-vue": 0.39.1
     "@nuxt/kit": ^3.4.3
     "@nuxt/schema": ^3.4.3
     "@playwright/test": 1.34.0
