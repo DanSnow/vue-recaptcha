@@ -2269,7 +2269,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-dom@npm:3.3.4, @vue/compiler-dom@npm:^3.0.1, @vue/compiler-dom@npm:^3.2.0, @vue/compiler-dom@npm:^3.3.0":
+"@vue/compiler-dom@npm:3.3.4, @vue/compiler-dom@npm:^3.2.0, @vue/compiler-dom@npm:^3.3.0":
   version: 3.3.4
   resolution: "@vue/compiler-dom@npm:3.3.4"
   dependencies:
@@ -2387,7 +2387,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/server-renderer@npm:3.3.4, @vue/server-renderer@npm:^3.0.1":
+"@vue/server-renderer@npm:3.3.4":
   version: 3.3.4
   resolution: "@vue/server-renderer@npm:3.3.4"
   dependencies:
@@ -2406,23 +2406,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/test-utils@npm:2.3.2":
-  version: 2.3.2
-  resolution: "@vue/test-utils@npm:2.3.2"
+"@vue/test-utils@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@vue/test-utils@npm:2.4.0"
   dependencies:
-    "@vue/compiler-dom": ^3.0.1
-    "@vue/server-renderer": ^3.0.1
     js-beautify: 1.14.6
+    vue-component-type-helpers: 1.6.5
   peerDependencies:
     "@vue/compiler-dom": ^3.0.1
     "@vue/server-renderer": ^3.0.1
     vue: ^3.0.1
-  dependenciesMeta:
+  peerDependenciesMeta:
     "@vue/compiler-dom":
       optional: true
     "@vue/server-renderer":
       optional: true
-  checksum: 870f9bfb0d5e5a00d0391d3a4fda13a3f556d2986ca2b4ed7702cabfd64d0d643293c33dce12e4fddfb7ddd215d4a5a4bf417d0105791d483c652b008d7e9efb
+  checksum: 28b9628cf82b031ad2f948560e508852177eeaf22677dc346792454a32138158e9e219be85e3a01ca4a1c6063d86dfe04a53045ccc0202e0724c328661eeff24
   languageName: node
   linkType: hard
 
@@ -12423,6 +12422,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"vue-component-type-helpers@npm:1.6.5":
+  version: 1.6.5
+  resolution: "vue-component-type-helpers@npm:1.6.5"
+  checksum: a7926ade20c31c6b8196b69124e676ec57cd2ec3cfb81eb5ea49efe115f7d679dcf43e2ff8a982b2fc5e16436098b42043301a30898e44d5ad073255bd821d46
+  languageName: node
+  linkType: hard
+
 "vue-demi@npm:*, vue-demi@npm:>=0.14.0, vue-demi@npm:^0.14.0":
   version: 0.14.0
   resolution: "vue-demi@npm:0.14.0"
@@ -12476,7 +12482,7 @@ __metadata:
     "@vitejs/plugin-vue": 4.2.3
     "@vue/compiler-dom": 3.3.4
     "@vue/composition-api": 1.7.1
-    "@vue/test-utils": 2.3.2
+    "@vue/test-utils": 2.4.0
     "@vueuse/shared": ^10.1.0
     defu: ^6.1.2
     eslint: 8.43.0
