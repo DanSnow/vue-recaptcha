@@ -1,0 +1,22 @@
+name: "Bug Report"
+description: File a bug report
+labels: ["bug"]
+body:
+- type: "textarea"
+  attributes:
+    label: "Description"
+    description: "Give a concise description of the problem"
+  validations:
+    required: true
+- type: "textarea"
+  attributes:
+    label: "Minimal Reproducible Example"
+    description: "Provide an example that reproduces the issue, either as a code snippet or a link to repo or StackBlitz."
+  validations:
+    required: true
+- type: "textarea"
+  attributes:
+    label: "System info"
+    description: "Provide the output for `npx nuxi info` for Nuxt or `npx envinfo --system --npmPackages '{vite,@vitejs/*,nuxt,vue-recaptcha}' --binaries --browsers` for Vite project"
+  validations:
+    required: true
