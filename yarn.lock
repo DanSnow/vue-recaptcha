@@ -1881,13 +1881,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/dom@npm:1.1.27":
-  version: 1.1.27
-  resolution: "@unhead/dom@npm:1.1.27"
+"@unhead/dom@npm:1.1.28":
+  version: 1.1.28
+  resolution: "@unhead/dom@npm:1.1.28"
   dependencies:
-    "@unhead/schema": 1.1.27
-    "@unhead/shared": 1.1.27
-  checksum: 16c95bfd12953fd94c98fb6e8be02f1d0d4f1941b145d3e92bbf406f42a264429047aa7cbc04f3ab5a48ee64ad07cc05c76d182db1ca32868dbc9c5512a46415
+    "@unhead/schema": 1.1.28
+    "@unhead/shared": 1.1.28
+  checksum: b1b7ffca19544ab56636057d78c4b1a628946da766f17878121d72c64d9b686ba7f242b4227b17b8b5988d854b048ddbc5e07b5b506f633a135e408da8fe19cf
   languageName: node
   linkType: hard
 
@@ -1901,12 +1901,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@unhead/schema@npm:1.1.28":
+  version: 1.1.28
+  resolution: "@unhead/schema@npm:1.1.28"
+  dependencies:
+    hookable: ^5.5.3
+    zhead: ^2.0.7
+  checksum: 6e358ed143d0ab11451f87bf92601a937fe5f332afd90e5fa7649d6406a3f643895bdf04e6c2469d3b3d38c221d7a20862688b9dd8c7eb1a41faaeb346af11ed
+  languageName: node
+  linkType: hard
+
 "@unhead/shared@npm:1.1.27":
   version: 1.1.27
   resolution: "@unhead/shared@npm:1.1.27"
   dependencies:
     "@unhead/schema": 1.1.27
   checksum: d0ff9af3dbbf9f36339c9ed4b9c42fcb83cb0ea26fe07da1c9d70772a7e1a5202c4465fdc4e3e6afce80a9a7c90d8245f666e65e3819220ea5ecb8e8602cdb47
+  languageName: node
+  linkType: hard
+
+"@unhead/shared@npm:1.1.28":
+  version: 1.1.28
+  resolution: "@unhead/shared@npm:1.1.28"
+  dependencies:
+    "@unhead/schema": 1.1.28
+  checksum: 4cae8fafa1638a0962793dfc59e20e4321be6d1b4089e82e8dd19a1e682f45ec950fa373d1f9d215df3988ef10bada96dd796c0fae55b3c0541d41a2b04c9870
   languageName: node
   linkType: hard
 
@@ -1920,17 +1939,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/vue@npm:1.1.27, @unhead/vue@npm:^1.1.27":
-  version: 1.1.27
-  resolution: "@unhead/vue@npm:1.1.27"
+"@unhead/vue@npm:1.1.28, @unhead/vue@npm:^1.1.27":
+  version: 1.1.28
+  resolution: "@unhead/vue@npm:1.1.28"
   dependencies:
-    "@unhead/schema": 1.1.27
-    "@unhead/shared": 1.1.27
+    "@unhead/schema": 1.1.28
+    "@unhead/shared": 1.1.28
     hookable: ^5.5.3
-    unhead: 1.1.27
+    unhead: 1.1.28
   peerDependencies:
     vue: ">=2.7 || >=3"
-  checksum: beb28ac0bd34df15a40eceb5f03004d787198074cdb1be72045ec33438321c4c6c5c0ca026dd7e1d0428a330462274d9ff830c319deff3588b4a578dd813a600
+  checksum: 2330c67f61f08f304652746cfd678c67334329a72217b64563a141e5234c84454dc925f832193f02c68215f24400f059c8828f07e38e1c5a4e5e72de9e549263
   languageName: node
   linkType: hard
 
@@ -12024,15 +12043,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unhead@npm:1.1.27":
-  version: 1.1.27
-  resolution: "unhead@npm:1.1.27"
+"unhead@npm:1.1.28":
+  version: 1.1.28
+  resolution: "unhead@npm:1.1.28"
   dependencies:
-    "@unhead/dom": 1.1.27
-    "@unhead/schema": 1.1.27
-    "@unhead/shared": 1.1.27
+    "@unhead/dom": 1.1.28
+    "@unhead/schema": 1.1.28
+    "@unhead/shared": 1.1.28
     hookable: ^5.5.3
-  checksum: c8d6136fb9200badc2daa4dffc72e8c68f9790150a102459fb7e3af98e5f3be1980465f065af4df40ab09e8896addfc8d6988690170b9b04f0fa0e4ec921f43f
+  checksum: 5cbdeb3c938949cfb239d18caa27ef6e747fd4bcd41b26f7f95f3e951de1ac2eb841e7fc69e3e5f1be7ac08e7f06001a8568ec1fbcd81ddddb7eb90d01cd15c3
   languageName: node
   linkType: hard
 
@@ -12760,7 +12779,7 @@ __metadata:
     "@nuxt/kit": ^3.4.3
     "@nuxt/schema": ^3.4.3
     "@playwright/test": 1.35.1
-    "@unhead/vue": 1.1.27
+    "@unhead/vue": 1.1.28
     "@vitejs/plugin-vue": 4.2.3
     "@vue/compiler-dom": 3.3.4
     "@vue/composition-api": 1.7.1
@@ -13163,10 +13182,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zhead@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "zhead@npm:2.0.4"
-  checksum: a5b506a6945e93a2a3356d7944a61f9b9b2bf303ee26b10075790a262039cae9b4af7a2ffb8fb02c43a3d9bbfd93598001da8c4d448f0044797a14ae114016ab
+"zhead@npm:^2.0.4, zhead@npm:^2.0.7":
+  version: 2.0.7
+  resolution: "zhead@npm:2.0.7"
+  checksum: dc7932ad2a55135325f3d2a096c096b6145e1e123f17125ebaa9a53ddc176a99c68b59ce50b04f4f5edaaf737e1992d664412f56cc47e3a70bd17269d398a4b2
   languageName: node
   linkType: hard
 
