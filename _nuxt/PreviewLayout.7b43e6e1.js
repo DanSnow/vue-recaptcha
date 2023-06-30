@@ -1,0 +1,1 @@
+import{l as t,b as _,c as o,a0 as s}from"./entry.d890dbc2.js";const r={},a={class:"preview-layout"};function n(e,c){return _(),o("div",a,[s(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",n],["__scopeId","data-v-ef0489ff"]]);export{d as default};
