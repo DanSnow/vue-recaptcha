@@ -10482,7 +10482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^3.20.2, rollup@npm:^3.21.0, rollup@npm:^3.25.3":
+"rollup@npm:^3.20.2, rollup@npm:^3.21.0, rollup@npm:^3.25.2, rollup@npm:^3.25.3":
   version: 3.26.1
   resolution: "rollup@npm:3.26.1"
   dependencies:
@@ -12153,7 +12153,47 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:4.3.9, vite@npm:^3.0.0 || ^4.0.0, vite@npm:~4.3.9":
+"vite@npm:4.4.0, vite@npm:^3.0.0 || ^4.0.0":
+  version: 4.4.0
+  resolution: "vite@npm:4.4.0"
+  dependencies:
+    esbuild: ^0.18.10
+    fsevents: ~2.3.2
+    postcss: ^8.4.24
+    rollup: ^3.25.2
+  peerDependencies:
+    "@types/node": ">= 14"
+    less: "*"
+    lightningcss: ^1.21.0
+    sass: "*"
+    stylus: "*"
+    sugarss: "*"
+    terser: ^5.4.0
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  peerDependenciesMeta:
+    "@types/node":
+      optional: true
+    less:
+      optional: true
+    lightningcss:
+      optional: true
+    sass:
+      optional: true
+    stylus:
+      optional: true
+    sugarss:
+      optional: true
+    terser:
+      optional: true
+  bin:
+    vite: bin/vite.js
+  checksum: a0565345836d2bd5471aa784a3769c19c2c7b5f1df05f3b30948ccba691c0a37300ff40bcbb288a7a189aba13063b04b91abbb49dffe9ec45472e95bf4a9ab17
+  languageName: node
+  linkType: hard
+
+"vite@npm:~4.3.9":
   version: 4.3.9
   resolution: "vite@npm:4.3.9"
   dependencies:
@@ -12416,7 +12456,7 @@ __metadata:
     type-fest: ^3.9.0
     typescript: 5.1.6
     unbuild: 1.2.1
-    vite: 4.3.9
+    vite: 4.4.0
     vitest: 0.32.4
     vue: 3.3.4
     vue-demi: ^0.14.0
