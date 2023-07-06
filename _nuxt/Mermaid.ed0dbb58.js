@@ -1,0 +1,2 @@
+import{d as o,r as n,o as m,Q as c,J as i,b as u,c as l,D as a,g as p,f as d,Z as f}from"./entry.93faa443.js";import{m as s}from"./mermaid.core.baf8e9be.js";import"./_commonjsHelpers.725317a4.js";const _={key:0,class:"mermaid"},C=o({__name:"Mermaid",setup(k){const e=n(!1);return m(async()=>{e.value=!0,await c(),s.initialize({startOnLoad:!1}),s.run({querySelector:".mermaid",suppressErrors:!1})}),(t,h)=>{const r=f;return i(e)?(u(),l("pre",_,[a("    "),p(r,{use:t.$slots.default,unwrap:"p"},null,8,["use"]),a(`
+  `)])):d("",!0)}}});export{C as default};
