@@ -36,7 +36,7 @@ export default defineNuxtModule<ModuleOptions>({
     const logger = useLogger('vue-recaptcha')
     const nuxt = useNuxt()
     const resolver = createResolver(import.meta.url)
-    nuxt.options.build.transpile.push(resolver.resolve('.'))
+    nuxt.options.build.transpile.push(resolver.resolve('.'), 'vue-recaptcha')
 
     for (const [name, fileName] of Object.entries(COMPONENTS)) {
       await addComponent({
