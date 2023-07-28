@@ -1079,20 +1079,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt-themes/docus@npm:1.14.3":
-  version: 1.14.3
-  resolution: "@nuxt-themes/docus@npm:1.14.3"
+"@nuxt-themes/docus@npm:1.14.4":
+  version: 1.14.4
+  resolution: "@nuxt-themes/docus@npm:1.14.4"
   dependencies:
     "@nuxt-themes/elements": ^0.9.4
     "@nuxt-themes/tokens": ^1.9.1
     "@nuxt-themes/typography": ^0.11.0
-    "@nuxt/content": ^2.7.0
+    "@nuxt/content": ^2.7.2
     "@nuxthq/studio": ^0.13.4
     "@vueuse/integrations": ^10.2.1
     "@vueuse/nuxt": ^10.2.1
     focus-trap: ^7.5.2
     fuse.js: ^6.6.2
-  checksum: 967ac5dc8ad3f33bccabc3b2c286e96dc35222de6d106add2a62de8f8bab1ed7e28fb7b13f3dc35a6859695fcdbbe3fd48b3f1946a8184fcc04b8ee7e301dda6
+  checksum: f431b418dd96f6e42a9810d676ea6d8c095aef702181eef7e2f351d0e5d1c1100e3f61998edcc9375f42b79bc614854799ee3154b935bca7aba2a052cc1d6446
   languageName: node
   linkType: hard
 
@@ -1130,18 +1130,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/content@npm:^2.7.0":
-  version: 2.7.0
-  resolution: "@nuxt/content@npm:2.7.0"
+"@nuxt/content@npm:^2.7.2":
+  version: 2.7.2
+  resolution: "@nuxt/content@npm:2.7.2"
   dependencies:
-    "@nuxt/kit": ^3.5.3
-    consola: ^3.1.0
+    "@nuxt/kit": ^3.6.3
+    consola: ^3.2.3
     defu: ^6.1.2
-    destr: ^1.2.2
+    destr: ^2.0.0
     detab: ^3.0.2
     json5: ^2.2.3
     knitwork: ^1.0.0
-    listhen: ^1.0.4
+    listhen: ^1.1.1
     mdast-util-to-hast: ^12.3.0
     mdurl: ^1.0.1
     ohash: ^1.1.2
@@ -1152,25 +1152,25 @@ __metadata:
     rehype-slug: ^5.1.0
     rehype-sort-attribute-values: ^4.0.0
     rehype-sort-attributes: ^4.0.0
-    remark-emoji: 3.1.1
+    remark-emoji: 3.1.2
     remark-gfm: ^3.0.1
     remark-mdc: ^1.1.3
     remark-parse: ^10.0.2
     remark-rehype: ^10.1.0
     remark-squeeze-paragraphs: ^5.0.1
     scule: ^1.0.0
-    shiki-es: ^0.2.0
+    shiki-es: ^0.14.0
     slugify: ^1.6.6
-    socket.io-client: ^4.6.2
+    socket.io-client: ^4.7.1
     ufo: ^1.1.2
     unified: ^10.1.2
-    unist-builder: ^3.0.1
-    unist-util-position: ^4.0.4
-    unist-util-stringify-position: ^3.0.3
-    unist-util-visit: ^4.1.2
-    unstorage: ^1.6.1
+    unist-builder: ^4.0.0
+    unist-util-position: ^5.0.0
+    unist-util-stringify-position: ^4.0.0
+    unist-util-visit: ^5.0.0
+    unstorage: ^1.8.0
     ws: ^8.13.0
-  checksum: baed191fa1cd0d150e61a944f6c0a38dfddd548401d394c3dc5c1fd04281ad575e96a99d4b3638a9b6f64c3d6dff8528834943f4867d58f85cbb63926a577c9b
+  checksum: 492b5ac4922535793615516edda9497805d36f78468c1bc538fbd901f0d5c88823f1153f55bdd0792785b9f1b0532d988945e8ac0fc42e54482ac20cf76f4469
   languageName: node
   linkType: hard
 
@@ -1181,7 +1181,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.6.5, @nuxt/kit@npm:^3.0.0, @nuxt/kit@npm:^3.3.1, @nuxt/kit@npm:^3.4.2, @nuxt/kit@npm:^3.4.3, @nuxt/kit@npm:^3.5.3, @nuxt/kit@npm:^3.6.1, @nuxt/kit@npm:^3.6.2":
+"@nuxt/kit@npm:3.6.5, @nuxt/kit@npm:^3.0.0, @nuxt/kit@npm:^3.3.1, @nuxt/kit@npm:^3.4.2, @nuxt/kit@npm:^3.4.3, @nuxt/kit@npm:^3.6.1, @nuxt/kit@npm:^3.6.2, @nuxt/kit@npm:^3.6.3":
   version: 3.6.5
   resolution: "@nuxt/kit@npm:3.6.5"
   dependencies:
@@ -1704,7 +1704,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/unist@npm:*, @types/unist@npm:^2.0.0, @types/unist@npm:^2.0.2":
+"@types/unist@npm:*, @types/unist@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/unist@npm:3.0.0"
+  checksum: e9d21a8fb5e332be0acef29192d82632875b2ef3e700f1bc64fdfc1520189542de85c3d4f3bcfbc2f4afdb210f4c23f68061f3fbf10744e920d4f18430d19f49
+  languageName: node
+  linkType: hard
+
+"@types/unist@npm:^2.0.0, @types/unist@npm:^2.0.2":
   version: 2.0.6
   resolution: "@types/unist@npm:2.0.6"
   checksum: 25cb860ff10dde48b54622d58b23e66214211a61c84c0f15f88d38b61aa1b53d4d46e42b557924a93178c501c166aa37e28d7f6d994aba13d24685326272d5db
@@ -2478,7 +2485,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@vue-recaptcha/doc@workspace:docs"
   dependencies:
-    "@nuxt-themes/docus": 1.14.3
+    "@nuxt-themes/docus": 1.14.4
     "@unocss/nuxt": 0.53.6
     "@vueuse/nuxt": ^10.1.0
     gh-pages: 5.0.0
@@ -3598,10 +3605,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"citty@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "citty@npm:0.1.1"
-  checksum: 7fb253777ce060a8b0c6de4b486c8dc01adcbe22dff2e7d0ce84ddf9c515f09686ec85af5a45ef9823d47af41c8f859dc4afd39c3fadb020211a43993a6c7b1b
+"citty@npm:^0.1.1, citty@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "citty@npm:0.1.2"
+  dependencies:
+    consola: ^3.2.3
+  checksum: e3b6b9c1b60c8dc06592643dd34a4dad0bec88ae89d8619eff7baa542a65c505842023bc93de0a4c4400d7d6ea22da6d5b1d1b6a5efc182b568a72f504df5ca9
   languageName: node
   linkType: hard
 
@@ -4591,13 +4600,6 @@ __metadata:
   version: 2.0.3
   resolution: "dequal@npm:2.0.3"
   checksum: 8679b850e1a3d0ebbc46ee780d5df7b478c23f335887464023a631d1b9af051ad4a6595a44220f9ff8ff95a8ddccf019b5ad778a976fd7bbf77383d36f412f90
-  languageName: node
-  linkType: hard
-
-"destr@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "destr@npm:1.2.2"
-  checksum: 3906b49513a64d8442dacb8b798c59d66257ded4ccd2ef1d99b58644d4aa6b30ca61f9a9823d3dcbc78b4db812596e53e85e499f39a498b3b165a045b5228b2b
   languageName: node
   linkType: hard
 
@@ -6207,7 +6209,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"h3@npm:^1.7.0, h3@npm:^1.7.1":
+"h3@npm:^1.7.1":
   version: 1.7.1
   resolution: "h3@npm:1.7.1"
   dependencies:
@@ -6654,13 +6656,6 @@ __metadata:
     redis-parser: ^3.0.0
     standard-as-callback: ^2.1.0
   checksum: 9a23559133e862a768778301efb68ae8c2af3c33562174b54a4c2d6574b976e85c75a4c34857991af733e35c48faf4c356e7daa8fb0a3543d85ff1768c8754bc
-  languageName: node
-  linkType: hard
-
-"ip-regex@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "ip-regex@npm:5.0.0"
-  checksum: 4098b2df89c015f1484a5946e733ec126af8c1828719d90e09f04af23ce487e1a852670e4d3f51b0dc6dfbaf7d8bfab23fd7893ca60e69833da99b7b1ee3623b
   languageName: node
   linkType: hard
 
@@ -7256,19 +7251,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"listhen@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "listhen@npm:1.0.4"
+"listhen@npm:^1.0.4, listhen@npm:^1.1.1":
+  version: 1.1.2
+  resolution: "listhen@npm:1.1.2"
   dependencies:
+    citty: ^0.1.2
     clipboardy: ^3.0.0
-    colorette: ^2.0.19
+    consola: ^3.2.3
     defu: ^6.1.2
     get-port-please: ^3.0.1
     http-shutdown: ^1.2.2
-    ip-regex: ^5.0.0
+    jiti: ^1.19.1
+    mlly: ^1.4.0
     node-forge: ^1.3.1
-    ufo: ^1.1.1
-  checksum: 9ab54b9d236a1895306d60deb4f1b007ab0ff27ab6d0009a7da912523aebce4d2f4efe3377d4d45e1d78087aa92bd96d999bf1f5acce433703a8cf348242e817
+    pathe: ^1.1.1
+    ufo: ^1.1.2
+  bin:
+    listen: bin/listhen.mjs
+    listhen: bin/listhen.mjs
+  checksum: ddc054c60b42482e4a2845f4c49fc72f23ab0b016e5be3e92daabbed827c71b4ca51deae44246dcd424b109863e9ee7fec081d51ce84dca1a481a7f783dd2735
   languageName: node
   linkType: hard
 
@@ -10174,14 +10175,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-emoji@npm:3.1.1":
-  version: 3.1.1
-  resolution: "remark-emoji@npm:3.1.1"
+"remark-emoji@npm:3.1.2":
+  version: 3.1.2
+  resolution: "remark-emoji@npm:3.1.2"
   dependencies:
     emoticon: ^4.0.1
     mdast-util-find-and-replace: ^2.2.2
     node-emoji: ^1.11.0
-  checksum: 1e3908205d45bf9621641b265aeda2f16353ae247193cfde915c71db7f25be1806a71c461398fae08b9b2a62ef405b4230567343bcd5d5e5b5593c8ac14c1fb2
+  checksum: da6a5cb06d8967e4ae3b197e2f18a92f2036ea51908f9eab322fb17cd0e721c957a73ec9a68b09b848287e527341a6d439ea71343a5755c92216dd7db6170d3e
   languageName: node
   linkType: hard
 
@@ -10604,10 +10605,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki-es@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "shiki-es@npm:0.2.0"
-  checksum: a3af5c946398fd91c7e64d019b1cdc2e2df66aec79b9f1ebd3f77b19bf34966415fe873571e5d4bacee961f30c08d210a5e3d2a89b5f3345b6b27ba0135e6684
+"shiki-es@npm:^0.14.0":
+  version: 0.14.0
+  resolution: "shiki-es@npm:0.14.0"
+  checksum: 49fbe9f4d5217aaba7a81dc837ca4efadd9721208ff7451c3d41027ad063aacdfba32bb356fc31ac137762a59b05f8219da466699df4baedf0c134d4b7ca0382
   languageName: node
   linkType: hard
 
@@ -10720,7 +10721,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"socket.io-client@npm:^4.6.1, socket.io-client@npm:^4.6.2":
+"socket.io-client@npm:^4.6.1, socket.io-client@npm:^4.7.1":
   version: 4.7.1
   resolution: "socket.io-client@npm:4.7.1"
   dependencies:
@@ -11589,12 +11590,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-builder@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "unist-builder@npm:3.0.1"
+"unist-builder@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "unist-builder@npm:4.0.0"
   dependencies:
-    "@types/unist": ^2.0.0
-  checksum: d8c42fe69aa55a3e9aed3c581007ec5371349bf9885bfa8b0b787634f8d12fa5081f066b205ded379b6d0aeaa884039bae9ebb65a3e71784005fb110aef30d0f
+    "@types/unist": ^3.0.0
+  checksum: 9b754c84c990e11d1b8b2cb7194beb24f6ec303dd1010af162a11127c82286f8304d4826ef710a5eecac0cb032983baecb574c1e114351a95a029bb204af89af
   languageName: node
   linkType: hard
 
@@ -11614,12 +11615,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-position@npm:^4.0.0, unist-util-position@npm:^4.0.4":
+"unist-util-is@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "unist-util-is@npm:6.0.0"
+  dependencies:
+    "@types/unist": ^3.0.0
+  checksum: f630a925126594af9993b091cf807b86811371e465b5049a6283e08537d3e6ba0f7e248e1e7dab52cfe33f9002606acef093441137181b327f6fe504884b20e2
+  languageName: node
+  linkType: hard
+
+"unist-util-position@npm:^4.0.0":
   version: 4.0.4
   resolution: "unist-util-position@npm:4.0.4"
   dependencies:
     "@types/unist": ^2.0.0
   checksum: e7487b6cec9365299695e3379ded270a1717074fa11fd2407c9b934fb08db6fe1d9077ddeaf877ecf1813665f8ccded5171693d3d9a7a01a125ec5cdd5e88691
+  languageName: node
+  linkType: hard
+
+"unist-util-position@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "unist-util-position@npm:5.0.0"
+  dependencies:
+    "@types/unist": ^3.0.0
+  checksum: f89b27989b19f07878de9579cd8db2aa0194c8360db69e2c99bd2124a480d79c08f04b73a64daf01a8fb3af7cba65ff4b45a0b978ca243226084ad5f5d441dde
   languageName: node
   linkType: hard
 
@@ -11632,12 +11651,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-stringify-position@npm:^3.0.0, unist-util-stringify-position@npm:^3.0.3":
+"unist-util-stringify-position@npm:^3.0.0":
   version: 3.0.3
   resolution: "unist-util-stringify-position@npm:3.0.3"
   dependencies:
     "@types/unist": ^2.0.0
   checksum: dbd66c15183607ca942a2b1b7a9f6a5996f91c0d30cf8966fb88955a02349d9eefd3974e9010ee67e71175d784c5a9fea915b0aa0b0df99dcb921b95c4c9e124
+  languageName: node
+  linkType: hard
+
+"unist-util-stringify-position@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "unist-util-stringify-position@npm:4.0.0"
+  dependencies:
+    "@types/unist": ^3.0.0
+  checksum: e2e7aee4b92ddb64d314b4ac89eef7a46e4c829cbd3ee4aee516d100772b490eb6b4974f653ba0717a0071ca6ea0770bf22b0a2ea62c65fcba1d071285e96324
   languageName: node
   linkType: hard
 
@@ -11651,7 +11679,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-visit@npm:^4.0.0, unist-util-visit@npm:^4.1.1, unist-util-visit@npm:^4.1.2":
+"unist-util-visit-parents@npm:^6.0.0":
+  version: 6.0.1
+  resolution: "unist-util-visit-parents@npm:6.0.1"
+  dependencies:
+    "@types/unist": ^3.0.0
+    unist-util-is: ^6.0.0
+  checksum: 08927647c579f63b91aafcbec9966dc4a7d0af1e5e26fc69f4e3e6a01215084835a2321b06f3cbe7bf7914a852830fc1439f0fc3d7153d8804ac3ef851ddfa20
+  languageName: node
+  linkType: hard
+
+"unist-util-visit@npm:^4.0.0, unist-util-visit@npm:^4.1.1":
   version: 4.1.2
   resolution: "unist-util-visit@npm:4.1.2"
   dependencies:
@@ -11659,6 +11697,17 @@ __metadata:
     unist-util-is: ^5.0.0
     unist-util-visit-parents: ^5.1.1
   checksum: 95a34e3f7b5b2d4b68fd722b6229972099eb97b6df18913eda44a5c11df8b1e27efe7206dd7b88c4ed244a48c474a5b2e2629ab79558ff9eb936840295549cee
+  languageName: node
+  linkType: hard
+
+"unist-util-visit@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "unist-util-visit@npm:5.0.0"
+  dependencies:
+    "@types/unist": ^3.0.0
+    unist-util-is: ^6.0.0
+    unist-util-visit-parents: ^6.0.0
+  checksum: 9ec42e618e7e5d0202f3c191cd30791b51641285732767ee2e6bcd035931032e3c1b29093f4d7fd0c79175bbc1f26f24f26ee49770d32be76f8730a652a857e6
   languageName: node
   linkType: hard
 
@@ -11747,14 +11796,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unstorage@npm:^1.6.1, unstorage@npm:^1.7.0":
-  version: 1.7.0
-  resolution: "unstorage@npm:1.7.0"
+"unstorage@npm:^1.7.0, unstorage@npm:^1.8.0":
+  version: 1.8.0
+  resolution: "unstorage@npm:1.8.0"
   dependencies:
     anymatch: ^3.1.3
     chokidar: ^3.5.3
     destr: ^2.0.0
-    h3: ^1.7.0
+    h3: ^1.7.1
     ioredis: ^5.3.2
     listhen: ^1.0.4
     lru-cache: ^10.0.0
@@ -11766,12 +11815,12 @@ __metadata:
     "@azure/app-configuration": ^1.4.1
     "@azure/cosmos": ^3.17.3
     "@azure/data-tables": ^13.2.2
-    "@azure/identity": ^3.2.2
+    "@azure/identity": ^3.2.3
     "@azure/keyvault-secrets": ^4.7.0
     "@azure/storage-blob": ^12.14.0
     "@planetscale/database": ^1.7.0
-    "@upstash/redis": ^1.20.6
-    "@vercel/kv": ^0.2.1
+    "@upstash/redis": ^1.21.0
+    "@vercel/kv": ^0.2.2
   peerDependenciesMeta:
     "@azure/app-configuration":
       optional: true
@@ -11791,7 +11840,7 @@ __metadata:
       optional: true
     "@vercel/kv":
       optional: true
-  checksum: 9c314249a7f91fffe9d1e1ce676deba65ccfa3cc828407419cc3c9658b6d50de110b7f371bd179e76416addb18ed8d6a59250deb656cd7810b654ad12392cfe4
+  checksum: b88bf8e58019506ca9655f2a9f2796b106b190e6eae5a2f916badd83e98900fceb282202f959c49288044315aadd63bb6ea9bb6c13482b8b0683c88345b357cf
   languageName: node
   linkType: hard
 
