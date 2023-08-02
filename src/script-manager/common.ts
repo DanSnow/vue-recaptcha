@@ -140,7 +140,7 @@ export function checkRecaptchaLoad() {
     return false
   }
 
-  const isLoaded = Object.hasOwn(window, 'grecaptcha') && Object.hasOwn(window.grecaptcha, 'execute')
+  const isLoaded = window.grecaptcha && window.grecaptcha.execute instanceof Function
   if (isLoaded) {
     recaptchaLoaded.resolve()
   }
