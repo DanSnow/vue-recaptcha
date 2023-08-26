@@ -5861,7 +5861,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:2.3.2, fsevents@npm:~2.3.2":
+"fsevents@npm:2.3.2":
   version: 2.3.2
   resolution: "fsevents@npm:2.3.2"
   dependencies:
@@ -5871,9 +5871,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
+"fsevents@npm:~2.3.2, fsevents@npm:~2.3.3":
+  version: 2.3.3
+  resolution: "fsevents@npm:2.3.3"
+  dependencies:
+    node-gyp: latest
+  checksum: 11e6ea6fea15e42461fc55b4b0e4a0a3c654faa567f1877dbd353f39156f69def97a69936d1746619d656c4b93de2238bf731f6085a03a50cabf287c9d024317
+  conditions: os=darwin
+  languageName: node
+  linkType: hard
+
+"fsevents@patch:fsevents@2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  dependencies:
+    node-gyp: latest
+  conditions: os=darwin
+  languageName: node
+  linkType: hard
+
+"fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.3#~builtin<compat/fsevents>":
+  version: 2.3.3
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -8738,6 +8757,23 @@ __metadata:
   bin:
     nuxi: bin/nuxi.mjs
   checksum: 7825e8e924aed2f6cc7070db257eaff24afe264e80863334f3dd68fc09035d6e11a93ee794f153db21e74abc88b3b2ce4f9820e3b3f97e3fb7c7c78526b6636a
+  languageName: node
+  linkType: hard
+
+"nuxi@npm:3.7.0":
+  version: 3.7.0
+  resolution: "nuxi@npm:3.7.0"
+  dependencies:
+    fsevents: ~2.3.3
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    nuxi: bin/nuxi.mjs
+    nuxi-ng: bin/nuxi.mjs
+    nuxt: bin/nuxi.mjs
+    nuxt-cli: bin/nuxi.mjs
+  checksum: 68e1f189fe9f55b04fdad3dc00850238e202a31a0382c0d5db58cd3816cdf5e84ae9d66dc8647806b383e7e7aeb8d7eff911a01d058b296d9a7810687ffd3221
   languageName: node
   linkType: hard
 
@@ -12303,7 +12339,7 @@ __metadata:
     eslint-plugin-prettier: 5.0.0
     husky: 8.0.3
     lint-staged: 13.3.0
-    nuxi: 3.6.5
+    nuxi: 3.7.0
     p-defer: ^4.0.0
     pinst: 3.0.0
     prettier: 3.0.2
