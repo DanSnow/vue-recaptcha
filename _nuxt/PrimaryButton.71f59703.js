@@ -1,1 +1,0 @@
-import{l as t,b as o,c as n,aa as c}from"./entry.22214ffd.js";const r={},s={"px-2":"","py-1":"",rounded:"","bg-teal-600":"","text-white":""};function a(e,_){return o(),n("button",s,[c(e.$slots,"default")])}const d=t(r,[["render",a]]);export{d as default};
