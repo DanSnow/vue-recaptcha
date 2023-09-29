@@ -1263,20 +1263,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt-themes/docus@npm:1.14.8":
-  version: 1.14.8
-  resolution: "@nuxt-themes/docus@npm:1.14.8"
+"@nuxt-themes/docus@npm:1.14.9":
+  version: 1.14.9
+  resolution: "@nuxt-themes/docus@npm:1.14.9"
   dependencies:
     "@nuxt-themes/elements": ^0.9.5
     "@nuxt-themes/tokens": ^1.9.1
     "@nuxt-themes/typography": ^0.11.0
-    "@nuxt/content": ^2.8.4
+    "@nuxt/content": ^2.8.5
     "@nuxthq/studio": ^0.14.1
     "@vueuse/integrations": ^10.4.1
     "@vueuse/nuxt": ^10.4.1
     focus-trap: ^7.5.3
     fuse.js: ^6.6.2
-  checksum: cb199b17a008fa908ad095ec49a44000a4449f677794c4f790f1712d3ffd28e747479d50f7bfdf874afae69498b5c583700a592ce33381b2674c293bb4c9ec77
+  checksum: 728056c34d5cc060d1ae2bab5079b2066fbd07058d8fd5c417f685bf9c81cc5dd2fbae837f8c7a33c071171234d2210329e5686a070dcbde2eb12dce4f92a7e5
   languageName: node
   linkType: hard
 
@@ -1314,12 +1314,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/content@npm:^2.8.4":
-  version: 2.8.4
-  resolution: "@nuxt/content@npm:2.8.4"
+"@nuxt/content@npm:^2.8.5":
+  version: 2.8.5
+  resolution: "@nuxt/content@npm:2.8.5"
   dependencies:
     "@nuxt/kit": ^3.7.4
-    "@nuxtjs/mdc": ^0.2.0
+    "@nuxtjs/mdc": ^0.2.1
     "@vueuse/head": ^2.0.0
     consola: ^3.2.3
     defu: ^6.1.2
@@ -1338,11 +1338,11 @@ __metadata:
     shiki-es: ^0.14.0
     slugify: ^1.6.6
     socket.io-client: ^4.7.2
-    ufo: ^1.3.0
+    ufo: ^1.3.1
     unist-util-stringify-position: ^4.0.0
     unstorage: ^1.9.0
     ws: ^8.14.2
-  checksum: ae8e803859fd96bfe1c5b551a7b7cf67d6621e0e4456126aaeaa8b2fe43f661d980f024754eecb2bfa505af3df9482779e3940127bbc15b45dbf78790fb0d66c
+  checksum: b49281dab6840587d51f61748dc1342e912e2f7618622615d87cdc4ed5a89b7330e309eb78e0e4ba815b40c1186ac98ada6589dfd0a45fd3d84aeefb1a28bac1
   languageName: node
   linkType: hard
 
@@ -1549,13 +1549,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxtjs/mdc@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "@nuxtjs/mdc@npm:0.2.0"
+"@nuxtjs/mdc@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@nuxtjs/mdc@npm:0.2.1"
   dependencies:
     "@nuxt/kit": latest
     "@types/hast": ^3.0.1
-    "@types/mdast": ^4.0.0
+    "@types/mdast": ^4.0.1
     "@vue/compiler-core": ^3.3.4
     consola: ^3.2.3
     defu: ^6.1.2
@@ -1579,11 +1579,11 @@ __metadata:
     remark-rehype: ^10.1.0
     scule: ^1.0.0
     shikiji: ^0.6.8
-    ufo: ^1.3.0
+    ufo: ^1.3.1
     unified: ^11.0.3
     unist-builder: ^4.0.0
     unist-util-visit: ^5.0.0
-  checksum: 40cbe34f6250f9918482aa06cb203a956b74aba6f60bd1703396b1b75195dbd808f6e459604afb937afbc714a459afc9514926b3937e8a7c3eff40553d823298
+  checksum: 34bb0d34d361d46cc45dade6807d165cd729b3bfec0010cf32aef443cbe4e37392cb0700d3584379394172586a664588f7c774351e80d12d7351acca190c415e
   languageName: node
   linkType: hard
 
@@ -2081,12 +2081,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdast@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@types/mdast@npm:4.0.0"
+"@types/mdast@npm:^4.0.0, @types/mdast@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@types/mdast@npm:4.0.1"
   dependencies:
     "@types/unist": "*"
-  checksum: d3d81818feec4ad1c48c4cd1edee627c75c1a60949e23425839339d7f89ff6df21f7b1f5740ac88cd7246419dd26794ee7229f249856d3e568c38521d004f2f7
+  checksum: 3d8fe54a6fb747376c4cc2f05c319730a5737b77844d8ea58d2d696417fa933cd270c20e197f531fc1b4be5e340dc416129f8b4f5fa2f0d2d0cf51850928340a
   languageName: node
   linkType: hard
 
@@ -2944,7 +2944,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@vue-recaptcha/doc@workspace:docs"
   dependencies:
-    "@nuxt-themes/docus": 1.14.8
+    "@nuxt-themes/docus": 1.14.9
     "@unocss/nuxt": 0.56.4
     "@vueuse/nuxt": ^10.1.0
     gh-pages: 6.0.0
@@ -12424,10 +12424,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ufo@npm:^1.1.1, ufo@npm:^1.1.2, ufo@npm:^1.2.0, ufo@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "ufo@npm:1.3.0"
-  checksum: 01f0be86cd5c205ad1b49ebea985e000a4542c503ee75398302b0f5e4b9a6d9cd8e77af2dc614ab7bea08805fdfd9a85191fb3b5ee3df383cb936cf65e9db30d
+"ufo@npm:^1.1.1, ufo@npm:^1.1.2, ufo@npm:^1.2.0, ufo@npm:^1.3.0, ufo@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "ufo@npm:1.3.1"
+  checksum: 2db2f9d24e3f572ddb9b2f4415eda679fd366cbb9eec4c56996651323737f17528b4aab2bb45c5f2effff2304f9b0c46e0981aee3e48f38ac51106a8993dff31
   languageName: node
   linkType: hard
 
