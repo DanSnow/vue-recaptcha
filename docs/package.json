@@ -7,17 +7,17 @@
     "publish": "yarn generate && touch .output/public/.nojekyll && gh-pages -d dist -t"
   },
   "dependencies": {
-    "@vueuse/nuxt": "^10.1.0",
-    "mermaid": "^10.1.0",
-    "ofetch": "^1.0.1",
-    "vee-validate": "^4.8.6",
+    "@vueuse/nuxt": "^10.7.1",
+    "mermaid": "^10.6.1",
+    "ofetch": "^1.3.3",
+    "vee-validate": "^4.12.4",
     "vue-recaptcha": "workspace:^",
-    "yup": "^1.1.1"
+    "yup": "^1.3.3"
   },
   "devDependencies": {
     "@nuxt-themes/docus": "1.15.0",
-    "@unocss/nuxt": "0.58.0",
-    "gh-pages": "6.1.0",
-    "nuxt": "3.8.2"
+    "@unocss/nuxt": "0.58.2",
+    "gh-pages": "6.1.1",
+    "nuxt": "3.9.0"
   }
 }
