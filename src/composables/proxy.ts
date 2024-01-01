@@ -27,20 +27,16 @@ export function createRecaptchaProxy(isReady: Ref<boolean>, getRecaptcha: () => 
     },
 
     reset(widgetId?: WidgetID | undefined) {
-      if (typeof widgetId === 'undefined') {
-        return
-      }
+      if (typeof widgetId === 'undefined') return
+
       assertLoaded()
       getRecaptcha().reset(widgetId)
     },
 
     async execute(widgetId?: WidgetID | undefined | string, options?: { action: string }) {
-      if (typeof widgetId === 'undefined') {
-        return
-      }
+      if (typeof widgetId === 'undefined') return
 
       await wait()
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-argument
       return getRecaptcha().execute(widgetId, options as any) as any
     },
   }

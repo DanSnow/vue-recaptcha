@@ -28,7 +28,7 @@ export interface UseComponentV2Return {
 export function useComponentV2(
   options: RecaptchaV2OptionsInput | undefined,
   modelValue: Ref<string | null | undefined>,
-  emit: Emits
+  emit: Emits,
 ) {
   const { root, state, widgetID, onError, onExpired, onVerify, reset, execute } = useChallengeV2({
     options: options || {},
@@ -44,9 +44,7 @@ export function useComponentV2(
   })
 
   watch(modelValue, (res, old) => {
-    if (!res && old && !isExpired.value) {
-      callReset()
-    }
+    if (!res && old && !isExpired.value) callReset()
   })
 
   onExpired(() => {

@@ -81,11 +81,8 @@ export function useChallengeV2({ root = ref(), options = {} }: UseChallengeV2Inp
     const id = await proxy.render(el, {
       ...options,
       sitekey: siteKey,
-      // eslint-disable-next-line @typescript-eslint/no-misused-promises
       callback: verify.trigger,
-      // eslint-disable-next-line @typescript-eslint/no-misused-promises
       'expired-callback': expired.trigger,
-      // eslint-disable-next-line @typescript-eslint/no-misused-promises
       'error-callback': error.trigger,
     })
     widgetID.value = id
@@ -107,15 +104,11 @@ export function useChallengeV2({ root = ref(), options = {} }: UseChallengeV2Inp
     root: rootRef,
     widgetID,
     execute() {
-      if (typeof widgetID.value !== 'undefined') {
-        proxy.execute(widgetID.value)
-      }
+      if (typeof widgetID.value !== 'undefined') proxy.execute(widgetID.value)
     },
     reset() {
       state.value = RecaptchaV2State.Init
-      if (typeof widgetID.value !== 'undefined') {
-        proxy.reset(widgetID.value)
-      }
+      if (typeof widgetID.value !== 'undefined') proxy.reset(widgetID.value)
     },
     state,
     onVerify: verify.on,

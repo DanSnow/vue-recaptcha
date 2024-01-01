@@ -1,6 +1,6 @@
-import { expectTypeOf, test } from 'vitest'
+import { expectTypeOf, it } from 'vitest'
 import { normalizeScriptLoaderOptions } from '../common'
 
-test('ScriptLoaderOptionsInput', () => {
+it('scriptLoaderOptionsInput', () => {
   expectTypeOf(normalizeScriptLoaderOptions).toBeCallableWith({ params: { render: 'explicit' } })
 })

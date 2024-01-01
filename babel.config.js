@@ -1,3 +1,5 @@
+const process = require('node:process')
+
 const __TEST__ = process.env.NODE_ENV === 'test'
 
 module.exports = {

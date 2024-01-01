@@ -136,13 +136,10 @@ export function toStringPair(params: RecaptchaParams): string[][] {
 }
 
 export function checkRecaptchaLoad() {
-  if (typeof window === 'undefined') {
-    return false
-  }
+  if (typeof window === 'undefined') return false
 
   const isLoaded = Object.hasOwn(window, 'grecaptcha') && Object.hasOwn(window.grecaptcha, 'execute')
-  if (isLoaded) {
-    recaptchaLoaded.resolve()
-  }
+  if (isLoaded) recaptchaLoaded.resolve()
+
   return isLoaded
 }

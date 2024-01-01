@@ -13,7 +13,7 @@ const props = withDefaults(
   {
     as: 'div',
     autoExecute: true,
-  }
+  },
 )
 
 const emit = defineEmits<{
@@ -43,9 +43,7 @@ whenever(response, (res) => {
 })
 
 function onClick() {
-  if (props.autoExecute) {
-    execute()
-  }
+  if (props.autoExecute) execute()
 }
 </script>
 

@@ -1,7 +1,7 @@
-import { expect, test } from 'vitest'
+import { expect, it } from 'vitest'
 import { normalizeOptions } from '../context'
 
-test('normalizeOptions', () => {
+it('normalizeOptions', () => {
   expect(normalizeOptions({ v2SiteKey: 'foo' })).toEqual({
     v2SiteKey: 'foo',
     loaderOptions: {

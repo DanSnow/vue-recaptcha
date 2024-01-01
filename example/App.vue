@@ -21,7 +21,9 @@ const challengeV3Verified = computed(() => !!challengeV3Response.value)
       <Checkbox v-model="checkboxResponse" v-model:widget-id="checkboxWidgetID" />
       <div>widgetID: {{ checkboxWidgetID }}</div>
       <div>response: {{ checkboxResponse }}</div>
-      <div data-testid="checkbox-verify">{{ checkboxVerified ? 'verified' : '' }}</div>
+      <div data-testid="checkbox-verify">
+        {{ checkboxVerified ? 'verified' : '' }}
+      </div>
     </div>
     <div id="invisible">
       <h2>Invisible Challenge v2</h2>
@@ -30,7 +32,9 @@ const challengeV3Verified = computed(() => !!challengeV3Response.value)
       </ChallengeV2>
       <div>widgetID: {{ challengeV2WidgetID }}</div>
       <div>response: {{ challengeV2Response }}</div>
-      <div data-testid="v2-verify">{{ challengeV2Verified ? 'verified' : '' }}</div>
+      <div data-testid="v2-verify">
+        {{ challengeV2Verified ? 'verified' : '' }}
+      </div>
     </div>
     <div id="v3">
       <h2>Challenge v3</h2>
@@ -39,7 +43,9 @@ const challengeV3Verified = computed(() => !!challengeV3Response.value)
       </ChallengeV3>
       <div>response: {{ challengeV3Response }}</div>
       <!-- it's not actually verify for v3 -->
-      <div data-testid="v3-verify">{{ challengeV3Verified ? 'verified' : '' }}</div>
+      <div data-testid="v3-verify">
+        {{ challengeV3Verified ? 'verified' : '' }}
+      </div>
     </div>
     <RecaptchaScript />
   </div>

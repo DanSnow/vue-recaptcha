@@ -31,7 +31,7 @@ const props = withDefaults(
     as: 'div',
     size: 'normal',
     theme: 'light',
-  }
+  },
 )
 
 const emit = defineEmits<{
@@ -50,7 +50,7 @@ const { root } = useComponentV2(
     tabindex: props.tabindex,
   },
   toRef(props, 'modelValue'),
-  emit
+  emit,
 )
 </script>
 

@@ -23,11 +23,13 @@ const onSubmit = handleSubmit(async (values) => {
   <form class="flex flex-col gap-2" @submit="onSubmit">
     <div>
       <input v-model="nameValue" class="border border-blue p-1" type="text" placeholder="Your name" />
-      <div v-if="nameError" class="text-red">{{ nameError }}</div>
+      <div v-if="nameError" class="text-red">
+        {{ nameError }}
+      </div>
     </div>
     <div>
       <RecaptchaChallengeV2 v-model="response">
-        <PrimaryButton type="submit">Submit</PrimaryButton>
+        <PrimaryButton type="submit"> Submit </PrimaryButton>
       </RecaptchaChallengeV2>
     </div>
   </form>

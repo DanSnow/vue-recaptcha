@@ -70,9 +70,8 @@ export default defineNuxtModule<ModuleOptions>({
     ])
 
     if (!opt.installPlugin) {
-      if (opt.enterprise) {
-        logger.warn('`enterprise` option is ignored when `installPlugin` is false')
-      }
+      if (opt.enterprise) logger.warn('`enterprise` option is ignored when `installPlugin` is false')
+
       return
     }
 

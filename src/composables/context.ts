@@ -57,7 +57,7 @@ export function useAssertV3SiteKey(): string {
 export function normalizeOptions(input: RecaptchaOptionsInput): RecaptchaOptions {
   invariant(
     input.v2SiteKey || input.v3SiteKey,
-    "You didn't pass v2SiteKey or v3SiteKey to plugin, which may be a mistake"
+    "You didn't pass v2SiteKey or v3SiteKey to plugin, which may be a mistake",
   )
 
   return {

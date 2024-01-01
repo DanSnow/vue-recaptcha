@@ -13,7 +13,7 @@ export interface CreatePluginOptions {
 
 export function createPlugin(
   scriptLoaderFactory: NormalizedScriptLoaderFactory,
-  { getRecaptcha = () => window.grecaptcha }: CreatePluginOptions = {}
+  { getRecaptcha = () => window.grecaptcha }: CreatePluginOptions = {},
 ): Plugin<[RecaptchaOptionsInput]> {
   return {
     install(app, options) {

@@ -32,7 +32,7 @@ const props = withDefaults(
     as: 'div',
     autoExecute: true,
     badge: 'bottomright',
-  }
+  },
 )
 
 const emit = defineEmits<{
@@ -51,7 +51,7 @@ const { root, reset, widgetID, state, execute, isError, isExpired, isVerified } 
     tabindex: props.tabindex,
   },
   toRef(props, 'modelValue'),
-  emit
+  emit,
 )
 
 interface SlotApi {
@@ -89,9 +89,7 @@ const slotApi: SlotApi = reactive({
 })
 
 function onClick() {
-  if (props.autoExecute) {
-    execute()
-  }
+  if (props.autoExecute) execute()
 }
 
 defineExpose({

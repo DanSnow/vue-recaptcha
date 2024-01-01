@@ -8,9 +8,8 @@ export const createHeadRecaptcha = defineScriptLoader((options) => {
       script.src = `${options.recaptchaApiURL}?${toQueryString(options.params)}`
       script.async = true
       script.defer = true
-      if (options.nonce) {
-        script.nonce = options.nonce
-      }
+      if (options.nonce) script.nonce = options.nonce
+
       document.head.append(script)
     })
   }

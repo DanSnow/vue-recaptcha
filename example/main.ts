@@ -3,7 +3,6 @@ import { createHead } from '@unhead/vue'
 import { VueRecaptchaPlugin } from '../src'
 import App from './App.vue'
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 const app = createApp(App)
 
 app.use(createHead())
