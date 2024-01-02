@@ -1,1 +1,0 @@
-import{k as t,b as n,c as o,ad as a}from"./entry.bGLLp7Vc.js";const c={};function r(e,s){return n(),o("thead",null,[a(e.$slots,"default",{},void 0,!0)])}const d=t(c,[["render",r],["__scopeId","data-v-7384b874"]]);export{d as default};
