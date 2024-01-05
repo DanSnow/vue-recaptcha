@@ -1,1 +1,0 @@
-import{_ as n}from"./MDCSlot.JJTa8D0_.js";import{d as o,Q as t}from"./entry.vmvih4pi.js";const s=o({props:{use:{type:Function,default:void 0},unwrap:{type:[Boolean,String],default:!1}},render(e){return t(n,e)}});export{s as default};
