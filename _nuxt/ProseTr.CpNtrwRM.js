@@ -1,0 +1,1 @@
+import{k as t,b as n,c as o,ad as r}from"./entry.KJa_VGA8.js";const c={};function a(e,s){return n(),o("tr",null,[r(e.$slots,"default",{},void 0,!0)])}const d=t(c,[["render",a],["__scopeId","data-v-8584fb94"]]);export{d as default};
