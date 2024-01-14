@@ -2,7 +2,7 @@ import { useHead } from '@unhead/vue'
 import type { ScriptLoaderOptions } from './common'
 import { defineScriptLoader, toQueryString } from './common'
 
-export const createUnheadRecaptcha = defineScriptLoader((options: ScriptLoaderOptions) => {
+export const unheadScriptLoader = defineScriptLoader((options: ScriptLoaderOptions) => {
   return () => {
     useHead({
       link: [

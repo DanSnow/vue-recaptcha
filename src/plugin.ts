@@ -3,18 +3,24 @@ import { ref } from 'vue-demi'
 import type { RecaptchaOptionsInput } from './composables/context'
 import { RecaptchaContextKey, normalizeOptions } from './composables/context'
 import { createRecaptchaProxy } from './composables/proxy'
-import type { GRecaptcha, NormalizedScriptLoaderFactory } from './script-manager/common'
+import type { GRecaptcha } from './script-manager/common'
 import { checkRecaptchaLoad, recaptchaLoaded } from './script-manager/common'
 import { warn } from './utils'
+import type { RecaptchaPlugin } from './types'
+import { createHeadRecaptcha } from './script-manager/head'
 
 export interface CreatePluginOptions {
   getRecaptcha?: () => GRecaptcha
 }
 
-export function createPlugin(
-  scriptLoaderFactory: NormalizedScriptLoaderFactory,
-  { getRecaptcha = () => window.grecaptcha }: CreatePluginOptions = {},
-): Plugin<[RecaptchaOptionsInput]> {
+export function createPlugin(plugins: RecaptchaPlugin[] = []): Plugin<[RecaptchaOptionsInput]> {
+  const { getRecaptcha, scriptLoader }: Required<RecaptchaPlugin> = Object.assign(
+    {
+      scriptLoader: createHeadRecaptcha,
+      getRecaptcha: () => window.grecaptcha,
+    },
+    ...plugins,
+  )
   return {
     install(app, options) {
       const isReady = ref(false)
@@ -33,7 +39,7 @@ export function createPlugin(
         isReady,
         scriptInjected: false,
         proxy: createRecaptchaProxy(isReady, getRecaptcha),
-        useScriptProvider: scriptLoaderFactory(opt.loaderOptions),
+        useScriptProvider: scriptLoader(opt.loaderOptions),
         options: opt,
       })
     },
