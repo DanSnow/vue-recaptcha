@@ -14,8 +14,6 @@ jobs:
         with:
           node-version: 18
       - uses: moonrepo/setup-toolchain@v0
-        with:
-          auto-install: true
       - name: Build and publish document
         run: moon run docs:publish
         env:
