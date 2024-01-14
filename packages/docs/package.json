@@ -2,8 +2,6 @@
   "name": "@vue-recaptcha/doc",
   "private": true,
   "scripts": {
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
     "publish": "yarn generate && touch .output/public/.nojekyll && gh-pages -d dist -t"
   },
   "dependencies": {

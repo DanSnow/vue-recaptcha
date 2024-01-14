@@ -1,0 +1,36 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+
+platform: node
+
+tasks:
+  build:
+    command: unbuild
+    inputs:
+      - src/**/*
+    outputs:
+      - dist/**/*
+  dev:
+    command: vite
+    local: true
+  lint:
+    command:
+    - eslint
+    - .
+  lint-fix:
+    command:
+    - eslint
+    - --fix
+    - .
+    local: true
+  test:
+    command: noop
+    deps:
+    - ~:test-unit
+    - ~:test-e2e
+    platform: node
+  test-e2e:
+    command:
+    - playwright
+    - test
+  test-unit:
+    command: vitest

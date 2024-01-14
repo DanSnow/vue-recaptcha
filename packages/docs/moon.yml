@@ -1,0 +1,32 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+
+platform: node
+
+dependsOn:
+- vue-recaptcha
+
+tasks:
+  dev:
+    command:
+    - nuxt
+    - dev
+    deps:
+      - ^:build
+    local: true
+  generate:
+    command:
+    - nuxt
+    - generate
+  generate-with-nojekyll:
+    command:
+    - touch
+    - .output/public/.nojekyll
+    platform: system
+  publish:
+    command:
+    - gh-pages
+    - -d
+    - dist
+    - -t
+    deps:
+      - ~:generate-with-nojekyll
