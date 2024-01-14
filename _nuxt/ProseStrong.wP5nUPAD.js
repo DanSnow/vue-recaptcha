@@ -1,0 +1,1 @@
+import{k as r,b as t,c as n,ae as o}from"./entry.EFS4caZL.js";const s={};function a(e,c){return t(),n("strong",null,[o(e.$slots,"default",{},void 0,!0)])}const l=r(s,[["render",a],["__scopeId","data-v-de24625d"]]);export{l as default};
