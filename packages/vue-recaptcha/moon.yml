@@ -6,9 +6,9 @@ tasks:
   build:
     command: unbuild
     inputs:
-      - src/**/*
+      - /src/**/*
     outputs:
-      - dist/**/*
+      - dist/
   dev:
     command: vite
     local: true

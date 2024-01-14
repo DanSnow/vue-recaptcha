@@ -1,6 +1,7 @@
 {
   "name": "@vue-recaptcha/doc",
   "private": true,
+  "type": "module",
   "scripts": {
     "publish": "yarn generate && touch .output/public/.nojekyll && gh-pages -d dist -t"
   },
