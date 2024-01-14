@@ -51,7 +51,7 @@
   ],
   "scripts": {
     "postpublish": "pinst --enable",
-    "postinstall": "moon run build",
+    "postinstall": "unbuild",
     "prepack": "yarn build",
     "prepare": "husky install",
     "prepublishOnly": "pinst --disable"
