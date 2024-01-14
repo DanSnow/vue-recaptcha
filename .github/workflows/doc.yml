@@ -13,18 +13,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: Install dependencies
-        run: yarn
+      - uses: moonrepo/setup-toolchain@v0
+        with:
+          auto-install: true
       - name: Build and publish document
-        run: yarn workspace @vue-recaptcha/doc generate
+        run: moon run docs:publish
         env:
           NODE_OPTIONS: --max-old-space-size=8192
-      - name: Check output file
-        run: test -f ./docs/.output/public/200.html && test -d ./docs/.output/public/_nuxt
-      - name: Create nojekyll
-        run: touch ./docs/.output/public
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4.0.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/.output/public

@@ -17,16 +17,35 @@ tasks:
     command:
     - nuxt
     - generate
+  check-200-html:
+    command:
+    - test
+    - -f
+    - .output/public/200.html
+    deps:
+      - ~:generate
+    platform: system
+  check-nuxt-dir:
+    command:
+    - test
+    - -d
+    - .output/public/_nuxt
+    deps:
+      - ~:generate
+    platform: system
   generate-with-nojekyll:
     command:
     - touch
     - .output/public/.nojekyll
+    deps:
+      - ~:check-200-html
+      - ~:check-nuxt-dir
     platform: system
   publish:
     command:
     - gh-pages
     - -d
-    - dist
+    - .output/public
     - -t
     deps:
       - ~:generate-with-nojekyll
