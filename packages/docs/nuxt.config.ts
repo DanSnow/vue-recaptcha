@@ -8,10 +8,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/vue-recaptcha/',
   },
-  alias: {
-    '#recaptcha': resolver.resolve('../src'),
-  },
-  modules: ['@unocss/nuxt', '@vueuse/nuxt', ['../src/nuxt', { _globalComponent: true }]],
+  modules: ['@unocss/nuxt', '@vueuse/nuxt', ['vue-recaptcha/nuxt', { _globalComponent: true }]],
   unocss: {
     // presets
     uno: true, // enabled `@unocss/preset-uno`

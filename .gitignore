@@ -85,8 +85,12 @@ junit.xml
 # and uncomment the following lines
 .pnp.*
 
-/dist
-/package.tgz
-/test-results/
-/playwright-report/
-/playwright/.cache/
+dist
+package.tgz
+test-results
+playwright-report
+playwright/.cache
+
+# moon
+.moon/cache
+.moon/docker
