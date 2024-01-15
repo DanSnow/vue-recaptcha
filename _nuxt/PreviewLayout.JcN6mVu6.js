@@ -1,1 +1,0 @@
-import{k as t,b as a,c as o,ae as s}from"./entry.EFS4caZL.js";const r={},c={class:"preview-layout"};function n(e,d){return a(),o("div",c,[s(e.$slots,"default",{},void 0,!0)])}const f=t(r,[["render",n],["__scopeId","data-v-ef21b5ba"]]);export{f as default};
