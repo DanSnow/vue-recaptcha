@@ -1,6 +1,6 @@
-import type { LiteralUnion, Opaque } from 'type-fest'
-import pDefer from 'p-defer'
 import defu from 'defu'
+import pDefer from 'p-defer'
+import type { LiteralUnion, Opaque } from 'type-fest'
 import { warn } from '../utils'
 
 export type RecaptchaCallback = '__vueRecaptchaLoaded'
@@ -33,10 +33,15 @@ export interface GRecaptcha {
   execute(widgetId: WidgetID): void
   execute(siteKey: string, options: { action: string }): Promise<string>
 }
+interface ExtendedGRecaptcha extends GRecaptcha {
+  enterprise?: GRecaptcha;
+}
+
+
 
 declare global {
   interface Window {
-    grecaptcha: GRecaptcha & { enterprise?: GRecaptcha }
+    grecaptcha: ExtendedGRecaptcha
     __vueRecaptchaLoaded: () => void
   }
 }
@@ -134,12 +139,15 @@ export function normalizeParams(raw: RecaptchaParams): string[][] {
 export function toStringPair(params: RecaptchaParams): string[][] {
   return Object.entries(params).filter((pair): pair is [string, string] => typeof pair[1] === 'string')
 }
-
 export function checkRecaptchaLoad() {
-  if (typeof window === 'undefined') return false
+  if (typeof window === 'undefined') return false;
 
-  const isLoaded = Object.hasOwn(window, 'grecaptcha') && Object.hasOwn(window.grecaptcha, 'execute')
-  if (isLoaded) recaptchaLoaded.resolve()
+  const isLoaded = 'grecaptcha' in window && (
+    'execute' in window.grecaptcha || 
+    'execute' in (window.grecaptcha?.enterprise ?? {})
+  );
 
-  return isLoaded
+  if (isLoaded) recaptchaLoaded.resolve();
+
+  return isLoaded;
 }
