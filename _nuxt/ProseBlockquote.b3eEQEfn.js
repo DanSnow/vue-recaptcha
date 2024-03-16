@@ -1,1 +1,0 @@
-import{k as o,b as c,c as t,ae as r}from"./entry.eOay-mQx.js";const a={};function n(e,s){return c(),t("blockquote",null,[r(e.$slots,"default",{},void 0,!0)])}const d=o(a,[["render",n],["__scopeId","data-v-eae89cdc"]]);export{d as default};
