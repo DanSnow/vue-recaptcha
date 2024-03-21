@@ -142,12 +142,16 @@ export function toStringPair(params: RecaptchaParams): string[][] {
 export function checkRecaptchaLoad() {
   if (typeof window === 'undefined') return false;
 
-  const isLoaded = 'grecaptcha' in window && (
+  const isLoaded = () => 'grecaptcha' in window && (
     'execute' in window.grecaptcha || 
     'execute' in (window.grecaptcha?.enterprise ?? {})
   );
 
-  if (isLoaded) recaptchaLoaded.resolve();
+  const interval = setInterval(() => {
+    if (isLoaded())
+      recaptchaLoaded.resolve();
+      clearInterval(interval);
+  },500);
 
-  return isLoaded;
+  return isLoaded();
 }
