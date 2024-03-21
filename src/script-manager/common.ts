@@ -148,9 +148,10 @@ export function checkRecaptchaLoad() {
   );
 
   const interval = setInterval(() => {
-    if (isLoaded())
+    if (isLoaded()) {
       recaptchaLoaded.resolve();
       clearInterval(interval);
+    }
   },500);
 
   return isLoaded();
