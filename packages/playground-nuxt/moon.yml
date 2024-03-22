@@ -1,0 +1,11 @@
+dependsOn:
+- vue-recaptcha
+
+tasks:
+  dev:
+    command:
+      - nuxt
+      - dev
+    deps:
+      - ^:build
+    local: true

@@ -10,15 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 18
+      - uses: moonrepo/setup-toolchain@v0
       - name: Install dependencies
-        run: yarn
+        run: yarn install
       - name: Install Playwright Browsers
         run: yarn playwright install --with-deps
       - name: Run Playwright tests
-        run: yarn playwright test
+        run: moon run vue-recaptcha:test-e2e
       - uses: actions/upload-artifact@v4
         if: always()
         with:

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RecaptchaV2State } from '#recaptcha'
+import { RecaptchaV2State } from 'vue-recaptcha'
 
 const map = {
   [RecaptchaV2State.Init]: 'Click to Challenge',
