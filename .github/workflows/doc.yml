@@ -19,6 +19,8 @@ jobs:
         run: yarn workspace @vue-recaptcha/doc generate
         env:
           NODE_OPTIONS: --max-old-space-size=8192
+      - name: Check output file
+        run: test -f ./docs/.output/public/200.html && test -d ./docs/.output/public/_nuxt
       - name: Create nojekyll
         run: touch ./docs/.output/public
       - name: Deploy
