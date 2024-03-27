@@ -78,16 +78,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antfu/eslint-config@npm:2.10.1":
-  version: 2.10.1
-  resolution: "@antfu/eslint-config@npm:2.10.1"
+"@antfu/eslint-config@npm:2.11.0":
+  version: 2.11.0
+  resolution: "@antfu/eslint-config@npm:2.11.0"
   dependencies:
-    "@antfu/eslint-define-config": "npm:^1.23.0-2"
     "@antfu/install-pkg": "npm:^0.3.1"
     "@clack/prompts": "npm:^0.7.0"
-    "@eslint-types/jsdoc": "npm:48.2.1"
-    "@eslint-types/typescript-eslint": "npm:^7.2.0"
-    "@eslint-types/unicorn": "npm:^51.0.1"
     "@stylistic/eslint-plugin": "npm:^1.7.0"
     "@typescript-eslint/eslint-plugin": "npm:^7.4.0"
     "@typescript-eslint/parser": "npm:^7.4.0"
@@ -157,14 +153,7 @@ __metadata:
       optional: true
   bin:
     eslint-config: bin/index.js
-  checksum: 10/940eb93f4265b3bf8dc740c90c843439dd1e39737a803162c2e4876da5e385d98f1aeac52426ddc454ca2bed05b3f675858973059e91c6a70e1587b1118e6cb6
-  languageName: node
-  linkType: hard
-
-"@antfu/eslint-define-config@npm:^1.23.0-2":
-  version: 1.23.0-2
-  resolution: "@antfu/eslint-define-config@npm:1.23.0-2"
-  checksum: 10/b647c10d48b5ba99a16dfb970a8e7892dea1696c455b4a19fadde75a69d5fc26aa28502430779fd28940dcb87766a543c7477cb5f9f325f58d27a614677cb7de
+  checksum: 10/75df79854499b1c40fa89f9d606d6f20db8becb28408ece5e197a6316e634b97595e8a66343eeaedcfacb6620327f7742fc00c9ceee6bfadb0fda5b887babd18
   languageName: node
   linkType: hard
 
@@ -1198,27 +1187,6 @@ __metadata:
   version: 4.10.0
   resolution: "@eslint-community/regexpp@npm:4.10.0"
   checksum: 10/8c36169c815fc5d726078e8c71a5b592957ee60d08c6470f9ce0187c8046af1a00afbda0a065cc40ff18d5d83f82aed9793c6818f7304a74a7488dc9f3ecbd42
-  languageName: node
-  linkType: hard
-
-"@eslint-types/jsdoc@npm:48.2.1":
-  version: 48.2.1
-  resolution: "@eslint-types/jsdoc@npm:48.2.1"
-  checksum: 10/1558f1ef6c199810a6ce55287f298308e038bfd634107fbd3e938cf9426755733946d06bb4b5bdf7881d4e8064567f0479e5ed2fb8f190f3a1c23e0c40494c3d
-  languageName: node
-  linkType: hard
-
-"@eslint-types/typescript-eslint@npm:^7.2.0":
-  version: 7.2.0
-  resolution: "@eslint-types/typescript-eslint@npm:7.2.0"
-  checksum: 10/14f304167ce5754ff99bcc2d20d58d09af37a96608b5794260ddccab5543e9695906e70d9ec3f207851a972bbb0b9917730a2f6827f2b283cdd5955eee4af180
-  languageName: node
-  linkType: hard
-
-"@eslint-types/unicorn@npm:^51.0.1":
-  version: 51.0.1
-  resolution: "@eslint-types/unicorn@npm:51.0.1"
-  checksum: 10/16b3e2ced779aed684377dab8b21dbe08a26f1ae1a860fb6d40191c38f689559b32b583794249e212b30815e711eb1c1baa8c8ee9840439713e85c3332bd2d02
   languageName: node
   linkType: hard
 
@@ -15103,7 +15071,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vue-recaptcha@workspace:."
   dependencies:
-    "@antfu/eslint-config": "npm:2.10.1"
+    "@antfu/eslint-config": "npm:2.11.0"
     "@antfu/eslint-config-vue": "npm:0.43.1"
     "@nuxt/kit": "npm:^3.9.1"
     "@nuxt/schema": "npm:^3.9.1"
