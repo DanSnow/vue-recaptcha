@@ -3547,12 +3547,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volar/language-core@npm:2.1.4, @volar/language-core@npm:~2.1.3":
-  version: 2.1.4
-  resolution: "@volar/language-core@npm:2.1.4"
+"@volar/language-core@npm:2.2.0-alpha.5, @volar/language-core@npm:~2.2.0-alpha.5":
+  version: 2.2.0-alpha.5
+  resolution: "@volar/language-core@npm:2.2.0-alpha.5"
   dependencies:
-    "@volar/source-map": "npm:2.1.4"
-  checksum: 10/24abc62446a232c8e9457c5b9b57f2f9d4315a0df48f00c27db390c2f04d1d63b6ac80ce9ea43dbcec871f284aa6e61ba9c850d8255585aca4b749430260a8fc
+    "@volar/source-map": "npm:2.2.0-alpha.5"
+  checksum: 10/35781780ae6fc48ae3ad6eec8c66fa28eb6dcd35129ef11e9a706bd8acef11a4edeec06b8db42768bfe33839f8f73a0f29194338ef0cbc3d3c91076e365eabc7
   languageName: node
   linkType: hard
 
@@ -3574,12 +3574,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volar/source-map@npm:2.1.4":
-  version: 2.1.4
-  resolution: "@volar/source-map@npm:2.1.4"
+"@volar/source-map@npm:2.2.0-alpha.5":
+  version: 2.2.0-alpha.5
+  resolution: "@volar/source-map@npm:2.2.0-alpha.5"
   dependencies:
     muggle-string: "npm:^0.4.0"
-  checksum: 10/333f9d5ecae4af2fdfa6a0a8741d8fe4d37ed2135908af6d8219f21d708021349bb71da549df92292f66ac8db9733fa75628fec23b2deea81afb0335fc54363c
+  checksum: 10/23e5cc3e42cb5d6b27db0d1d509f44bea63fcbab19b5ebee4d9b47d621569a915e114fab30806f063ee6052c82983a2961b661001c89b1118d452e1803f97bdd
   languageName: node
   linkType: hard
 
@@ -3593,13 +3593,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volar/typescript@npm:~2.1.3":
-  version: 2.1.4
-  resolution: "@volar/typescript@npm:2.1.4"
+"@volar/typescript@npm:~2.2.0-alpha.5":
+  version: 2.2.0-alpha.5
+  resolution: "@volar/typescript@npm:2.2.0-alpha.5"
   dependencies:
-    "@volar/language-core": "npm:2.1.4"
+    "@volar/language-core": "npm:2.2.0-alpha.5"
     path-browserify: "npm:^1.0.1"
-  checksum: 10/a9487e48e604f9f8ae51065c9c5a1d6adb0792bd2cc339ee130f6acd6c78f4f25c822c49cd201810a3e0888691bfbe4e7095ce33223f82eef48fca660d169c6b
+  checksum: 10/c7e596cf0446456ab259a9e209f4eb3651eff0422b1b23819f7d4a1f6cac8795c908ded2325e94c42f52e28028bfbe2f301a623a272e4e3e5c0b46c78cfc86c1
   languageName: node
   linkType: hard
 
@@ -3863,11 +3863,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/language-core@npm:2.0.7":
-  version: 2.0.7
-  resolution: "@vue/language-core@npm:2.0.7"
+"@vue/language-core@npm:2.0.10":
+  version: 2.0.10
+  resolution: "@vue/language-core@npm:2.0.10"
   dependencies:
-    "@volar/language-core": "npm:~2.1.3"
+    "@volar/language-core": "npm:~2.2.0-alpha.5"
     "@vue/compiler-dom": "npm:^3.4.0"
     "@vue/shared": "npm:^3.4.0"
     computeds: "npm:^0.0.1"
@@ -3879,7 +3879,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10/66d5305e5032c30f1d1dc19b3c2c714544bb152a12156d44dcabce5eb22c17aa55639b13901d7ca7a3b62021d1d4d3f303825c5043ee17055f28861460f4569b
+  checksum: 10/4461c0ad96e7152d3186ea101bd57e0d1e39553c59bca03a5743e1281c286f45633b52da5cfe8c7359d6d262a2c71419e15224b3517a6172e0e856a6f515a9e4
   languageName: node
   linkType: hard
 
@@ -15101,7 +15101,7 @@ __metadata:
     vitest: "npm:1.4.0"
     vue: "npm:3.4.21"
     vue-demi: "npm:^0.14.6"
-    vue-tsc: "npm:2.0.7"
+    vue-tsc: "npm:2.0.10"
   peerDependencies:
     vue: ^3.0.0
   peerDependenciesMeta:
@@ -15140,18 +15140,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-tsc@npm:2.0.7":
-  version: 2.0.7
-  resolution: "vue-tsc@npm:2.0.7"
+"vue-tsc@npm:2.0.10":
+  version: 2.0.10
+  resolution: "vue-tsc@npm:2.0.10"
   dependencies:
-    "@volar/typescript": "npm:~2.1.3"
-    "@vue/language-core": "npm:2.0.7"
+    "@volar/typescript": "npm:~2.2.0-alpha.5"
+    "@vue/language-core": "npm:2.0.10"
     semver: "npm:^7.5.4"
   peerDependencies:
     typescript: "*"
   bin:
     vue-tsc: bin/vue-tsc.js
-  checksum: 10/8db8d7d4388a3410a6f6810b47900c5eb7ebd754b827571ecec7b55e54523017f4f5f9ce235228865d5dffc0de3c10cfe3e6e09edcac262603330e2bba1e8ac6
+  checksum: 10/dd917566b2589a5c5dc273f1be07862930695d91ec1b563c96ac1bbf5b2a4dc3bceacc3af1fd5c71a93f17d9be1738dd205ded0ae480631d0dbfd8d3475fcd5d
   languageName: node
   linkType: hard
 
