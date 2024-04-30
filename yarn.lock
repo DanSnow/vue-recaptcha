@@ -78,15 +78,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antfu/eslint-config@npm:2.16.0":
-  version: 2.16.0
-  resolution: "@antfu/eslint-config@npm:2.16.0"
+"@antfu/eslint-config@npm:2.16.1":
+  version: 2.16.1
+  resolution: "@antfu/eslint-config@npm:2.16.1"
   dependencies:
     "@antfu/install-pkg": "npm:^0.3.2"
     "@clack/prompts": "npm:^0.7.0"
     "@stylistic/eslint-plugin": "npm:^1.7.2"
-    "@typescript-eslint/eslint-plugin": "npm:^7.7.1"
-    "@typescript-eslint/parser": "npm:^7.7.1"
+    "@typescript-eslint/eslint-plugin": "npm:~7.7.1"
+    "@typescript-eslint/parser": "npm:~7.7.1"
     eslint-config-flat-gitignore: "npm:^0.1.5"
     eslint-flat-config-utils: "npm:^0.2.3"
     eslint-merge-processors: "npm:^0.1.0"
@@ -157,7 +157,7 @@ __metadata:
       optional: true
   bin:
     eslint-config: bin/index.js
-  checksum: 10/0fabfd54ae25e8a7b3358e7f10fd3dfdfe9cff89f7003ca7eb6ee5b3e6a939110c765b6a46ab50220e1e273033ae3677432c774c3a063c8bf40f574db8d858c3
+  checksum: 10/f539f24f7038a9855ac6bbb08a8fc71d8410b53ea9ba63e350176e205ed4c73f88fc3e9dfc8dcb02d3da2937bbe450676fc253736ad04e357d75209b2a17104a
   languageName: node
   linkType: hard
 
@@ -2770,7 +2770,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^7.7.1":
+"@typescript-eslint/eslint-plugin@npm:~7.7.1":
   version: 7.7.1
   resolution: "@typescript-eslint/eslint-plugin@npm:7.7.1"
   dependencies:
@@ -2813,7 +2813,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^7.7.1":
+"@typescript-eslint/parser@npm:~7.7.1":
   version: 7.7.1
   resolution: "@typescript-eslint/parser@npm:7.7.1"
   dependencies:
@@ -15130,7 +15130,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vue-recaptcha@workspace:."
   dependencies:
-    "@antfu/eslint-config": "npm:2.16.0"
+    "@antfu/eslint-config": "npm:2.16.1"
     "@antfu/eslint-config-vue": "npm:0.43.1"
     "@nuxt/kit": "npm:^3.9.1"
     "@nuxt/schema": "npm:^3.9.1"
