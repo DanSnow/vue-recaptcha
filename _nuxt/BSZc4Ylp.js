@@ -1,0 +1,1 @@
+import{l as t,b as n,c,ad as o}from"./DAVYSdzj.js";const r={};function a(e,s){return n(),c("td",null,[o(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",a],["__scopeId","data-v-e749cfe8"]]);export{d as default};
