@@ -1,0 +1,1 @@
+import{_ as n}from"./Dbepv1s8.js";import{d as o,N as t}from"./C4DfiPl_.js";const s=o({props:{use:{type:Function,default:void 0},unwrap:{type:[Boolean,String],default:!1}},render(e){return t(n,e)}});export{s as default};
