@@ -1,0 +1,1 @@
+import{_ as n}from"./0jjBzt2Q.js";import{d as o,N as t}from"./bL35Bxl7.js";const s=o({props:{use:{type:Function,default:void 0},unwrap:{type:[Boolean,String],default:!1}},render(e){return t(n,e)}});export{s as default};
