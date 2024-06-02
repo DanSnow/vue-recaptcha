@@ -1,4 +1,4 @@
-import type { LiteralUnion, Opaque } from 'type-fest'
+import type { LiteralUnion, Tagged } from 'type-fest'
 import pDefer from 'p-defer'
 import defu from 'defu'
 import { warn } from '../utils'
@@ -25,13 +25,12 @@ export interface RecaptchaV2InvisibleOptions extends RecaptchaV2CommonOptions {
 
 export type RecaptchaV2Options = RecaptchaV2CheckboxOptions | RecaptchaV2InvisibleOptions
 
-export type WidgetID = Opaque<string, 'widget-id'>
+export type WidgetID = Tagged<string, 'widget-id'>
 
 export interface GRecaptcha {
-  render(ele: Element, options: RecaptchaV2Options): WidgetID
-  reset(widgetId: WidgetID): void
-  execute(widgetId: WidgetID): void
-  execute(siteKey: string, options: { action: string }): Promise<string>
+  render: (ele: Element, options: RecaptchaV2Options) => WidgetID
+  reset: (widgetId: WidgetID) => void
+  execute: ((widgetId: WidgetID) => void) & ((siteKey: string, options: { action: string }) => Promise<string>)
 }
 
 declare global {

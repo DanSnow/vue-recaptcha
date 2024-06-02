@@ -1,0 +1,9 @@
+dependsOn:
+- vue-recaptcha
+
+tasks:
+  dev:
+    command: vite
+    deps:
+      - ^:build
+    local: true
