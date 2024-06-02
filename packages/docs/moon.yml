@@ -8,44 +8,61 @@ dependsOn:
 tasks:
   dev:
     command:
-    - nuxt
-    - dev
+      - nuxt
+      - dev
     deps:
       - ^:build
     local: true
   generate:
     command:
-    - nuxt
-    - generate
+      - nuxt
+      - generate
+    deps:
+      - ^:build
+    inputs:
+      - content/**
+      - components/**
+      - layouts/**
+      - public/**
+      - app.config.ts
+      - app.vue
+      - nuxt.config.ts
+      - tokens.config.ts
   check-200-html:
     command:
-    - test
-    - -f
-    - .output/public/200.html
+      - test
+      - -f
+      - .output/public/200.html
     deps:
       - ~:generate
+    inputs:
+      - .output/public/200.html
     platform: system
   check-nuxt-dir:
     command:
-    - test
-    - -d
-    - .output/public/_nuxt
+      - test
+      - -d
+      - .output/public/_nuxt
     deps:
       - ~:generate
+    inputs:
+      - .output/public/_nuxt
     platform: system
   generate-with-nojekyll:
     command:
-    - touch
-    - .output/public/.nojekyll
+      - touch
+      - .output/public/.nojekyll
     deps:
       - ~:check-200-html
       - ~:check-nuxt-dir
+    outputs:
+      - .output/public/.nojekyll
     platform: system
   publish:
     command:
-    - gh-pages
-    - -d
-    - .output/public
-    - -t
+      - gh-pages
+      - -d
+      - .output/public
+      - -t
     deps:
       - ~:generate-with-nojekyll
