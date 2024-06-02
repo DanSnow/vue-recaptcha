@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "moon run dev --",
     "publish": "yarn generate && touch .output/public/.nojekyll && gh-pages -d dist -t"
   },
   "dependencies": {
