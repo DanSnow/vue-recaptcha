@@ -13,23 +13,23 @@ tasks:
     command: vite
   lint:
     command:
-    - eslint
-    - .
+      - eslint
+      - .
   lint-fix:
     command:
-    - eslint
-    - --fix
-    - .
+      - eslint
+      - --fix
+      - .
     local: true
   test:
     command: noop
     deps:
-    - ~:test-unit
-    - ~:test-e2e
+      - ~:test-unit
+      - ~:test-e2e
     platform: node
   test-e2e:
     command:
-    - playwright
-    - test
+      - playwright
+      - test
   test-unit:
     command: vitest

@@ -4,10 +4,10 @@ import type { GRecaptcha, RecaptchaV2Options, WidgetID } from '../script-manager
 import { recaptchaLoaded } from '../script-manager/common'
 
 export interface RecaptchaProxy {
-  render(ele: Element, options: RecaptchaV2Options): Promise<WidgetID>
-  reset(widgetId?: WidgetID | undefined): void
-  execute(siteKey: string, options: { action: string }): Promise<string>
-  execute(widgetId?: WidgetID | undefined): void
+  render: (ele: Element, options: RecaptchaV2Options) => Promise<WidgetID>
+  reset: (widgetId?: WidgetID | undefined) => void
+  execute: ((siteKey: string, options: { action: string }) => Promise<string>) &
+    ((widgetId?: WidgetID | undefined) => void)
 }
 
 export function createRecaptchaProxy(isReady: Ref<boolean>, getRecaptcha: () => GRecaptcha): RecaptchaProxy {
