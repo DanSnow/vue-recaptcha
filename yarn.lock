@@ -3767,17 +3767,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/dom@npm:1.9.14, @unhead/dom@npm:^1.7.0, @unhead/dom@npm:^1.9.14":
-  version: 1.9.14
-  resolution: "@unhead/dom@npm:1.9.14"
+"@unhead/dom@npm:1.9.15, @unhead/dom@npm:^1.7.0, @unhead/dom@npm:^1.9.14":
+  version: 1.9.15
+  resolution: "@unhead/dom@npm:1.9.15"
   dependencies:
-    "@unhead/schema": "npm:1.9.14"
-    "@unhead/shared": "npm:1.9.14"
-  checksum: 10/3afc2c4b9debeb9cf9e92063f137d067b6266b96029fa03965add1118cb051f87238858224a43a3d8da9e28dbc95df48ec422d6a6c7067dbfd19209fa2874488
+    "@unhead/schema": "npm:1.9.15"
+    "@unhead/shared": "npm:1.9.15"
+  checksum: 10/799fc2f74b176e498709dc3ea3140647199da9b463cff8c68f524e98dcf2db73921a327442cd66abd001cac7f1a58d57673a2ffe70dfe34a72792995a5409c5b
   languageName: node
   linkType: hard
 
-"@unhead/schema@npm:1.9.14, @unhead/schema@npm:^1.7.0":
+"@unhead/schema@npm:1.9.14":
   version: 1.9.14
   resolution: "@unhead/schema@npm:1.9.14"
   dependencies:
@@ -3787,12 +3787,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@unhead/schema@npm:1.9.15, @unhead/schema@npm:^1.7.0":
+  version: 1.9.15
+  resolution: "@unhead/schema@npm:1.9.15"
+  dependencies:
+    hookable: "npm:^5.5.3"
+    zhead: "npm:^2.2.4"
+  checksum: 10/8a02fc2363f14d8dfab848735859462142acdef65d2736991d47d0cffdfc564615d39c35a6073854d1808a1b89c11a3d797975ac89ef09d95b93b02762660848
+  languageName: node
+  linkType: hard
+
 "@unhead/shared@npm:1.9.14":
   version: 1.9.14
   resolution: "@unhead/shared@npm:1.9.14"
   dependencies:
     "@unhead/schema": "npm:1.9.14"
   checksum: 10/93169f996f2555c242507c3616fb3ae4d80088186ce9ecab11dee7df4d961167cf19d8c58e1425c761b11cd69ce1066043c52e79193289b0415d121f667b42e7
+  languageName: node
+  linkType: hard
+
+"@unhead/shared@npm:1.9.15":
+  version: 1.9.15
+  resolution: "@unhead/shared@npm:1.9.15"
+  dependencies:
+    "@unhead/schema": "npm:1.9.15"
+  checksum: 10/623571b666c62d244f72fdce184f7dabf0f353fdea04cbfc70c31469059a9924bd541def7b45590f8b8296fdfe7e99aa69fa90ce7343bebc7f457b53fafe5617
   languageName: node
   linkType: hard
 
@@ -3806,17 +3825,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/vue@npm:1.9.14, @unhead/vue@npm:^1.7.0, @unhead/vue@npm:^1.9.14":
-  version: 1.9.14
-  resolution: "@unhead/vue@npm:1.9.14"
+"@unhead/vue@npm:1.9.15, @unhead/vue@npm:^1.7.0, @unhead/vue@npm:^1.9.14":
+  version: 1.9.15
+  resolution: "@unhead/vue@npm:1.9.15"
   dependencies:
-    "@unhead/schema": "npm:1.9.14"
-    "@unhead/shared": "npm:1.9.14"
+    "@unhead/schema": "npm:1.9.15"
+    "@unhead/shared": "npm:1.9.15"
     hookable: "npm:^5.5.3"
-    unhead: "npm:1.9.14"
+    unhead: "npm:1.9.15"
   peerDependencies:
     vue: ">=2.7 || >=3"
-  checksum: 10/a659f625005f6299257d585ddad9a7eaa174ce1bf6d812803b686b7ea9f3d4edfbc7330abd10a7d4bacf4bcb3de55b174154045c4b2671f4bfc2a9e481da9fe3
+  checksum: 10/f50a252c3e43f3fa9f9f6d504495af7906266fa0f1b750d1eac6f2c80dc3f829e88d3f6d9bd2440a1bcd050e5f669054612b61640ae8015cfa2f9aa092293118
   languageName: node
   linkType: hard
 
@@ -15573,15 +15592,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unhead@npm:1.9.14":
-  version: 1.9.14
-  resolution: "unhead@npm:1.9.14"
+"unhead@npm:1.9.15":
+  version: 1.9.15
+  resolution: "unhead@npm:1.9.15"
   dependencies:
-    "@unhead/dom": "npm:1.9.14"
-    "@unhead/schema": "npm:1.9.14"
-    "@unhead/shared": "npm:1.9.14"
+    "@unhead/dom": "npm:1.9.15"
+    "@unhead/schema": "npm:1.9.15"
+    "@unhead/shared": "npm:1.9.15"
     hookable: "npm:^5.5.3"
-  checksum: 10/51388d87c123ef9069bbacecdb66a847c82e4bf60cf647c59eb6577e0e57249456bf2a0745e5005d6ead7c1d50386025ce26ba804da2680fe49e30bcd5282407
+  checksum: 10/bdce16b58be67fcb011ac0be63b946b55123ed33637beb35456ec24e64549d877659b5713f6e2f9ba808215d8ab4acbf7f7b14f4822857fcc68c9a4d08b56f89
   languageName: node
   linkType: hard
 
@@ -16417,7 +16436,7 @@ __metadata:
     "@nuxt/kit": "npm:^3.9.1"
     "@nuxt/schema": "npm:^3.9.1"
     "@playwright/test": "npm:1.45.1"
-    "@unhead/vue": "npm:1.9.14"
+    "@unhead/vue": "npm:1.9.15"
     "@vitejs/plugin-vue": "npm:5.0.5"
     "@vue/compiler-dom": "npm:3.4.31"
     "@vue/composition-api": "npm:1.7.2"
