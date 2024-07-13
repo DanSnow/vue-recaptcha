@@ -3,7 +3,7 @@ $schema: 'https://moonrepo.dev/schemas/project.json'
 platform: node
 
 dependsOn:
-- vue-recaptcha
+  - vue-recaptcha
 
 tasks:
   dev:
@@ -28,6 +28,18 @@ tasks:
       - app.vue
       - nuxt.config.ts
       - tokens.config.ts
+  test-unit:
+    command: vitest
+    deps:
+      - generate
+    inputs:
+      - tests/**
+      - vitest.config.mts
+    platform: node
+  test:
+    command: noop
+    deps:
+      - test-unit
   check-200-html:
     command:
       - test
