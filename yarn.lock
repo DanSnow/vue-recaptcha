@@ -2905,16 +2905,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
-  version: 20.14.9
-  resolution: "@types/node@npm:20.14.9"
-  dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 10/f313b06c79be92f5d3541159ef813b9fc606941f951ecf826e940658c6d4952755ca2f06277b746326cef0697ed79a04676ecde053d32e1121b3352c8168d2e9
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:>=20":
+"@types/node@npm:*, @types/node@npm:>=20":
   version: 20.14.10
   resolution: "@types/node@npm:20.14.10"
   dependencies:
@@ -4004,10 +3995,10 @@ __metadata:
     nuxt: "npm:3.12.2"
     ofetch: "npm:^1.3.3"
     vee-validate: "npm:^4.12.8"
-    vitest: "npm:^2.0.2"
+    vitest: "npm:2.0.2"
     vue-recaptcha: "workspace:^"
     yup: "npm:^1.4.0"
-    zx: "npm:^8.1.4"
+    zx: "npm:8.1.4"
   languageName: unknown
   linkType: soft
 
@@ -15685,7 +15676,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:2.0.2, vitest@npm:^2.0.2":
+"vitest@npm:2.0.2":
   version: 2.0.2
   resolution: "vitest@npm:2.0.2"
   dependencies:
@@ -16269,7 +16260,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zx@npm:^8.1.4":
+"zx@npm:8.1.4":
   version: 8.1.4
   resolution: "zx@npm:8.1.4"
   dependencies:
