@@ -78,9 +78,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antfu/eslint-config@npm:2.23.0":
-  version: 2.23.0
-  resolution: "@antfu/eslint-config@npm:2.23.0"
+"@antfu/eslint-config@npm:2.23.1":
+  version: 2.23.1
+  resolution: "@antfu/eslint-config@npm:2.23.1"
   dependencies:
     "@antfu/eslint-plugin-unused-imports": "npm:^4.0.0"
     "@antfu/install-pkg": "npm:^0.3.3"
@@ -95,7 +95,7 @@ __metadata:
     eslint-plugin-command: "npm:^0.2.3"
     eslint-plugin-eslint-comments: "npm:^3.2.0"
     eslint-plugin-import-x: "npm:^3.0.1"
-    eslint-plugin-jsdoc: "npm:^48.7.0"
+    eslint-plugin-jsdoc: "npm:^48.8.3"
     eslint-plugin-jsonc: "npm:^2.16.0"
     eslint-plugin-markdown: "npm:^5.1.0"
     eslint-plugin-n: "npm:^17.9.0"
@@ -161,7 +161,7 @@ __metadata:
       optional: true
   bin:
     eslint-config: bin/index.js
-  checksum: 10/520e17b3e03d6cca4c2dcc007add9b7c760d396f25670247994f5ac32104f290335959f31f2ad495164a9b29147c62d334fe952b8bda347956aaeb142422213e
+  checksum: 10/ccac368a08f335a074f8a74368529883d2e47048bfdf952861a1420fe19ad65c7b2aa375d634e9c32da3cdbdbc99b2d23edc9b037dc5d4d2d9cce8b9b906bd13
   languageName: node
   linkType: hard
 
@@ -7550,9 +7550,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:^48.7.0":
-  version: 48.7.0
-  resolution: "eslint-plugin-jsdoc@npm:48.7.0"
+"eslint-plugin-jsdoc@npm:^48.8.3":
+  version: 48.8.3
+  resolution: "eslint-plugin-jsdoc@npm:48.8.3"
   dependencies:
     "@es-joy/jsdoccomment": "npm:~0.46.0"
     are-docs-informative: "npm:^0.0.2"
@@ -7561,12 +7561,12 @@ __metadata:
     escape-string-regexp: "npm:^4.0.0"
     esquery: "npm:^1.6.0"
     parse-imports: "npm:^2.1.1"
-    semver: "npm:^7.6.2"
+    semver: "npm:^7.6.3"
     spdx-expression-parse: "npm:^4.0.0"
-    synckit: "npm:^0.9.0"
+    synckit: "npm:^0.9.1"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10/7289c37e45429cf3661bd553bb6cdcb4a9877b8a1fc0e6f369fa049cf6690953333dcbc972f48f03991df53734afeb77c6025804392184df19e214fb4425c4dc
+  checksum: 10/17b344616a61fd0b2841c488c09189cf5689d30549eaab4c73b3abdf18ee28951616f9898149d0baa428264bc7a78d21ef4f508ad084e85b12e73c44808713ae
   languageName: node
   linkType: hard
 
@@ -14690,7 +14690,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"synckit@npm:^0.9.0, synckit@npm:^0.9.1":
+"synckit@npm:^0.9.1":
   version: 0.9.1
   resolution: "synckit@npm:0.9.1"
   dependencies:
@@ -16005,7 +16005,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vue-recaptcha@workspace:packages/vue-recaptcha"
   dependencies:
-    "@antfu/eslint-config": "npm:2.23.0"
+    "@antfu/eslint-config": "npm:2.23.1"
     "@antfu/eslint-config-vue": "npm:0.43.1"
     "@nuxt/kit": "npm:^3.9.1"
     "@nuxt/schema": "npm:^3.9.1"
