@@ -1,1 +1,0 @@
-import{l as r,c as t,e as n,ad as o}from"./D8044hNU.js";const s={};function a(e,c){return t(),n("li",null,[o(e.$slots,"default",{},void 0,!0)])}const l=r(s,[["render",a],["__scopeId","data-v-942d4e54"]]);export{l as default};
