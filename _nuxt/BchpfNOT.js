@@ -1,0 +1,1 @@
+import{k as t,c as a,e as o,ab as s}from"./D-so36xg.js";const r={},c={class:"preview-layout"};function n(e,d){return a(),o("div",c,[s(e.$slots,"default",{},void 0,!0)])}const f=t(r,[["render",n],["__scopeId","data-v-ef21b5ba"]]);export{f as default};
