@@ -1,1 +1,0 @@
-import{k as n,c as t,e as o,ab as c}from"./D-so36xg.js";const r={};function a(e,s){return t(),o("p",null,[c(e.$slots,"default",{},void 0,!0)])}const d=n(r,[["render",a],["__scopeId","data-v-f5132415"]]);export{d as default};
