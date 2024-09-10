@@ -1,0 +1,1 @@
+import{k as t,c as n,e as o,ab as a}from"./BkaENivy.js";const c={};function r(e,s){return n(),o("td",null,[a(e.$slots,"default",{},void 0,!0)])}const f=t(c,[["render",r],["__scopeId","data-v-f1ffe96a"]]);export{f as default};
