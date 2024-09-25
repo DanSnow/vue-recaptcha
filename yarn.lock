@@ -4372,7 +4372,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:10.9.0, @vueuse/shared@npm:^10.7.2":
+"@vueuse/shared@npm:10.9.0":
   version: 10.9.0
   resolution: "@vueuse/shared@npm:10.9.0"
   dependencies:
@@ -4387,6 +4387,15 @@ __metadata:
   dependencies:
     vue-demi: "npm:*"
   checksum: 10/9d9fdfca0f785a150115b860ceb57d0f6e762846dc9695d8531b4e4209de8cd3d7229998406c3dfed38a99ac1e6f6eae9f707290e15807ed65575c2cc5f67dba
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:^11.0.0":
+  version: 11.1.0
+  resolution: "@vueuse/shared@npm:11.1.0"
+  dependencies:
+    vue-demi: "npm:>=0.14.10"
+  checksum: 10/467bd1da45e4cf8d5a9c91129bd7e2cfecd80e896e8fd11e6a85fa28d2743b124faf595fc54e1c00359f721b3faf70c5f9574130c7ab3a30c4891a89c77b80fd
   languageName: node
   linkType: hard
 
@@ -15889,9 +15898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-demi@npm:*, vue-demi@npm:>=0.14.7, vue-demi@npm:^0.14.8":
-  version: 0.14.8
-  resolution: "vue-demi@npm:0.14.8"
+"vue-demi@npm:*, vue-demi@npm:>=0.14.10, vue-demi@npm:>=0.14.7, vue-demi@npm:^0.14.8":
+  version: 0.14.10
+  resolution: "vue-demi@npm:0.14.10"
   peerDependencies:
     "@vue/composition-api": ^1.0.0-rc.1
     vue: ^3.0.0-0 || ^2.6.0
@@ -15901,7 +15910,7 @@ __metadata:
   bin:
     vue-demi-fix: bin/vue-demi-fix.js
     vue-demi-switch: bin/vue-demi-switch.js
-  checksum: 10/88af227aa3a83607584c4f614efee9ac2fb8ea124db85f2f88bab62382cdfbd6611d9d2489ca757d3518afc7df7ea69257bf182705d20e473404e64959e9f838
+  checksum: 10/3028239c0c25a84361a13ab936fcc9a199f54e0320c2ec1d2f4fdf7da8bae663382b7c1e5b1f5a1a43f6aebc73b955892cd4b6c7b3eaf2b766e18cc2a6f7ebea
   languageName: node
   linkType: hard
 
@@ -15943,7 +15952,7 @@ __metadata:
     "@vue/compiler-dom": "npm:3.5.8"
     "@vue/composition-api": "npm:1.7.2"
     "@vue/test-utils": "npm:2.4.6"
-    "@vueuse/shared": "npm:^10.7.2"
+    "@vueuse/shared": "npm:^11.0.0"
     defu: "npm:^6.1.4"
     eslint: "npm:9.11.1"
     eslint-config-prettier: "npm:9.1.0"
