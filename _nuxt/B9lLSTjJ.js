@@ -1,1 +1,0 @@
-import{k as t,c as n,e as o,ab as r}from"./D4Pu915r.js";const a={};function c(e,s){return n(),o("tr",null,[r(e.$slots,"default",{},void 0,!0)])}const d=t(a,[["render",c],["__scopeId","data-v-b9060a20"]]);export{d as default};
