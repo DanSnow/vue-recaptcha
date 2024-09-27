@@ -1,1 +1,0 @@
-import{k as r,c as t,e as n,ab as o}from"./Doc-oWfK.js";const s={};function a(e,c){return t(),n("em",null,[o(e.$slots,"default",{},void 0,!0)])}const l=r(s,[["render",a],["__scopeId","data-v-114934b6"]]);export{l as default};
