@@ -4,9 +4,9 @@ import { defineScriptLoader, toQueryString } from './common'
 export const createHeadRecaptcha = defineScriptLoader((options) => {
   return () => {
     onMounted(() => {
-
-      if (document.getElementById('vue-recaptcha'))
+      if (document.getElementById('vue-recaptcha')) {
         return
+      }
 
       const script = document.createElement('script')
       script.src = `${options.recaptchaApiURL}?${toQueryString(options.params)}`
