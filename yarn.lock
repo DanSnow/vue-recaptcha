@@ -4032,7 +4032,7 @@ __metadata:
     "@nuxt-themes/docus": "npm:1.15.0"
     "@nuxt/ui-templates": "npm:^1.3.4"
     "@unocss/nuxt": "npm:0.63.6"
-    "@vueuse/nuxt": "npm:^10.7.2"
+    "@vueuse/nuxt": "npm:^11.0.0"
     gh-pages: "npm:6.2.0"
     mermaid: "npm:^10.9.1"
     nuxt: "npm:3.13.2"
@@ -4359,6 +4359,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/core@npm:11.1.0":
+  version: 11.1.0
+  resolution: "@vueuse/core@npm:11.1.0"
+  dependencies:
+    "@types/web-bluetooth": "npm:^0.0.20"
+    "@vueuse/metadata": "npm:11.1.0"
+    "@vueuse/shared": "npm:11.1.0"
+    vue-demi: "npm:>=0.14.10"
+  checksum: 10/2ed51d0a49588bf23f18b31e16756b0ddd1a97e1fa426f73e805d76c52d1b51959372f04040e7bdad2d922568afe8a5c6674e6efbeac17624ee843bad17671bf
+  languageName: node
+  linkType: hard
+
 "@vueuse/core@npm:^9.13.0":
   version: 9.13.0
   resolution: "@vueuse/core@npm:9.13.0"
@@ -4441,6 +4453,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/metadata@npm:11.1.0":
+  version: 11.1.0
+  resolution: "@vueuse/metadata@npm:11.1.0"
+  checksum: 10/3bb0171a275845780678360a8e74591b52ad3a25aba61bee0e57924410918c343ccb94b9317a06e77c92e6e18a7d22ddf46ea51eea930fea6ca9b06053875522
+  languageName: node
+  linkType: hard
+
 "@vueuse/metadata@npm:9.13.0":
   version: 9.13.0
   resolution: "@vueuse/metadata@npm:9.13.0"
@@ -4448,7 +4467,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/nuxt@npm:^10.4.1, @vueuse/nuxt@npm:^10.7.2, @vueuse/nuxt@npm:^10.9.0":
+"@vueuse/nuxt@npm:^10.4.1, @vueuse/nuxt@npm:^10.9.0":
   version: 10.9.0
   resolution: "@vueuse/nuxt@npm:10.9.0"
   dependencies:
@@ -4463,12 +4482,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:10.9.0, @vueuse/shared@npm:^10.7.2":
+"@vueuse/nuxt@npm:^11.0.0":
+  version: 11.1.0
+  resolution: "@vueuse/nuxt@npm:11.1.0"
+  dependencies:
+    "@nuxt/kit": "npm:^3.13.2"
+    "@vueuse/core": "npm:11.1.0"
+    "@vueuse/metadata": "npm:11.1.0"
+    local-pkg: "npm:^0.5.0"
+    vue-demi: "npm:>=0.14.10"
+  peerDependencies:
+    nuxt: ^3.0.0
+  checksum: 10/13fd7998bd5d6c64ab81bb17aa945e4d519f5392b3c361afdb252b34d6d43dd64d0f4584a711946dbaad531f12cd59fbab40868d9b1a828162f081ad2a82f810
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:10.9.0":
   version: 10.9.0
   resolution: "@vueuse/shared@npm:10.9.0"
   dependencies:
     vue-demi: "npm:>=0.14.7"
   checksum: 10/8e81358b695c471c0d5e2ac369dedfe29a4fe0188f7573aa71dc9e6a22ba0eb2e2fbca0f0a075a2ce626342ce5515a08ed7d9cb03d080326af32c8d116ae2381
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:11.1.0, @vueuse/shared@npm:^11.0.0":
+  version: 11.1.0
+  resolution: "@vueuse/shared@npm:11.1.0"
+  dependencies:
+    vue-demi: "npm:>=0.14.10"
+  checksum: 10/467bd1da45e4cf8d5a9c91129bd7e2cfecd80e896e8fd11e6a85fa28d2743b124faf595fc54e1c00359f721b3faf70c5f9574130c7ab3a30c4891a89c77b80fd
   languageName: node
   linkType: hard
 
@@ -16270,9 +16313,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-demi@npm:*, vue-demi@npm:>=0.14.7, vue-demi@npm:^0.14.8":
-  version: 0.14.8
-  resolution: "vue-demi@npm:0.14.8"
+"vue-demi@npm:*, vue-demi@npm:>=0.14.10, vue-demi@npm:>=0.14.7, vue-demi@npm:^0.14.8":
+  version: 0.14.10
+  resolution: "vue-demi@npm:0.14.10"
   peerDependencies:
     "@vue/composition-api": ^1.0.0-rc.1
     vue: ^3.0.0-0 || ^2.6.0
@@ -16282,7 +16325,7 @@ __metadata:
   bin:
     vue-demi-fix: bin/vue-demi-fix.js
     vue-demi-switch: bin/vue-demi-switch.js
-  checksum: 10/88af227aa3a83607584c4f614efee9ac2fb8ea124db85f2f88bab62382cdfbd6611d9d2489ca757d3518afc7df7ea69257bf182705d20e473404e64959e9f838
+  checksum: 10/3028239c0c25a84361a13ab936fcc9a199f54e0320c2ec1d2f4fdf7da8bae663382b7c1e5b1f5a1a43f6aebc73b955892cd4b6c7b3eaf2b766e18cc2a6f7ebea
   languageName: node
   linkType: hard
 
@@ -16335,7 +16378,7 @@ __metadata:
     "@vue/compiler-dom": "npm:3.5.12"
     "@vue/composition-api": "npm:1.7.2"
     "@vue/test-utils": "npm:2.4.6"
-    "@vueuse/shared": "npm:^10.7.2"
+    "@vueuse/shared": "npm:^11.0.0"
     defu: "npm:^6.1.4"
     eslint: "npm:9.13.0"
     eslint-config-prettier: "npm:9.1.0"
