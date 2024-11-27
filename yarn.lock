@@ -78,25 +78,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@antfu/eslint-config@npm:3.10.0":
-  version: 3.10.0
-  resolution: "@antfu/eslint-config@npm:3.10.0"
+"@antfu/eslint-config@npm:3.11.0":
+  version: 3.11.0
+  resolution: "@antfu/eslint-config@npm:3.11.0"
   dependencies:
-    "@antfu/install-pkg": "npm:^0.4.1"
+    "@antfu/install-pkg": "npm:^0.5.0"
     "@clack/prompts": "npm:^0.8.2"
     "@eslint-community/eslint-plugin-eslint-comments": "npm:^4.4.1"
     "@eslint/markdown": "npm:^6.2.1"
     "@stylistic/eslint-plugin": "npm:^2.11.0"
     "@typescript-eslint/eslint-plugin": "npm:^8.16.0"
     "@typescript-eslint/parser": "npm:^8.16.0"
-    "@vitest/eslint-plugin": "npm:^1.1.10"
+    "@vitest/eslint-plugin": "npm:^1.1.11"
     eslint-config-flat-gitignore: "npm:^0.3.0"
     eslint-flat-config-utils: "npm:^0.4.0"
     eslint-merge-processors: "npm:^0.1.0"
     eslint-plugin-antfu: "npm:^2.7.0"
     eslint-plugin-command: "npm:^0.2.6"
     eslint-plugin-import-x: "npm:^4.4.3"
-    eslint-plugin-jsdoc: "npm:^50.5.0"
+    eslint-plugin-jsdoc: "npm:^50.6.0"
     eslint-plugin-jsonc: "npm:^2.18.2"
     eslint-plugin-n: "npm:^17.14.0"
     eslint-plugin-no-only-tests: "npm:^3.3.0"
@@ -129,7 +129,7 @@ __metadata:
     eslint-plugin-react-refresh: ^0.4.4
     eslint-plugin-solid: ^0.14.3
     eslint-plugin-svelte: ">=2.35.1"
-    prettier-plugin-astro: ^0.13.0
+    prettier-plugin-astro: ^0.14.0
     prettier-plugin-slidev: ^1.0.5
     svelte-eslint-parser: ">=0.37.0"
   peerDependenciesMeta:
@@ -161,17 +161,27 @@ __metadata:
       optional: true
   bin:
     eslint-config: bin/index.js
-  checksum: 10/ef0c02219ae954a98581368f5cec0f82ff8f08d051d78240046db0b345bfb96210d1b12f5c8d461526571405b2dde63f32f3cdcfdda12ad1ef8167dafd6e738c
+  checksum: 10/ef60682e802ef2ec1b37236b73f6b583595fcb5d4099575921932d20a9549bae629fc5bc0673b52fe4fdd76c873866808efd453c3e0bf4d65cd37ab984b95578
   languageName: node
   linkType: hard
 
-"@antfu/install-pkg@npm:^0.4.0, @antfu/install-pkg@npm:^0.4.1":
+"@antfu/install-pkg@npm:^0.4.0":
   version: 0.4.1
   resolution: "@antfu/install-pkg@npm:0.4.1"
   dependencies:
     package-manager-detector: "npm:^0.2.0"
     tinyexec: "npm:^0.3.0"
   checksum: 10/3ffd59fa5a21dcb4951a037f5c91dfbfc152adfef9e7ba231a968f108aa28c1cd22213c437a8d34f2bfea8c2b9a6df20447eb04be15b534a8e9e21a9dcf203c0
+  languageName: node
+  linkType: hard
+
+"@antfu/install-pkg@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "@antfu/install-pkg@npm:0.5.0"
+  dependencies:
+    package-manager-detector: "npm:^0.2.5"
+    tinyexec: "npm:^0.3.1"
+  checksum: 10/93b38f8a18f5a06d3b0ae3685cf82b53791decfb5147dfc1e9e8b357b109fcce90677cf6fadc00a36e4f0d6ea320c8ea1e52c3e7ba7da55909583ad0f827ffb5
   languageName: node
   linkType: hard
 
@@ -3890,9 +3900,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/eslint-plugin@npm:^1.1.10":
-  version: 1.1.10
-  resolution: "@vitest/eslint-plugin@npm:1.1.10"
+"@vitest/eslint-plugin@npm:^1.1.11":
+  version: 1.1.11
+  resolution: "@vitest/eslint-plugin@npm:1.1.11"
   peerDependencies:
     "@typescript-eslint/utils": ">= 8.0"
     eslint: ">= 8.57.0"
@@ -3903,7 +3913,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 10/b68f08db0564fad950ec5320c503a1e87bab864f879c36eb5727800e080b023fef73e502f9265dffeff5efa8491ba991c83a38817eda9caef0714c0cd0c06acb
+  checksum: 10/6bfa180b37d693656adee837cce16089e8603774795144071fc2b15244549c693f6d4f29782669f8a24837394cecfa4b25e41f89e678b84ba96d587019001d9f
   languageName: node
   linkType: hard
 
@@ -7655,9 +7665,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:^50.5.0":
-  version: 50.5.0
-  resolution: "eslint-plugin-jsdoc@npm:50.5.0"
+"eslint-plugin-jsdoc@npm:^50.6.0":
+  version: 50.6.0
+  resolution: "eslint-plugin-jsdoc@npm:50.6.0"
   dependencies:
     "@es-joy/jsdoccomment": "npm:~0.49.0"
     are-docs-informative: "npm:^0.0.2"
@@ -7672,7 +7682,7 @@ __metadata:
     synckit: "npm:^0.9.1"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10/4abe3ac34ad0d3bf34238968b6961c4ea9ec8eb058046f554cf60a702a91ac294eda8e475cadeaa1951e1a5317dd055543407787b04256fbd0728454af7e2ad0
+  checksum: 10/295df63b2d0300a072f4349b15eaf3279080ed13147752e21ce145ed31ed111a15c406e44650726a9e5bcf6bf248e5714ec3962e7e4f7b4bbd4cc3cd0cf16db2
   languageName: node
   linkType: hard
 
@@ -12463,10 +12473,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"package-manager-detector@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "package-manager-detector@npm:0.2.0"
-  checksum: 10/5a361717e7de78ca055de0ae99c368c338631ef9f52867ab7788b81862aeb016916abb0a0d37e7c0117d62b0ad954ec942ab228790eaa8d30cace4edb2819763
+"package-manager-detector@npm:^0.2.0, package-manager-detector@npm:^0.2.5":
+  version: 0.2.5
+  resolution: "package-manager-detector@npm:0.2.5"
+  checksum: 10/97127289fffc238f6af5af3339c309a3b25f5b360b8d503f8d27cc3afa259732a08e7df9331f703b1db0c585504f70ade9b068ddf40949f6dd8a5ebbb9ab8d67
   languageName: node
   linkType: hard
 
@@ -16491,7 +16501,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vue-recaptcha@workspace:packages/vue-recaptcha"
   dependencies:
-    "@antfu/eslint-config": "npm:3.10.0"
+    "@antfu/eslint-config": "npm:3.11.0"
     "@antfu/eslint-config-vue": "npm:0.43.1"
     "@nuxt/kit": "npm:^3.9.1"
     "@nuxt/schema": "npm:^3.9.1"
