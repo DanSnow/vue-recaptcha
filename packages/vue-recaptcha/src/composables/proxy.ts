@@ -1,7 +1,7 @@
 import type { Ref } from 'vue-demi'
-import { invariant } from '../utils'
 import type { GRecaptcha, RecaptchaV2Options, WidgetID } from '../script-manager/common'
 import { recaptchaLoaded } from '../script-manager/common'
+import { invariant } from '../utils'
 
 export interface RecaptchaProxy {
   render: (ele: Element, options: RecaptchaV2Options) => Promise<WidgetID>
