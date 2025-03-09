@@ -3555,17 +3555,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/dom@npm:1.11.18, @unhead/dom@npm:^1.11.18, @unhead/dom@npm:^1.7.0":
-  version: 1.11.18
-  resolution: "@unhead/dom@npm:1.11.18"
+"@unhead/dom@npm:1.11.20, @unhead/dom@npm:^1.11.18, @unhead/dom@npm:^1.7.0":
+  version: 1.11.20
+  resolution: "@unhead/dom@npm:1.11.20"
   dependencies:
-    "@unhead/schema": "npm:1.11.18"
-    "@unhead/shared": "npm:1.11.18"
-  checksum: 10/caf041d7323312b6b6ec9ea5b0dbe6766f8d5a8c52cbe11118dd6f453bcf6881966c4e3982f05617e59749c57d8d6d08eef29ca0b969141efb07b8966b2555d7
+    "@unhead/schema": "npm:1.11.20"
+    "@unhead/shared": "npm:1.11.20"
+  checksum: 10/947f3b6ec4373fcffba427dbcf119600e98e6a2e43835ac73b9d5c9c2f0ccd956e86f1b55e11d85f6649b69cf315982e46156b3812f073e4cd4fcc8f68a5e486
   languageName: node
   linkType: hard
 
-"@unhead/schema@npm:1.11.18, @unhead/schema@npm:^1.7.0":
+"@unhead/schema@npm:1.11.18":
   version: 1.11.18
   resolution: "@unhead/schema@npm:1.11.18"
   dependencies:
@@ -3575,13 +3575,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/shared@npm:1.11.18, @unhead/shared@npm:^1.11.18":
+"@unhead/schema@npm:1.11.20, @unhead/schema@npm:^1.7.0":
+  version: 1.11.20
+  resolution: "@unhead/schema@npm:1.11.20"
+  dependencies:
+    hookable: "npm:^5.5.3"
+    zhead: "npm:^2.2.4"
+  checksum: 10/150b35c25368c476a2fce030d7b17ff52a3694c7863c288e1ad17ddf1aa0a97314c0732a381b477f9805772d3edb7b492238cd3f1201514b760f521447b239e1
+  languageName: node
+  linkType: hard
+
+"@unhead/shared@npm:1.11.18":
   version: 1.11.18
   resolution: "@unhead/shared@npm:1.11.18"
   dependencies:
     "@unhead/schema": "npm:1.11.18"
     packrup: "npm:^0.1.2"
   checksum: 10/2c22dd8a660a7e4eabf4041b0ab21de6c34bde52cd68cfaeb3662c3e135db4c7e70ecb633f7c46d250d9ca61e3bd906f9daa81d76e912914fdd18e1e7055c255
+  languageName: node
+  linkType: hard
+
+"@unhead/shared@npm:1.11.20, @unhead/shared@npm:^1.11.18":
+  version: 1.11.20
+  resolution: "@unhead/shared@npm:1.11.20"
+  dependencies:
+    "@unhead/schema": "npm:1.11.20"
+    packrup: "npm:^0.1.2"
+  checksum: 10/45b4afa76b96a9e2abc1dc70bcccae150423b75472a8501906ebd8a5e120b8a65f2acb0ae6ce065b1b1f018e29fc008562fc0e103ef9eaaac9f4925e3a72b86d
   languageName: node
   linkType: hard
 
@@ -3595,17 +3615,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/vue@npm:1.11.18, @unhead/vue@npm:^1.11.18, @unhead/vue@npm:^1.7.0":
-  version: 1.11.18
-  resolution: "@unhead/vue@npm:1.11.18"
+"@unhead/vue@npm:1.11.20, @unhead/vue@npm:^1.11.18, @unhead/vue@npm:^1.7.0":
+  version: 1.11.20
+  resolution: "@unhead/vue@npm:1.11.20"
   dependencies:
-    "@unhead/schema": "npm:1.11.18"
-    "@unhead/shared": "npm:1.11.18"
+    "@unhead/schema": "npm:1.11.20"
+    "@unhead/shared": "npm:1.11.20"
     hookable: "npm:^5.5.3"
-    unhead: "npm:1.11.18"
+    unhead: "npm:1.11.20"
   peerDependencies:
     vue: ">=2.7 || >=3"
-  checksum: 10/e8ea00532b9920b0657ebf8420c27423bb4e871dfdd507e199e724bc15e6d05fdf186d1d391e007ee9d7aae247b340e7c7bc17c30f25d527456e052fc13a522c
+  checksum: 10/90222e2846ed53625b2a50c64dddf124ed34a7c5d4d8961d96c7a5e6074970a77b55b30ba9db4cc7e8561d8619bac059e23762207d004dcd9c9a8409c7765ec0
   languageName: node
   linkType: hard
 
@@ -16042,15 +16062,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unhead@npm:1.11.18, unhead@npm:^1.11.18":
-  version: 1.11.18
-  resolution: "unhead@npm:1.11.18"
+"unhead@npm:1.11.20, unhead@npm:^1.11.18":
+  version: 1.11.20
+  resolution: "unhead@npm:1.11.20"
   dependencies:
-    "@unhead/dom": "npm:1.11.18"
-    "@unhead/schema": "npm:1.11.18"
-    "@unhead/shared": "npm:1.11.18"
+    "@unhead/dom": "npm:1.11.20"
+    "@unhead/schema": "npm:1.11.20"
+    "@unhead/shared": "npm:1.11.20"
     hookable: "npm:^5.5.3"
-  checksum: 10/133e31b743a4e77c341ce761ef70512a6ccfff149a9914cd1b2da80c1645222ffb4e7f6aaea68a1f0e14e53c7f95a8577b65d134508bfc5909fb16b8c8278800
+  checksum: 10/1b18f84839c4ea0a65c51cfbac211fa5e67e9987ab204b920e5e72eb797e70c8947d3d8ce488fee0532fba7ba482a9a5e32401068660ba24fa36fe90698a38a6
   languageName: node
   linkType: hard
 
@@ -16989,7 +17009,7 @@ __metadata:
     "@playwright/test": "npm:1.51.0"
     "@testing-library/dom": "npm:10.4.0"
     "@testing-library/vue": "npm:8.1.0"
-    "@unhead/vue": "npm:1.11.18"
+    "@unhead/vue": "npm:1.11.20"
     "@vitejs/plugin-vue": "npm:5.2.1"
     "@vue/compiler-dom": "npm:3.5.13"
     "@vue/composition-api": "npm:1.7.2"
