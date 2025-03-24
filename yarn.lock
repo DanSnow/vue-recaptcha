@@ -2588,6 +2588,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pkgr/core@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@pkgr/core@npm:0.2.0"
+  checksum: 10/b7e126161ecf59ceaa0a95ba4b937cc57bf29c42bd72dc129391e4c9ab06aac31e37379dde4f523a736aab9765b18c2494096eedcbe1f494df415998eef2b949
+  languageName: node
+  linkType: hard
+
 "@playwright/test@npm:1.51.1":
   version: 1.51.1
   resolution: "@playwright/test@npm:1.51.1"
@@ -8130,12 +8137,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:5.2.3":
-  version: 5.2.3
-  resolution: "eslint-plugin-prettier@npm:5.2.3"
+"eslint-plugin-prettier@npm:5.2.4":
+  version: 5.2.4
+  resolution: "eslint-plugin-prettier@npm:5.2.4"
   dependencies:
     prettier-linter-helpers: "npm:^1.0.0"
-    synckit: "npm:^0.9.1"
+    synckit: "npm:^0.10.2"
   peerDependencies:
     "@types/eslint": ">=8.0.0"
     eslint: ">=8.0.0"
@@ -8146,7 +8153,7 @@ __metadata:
       optional: true
     eslint-config-prettier:
       optional: true
-  checksum: 10/6444a0b89f3e2a6b38adce69761133f8539487d797f1655b3fa24f93a398be132c4f68f87041a14740b79202368d5782aa1dffd2bd7a3ea659f263d6796acf15
+  checksum: 10/6508bf7e12b98e16fe185c64cd290a6d055b7fadaef30b5b4677cf4a1ce8b1d5975590722809fa762b1cdf01b605559cf4d40fc900a6f67f49bb02ecff092e78
   languageName: node
   linkType: hard
 
@@ -15931,6 +15938,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"synckit@npm:^0.10.2":
+  version: 0.10.2
+  resolution: "synckit@npm:0.10.2"
+  dependencies:
+    "@pkgr/core": "npm:^0.2.0"
+    tslib: "npm:^2.8.1"
+  checksum: 10/1bdab0f2d57e311682bb72eedbccf59edc09a5741157b10c22563d65e33532a63464b54fe33e7933b6492062bf0e0e3a0a53099232bb7be2fecd6bf6c22fa155
+  languageName: node
+  linkType: hard
+
 "synckit@npm:^0.6.0":
   version: 0.6.2
   resolution: "synckit@npm:0.6.2"
@@ -17340,7 +17357,7 @@ __metadata:
     defu: "npm:^6.1.4"
     eslint: "npm:9.23.0"
     eslint-config-prettier: "npm:10.1.1"
-    eslint-plugin-prettier: "npm:5.2.3"
+    eslint-plugin-prettier: "npm:5.2.4"
     happy-dom: "npm:17.4.4"
     husky: "npm:9.1.7"
     lint-staged: "npm:15.5.0"
