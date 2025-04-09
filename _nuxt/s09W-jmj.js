@@ -1,1 +1,0 @@
-import o from"./DItdO3UX.js";import{d as r,V as t,e as n}from"./t_IpAuO7.js";const m=r({__name:"SourceLink",props:{source:{type:String,required:!0}},setup(_){return(c,p)=>{const e=o;return n(),t(e)}}});export{m as default};
