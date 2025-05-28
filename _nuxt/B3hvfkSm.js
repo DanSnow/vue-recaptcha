@@ -1,1 +1,0 @@
-import{k as r,c as t,e as n,ac as o}from"./C2wUitCL.js";const s={};function c(e,a){return n(),t("strong",null,[o(e.$slots,"default",{},void 0,!0)])}const l=r(s,[["render",c],["__scopeId","data-v-de24625d"]]);export{l as default};
