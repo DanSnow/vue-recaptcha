@@ -1,0 +1,1 @@
+import{k as c,c as n,e as t,ac as o}from"./Bt7PSdlq.js";const r={};function a(e,s){return t(),n("code",null,[o(e.$slots,"default",{},void 0,!0)])}const d=c(r,[["render",a],["__scopeId","data-v-22b00c57"]]);export{d as default};
