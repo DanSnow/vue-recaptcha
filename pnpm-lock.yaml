@@ -182,7 +182,7 @@ importers:
         version: 5.8.3
       unbuild:
         specifier: 3.6.1
-        version: 3.6.1(typescript@5.8.3)(vue-tsc@2.2.12(typescript@5.8.3))(vue@3.5.19(typescript@5.8.3))
+        version: 3.6.1(typescript@5.8.3)(vue-sfc-transformer@0.1.16(@vue/compiler-core@3.5.21)(esbuild@0.25.9)(vue@3.5.19(typescript@5.8.3)))(vue-tsc@2.2.12(typescript@5.8.3))(vue@3.5.19(typescript@5.8.3))
       vite:
         specifier: 6.3.5
         version: 6.3.5(@types/node@24.3.1)(jiti@2.5.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
@@ -192,6 +192,9 @@ importers:
       vue:
         specifier: 3.5.19
         version: 3.5.19(typescript@5.8.3)
+      vue-sfc-transformer:
+        specifier: ^0.1.16
+        version: 0.1.16(@vue/compiler-core@3.5.21)(esbuild@0.25.9)(vue@3.5.19(typescript@5.8.3))
       vue-tsc:
         specifier: 2.2.12
         version: 2.2.12(typescript@5.8.3)
@@ -6465,6 +6468,14 @@ packages:
     peerDependencies:
       vue: ^3.2.0
 
+  vue-sfc-transformer@0.1.16:
+    resolution: {integrity: sha512-pXx4pkHigOJCzGPXhGA9Rdou1oIuNiF9n4n5GQ7C4QehTXFEpKUjcpvc3PZ6LvC6ccUL021qor8j1153Y7/6Ig==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@vue/compiler-core': ^3.5.13
+      esbuild: '*'
+      vue: ^3.5.13
+
   vue-template-compiler@2.7.16:
     resolution: {integrity: sha512-AYbUWAJHLGGQM7+cNTELw+KsOG9nl2CnSv467WobS5Cv9uk3wFcnr1Etsz2sEIHEZvw1U+o9mRlEO6QbZvUPGQ==}
 
@@ -12285,7 +12296,7 @@ snapshots:
       typescript: 5.8.3
       vue-tsc: 2.2.12(typescript@5.8.3)
 
-  mkdist@2.3.0(typescript@5.8.3)(vue-tsc@2.2.12(typescript@5.8.3))(vue@3.5.19(typescript@5.8.3)):
+  mkdist@2.3.0(typescript@5.8.3)(vue-sfc-transformer@0.1.16(@vue/compiler-core@3.5.21)(esbuild@0.25.9)(vue@3.5.19(typescript@5.8.3)))(vue-tsc@2.2.12(typescript@5.8.3))(vue@3.5.19(typescript@5.8.3)):
     dependencies:
       autoprefixer: 10.4.21(postcss@8.5.6)
       citty: 0.1.6
@@ -12303,6 +12314,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
       vue: 3.5.19(typescript@5.8.3)
+      vue-sfc-transformer: 0.1.16(@vue/compiler-core@3.5.21)(esbuild@0.25.9)(vue@3.5.19(typescript@5.8.3))
       vue-tsc: 2.2.12(typescript@5.8.3)
 
   mlly@1.8.0:
@@ -14159,7 +14171,7 @@ snapshots:
       - supports-color
       - vue-tsc
 
-  unbuild@3.6.1(typescript@5.8.3)(vue-tsc@2.2.12(typescript@5.8.3))(vue@3.5.19(typescript@5.8.3)):
+  unbuild@3.6.1(typescript@5.8.3)(vue-sfc-transformer@0.1.16(@vue/compiler-core@3.5.21)(esbuild@0.25.9)(vue@3.5.19(typescript@5.8.3)))(vue-tsc@2.2.12(typescript@5.8.3))(vue@3.5.19(typescript@5.8.3)):
     dependencies:
       '@rollup/plugin-alias': 5.1.1(rollup@4.50.0)
       '@rollup/plugin-commonjs': 28.0.6(rollup@4.50.0)
@@ -14175,7 +14187,7 @@ snapshots:
       hookable: 5.5.3
       jiti: 2.5.1
       magic-string: 0.30.18
-      mkdist: 2.3.0(typescript@5.8.3)(vue-tsc@2.2.12(typescript@5.8.3))(vue@3.5.19(typescript@5.8.3))
+      mkdist: 2.3.0(typescript@5.8.3)(vue-sfc-transformer@0.1.16(@vue/compiler-core@3.5.21)(esbuild@0.25.9)(vue@3.5.19(typescript@5.8.3)))(vue-tsc@2.2.12(typescript@5.8.3))(vue@3.5.19(typescript@5.8.3))
       mlly: 1.8.0
       pathe: 2.0.3
       pkg-types: 2.3.0
@@ -14669,6 +14681,13 @@ snapshots:
   vue-router@4.5.1(vue@3.5.19(typescript@5.8.3)):
     dependencies:
       '@vue/devtools-api': 6.6.4
+      vue: 3.5.19(typescript@5.8.3)
+
+  vue-sfc-transformer@0.1.16(@vue/compiler-core@3.5.21)(esbuild@0.25.9)(vue@3.5.19(typescript@5.8.3)):
+    dependencies:
+      '@babel/parser': 7.28.4
+      '@vue/compiler-core': 3.5.21
+      esbuild: 0.25.9
       vue: 3.5.19(typescript@5.8.3)
 
   vue-template-compiler@2.7.16:
