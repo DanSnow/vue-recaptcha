@@ -1,4 +1,5 @@
-$schema: 'https://moonrepo.dev/schemas/toolchain.json'
+$schema: "https://moonrepo.dev/schemas/toolchain.json"
 
 node:
-  packageManager: yarn
+  packageManager: pnpm
+  syncPackageManagerField: false
