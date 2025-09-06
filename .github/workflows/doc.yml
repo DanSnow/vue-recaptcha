@@ -14,7 +14,8 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: pnpm
       - uses: actions4git/setup-git@v1
       - uses: moonrepo/setup-toolchain@v0
       - run: |
