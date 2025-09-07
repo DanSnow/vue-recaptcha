@@ -1,0 +1,1 @@
+import{k as t,c as n,e as c,ac as o}from"./Bt4b_yXN.js";const a={};function r(e,s){return c(),n("thead",null,[o(e.$slots,"default",{},void 0,!0)])}const d=t(a,[["render",r],["__scopeId","data-v-15893f3c"]]);export{d as default};
