@@ -1,1 +1,0 @@
-import{k as r,c as t,e as a,ac as c}from"./C4Dh12Um.js";const n={};function o(e,s){return a(),t("em",null,[c(e.$slots,"default",{},void 0,!0)])}const l=r(n,[["render",o],["__scopeId","data-v-6eae1e5d"]]);export{l as default};

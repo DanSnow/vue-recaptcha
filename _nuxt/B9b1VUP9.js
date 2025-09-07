@@ -1,1 +1,0 @@
-import{k as o,c as t,e as c,ac as r}from"./C4Dh12Um.js";const n={};function s(e,a){return c(),t("blockquote",null,[r(e.$slots,"default",{},void 0,!0)])}const d=o(n,[["render",s],["__scopeId","data-v-7fd23482"]]);export{d as default};
