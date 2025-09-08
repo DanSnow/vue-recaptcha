@@ -1,0 +1,1 @@
+import{k as t,c as a,e as c,h as s,ac as n}from"./ChkFXRpN.js";const o={},r={class:"table-wrapper"};function _(e,d){return c(),a("div",r,[s("table",null,[n(e.$slots,"default",{},void 0,!0)])])}const f=t(o,[["render",_],["__scopeId","data-v-0fc86596"]]);export{f as default};
