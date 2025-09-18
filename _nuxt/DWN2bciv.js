@@ -1,1 +1,0 @@
-import{k as c,c as o,e as r,ac as t}from"./ChkFXRpN.js";const a={};function n(e,s){return r(),o("ol",null,[t(e.$slots,"default",{},void 0,!0)])}const d=c(a,[["render",n],["__scopeId","data-v-7ee5acc4"]]);export{d as default};

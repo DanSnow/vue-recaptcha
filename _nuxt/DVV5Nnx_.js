@@ -1,1 +1,0 @@
-import{k as o,c as t,e as c,ac as r}from"./ChkFXRpN.js";const a={};function n(e,s){return c(),t("blockquote",null,[r(e.$slots,"default",{},void 0,!0)])}const d=o(a,[["render",n],["__scopeId","data-v-9ad2eff6"]]);export{d as default};
