@@ -1,0 +1,1 @@
+import{k as t,c,e as o,ac as s}from"./we4zdBCV.js";const a={},r={class:"preview-layout"};function n(e,d){return o(),c("div",r,[s(e.$slots,"default",{},void 0,!0)])}const l=t(a,[["render",n],["__scopeId","data-v-4d50d98c"]]);export{l as default};

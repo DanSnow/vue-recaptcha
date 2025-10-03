@@ -1,0 +1,1 @@
+import{k as t,c as n,e as a,ac as c}from"./we4zdBCV.js";const o={};function r(e,s){return a(),n("td",null,[c(e.$slots,"default",{},void 0,!0)])}const d=t(o,[["render",r],["__scopeId","data-v-a0d0a861"]]);export{d as default};
