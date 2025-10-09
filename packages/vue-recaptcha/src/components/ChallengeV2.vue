@@ -48,7 +48,7 @@ const { root, reset, widgetID, state, execute, isError, isExpired, isVerified } 
   {
     size: 'invisible',
     badge: props.badge,
-    tabindex: props.tabindex,
+    tabindex: props.tabindex ?? '',
   },
   toRef(props, 'modelValue'),
   emit,
