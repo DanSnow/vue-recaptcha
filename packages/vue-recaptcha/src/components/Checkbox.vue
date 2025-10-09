@@ -47,7 +47,7 @@ const { root } = useComponentV2(
   {
     theme: props.theme,
     size: props.size,
-    tabindex: props.tabindex,
+    tabindex: props.tabindex ?? '',
   },
   toRef(props, 'modelValue'),
   emit,
