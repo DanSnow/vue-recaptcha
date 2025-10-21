@@ -1,1 +1,0 @@
-import{k as n,c as t,e as c,ac as o}from"./DqnxG2eg.js";const r={};function a(e,s){return c(),t("p",null,[o(e.$slots,"default",{},void 0,!0)])}const d=n(r,[["render",a],["__scopeId","data-v-6c046913"]]);export{d as default};
