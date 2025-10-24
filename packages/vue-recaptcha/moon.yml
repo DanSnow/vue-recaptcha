@@ -1,14 +1,14 @@
-$schema: 'https://moonrepo.dev/schemas/project.json'
+$schema: "https://moonrepo.dev/schemas/project.json"
 
 platform: node
 
 tasks:
   build:
-    command: unbuild
+    command: tsdown
     inputs:
-      - /src/**/*
+      - src/**/*
     outputs:
-      - dist/
+      - dist
   dev:
     command: vite
   lint:
