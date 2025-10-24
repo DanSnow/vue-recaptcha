@@ -1,4 +1,4 @@
-import { createHead } from '@unhead/vue'
+import { createHead } from '@unhead/vue/client'
 import { createApp } from 'vue'
 import { VueRecaptchaPlugin } from '../src'
 import App from './App.vue'
