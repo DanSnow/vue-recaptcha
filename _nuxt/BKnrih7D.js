@@ -1,1 +1,0 @@
-import{_ as o,c as r,o as t,h as a}from"./BaiHIqRL.js";const c={};function n(e,s){return t(),r("li",null,[a(e.$slots,"default",{},void 0,!0)])}const _=o(c,[["render",n],["__scopeId","data-v-85fca6a9"]]);export{_ as default};

@@ -1,0 +1,1 @@
+import{_ as o,c as r,o as t,h as n}from"./DrbGMSxA.js";const s={};function a(e,c){return t(),r("ul",null,[n(e.$slots,"default",{},void 0,!0)])}const d=o(s,[["render",a],["__scopeId","data-v-481dffa9"]]);export{d as default};
