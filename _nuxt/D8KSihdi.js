@@ -1,1 +1,0 @@
-import o from"./CCspl_DN.js";import{e as r,n,o as t}from"./C4A0j_H1.js";const m=r({__name:"SourceLink",props:{source:{type:String,required:!0}},setup(_){return(c,p)=>{const e=o;return t(),n(e)}}});export{m as default};
