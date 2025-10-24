@@ -1,10 +1,10 @@
 import type { App } from 'vue'
-import { getEnterpriseRecaptcha } from './utils'
-import { unheadScriptLoader } from './script-manager/unhead'
-import { createPlugin } from './plugin'
-
 // @ts-expect-error no types
 import { defineNuxtPlugin, useRuntimeConfig } from '#imports'
+import { createPlugin } from './plugin'
+import { unheadScriptLoader } from './script-manager/unhead'
+
+import { getEnterpriseRecaptcha } from './utils'
 
 export default defineNuxtPlugin(({ vueApp }: { vueApp: App }) => {
   const {

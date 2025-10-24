@@ -1,12 +1,22 @@
 {
-  "vitest.commandLine": "yarn vitest",
   "testing.automaticallyOpenPeekView": "never",
   // Enable the ESlint flat config support
-  "eslint.experimental.useFlatConfig": true,
 
   // Disable the default formatter, use eslint instead
   "prettier.enable": true,
   "editor.formatOnSave": true,
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   // Auto fix
   "editor.codeActionsOnSave": {

@@ -1,13 +1,13 @@
 import type { Plugin } from 'vue-demi'
-import { ref } from 'vue-demi'
 import type { RecaptchaOptionsInput } from './composables/context'
-import { RecaptchaContextKey, normalizeOptions } from './composables/context'
-import { createRecaptchaProxy } from './composables/proxy'
 import type { GRecaptcha } from './script-manager/common'
-import { checkRecaptchaLoad, recaptchaLoaded } from './script-manager/common'
-import { warn } from './utils'
 import type { RecaptchaPlugin } from './types'
+import { ref } from 'vue-demi'
+import { normalizeOptions, RecaptchaContextKey } from './composables/context'
+import { createRecaptchaProxy } from './composables/proxy'
+import { checkRecaptchaLoad, recaptchaLoaded } from './script-manager/common'
 import { createHeadRecaptcha } from './script-manager/head'
+import { warn } from './utils'
 
 export interface CreatePluginOptions {
   getRecaptcha?: () => GRecaptcha

@@ -1,8 +1,8 @@
-import { whenever } from '@vueuse/shared'
 import type { Ref } from 'vue-demi'
-import { computed, watch } from 'vue-demi'
 import type { WidgetID } from '../script-manager/common'
 import type { RecaptchaV2OptionsInput } from './challenge-v2'
+import { whenever } from '@vueuse/shared'
+import { computed, watch } from 'vue-demi'
 import { RecaptchaV2State, useChallengeV2 } from './challenge-v2'
 
 interface Emits {

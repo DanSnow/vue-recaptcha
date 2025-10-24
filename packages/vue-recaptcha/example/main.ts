@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
 import { createHead } from '@unhead/vue'
+import { createApp } from 'vue'
 import { VueRecaptchaPlugin } from '../src'
 import App from './App.vue'
 

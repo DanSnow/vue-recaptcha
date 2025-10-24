@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { until } from '@vueuse/core'
 import { useField, useForm } from 'vee-validate'
 import * as yup from 'yup'
-import { until } from '@vueuse/core'
 
 const { handleSubmit } = useForm({
   validationSchema: yup.object({

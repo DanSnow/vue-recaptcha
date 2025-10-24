@@ -1,27 +1,25 @@
-const antfu = require('@antfu/eslint-config').default
-const prettier = require('eslint-plugin-prettier')
+import antfu from '@antfu/eslint-config'
+import eslintPluginPrettier from 'eslint-plugin-prettier'
 
 const ignores = ['node_modules/**', 'dist/**', 'lib/**', 'coverage/**', '.yarn/**', '**/*.md', '**/*.toml']
-module.exports = antfu(
+
+export default antfu(
   {
     ignores,
     stylistic: false,
+    plugins: {
+      prettier: eslintPluginPrettier,
+    },
     rules: {
       'vue/html-self-closing': 'off',
       'vue/singleline-html-element-content-newline': 'off',
 
       'antfu/top-level-function': 'error',
-    },
-  },
-  {
-    plugins: { prettier },
-    ignores,
-    rules: {
       'prettier/prettier': 'error',
     },
   },
   {
-    files: ['docs/**/*.ts', 'docs/**/*.vue'],
+    files: ['packages/docs/**/*.ts', 'packages/docs/**/*.vue'],
     rules: {
       'no-console': 'off',
     },
