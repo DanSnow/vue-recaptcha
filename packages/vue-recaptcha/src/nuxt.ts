@@ -38,33 +38,34 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url)
     nuxt.options.build.transpile.push(resolver.resolve('.'), 'vue-recaptcha')
 
-    for (const [name, fileName] of Object.entries(COMPONENTS)) {
+    for (const [name, component] of Object.entries(COMPONENTS)) {
       await addComponent({
         name,
         global: opt._globalComponent,
-        filePath: resolver.resolve(`./components/${fileName}.vue`),
+        filePath: resolver.resolve('.'),
+        export: component,
       })
     }
 
     addImports([
       {
-        from: resolver.resolve('./composables/context'),
+        from: resolver.resolve('.'),
         name: 'useRecaptchaContext',
       },
       {
-        from: resolver.resolve('./composables/context'),
+        from: resolver.resolve('.'),
         name: 'useRecaptchaProxy',
       },
       {
-        from: resolver.resolve('./composables/challenge-v2'),
+        from: resolver.resolve('.'),
         name: 'useChallengeV2',
       },
       {
-        from: resolver.resolve('./composables/challenge-v3'),
+        from: resolver.resolve('.'),
         name: 'useChallengeV3',
       },
       {
-        from: resolver.resolve('./composables/script-provider'),
+        from: resolver.resolve('.'),
         name: 'useRecaptchaProvider',
       },
     ])
