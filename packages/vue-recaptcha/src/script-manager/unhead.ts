@@ -1,5 +1,5 @@
-import { useHead } from '@unhead/vue'
 import type { ScriptLoaderOptions } from './common'
+import { useHead } from '@unhead/vue'
 import { defineScriptLoader, toQueryString } from './common'
 
 export const unheadScriptLoader = defineScriptLoader((options: ScriptLoaderOptions) => {

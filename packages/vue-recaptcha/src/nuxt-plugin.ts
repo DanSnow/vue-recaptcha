@@ -1,9 +1,9 @@
 import type { App } from 'vue'
-import { createPlugin } from './plugin'
-import { unheadScriptLoader } from './script-manager/unhead'
-
 // @ts-expect-error no types
 import { defineNuxtPlugin, useRuntimeConfig } from '#imports'
+import { createPlugin } from './plugin'
+
+import { unheadScriptLoader } from './script-manager/unhead'
 
 export default defineNuxtPlugin(({ vueApp }: { vueApp: App }) => {
   const {

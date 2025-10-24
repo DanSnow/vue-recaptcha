@@ -1,8 +1,8 @@
 import type { InjectionKey, Ref } from 'vue-demi'
-import { inject } from 'vue-demi'
 import type { RecaptchaParams, ScriptLoaderOptionsInput } from '../script-manager/common'
-import { invariant, warn } from '../utils'
 import type { RecaptchaProxy } from './proxy'
+import { inject } from 'vue-demi'
+import { invariant, warn } from '../utils'
 
 export interface RecaptchaOptionsInput {
   v2SiteKey?: string | undefined

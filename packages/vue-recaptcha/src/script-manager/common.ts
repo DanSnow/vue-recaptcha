@@ -1,6 +1,6 @@
 import type { LiteralUnion, Tagged } from 'type-fest'
-import pDefer from 'p-defer'
 import defu from 'defu'
+import pDefer from 'p-defer'
 import { warn } from '../utils'
 
 export type RecaptchaCallback = '__vueRecaptchaLoaded'

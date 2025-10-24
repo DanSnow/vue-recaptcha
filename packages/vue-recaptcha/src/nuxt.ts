@@ -1,5 +1,5 @@
-import { addComponent, addImports, addPlugin, createResolver, defineNuxtModule, useLogger, useNuxt } from '@nuxt/kit'
 import type { RecaptchaOptionsInput } from './api'
+import { addComponent, addImports, addPlugin, createResolver, defineNuxtModule, useLogger, useNuxt } from '@nuxt/kit'
 
 const COMPONENTS = {
   RecaptchaCheckbox: 'Checkbox',

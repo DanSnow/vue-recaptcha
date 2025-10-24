@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { toRef } from 'vue-demi'
 import type { WidgetID } from '../script-manager/common'
+import { toRef } from 'vue-demi'
 import { useComponentV2 } from '../composables/component-v2'
 
 const props = withDefaults(
