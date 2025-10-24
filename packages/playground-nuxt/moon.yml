@@ -2,6 +2,12 @@ dependsOn:
   - vue-recaptcha
 
 tasks:
+  prepare:
+    command:
+      - nuxt
+      - prepare
+    deps:
+      - ^:build
   dev:
     command:
       - nuxt
