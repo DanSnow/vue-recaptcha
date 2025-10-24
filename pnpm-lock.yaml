@@ -145,8 +145,8 @@ importers:
         specifier: 8.1.0
         version: 8.1.0(@vue/compiler-sfc@3.5.22)(vue@3.5.22(typescript@5.9.3))
       '@unhead/vue':
-        specifier: 1.11.20
-        version: 1.11.20(vue@3.5.22(typescript@5.9.3))
+        specifier: 2.0.19
+        version: 2.0.19(vue@3.5.22(typescript@5.9.3))
       '@vitejs/plugin-vue':
         specifier: 6.0.1
         version: 6.0.1(vite@7.1.12(@types/node@24.3.1)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))(vue@3.5.22(typescript@5.9.3))
@@ -1929,6 +1929,11 @@ packages:
 
   '@unhead/vue@2.0.14':
     resolution: {integrity: sha512-Ym9f+Kd2Afqek2FtUHvYvK+j2uZ2vbZ6Rr9NCnNGGBMdmafAuiZpT117YGyh0ARcueL6Znia0U8ySqPsnHOZIg==}
+    peerDependencies:
+      vue: '>=3.5.18'
+
+  '@unhead/vue@2.0.19':
+    resolution: {integrity: sha512-7BYjHfOaoZ9+ARJkT10Q2TjnTUqDXmMpfakIAsD/hXiuff1oqWg1xeXT5+MomhNcC15HbiABpbbBmITLSHxdKg==}
     peerDependencies:
       vue: '>=3.5.18'
 
@@ -6300,6 +6305,9 @@ packages:
   unhead@2.0.14:
     resolution: {integrity: sha512-dRP6OCqtShhMVZQe1F4wdt/WsYl2MskxKK+cvfSo0lQnrPJ4oAUQEkxRg7pPP+vJENabhlir31HwAyHUv7wfMg==}
 
+  unhead@2.0.19:
+    resolution: {integrity: sha512-gEEjkV11Aj+rBnY6wnRfsFtF2RxKOLaPN4i+Gx3UhBxnszvV6ApSNZbGk7WKyy/lErQ6ekPN63qdFL7sa1leow==}
+
   unicode-emoji-modifier-base@1.0.0:
     resolution: {integrity: sha512-yLSH4py7oFH3oG/9K+XWrz1pSi3dfUrWEnInbxMfArOfc1+33BlGPQtLsOYwvdMy11AwUBetYuaRxSPqgkq+8g==}
     engines: {node: '>=4'}
@@ -9142,6 +9150,12 @@ snapshots:
     dependencies:
       hookable: 5.5.3
       unhead: 2.0.14
+      vue: 3.5.22(typescript@5.9.3)
+
+  '@unhead/vue@2.0.19(vue@3.5.22(typescript@5.9.3))':
+    dependencies:
+      hookable: 5.5.3
+      unhead: 2.0.19
       vue: 3.5.22(typescript@5.9.3)
 
   '@unocss/astro@0.65.4(rollup@3.29.5)(vite@7.1.12(@types/node@24.3.1)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))(vue@3.5.22(typescript@5.9.3))':
@@ -14859,6 +14873,10 @@ snapshots:
       hookable: 5.5.3
 
   unhead@2.0.14:
+    dependencies:
+      hookable: 5.5.3
+
+  unhead@2.0.19:
     dependencies:
       hookable: 5.5.3
 
