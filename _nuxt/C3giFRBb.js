@@ -1,0 +1,1 @@
+import{_ as t,c as n,o,h as c}from"./DosVvM_4.js";const r={};function _(e,a){return o(),n("thead",null,[c(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",_],["__scopeId","data-v-0f4d2772"]]);export{d as default};

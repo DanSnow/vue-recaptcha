@@ -1,0 +1,1 @@
+import o from"./Cs2ORtOm.js";import{e as r,x as t,o as n}from"./DosVvM_4.js";const m=r({__name:"SourceLink",props:{source:{type:String,required:!0}},setup(_){return(c,p)=>{const e=o;return n(),t(e)}}});export{m as default};
