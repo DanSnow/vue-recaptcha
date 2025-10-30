@@ -1,1 +1,0 @@
-import{_ as n}from"./D-DI_O2I.js";import{e as o,i as t}from"./DosVvM_4.js";const s=o({props:{use:{type:Function,default:void 0},unwrap:{type:[Boolean,String],default:!1}},render(e){return t(n,e)}});export{s as default};
