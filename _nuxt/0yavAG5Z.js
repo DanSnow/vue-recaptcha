@@ -1,0 +1,1 @@
+import{_ as n}from"./CgDmf2X_.js";import{e as o,i as t}from"./_X-qjln9.js";const s=o({props:{use:{type:Function,default:void 0},unwrap:{type:[Boolean,String],default:!1}},render(e){return t(n,e)}});export{s as default};
