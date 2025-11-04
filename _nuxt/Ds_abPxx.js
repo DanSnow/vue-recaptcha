@@ -1,0 +1,1 @@
+import{_ as o,c as t,o as c,h as r}from"./Ceuf_KlG.js";const n={};function s(e,a){return c(),t("blockquote",null,[r(e.$slots,"default",{},void 0,!0)])}const _=o(n,[["render",s],["__scopeId","data-v-e0cb7831"]]);export{_ as default};
