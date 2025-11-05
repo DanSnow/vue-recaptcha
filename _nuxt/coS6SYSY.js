@@ -1,1 +1,0 @@
-import{_ as t,c as n,o,h as c}from"./Ceuf_KlG.js";const r={};function _(e,s){return o(),n("th",null,[c(e.$slots,"default",{},void 0,!0)])}const f=t(r,[["render",_],["__scopeId","data-v-7106ff38"]]);export{f as default};
