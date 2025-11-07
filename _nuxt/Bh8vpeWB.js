@@ -1,1 +1,0 @@
-import{_ as o,c as r,o as t,h as c}from"./BQrUEb2b.js";const n={};function s(e,a){return t(),r("ul",null,[c(e.$slots,"default",{},void 0,!0)])}const _=o(n,[["render",s],["__scopeId","data-v-c39a5541"]]);export{_ as default};
