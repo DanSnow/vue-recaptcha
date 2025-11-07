@@ -1,0 +1,1 @@
+import{_ as t,c as n,o,h as c}from"./DFgQegCh.js";const r={};function _(e,a){return o(),n("thead",null,[c(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",_],["__scopeId","data-v-8417827b"]]);export{d as default};
