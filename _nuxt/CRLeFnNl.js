@@ -1,1 +1,0 @@
-import{_ as t,c as n,o,h as c}from"./SiB4-U3J.js";const r={};function _(e,s){return o(),n("td",null,[c(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",_],["__scopeId","data-v-2e082609"]]);export{d as default};
