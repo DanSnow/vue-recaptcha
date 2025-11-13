@@ -1,1 +1,0 @@
-import{_ as t,c as n,o,h as c}from"./CLXXmcZu.js";const r={};function _(e,s){return o(),n("td",null,[c(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",_],["__scopeId","data-v-cf10d806"]]);export{d as default};
