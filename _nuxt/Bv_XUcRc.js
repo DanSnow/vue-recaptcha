@@ -1,1 +1,0 @@
-import{_ as n,c as t,o,h as c}from"./BIMhuBud.js";const r={};function _(e,a){return o(),t("p",null,[c(e.$slots,"default",{},void 0,!0)])}const d=n(r,[["render",_],["__scopeId","data-v-11039ad3"]]);export{d as default};
