@@ -1,0 +1,1 @@
+import{_ as t,c as n,o,h as a}from"./DZcSZzt_.js";const c={};function r(e,_){return o(),n("thead",null,[a(e.$slots,"default",{},void 0,!0)])}const d=t(c,[["render",r],["__scopeId","data-v-3ae0e857"]]);export{d as default};
