@@ -1,0 +1,1 @@
+import{_ as t,c as n,o as a,h as o}from"./DL27zseU.js";const c={};function r(e,_){return a(),n("thead",null,[o(e.$slots,"default",{},void 0,!0)])}const d=t(c,[["render",r],["__scopeId","data-v-d9aaa137"]]);export{d as default};
