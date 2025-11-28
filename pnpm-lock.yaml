@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: 6.2.0
-        version: 6.2.0(@vue/compiler-sfc@3.5.25)(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))
+        version: 6.2.0(@vue/compiler-sfc@3.5.25)(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.11)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))
       '@moonrepo/cli':
         specifier: 1.41.7
         version: 1.41.7
@@ -68,7 +68,7 @@ importers:
         version: 3.20.1(@parcel/watcher@2.5.1)(@types/node@24.9.1)(@vue/compiler-sfc@3.5.25)(db0@0.3.4)(eslint@9.39.1(jiti@2.6.1))(ioredis@5.8.2)(magicast@0.3.5)(optionator@0.9.4)(rolldown@1.0.0-beta.52)(rollup@3.29.5)(terser@5.44.0)(tsx@4.20.5)(typescript@5.9.3)(vite@7.2.4(@types/node@24.9.1)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))(vue-tsc@2.2.12(typescript@5.9.3))(yaml@2.8.1)
       vitest:
         specifier: 3.2.4
-        version: 3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
+        version: 3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.11)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
       zx:
         specifier: 8.8.5
         version: 8.8.5
@@ -134,7 +134,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: 6.2.0
-        version: 6.2.0(@vue/compiler-sfc@3.5.25)(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))
+        version: 6.2.0(@vue/compiler-sfc@3.5.25)(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.11)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))
       '@playwright/test':
         specifier: 1.57.0
         version: 1.57.0
@@ -169,8 +169,8 @@ importers:
         specifier: 5.5.4
         version: 5.5.4(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.1)
       happy-dom:
-        specifier: 20.0.10
-        version: 20.0.10
+        specifier: 20.0.11
+        version: 20.0.11
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -203,7 +203,7 @@ importers:
         version: 7.2.4(@types/node@24.9.1)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
       vitest:
         specifier: 3.2.4
-        version: 3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
+        version: 3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.11)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
       vue:
         specifier: 3.5.25
         version: 3.5.25(typescript@5.9.3)
@@ -4335,8 +4335,8 @@ packages:
   hachure-fill@0.5.2:
     resolution: {integrity: sha512-3GKBOn+m2LX9iq+JC1064cSFprJY4jL1jCXTcpnfER5HYE2l/4EfWSGzkPa/ZDBmYI0ZOEj5VHV/eKnPGkHuOg==}
 
-  happy-dom@20.0.10:
-    resolution: {integrity: sha512-6umCCHcjQrhP5oXhrHQQvLB0bwb1UzHAHdsXy+FjtKoYjUhmNZsQL8NivwM1vDvNEChJabVrUYxUnp/ZdYmy2g==}
+  happy-dom@20.0.11:
+    resolution: {integrity: sha512-QsCdAUHAmiDeKeaNojb1OHOPF7NjcWPBR7obdu3NwH2a/oyQaLg5d0aaCy/9My6CdPChYF07dvz5chaXBGaD4g==}
     engines: {node: '>=20.0.0'}
 
   has-bigints@1.1.0:
@@ -7472,7 +7472,7 @@ packages:
 
 snapshots:
 
-  '@antfu/eslint-config@6.2.0(@vue/compiler-sfc@3.5.25)(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))':
+  '@antfu/eslint-config@6.2.0(@vue/compiler-sfc@3.5.25)(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.11)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@clack/prompts': 0.11.0
@@ -7481,7 +7481,7 @@ snapshots:
       '@stylistic/eslint-plugin': 5.5.0(eslint@9.39.1(jiti@2.6.1))
       '@typescript-eslint/eslint-plugin': 8.46.2(@typescript-eslint/parser@8.46.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       '@typescript-eslint/parser': 8.46.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
-      '@vitest/eslint-plugin': 1.4.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))
+      '@vitest/eslint-plugin': 1.4.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.11)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))
       ansis: 4.2.0
       cac: 6.7.14
       eslint: 9.39.1(jiti@2.6.1)
@@ -10326,14 +10326,14 @@ snapshots:
       vite: 7.2.4(@types/node@24.9.1)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
       vue: 3.5.25(typescript@5.9.3)
 
-  '@vitest/eslint-plugin@1.4.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))':
+  '@vitest/eslint-plugin@1.4.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.11)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1))':
     dependencies:
       '@typescript-eslint/scope-manager': 8.46.2
       '@typescript-eslint/utils': 8.46.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3)
       eslint: 9.39.1(jiti@2.6.1)
     optionalDependencies:
       typescript: 5.9.3
-      vitest: 3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
+      vitest: 3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.11)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -12646,7 +12646,7 @@ snapshots:
 
   hachure-fill@0.5.2: {}
 
-  happy-dom@20.0.10:
+  happy-dom@20.0.11:
     dependencies:
       '@types/node': 20.19.13
       '@types/whatwg-mimetype': 3.0.2
@@ -16346,7 +16346,7 @@ snapshots:
       tsx: 4.20.5
       yaml: 2.8.1
 
-  vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1):
+  vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.9.1)(happy-dom@20.0.11)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.1):
     dependencies:
       '@types/chai': 5.2.2
       '@vitest/expect': 3.2.4
@@ -16374,7 +16374,7 @@ snapshots:
     optionalDependencies:
       '@types/debug': 4.1.12
       '@types/node': 24.9.1
-      happy-dom: 20.0.10
+      happy-dom: 20.0.11
     transitivePeerDependencies:
       - jiti
       - less
