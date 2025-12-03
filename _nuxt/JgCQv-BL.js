@@ -1,0 +1,1 @@
+import{_ as t,c as n,o,h as r}from"./Czlp1o-x.js";const a={};function c(e,_){return o(),n("tr",null,[r(e.$slots,"default",{},void 0,!0)])}const d=t(a,[["render",c],["__scopeId","data-v-d097aad8"]]);export{d as default};

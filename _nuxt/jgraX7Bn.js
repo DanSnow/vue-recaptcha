@@ -1,1 +1,0 @@
-import{_ as n}from"./DNerUNL3.js";import{e as o,i as t}from"./DSk9mlPR.js";const s=o({props:{use:{type:Function,default:void 0},unwrap:{type:[Boolean,String],default:!1}},render(e){return t(n,e)}});export{s as default};
