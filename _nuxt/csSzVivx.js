@@ -1,0 +1,1 @@
+import{_ as n,c as o,o as t,h as c}from"./DSCr9v1X.js";const r={};function _(e,s){return t(),o("code",null,[c(e.$slots,"default",{},void 0,!0)])}const d=n(r,[["render",_],["__scopeId","data-v-45d55294"]]);export{d as default};
