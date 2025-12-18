@@ -1,0 +1,1 @@
+import{_ as o,c as r,o as t,h as n}from"./CPkU-QGX.js";const s={};function c(e,a){return t(),r("li",null,[n(e.$slots,"default",{},void 0,!0)])}const _=o(s,[["render",c],["__scopeId","data-v-477f1451"]]);export{_ as default};
