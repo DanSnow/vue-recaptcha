@@ -145,8 +145,8 @@ importers:
         specifier: 8.1.0
         version: 8.1.0(@vue/compiler-sfc@3.5.26)(vue@3.5.26(typescript@5.9.3))
       '@unhead/vue':
-        specifier: 2.1.1
-        version: 2.1.1(vue@3.5.26(typescript@5.9.3))
+        specifier: 2.1.2
+        version: 2.1.2(vue@3.5.26(typescript@5.9.3))
       '@vitejs/plugin-vue':
         specifier: 6.0.3
         version: 6.0.3(vite@7.3.1(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.2))(vue@3.5.26(typescript@5.9.3))
@@ -2518,8 +2518,8 @@ packages:
     peerDependencies:
       vue: '>=3.5.18'
 
-  '@unhead/vue@2.1.1':
-    resolution: {integrity: sha512-WYa8ORhfv7lWDSoNpkMKhbW1Dbsux/3HqMcVkZS3xZ2/c/VrcChLj+IMadpCd1WNR0srITfRJhBYZ1i9hON5Qw==}
+  '@unhead/vue@2.1.2':
+    resolution: {integrity: sha512-w5yxH/fkkLWAFAOnMSIbvAikNHYn6pgC7zGF/BasXf+K3CO1cYIPFehYAk5jpcsbiNPMc3goyyw1prGLoyD14g==}
     peerDependencies:
       vue: '>=3.5.18'
 
@@ -7051,8 +7051,8 @@ packages:
   unhead@2.0.19:
     resolution: {integrity: sha512-gEEjkV11Aj+rBnY6wnRfsFtF2RxKOLaPN4i+Gx3UhBxnszvV6ApSNZbGk7WKyy/lErQ6ekPN63qdFL7sa1leow==}
 
-  unhead@2.1.1:
-    resolution: {integrity: sha512-NOt8n2KybAOxSLfNXegAVai4SGU8bPKqWnqCzNAvnRH2i8mW+0bbFjN/L75LBgCSTiOjJSpANe5w2V34Grr7Cw==}
+  unhead@2.1.2:
+    resolution: {integrity: sha512-vSihrxyb+zsEUfEbraZBCjdE0p/WSoc2NGDrpwwSNAwuPxhYK1nH3eegf02IENLpn1sUhL8IoO84JWmRQ6tILA==}
 
   unicode-emoji-modifier-base@1.0.0:
     resolution: {integrity: sha512-yLSH4py7oFH3oG/9K+XWrz1pSi3dfUrWEnInbxMfArOfc1+33BlGPQtLsOYwvdMy11AwUBetYuaRxSPqgkq+8g==}
@@ -9239,7 +9239,7 @@ snapshots:
     dependencies:
       '@nuxt/devalue': 2.0.2
       '@nuxt/kit': 3.20.2(magicast@0.3.5)
-      '@unhead/vue': 2.1.1(vue@3.5.26(typescript@5.9.3))
+      '@unhead/vue': 2.1.2(vue@3.5.26(typescript@5.9.3))
       '@vue/shared': 3.5.25
       consola: 3.4.2
       defu: 6.1.4
@@ -9301,7 +9301,7 @@ snapshots:
     dependencies:
       '@nuxt/devalue': 2.0.2
       '@nuxt/kit': 3.20.2(magicast@0.5.1)
-      '@unhead/vue': 2.1.1(vue@3.5.26(typescript@5.9.3))
+      '@unhead/vue': 2.1.2(vue@3.5.26(typescript@5.9.3))
       '@vue/shared': 3.5.25
       consola: 3.4.2
       defu: 6.1.4
@@ -10619,10 +10619,10 @@ snapshots:
       unhead: 2.0.19
       vue: 3.5.26(typescript@5.9.3)
 
-  '@unhead/vue@2.1.1(vue@3.5.26(typescript@5.9.3))':
+  '@unhead/vue@2.1.2(vue@3.5.26(typescript@5.9.3))':
     dependencies:
-      hookable: 5.5.3
-      unhead: 2.1.1
+      hookable: 6.0.1
+      unhead: 2.1.2
       vue: 3.5.26(typescript@5.9.3)
 
   '@unocss/astro@66.5.12(vite@8.0.0-beta.0(@types/node@24.9.1)(esbuild@0.25.12)(jiti@2.6.1)(terser@5.44.0)(tsx@4.20.5)(yaml@2.8.2))':
@@ -16483,9 +16483,9 @@ snapshots:
     dependencies:
       hookable: 5.5.3
 
-  unhead@2.1.1:
+  unhead@2.1.2:
     dependencies:
-      hookable: 5.5.3
+      hookable: 6.0.1
 
   unicode-emoji-modifier-base@1.0.0: {}
 
