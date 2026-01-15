@@ -1,1 +1,0 @@
-import{_ as o,c as t,o as c,h as r}from"./CeXRAd_Y.js";const n={};function s(e,a){return c(),t("blockquote",null,[r(e.$slots,"default",{},void 0,!0)])}const d=o(n,[["render",s],["__scopeId","data-v-4bd850e8"]]);export{d as default};

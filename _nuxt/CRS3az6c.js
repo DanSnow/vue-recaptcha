@@ -1,1 +1,0 @@
-import{_ as n,c as t,o as c,h as o}from"./CeXRAd_Y.js";const r={};function _(e,s){return c(),t("p",null,[o(e.$slots,"default",{},void 0,!0)])}const d=n(r,[["render",_],["__scopeId","data-v-0c71580c"]]);export{d as default};
