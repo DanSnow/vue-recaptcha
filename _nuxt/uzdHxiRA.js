@@ -1,0 +1,1 @@
+import{_ as o,c as r,o as t,h as c}from"./BkWU0OpL.js";const n={};function s(e,a){return t(),r("em",null,[c(e.$slots,"default",{},void 0,!0)])}const _=o(n,[["render",s],["__scopeId","data-v-eface56d"]]);export{_ as default};
