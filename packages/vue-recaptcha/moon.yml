@@ -13,11 +13,11 @@ tasks:
     command: vite
   lint:
     command:
-      - eslint
+      - oxlint
       - .
   lint-fix:
     command:
-      - eslint
+      - oxlint
       - --fix
       - .
     local: true
