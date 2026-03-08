@@ -1,31 +1,41 @@
 {
   "name": "vue-recaptcha",
-  "type": "module",
   "version": "3.0.0-alpha.6",
   "description": "ReCAPTCHA vue component",
-  "author": "DanSnow",
+  "keywords": [
+    "captcha",
+    "component",
+    "gcaptcha",
+    "google-recaptcha",
+    "google-recaptcha-v3",
+    "nuxt",
+    "nuxt-3",
+    "nuxt3",
+    "recaptcha",
+    "recaptcha-v3",
+    "vue",
+    "vue-component"
+  ],
+  "bugs": {
+    "url": "https://github.com/DanSnow/vue-recaptcha/issues"
+  },
   "license": "MIT",
+  "author": "DanSnow",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DanSnow/vue-recaptcha.git"
   },
-  "bugs": {
-    "url": "https://github.com/DanSnow/vue-recaptcha/issues"
-  },
-  "keywords": [
-    "vue",
-    "component",
-    "vue-component",
-    "google-recaptcha",
-    "google-recaptcha-v3",
-    "recaptcha",
-    "recaptcha-v3",
-    "gcaptcha",
-    "captcha",
-    "nuxt",
-    "nuxt3",
-    "nuxt-3"
+  "workspaces": [
+    ".",
+    "docs"
   ],
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
     "./nuxt": "./dist/nuxt.js",
@@ -34,26 +44,8 @@
     "./unhead": "./dist/unhead.js",
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "prepack": "moon run --no-actions build"
-  },
-  "workspaces": [
-    ".",
-    "docs"
-  ],
-  "peerDependencies": {
-    "vue": "^3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
   },
   "dependencies": {
     "@nuxt/kit": "^3.9.1",
@@ -93,5 +85,13 @@
     "vue": "3.5.27",
     "vue-sfc-transformer": "0.1.17",
     "vue-tsc": "3.1.8"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
   }
 }

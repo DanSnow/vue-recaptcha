@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref } from "vue";
 
-useRecaptchaProvider()
+useRecaptchaProvider();
 
-const checkboxWidgetID = ref()
-const checkboxResponse = ref()
-const checkboxVerified = computed(() => !!checkboxResponse.value)
-const challengeV2WidgetID = ref()
-const challengeV2Response = ref()
-const challengeV2Verified = computed(() => !!challengeV2Response.value)
-const challengeV3Response = ref()
-const challengeV3Verified = computed(() => !!challengeV3Response.value)
+const checkboxWidgetID = ref();
+const checkboxResponse = ref();
+const checkboxVerified = computed(() => !!checkboxResponse.value);
+const challengeV2WidgetID = ref();
+const challengeV2Response = ref();
+const challengeV2Verified = computed(() => !!challengeV2Response.value);
+const challengeV3Response = ref();
+const challengeV3Verified = computed(() => !!challengeV3Response.value);
 </script>
 
 <template>
@@ -21,7 +21,7 @@ const challengeV3Verified = computed(() => !!challengeV3Response.value)
       <div>widgetID: {{ checkboxWidgetID }}</div>
       <div>response: {{ checkboxResponse }}</div>
       <div data-testid="checkbox-verify">
-        {{ checkboxVerified ? 'verified' : '' }}
+        {{ checkboxVerified ? "verified" : "" }}
       </div>
     </div>
     <div id="invisible">
@@ -32,7 +32,7 @@ const challengeV3Verified = computed(() => !!challengeV3Response.value)
       <div>widgetID: {{ challengeV2WidgetID }}</div>
       <div>response: {{ challengeV2Response }}</div>
       <div data-testid="v2-verify">
-        {{ challengeV2Verified ? 'verified' : '' }}
+        {{ challengeV2Verified ? "verified" : "" }}
       </div>
     </div>
     <div id="v3">
@@ -43,7 +43,7 @@ const challengeV3Verified = computed(() => !!challengeV3Response.value)
       <div>response: {{ challengeV3Response }}</div>
       <!-- it's not actually verify for v3 -->
       <div data-testid="v3-verify">
-        {{ challengeV3Verified ? 'verified' : '' }}
+        {{ challengeV3Verified ? "verified" : "" }}
       </div>
     </div>
   </div>

@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import mermaid from 'mermaid'
+import mermaid from "mermaid";
 
-const show = ref(false)
+const show = ref(false);
 
 onMounted(async () => {
-  show.value = true
+  show.value = true;
 
-  await nextTick()
-  mermaid.initialize({ startOnLoad: false })
+  await nextTick();
+  mermaid.initialize({ startOnLoad: false });
   mermaid.run({
-    querySelector: '.mermaid',
+    querySelector: ".mermaid",
     suppressErrors: false,
-  })
-})
+  });
+});
 </script>
 
 <template>

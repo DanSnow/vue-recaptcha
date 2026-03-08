@@ -3,7 +3,9 @@
     <div class="w-2/3">
       <Card class="h-full">
         <template #title> Easy to use </template>
-        <template #description> Use <code v-pre>&lt;Checkbox /&gt;</code> to render reCAPTCHA checkbox </template>
+        <template #description>
+          Use <code v-pre>&lt;Checkbox /&gt;</code> to render reCAPTCHA checkbox
+        </template>
       </Card>
     </div>
 

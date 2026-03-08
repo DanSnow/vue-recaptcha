@@ -1,11 +1,11 @@
-import { defineNuxtConfig } from 'nuxt/config'
+import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  extends: '@nuxt-themes/docus',
+  extends: "@nuxt-themes/docus",
   app: {
-    baseURL: '/vue-recaptcha/',
+    baseURL: "/vue-recaptcha/",
   },
-  modules: ['@unocss/nuxt', '@vueuse/nuxt', ['vue-recaptcha/nuxt', { _globalComponent: true }]],
+  modules: ["@unocss/nuxt", "@vueuse/nuxt", ["vue-recaptcha/nuxt", { _globalComponent: true }]],
   unocss: {
     // presets
     uno: true, // enabled `@unocss/preset-uno`
@@ -19,9 +19,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       recaptcha: {
-        v2SiteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
-        v3SiteKey: '6LejC9kZAAAAAFQyq2IjCq0eK4g88GkixXr4_BGs',
+        v2SiteKey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
+        v3SiteKey: "6LejC9kZAAAAAFQyq2IjCq0eK4g88GkixXr4_BGs",
       },
     },
   },
-})
+});

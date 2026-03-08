@@ -1,14 +1,14 @@
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import { expect, it } from 'vitest'
-import { fs } from 'zx'
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { expect, it } from "vitest";
+import { fs } from "zx";
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-it('should generate queries', async () => {
-  const queryPath = resolve(__dirname, '../dist/api/_content/query')
-  const stat = await fs.stat(queryPath)
-  expect(stat.isDirectory()).toBe(true)
-  const files = await fs.readdir(queryPath)
-  expect(files.length).toBeGreaterThan(0)
-})
+it("should generate queries", async () => {
+  const queryPath = resolve(__dirname, "../dist/api/_content/query");
+  const stat = await fs.stat(queryPath);
+  expect(stat.isDirectory()).toBe(true);
+  const files = await fs.readdir(queryPath);
+  expect(files.length).toBeGreaterThan(0);
+});

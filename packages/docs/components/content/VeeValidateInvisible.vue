@@ -1,28 +1,33 @@
 <script setup lang="ts">
-import { until } from '@vueuse/core'
-import { useField, useForm } from 'vee-validate'
-import * as yup from 'yup'
+import { until } from "@vueuse/core";
+import { useField, useForm } from "vee-validate";
+import * as yup from "yup";
 
 const { handleSubmit } = useForm({
   validationSchema: yup.object({
     name: yup.string().required(),
   }),
-})
+});
 
-const { value: nameValue, errorMessage: nameError } = useField('name')
+const { value: nameValue, errorMessage: nameError } = useField("name");
 
-const response = ref()
+const response = ref();
 
 const onSubmit = handleSubmit(async (values) => {
-  await until(response).changed()
-  console.log({ ...values, response: response.value })
-})
+  await until(response).changed();
+  console.log({ ...values, response: response.value });
+});
 </script>
 
 <template>
   <form class="flex flex-col gap-2" @submit="onSubmit">
     <div>
-      <input v-model="nameValue" class="border border-blue p-1" type="text" placeholder="Your name" />
+      <input
+        v-model="nameValue"
+        class="border border-blue p-1"
+        type="text"
+        placeholder="Your name"
+      />
       <div v-if="nameError" class="text-red">
         {{ nameError }}
       </div>

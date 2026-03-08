@@ -1,6 +1,6 @@
-import process from 'node:process'
-import { defineConfig, devices } from '@playwright/test'
-import { isCI } from 'std-env'
+import process from "node:process";
+import { defineConfig, devices } from "@playwright/test";
+import { isCI } from "std-env";
 
 /**
  * Read environment variables from file.
@@ -12,7 +12,7 @@ import { isCI } from 'std-env'
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './playwright',
+  testDir: "./playwright",
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {
@@ -31,7 +31,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: isCI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
@@ -40,23 +40,23 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: "on-first-retry",
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: "chromium",
       use: {
-        ...devices['Desktop Chrome'],
-        channel: process.env.CI ? 'chrome' : undefined,
+        ...devices["Desktop Chrome"],
+        channel: process.env.CI ? "chrome" : undefined,
       },
     },
   ],
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'moon run dev -- --port 3456',
+    command: "moon run dev -- --port 3456",
     port: 3456,
   },
-})
+});

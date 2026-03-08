@@ -1,14 +1,14 @@
-import { createHead } from '@unhead/vue'
-import { createApp } from 'vue'
-import { VueRecaptchaPlugin } from 'vue-recaptcha'
-import App from './App.vue'
+import { createHead } from "@unhead/vue";
+import { createApp } from "vue";
+import { VueRecaptchaPlugin } from "vue-recaptcha";
+import App from "./App.vue";
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(createHead())
+app.use(createHead());
 app.use(VueRecaptchaPlugin, {
-  v2SiteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
-  v3SiteKey: '6LejC9kZAAAAAFQyq2IjCq0eK4g88GkixXr4_BGs',
-})
+  v2SiteKey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
+  v3SiteKey: "6LejC9kZAAAAAFQyq2IjCq0eK4g88GkixXr4_BGs",
+});
 
-app.mount('#root')
+app.mount("#root");

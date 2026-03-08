@@ -1,5 +1,6 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
-import {} from 'vitest/config'
+// oxlint-disable-next-line import/no-empty-named-blocks, unicorn/require-module-specifiers
+import type {} from "vitest/config";
 
-export default defineConfig({})
+export default defineConfig({});

@@ -1,3 +1,3 @@
-import { unheadScriptLoader } from './script-manager/unhead'
+import { unheadScriptLoader } from "./script-manager/unhead";
 
-export { unheadScriptLoader }
+export { unheadScriptLoader };

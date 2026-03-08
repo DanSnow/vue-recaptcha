@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import mermaid from 'mermaid'
+import mermaid from "mermaid";
 
 onMounted(() => {
   mermaid.initialize({
     startOnLoad: true,
-    theme: 'forest',
+    theme: "forest",
     flowchart: {
       useMaxWidth: true,
     },
-  })
-})
+  });
+});
 </script>
 
 <template>

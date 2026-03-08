@@ -1,81 +1,81 @@
 <script setup lang="ts">
-import type { RecaptchaV2State } from '../api'
-import type { WidgetID } from '../script-manager/common'
-import { reactive, toRef } from 'vue-demi'
-import { useComponentV2 } from '../composables/component-v2'
+import type { RecaptchaV2State } from "../api";
+import type { WidgetID } from "../script-manager/common";
+import { reactive, toRef } from "vue-demi";
+import { useComponentV2 } from "../composables/component-v2";
 
 const props = withDefaults(
   defineProps<{
     /**
      * render element
      */
-    as?: string
+    as?: string;
     /**
      * @ignore
      */
-    widgetId?: WidgetID
+    widgetId?: WidgetID;
     /**
      * badge position to display the site is using reCAPTCHA
      */
-    badge?: 'bottomright' | 'bottomleft' | 'inline'
-    tabindex?: string
+    badge?: "bottomright" | "bottomleft" | "inline";
+    tabindex?: string;
     /**
      * should this component listen to click event and trigger challenge? default is true
      */
-    autoExecute?: boolean
+    autoExecute?: boolean;
     /**
      * reCAPTCHA response
      */
-    modelValue?: string | null
+    modelValue?: string | null;
   }>(),
   {
-    as: 'div',
+    as: "div",
     autoExecute: true,
-    badge: 'bottomright',
+    badge: "bottomright",
   },
-)
+);
 
 const emit = defineEmits<{
-  (event: 'load', widgetID: WidgetID): void
-  (event: 'error', error: Error): void
-  (event: 'expired', widgetID: WidgetID): void
-  (event: 'success', response: string): void
-  (event: 'update:widgetId', widgetID: WidgetID): void
-  (event: 'update:modelValue', response: string | null): void
-}>()
+  (event: "load", widgetID: WidgetID): void;
+  (event: "error", error: Error): void;
+  (event: "expired", widgetID: WidgetID): void;
+  (event: "success", response: string): void;
+  (event: "update:widgetId", widgetID: WidgetID): void;
+  (event: "update:modelValue", response: string | null): void;
+}>();
 
 const { root, reset, widgetID, state, execute, isError, isExpired, isVerified } = useComponentV2(
   {
-    size: 'invisible',
+    size: "invisible",
     badge: props.badge,
-    tabindex: props.tabindex ?? '',
+    tabindex: props.tabindex ?? "",
   },
-  toRef(props, 'modelValue'),
+  toRef(props, "modelValue"),
   emit,
-)
+);
 
 interface SlotApi {
   /**
    * widget id
    */
-  widgetId: WidgetID | undefined
+  widgetId: WidgetID | undefined;
   /**
    * reCAPTCHA state
    */
-  state: RecaptchaV2State
+  state: RecaptchaV2State;
 
-  isError: boolean
-  isExpired: boolean
-  isVerified: boolean
+  isError: boolean;
+  isExpired: boolean;
+  isVerified: boolean;
 
   /**
    * reset reCAPTCHA
    */
-  reset: () => void
+  reset: () => void;
   /**
    * execute challenge
    */
-  execute: () => void
+  execute: () => void;
 }
 
 const slotApi: SlotApi = reactive({
@@ -86,16 +86,16 @@ const slotApi: SlotApi = reactive({
   isError,
   isExpired,
   isVerified,
-})
+});
 
 function onClick() {
-  if (props.autoExecute) execute()
+  if (props.autoExecute) execute();
 }
 
 defineExpose({
   execute,
   reset,
-})
+});
 </script>
 
 <template>
