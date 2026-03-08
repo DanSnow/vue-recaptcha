@@ -5,9 +5,9 @@ import { invariant } from "../utils";
 
 export interface RecaptchaProxy {
   render: (ele: Element, options: RecaptchaV2Options) => Promise<WidgetID>;
-  reset: (widgetId?: WidgetID | undefined) => void;
+  reset: (widgetId?: WidgetID) => void;
   execute: ((siteKey: string, options: { action: string }) => Promise<string>) &
-    ((widgetId?: WidgetID | undefined) => void);
+    ((widgetId?: WidgetID) => void);
 }
 
 export function createRecaptchaProxy(
@@ -29,14 +29,14 @@ export function createRecaptchaProxy(
       return getRecaptcha().render(ele, options);
     },
 
-    reset(widgetId?: WidgetID | undefined) {
+    reset(widgetId?: WidgetID) {
       if (typeof widgetId === "undefined") return;
 
       assertLoaded();
       getRecaptcha().reset(widgetId);
     },
 
-    async execute(widgetId?: WidgetID | undefined | string, options?: { action: string }) {
+    async execute(widgetId?: WidgetID | string, options?: { action: string }) {
       if (typeof widgetId === "undefined") return;
 
       await wait();
