@@ -28,16 +28,18 @@ tasks:
       - app.vue
       - nuxt.config.ts
       - tokens.config.ts
+  prepare-test:
+    deps:
+      - generate
   test-unit:
     command: vitest
     deps:
-      - generate
+      - prepare-test
     inputs:
       - tests/**
       - vite.config.mts
     platform: node
   test:
-    command: noop
     deps:
       - test-unit
   check-200-html:

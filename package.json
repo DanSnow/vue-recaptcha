@@ -4,7 +4,8 @@
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "format": "oxfmt --write .",
-    "format:check": "oxfmt --check ."
+    "format:check": "oxfmt --check .",
+    "test": "moon run :prepare-test && vitest"
   },
   "devDependencies": {
     "@moonrepo/cli": "1.41.7",
