@@ -20,12 +20,14 @@ jobs:
           node-version: 22
           cache: pnpm
       - uses: moonrepo/setup-toolchain@v0
+        with:
+          auto-setup: true
       - name: Install dependencies
         run: pnpm install
       - name: Run Playwright tests
-        run: moon run vue-recaptcha:test-e2e
+        run: pnpm exec moon run vue-recaptcha:test-e2e
       - name: Run unit tests
-        run: moon run :test-unit
+        run: pnpm exec moon run :test-unit
       - uses: actions/upload-artifact@v5
         if: always()
         with:
