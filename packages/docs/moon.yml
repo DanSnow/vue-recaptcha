@@ -1,6 +1,4 @@
-$schema: "https://moonrepo.dev/schemas/project.json"
-
-platform: node
+$schema: https://moonrepo.dev/schemas/project.json
 
 dependsOn:
   - vue-recaptcha
@@ -12,7 +10,7 @@ tasks:
       - dev
     deps:
       - ^:build
-    local: true
+    preset: server
   generate:
     command:
       - nuxt
@@ -38,7 +36,7 @@ tasks:
     inputs:
       - tests/**
       - vite.config.mts
-    platform: node
+    toolchains: node
   test:
     deps:
       - test-unit
@@ -51,7 +49,7 @@ tasks:
       - ~:generate
     inputs:
       - .output/public/200.html
-    platform: system
+    toolchains: system
   check-nuxt-dir:
     command:
       - test
@@ -61,7 +59,7 @@ tasks:
       - ~:generate
     inputs:
       - .output/public/_nuxt
-    platform: system
+    toolchains: system
   generate-with-nojekyll:
     command:
       - touch
@@ -71,7 +69,7 @@ tasks:
       - ~:check-nuxt-dir
     outputs:
       - .output/public/.nojekyll
-    platform: system
+    toolchains: system
   publish:
     command:
       - gh-pages

@@ -1,6 +1,4 @@
-$schema: "https://moonrepo.dev/schemas/project.json"
-
-platform: node
+$schema: https://moonrepo.dev/schemas/project.json
 
 tasks:
   build:
@@ -20,13 +18,13 @@ tasks:
       - oxlint
       - --fix
       - .
-    local: true
+    preset: server
   test:
     command: noop
     deps:
       - ~:test-unit
       - ~:test-e2e
-    platform: node
+    toolchains: node
   test-e2e:
     command:
       - playwright
