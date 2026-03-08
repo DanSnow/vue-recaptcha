@@ -1,1 +1,0 @@
-import{_ as t,c as o,o as s,h as c}from"./CjJdoR8c.js";const r={},a={class:"preview-layout"};function n(e,d){return s(),o("div",a,[c(e.$slots,"default",{},void 0,!0)])}const f=t(r,[["render",n],["__scopeId","data-v-1dcd2f11"]]);export{f as default};

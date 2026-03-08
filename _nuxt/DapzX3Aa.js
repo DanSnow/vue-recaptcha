@@ -1,0 +1,1 @@
+import{_ as t,o as n,c as o,h as a}from"./BiGvMQ40.js";const c={};function r(e,_){return n(),o("thead",null,[a(e.$slots,"default",{},void 0,!0)])}const s=t(c,[["render",r],["__scopeId","data-v-d39dd02a"]]);export{s as default};

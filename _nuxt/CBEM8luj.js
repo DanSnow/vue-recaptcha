@@ -1,1 +1,0 @@
-import{_ as o,c as r,o as t,h as c}from"./CjJdoR8c.js";const n={};function s(e,a){return t(),r("li",null,[c(e.$slots,"default",{},void 0,!0)])}const _=o(n,[["render",s],["__scopeId","data-v-87777cab"]]);export{_ as default};
