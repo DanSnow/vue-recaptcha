@@ -14,6 +14,8 @@ export default defineConfig({
   platform: "neutral",
   exports: true,
   // Nuxt auto import
-  external: ["#imports"],
+  deps: {
+    neverBundle: ["#imports"],
+  },
   plugins: [Vue({ isProduction: true })],
 });
