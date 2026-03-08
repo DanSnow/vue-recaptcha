@@ -9,6 +9,8 @@ tasks:
       - dist
   dev:
     command: vite
+    options:
+      runInCI: true
   lint:
     command:
       - oxlint
