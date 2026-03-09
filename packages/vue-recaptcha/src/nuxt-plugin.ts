@@ -13,8 +13,16 @@ export default defineNuxtPlugin(({ vueApp }: { vueApp: App }) => {
     createPlugin([
       {
         scriptLoader: unheadScriptLoader,
+        _scriptLoaded: true,
       },
     ]),
     recaptcha,
   );
+
+  unheadScriptLoader({
+    recaptchaApiURL: recaptcha.recaptchaApiURL,
+    params: recaptcha.params,
+    useRecaptchaNet: recaptcha.useRecaptchaNet,
+    nonce: recaptcha.nonce,
+  })();
 });
