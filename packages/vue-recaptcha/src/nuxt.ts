@@ -32,7 +32,7 @@ export default defineNuxtModule<ModuleOptions>({
     name: "vue-recaptcha",
     configKey: "recaptcha",
     compatibility: {
-      nuxt: "^3.0.0",
+      nuxt: "^3.0.0 || ^4.0.0",
     },
   },
   defaults: {

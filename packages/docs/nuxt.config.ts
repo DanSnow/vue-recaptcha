@@ -1,7 +1,7 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  extends: "@nuxt-themes/docus",
+  extends: "docus",
   app: {
     baseURL: "/vue-recaptcha/",
   },
@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     shortcuts: [],
     rules: [],
   },
+  robots: { robotsTxt: false },
   runtimeConfig: {
     public: {
       recaptcha: {

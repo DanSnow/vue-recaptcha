@@ -14,10 +14,11 @@ export interface CreatePluginOptions {
 }
 
 export function createPlugin(plugins: RecaptchaPlugin[] = []): Plugin<[RecaptchaOptionsInput]> {
-  const { getRecaptcha, scriptLoader }: Required<RecaptchaPlugin> = Object.assign(
+  const { getRecaptcha, scriptLoader, _scriptLoaded }: Required<RecaptchaPlugin> = Object.assign(
     {
       scriptLoader: createHeadRecaptcha,
       getRecaptcha: () => window.grecaptcha,
+      _scriptLoaded: false,
     },
     ...plugins,
   );
@@ -37,7 +38,7 @@ export function createPlugin(plugins: RecaptchaPlugin[] = []): Plugin<[Recaptcha
 
       app.provide(RecaptchaContextKey, {
         isReady,
-        scriptInjected: false,
+        scriptInjected: _scriptLoaded,
         proxy: createRecaptchaProxy(isReady, getRecaptcha),
         useScriptProvider: scriptLoader(opt.loaderOptions),
         options: opt,

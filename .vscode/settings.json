@@ -10,7 +10,13 @@
     "source.organizeImports": "never"
   },
 
-  "[javascript][typescript][typescriptreact][json][json5][jsonc][markdown][yaml][vue]": {
+  "[javascript][typescript][typescriptreact][json][json5][jsonc][yaml][vue]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   }
 }
