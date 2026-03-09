@@ -1,2 +1,0 @@
-import{e as o,U as n,V as m,u as i,c as u,d as a,r as d,y as l,Q as p,o as f}from"./CC3wTWUN.js";import{ar as s}from"./COUYDI3y.js";import"./DaWZu8wl.js";const c={key:0,class:"mermaid"},x=o({__name:"Mermaid",setup(_){const r=p(!1);return n(async()=>{r.value=!0,await m(),s.initialize({startOnLoad:!1}),s.run({querySelector:".mermaid",suppressErrors:!1})}),(t,e)=>i(r)?(f(),u("pre",c,[e[0]||(e[0]=a("    ",-1)),d(t.$slots,"default",{unwrap:"p"}),e[1]||(e[1]=a(`
-  `,-1))])):l("",!0)}});export{x as default};

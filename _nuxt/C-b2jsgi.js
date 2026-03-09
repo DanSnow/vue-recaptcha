@@ -1,0 +1,1 @@
+import{_ as o,o as t,c,h as r}from"./DNLBaQ47.js";const n={};function s(e,a){return t(),c("blockquote",null,[r(e.$slots,"default",{},void 0,!0)])}const _=o(n,[["render",s],["__scopeId","data-v-e396e14e"]]);export{_ as default};

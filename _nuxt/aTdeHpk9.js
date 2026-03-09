@@ -1,1 +1,0 @@
-import{_ as t,o as n,c as o,h as c}from"./CC3wTWUN.js";const r={};function _(e,a){return n(),o("th",null,[c(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",_],["__scopeId","data-v-2901d3a0"]]);export{d as default};
