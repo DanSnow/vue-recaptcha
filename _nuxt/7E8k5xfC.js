@@ -1,1 +1,0 @@
-import{_ as n,o,c as t,h as c}from"./CuZEghnL.js";const r={};function _(e,s){return o(),t("code",null,[c(e.$slots,"default",{},void 0,!0)])}const d=n(r,[["render",_],["__scopeId","data-v-628d36b1"]]);export{d as default};
