@@ -1,1 +1,0 @@
-import{_ as o,o as r,c as t,h as c}from"./DNLBaQ47.js";const n={};function s(e,a){return r(),t("em",null,[c(e.$slots,"default",{},void 0,!0)])}const d=o(n,[["render",s],["__scopeId","data-v-b20c3a94"]]);export{d as default};
