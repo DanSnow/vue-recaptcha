@@ -142,8 +142,8 @@ importers:
         specifier: 8.1.0
         version: 8.1.0(@vue/compiler-sfc@3.5.30)(vue@3.5.30(typescript@5.9.3))
       '@unhead/vue':
-        specifier: 2.1.10
-        version: 2.1.10(vue@3.5.30(typescript@5.9.3))
+        specifier: 2.1.11
+        version: 2.1.11(vue@3.5.30(typescript@5.9.3))
       '@vitejs/plugin-vue':
         specifier: 6.0.4
         version: 6.0.4(vite@7.3.1(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)(tsx@4.20.5)(yaml@2.8.2))(vue@3.5.30(typescript@5.9.3))
@@ -3112,6 +3112,11 @@ packages:
 
   '@unhead/vue@2.1.10':
     resolution: {integrity: sha512-VP78Onh2HNezLPfhYjfHqn4dxlcQsE6PJgTTs61NksO/thvilNswtgBq0N0MWCLtn43N5akEPGW2y2zxM3PWgQ==}
+    peerDependencies:
+      vue: '>=3.5.18'
+
+  '@unhead/vue@2.1.11':
+    resolution: {integrity: sha512-l8eFaBehvTWDlaZKYm3484ZF3/Z2sG4c30cpTYnd2CrXB3FE1IU5nW+vQkP7DQ5Y2Fjqmaer8f6uL+BzCbhWrQ==}
     peerDependencies:
       vue: '>=3.5.18'
 
@@ -7216,6 +7221,9 @@ packages:
   unhead@2.1.10:
     resolution: {integrity: sha512-We8l9uNF8zz6U8lfQaVG70+R/QBfQx1oPIgXin4BtZnK2IQpz6yazQ0qjMNVBDw2ADgF2ea58BtvSK+XX5AS7g==}
 
+  unhead@2.1.11:
+    resolution: {integrity: sha512-EAgw0fgo390WIATJOjn0jHUBCMhjRM046WZXyQX4MOdnEiwYeDgTRzJYR0nVWiQPta6568jc5OLCDJswHCkgNg==}
+
   unicode-emoji-modifier-base@1.0.0:
     resolution: {integrity: sha512-yLSH4py7oFH3oG/9K+XWrz1pSi3dfUrWEnInbxMfArOfc1+33BlGPQtLsOYwvdMy11AwUBetYuaRxSPqgkq+8g==}
     engines: {node: '>=4'}
@@ -9134,7 +9142,7 @@ snapshots:
     dependencies:
       '@nuxt/devalue': 2.0.2
       '@nuxt/kit': 3.21.1(magicast@0.5.1)
-      '@unhead/vue': 2.1.10(vue@3.5.30(typescript@5.9.3))
+      '@unhead/vue': 2.1.11(vue@3.5.30(typescript@5.9.3))
       '@vue/shared': 3.5.29
       consola: 3.4.2
       defu: 6.1.4
@@ -9197,7 +9205,7 @@ snapshots:
     dependencies:
       '@nuxt/devalue': 2.0.2
       '@nuxt/kit': 3.21.1(magicast@0.5.1)
-      '@unhead/vue': 2.1.10(vue@3.5.30(typescript@5.9.3))
+      '@unhead/vue': 2.1.11(vue@3.5.30(typescript@5.9.3))
       '@vue/shared': 3.5.29
       consola: 3.4.2
       defu: 6.1.4
@@ -10642,6 +10650,12 @@ snapshots:
     dependencies:
       hookable: 6.0.1
       unhead: 2.1.10
+      vue: 3.5.30(typescript@5.9.3)
+
+  '@unhead/vue@2.1.11(vue@3.5.30(typescript@5.9.3))':
+    dependencies:
+      hookable: 6.0.1
+      unhead: 2.1.11
       vue: 3.5.30(typescript@5.9.3)
 
   '@unocss/cli@66.6.6':
@@ -16095,6 +16109,10 @@ snapshots:
       hookable: 5.5.3
 
   unhead@2.1.10:
+    dependencies:
+      hookable: 6.0.1
+
+  unhead@2.1.11:
     dependencies:
       hookable: 6.0.1
 
