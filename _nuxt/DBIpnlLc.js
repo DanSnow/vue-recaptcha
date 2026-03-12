@@ -1,1 +1,0 @@
-import{_ as o,o as r,c as t,h as n}from"./DDP0_gTo.js";const s={};function c(e,a){return r(),t("strong",null,[n(e.$slots,"default",{},void 0,!0)])}const _=o(s,[["render",c],["__scopeId","data-v-37b69d1b"]]);export{_ as default};
