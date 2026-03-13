@@ -1,1 +1,0 @@
-import{_ as t,o,c as a,h as s}from"./DA9R45lN.js";const c={},r={class:"preview-layout"};function n(e,d){return o(),a("div",r,[s(e.$slots,"default",{},void 0,!0)])}const l=t(c,[["render",n],["__scopeId","data-v-d2a6ac3e"]]);export{l as default};

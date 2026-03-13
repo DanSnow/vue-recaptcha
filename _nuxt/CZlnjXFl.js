@@ -1,0 +1,1 @@
+import{_ as o,o as r,c as t,h as n}from"./CIQjd-Le.js";const s={};function a(e,c){return r(),t("em",null,[n(e.$slots,"default",{},void 0,!0)])}const d=o(s,[["render",a],["__scopeId","data-v-16eb286a"]]);export{d as default};
