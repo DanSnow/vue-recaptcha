@@ -86,8 +86,8 @@ importers:
         specifier: 3.5.30
         version: 3.5.30(typescript@5.9.3)
       vue-router:
-        specifier: 5.0.3
-        version: 5.0.3(@vue/compiler-sfc@3.5.30)(vue@3.5.30(typescript@5.9.3))
+        specifier: 5.0.4
+        version: 5.0.4(@vue/compiler-sfc@3.5.30)(vue@3.5.30(typescript@5.9.3))
 
   packages/playground-vite:
     dependencies:
@@ -7755,8 +7755,8 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
-  vue-router@5.0.3:
-    resolution: {integrity: sha512-nG1c7aAFac7NYj8Hluo68WyWfc41xkEjaR0ViLHCa3oDvTQ/nIuLJlXJX1NUPw/DXzx/8+OKMng045HHQKQKWw==}
+  vue-router@5.0.4:
+    resolution: {integrity: sha512-lCqDLCI2+fKVRl2OzXuzdSWmxXFLQRxQbmHugnRpTMyYiT+hNaycV0faqG5FBHDXoYrZ6MQcX87BvbY8mQ20Bg==}
     peerDependencies:
       '@pinia/colada': '>=0.21.2'
       '@vue/compiler-sfc': ^3.5.17
@@ -11032,7 +11032,7 @@ snapshots:
       '@volar/language-core': 1.4.1
       '@volar/source-map': 1.4.1
       '@vue/compiler-dom': 3.5.30
-      '@vue/compiler-sfc': 3.5.29
+      '@vue/compiler-sfc': 3.5.30
       '@vue/reactivity': 3.5.29
       '@vue/shared': 3.5.30
       minimatch: 9.0.9
@@ -11041,7 +11041,7 @@ snapshots:
 
   '@vue-macros/common@3.1.2(vue@3.5.30(typescript@5.9.3))':
     dependencies:
-      '@vue/compiler-sfc': 3.5.29
+      '@vue/compiler-sfc': 3.5.30
       ast-kit: 2.2.0
       local-pkg: 1.1.2
       magic-string-ast: 1.0.3
@@ -16849,7 +16849,7 @@ snapshots:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.30(typescript@5.9.3)
 
-  vue-router@5.0.3(@vue/compiler-sfc@3.5.30)(vue@3.5.30(typescript@5.9.3)):
+  vue-router@5.0.4(@vue/compiler-sfc@3.5.30)(vue@3.5.30(typescript@5.9.3)):
     dependencies:
       '@babel/generator': 7.29.1
       '@vue-macros/common': 3.1.2(vue@3.5.30(typescript@5.9.3))
