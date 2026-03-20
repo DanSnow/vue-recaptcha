@@ -1,0 +1,1 @@
+import{_ as n,o,c as t,h as c}from"./Bfrb3kwm.js";const a={};function r(e,_){return o(),t("code",null,[c(e.$slots,"default",{},void 0,!0)])}const d=n(a,[["render",r],["__scopeId","data-v-4a193ba4"]]);export{d as default};
