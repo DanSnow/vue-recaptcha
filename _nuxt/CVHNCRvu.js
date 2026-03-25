@@ -1,0 +1,1 @@
+import{_ as o,o as r,c as t,h as n}from"./DNLsGskI.js";const s={};function c(e,a){return r(),t("strong",null,[n(e.$slots,"default",{},void 0,!0)])}const _=o(s,[["render",c],["__scopeId","data-v-c5d165d8"]]);export{_ as default};
