@@ -1,0 +1,1 @@
+import{_ as o,o as r,c as t,h as n}from"./CeyVptFN.js";const s={};function a(e,c){return r(),t("li",null,[n(e.$slots,"default",{},void 0,!0)])}const _=o(s,[["render",a],["__scopeId","data-v-56a70564"]]);export{_ as default};
