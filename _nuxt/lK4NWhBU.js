@@ -1,1 +1,0 @@
-import{_ as t,o as n,c as o,h as c}from"./ClDLVXo7.js";const r={};function _(e,s){return n(),o("tr",null,[c(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",_],["__scopeId","data-v-07d9cd9f"]]);export{d as default};

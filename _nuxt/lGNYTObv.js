@@ -1,1 +1,0 @@
-import{_ as t,o as a,c as o,a as s,h as c}from"./ClDLVXo7.js";const n={},r={class:"table-wrapper"};function _(e,d){return a(),o("div",r,[s("table",null,[c(e.$slots,"default",{},void 0,!0)])])}const f=t(n,[["render",_],["__scopeId","data-v-83b95cd8"]]);export{f as default};
