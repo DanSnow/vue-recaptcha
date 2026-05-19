@@ -1,0 +1,1 @@
+import{_ as o,o as t,c,h as r}from"./CDmwKdiS.js";const n={};function s(e,a){return t(),c("blockquote",null,[r(e.$slots,"default",{},void 0,!0)])}const _=o(n,[["render",s],["__scopeId","data-v-148095b3"]]);export{_ as default};

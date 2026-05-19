@@ -1,0 +1,1 @@
+import{e as t,c as o,a as n,t as a,o as s}from"./CDmwKdiS.js";const r={class:"component-playground-data-section"},i=t({__name:"ComponentPlaygroundSlots",props:{componentData:{type:Object,required:!0}},setup(e){return(c,p)=>(s(),o("div",r,[n("pre",null,a(JSON.stringify(e.componentData,null,2)),1)]))}});export{i as _};
