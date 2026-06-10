@@ -67,6 +67,8 @@ tasks:
       - .output/public/404.html
     deps:
       - ~:check-200-html
+    inputs:
+      - .output/public/200.html
     outputs:
       - .output/public/404.html
     toolchains: system
