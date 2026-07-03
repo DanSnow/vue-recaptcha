@@ -1,1 +1,0 @@
-import{_ as n,o,c as t,h as c}from"./CDmwKdiS.js";const r={};function _(e,a){return o(),t("code",null,[c(e.$slots,"default",{},void 0,!0)])}const d=n(r,[["render",_],["__scopeId","data-v-b94002da"]]);export{d as default};
