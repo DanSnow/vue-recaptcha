@@ -1,1 +1,0 @@
-import{g as r,ab as t,y as a,ak as n}from"./CsqQDGEZ.js";const o={};function s(e,c){return t(),a("li",null,[n(e.$slots,"default",{},void 0,!0)])}const d=r(o,[["render",s],["__scopeId","data-v-e955b45b"]]);export{d as default};

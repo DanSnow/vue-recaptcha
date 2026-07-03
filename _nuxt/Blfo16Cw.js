@@ -1,1 +1,0 @@
-import{g as a,ab as t,y as s,u as n,ak as o}from"./CsqQDGEZ.js";const r={},c={class:"table-wrapper"};function _(e,d){return t(),s("div",c,[n("table",null,[o(e.$slots,"default",{},void 0,!0)])])}const u=a(r,[["render",_],["__scopeId","data-v-eda62d3e"]]);export{u as default};
