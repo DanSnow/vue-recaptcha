@@ -1,0 +1,1 @@
+import{g as t,ab as n,y as o,ak as a}from"./BkMVTbLL.js";const r={};function c(e,s){return n(),o("th",null,[a(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",c],["__scopeId","data-v-44be1415"]]);export{d as default};

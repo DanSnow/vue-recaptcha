@@ -1,1 +1,0 @@
-import{g as t,ab as n,y as a,ak as o}from"./BiTqxm14.js";const r={};function c(e,s){return n(),a("td",null,[o(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",c],["__scopeId","data-v-a7a3662d"]]);export{d as default};
