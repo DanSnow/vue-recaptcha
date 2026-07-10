@@ -1,2 +1,0 @@
-import{b as e,aD as s,a$ as n,E as i}from"./CJYeUQZm.js";import{p}from"./N00o1rD9.js";import"./LGi80qPs.js";import"./CqkleIqs.js";var g={parse:e(async r=>{const a=await p("info",r);s.debug(a)},"parse")},v={version:"11.15.0"},d=e(()=>v.version,"getVersion"),m={getVersion:d},c=e((r,a,o)=>{s.debug(`rendering info diagram
-`+r);const t=n(a);i(t,100,400,!0),t.append("g").append("text").attr("x",100).attr("y",40).attr("class","version").attr("font-size",32).style("text-anchor","middle").text(`v${o}`)},"draw"),f={draw:c},w={parser:g,db:m,renderer:f};export{w as diagram};

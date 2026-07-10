@@ -1,1 +1,0 @@
-import{g as o,ab as t,y as r,ak as a}from"./LGi80qPs.js";const c={};function n(e,s){return t(),r("blockquote",null,[a(e.$slots,"default",{},void 0,!0)])}const d=o(c,[["render",n],["__scopeId","data-v-148095b3"]]);export{d as default};
