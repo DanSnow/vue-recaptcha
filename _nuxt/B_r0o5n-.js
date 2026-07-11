@@ -1,1 +1,0 @@
-import{g as n,ab as t,y as a,ak as o}from"./DWdE0dku.js";const r={};function c(e,s){return t(),a("p",null,[o(e.$slots,"default",{},void 0,!0)])}const d=n(r,[["render",c],["__scopeId","data-v-80d88a2d"]]);export{d as default};
