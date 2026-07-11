@@ -1,0 +1,1 @@
+import{g as t,ab as o,y as n,ak as r}from"./DWdE0dku.js";const s={},a={"px-2":"","py-1":"",rounded:"","bg-teal-600":"","text-white":""};function c(e,_){return o(),n("button",a,[r(e.$slots,"default")])}const l=t(s,[["render",c]]);export{l as default};
