@@ -1,0 +1,1 @@
+import{g as t,ab as a,y as o,ak as s}from"./B9Fk1lxv.js";const r={},c={class:"preview-layout"};function n(e,d){return a(),o("div",c,[s(e.$slots,"default",{},void 0,!0)])}const f=t(r,[["render",n],["__scopeId","data-v-f19adfdb"]]);export{f as default};
