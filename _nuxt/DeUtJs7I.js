@@ -1,1 +1,0 @@
-import{g as o,ab as t,y as a,ak as r}from"./Ck8KaDro.js";const c={};function n(e,s){return t(),a("blockquote",null,[r(e.$slots,"default",{},void 0,!0)])}const d=o(c,[["render",n],["__scopeId","data-v-a4e61ba5"]]);export{d as default};
