@@ -1,0 +1,1 @@
+import o from"./BxTAXKa4.js";import{E as r,v as t,ab as n}from"./DL8c9p2J.js";const m=r({__name:"SourceLink",props:{source:{type:String,required:!0}},setup(_){return(c,p)=>{const e=o;return n(),t(e)}}});export{m as default};

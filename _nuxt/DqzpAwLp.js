@@ -1,1 +1,0 @@
-import{g as r,ab as t,y as n,ak as o}from"./CMX59eYj.js";const s={};function a(e,c){return t(),n("strong",null,[o(e.$slots,"default",{},void 0,!0)])}const l=r(s,[["render",a],["__scopeId","data-v-bde0432b"]]);export{l as default};
