@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0 (2026-08-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency type-fest to v5 ([#2271](https://github.com/DanSnow/vue-recaptcha/issues/2271)) ([bd431f5](https://github.com/DanSnow/vue-recaptcha/commit/bd431f5bef6734d274df5cf459bf185d1e75db3d))
+* fix lint errors ([437e23b](https://github.com/DanSnow/vue-recaptcha/commit/437e23bb57fb192eecb22cc2f2198c527c3608f8))
+* ts bug ([#2312](https://github.com/DanSnow/vue-recaptcha/issues/2312)) ([c745788](https://github.com/DanSnow/vue-recaptcha/commit/c7457887662c4578eccb5635644dabe3b38ffeba))
+
 ## [2.0.3](https://github.com/DanSnow/vue-recaptcha/compare/v2.0.2...v2.0.3) (2022-09-17)
 
 ### Bug Fixes
