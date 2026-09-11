@@ -196,8 +196,8 @@ importers:
         specifier: 3.5.42
         version: 3.5.42(typescript@5.9.3)
       vue-sfc-transformer:
-        specifier: 0.2.3
-        version: 0.2.3(@volar/typescript@2.4.28)(@vue/compiler-core@3.5.42)(@vue/language-core@3.3.11)(esbuild@0.28.0)(rolldown@1.2.8)(typescript@5.9.3)(vue@3.5.42(typescript@5.9.3))
+        specifier: 0.3.0
+        version: 0.3.0(@volar/typescript@2.4.28)(@vue/compiler-core@3.5.42)(@vue/language-core@3.3.11)(esbuild@0.28.0)(rolldown@1.2.8)(typescript@5.9.3)(vue@3.5.42(typescript@5.9.3))
       vue-tsc:
         specifier: 3.3.11
         version: 3.3.11(typescript@5.9.3)
@@ -8262,8 +8262,8 @@ packages:
       vite:
         optional: true
 
-  vue-sfc-transformer@0.2.3:
-    resolution: {integrity: sha512-aWgeZUXS1W5Q7UIgzBBURMS79/hGsVlNFRHvvQIed1Q0qm8Pt5b+DZvFdx30RkE1BWv6OWQH0+p0avyMnteTGw==}
+  vue-sfc-transformer@0.3.0:
+    resolution: {integrity: sha512-WdpctRqmwbePyfHFK/vZgyiUWkDDdN/0V7s5KFCX8DAEwCQI+XKudNgoJbGfDvVxLrWtvV9D6H7kvMkZeYGAhg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@volar/typescript': ^2.4.0
@@ -8277,6 +8277,8 @@ packages:
       '@volar/typescript':
         optional: true
       '@vue/language-core':
+        optional: true
+      esbuild:
         optional: true
       rolldown:
         optional: true
@@ -18157,17 +18159,15 @@ snapshots:
       - unloader
       - webpack
 
-  vue-sfc-transformer@0.2.3(@volar/typescript@2.4.28)(@vue/compiler-core@3.5.42)(@vue/language-core@3.3.11)(esbuild@0.28.0)(rolldown@1.2.8)(typescript@5.9.3)(vue@3.5.42(typescript@5.9.3)):
+  vue-sfc-transformer@0.3.0(@volar/typescript@2.4.28)(@vue/compiler-core@3.5.42)(@vue/language-core@3.3.11)(esbuild@0.28.0)(rolldown@1.2.8)(typescript@5.9.3)(vue@3.5.42(typescript@5.9.3)):
     dependencies:
-      '@babel/parser': 7.29.7
       '@vue/compiler-core': 3.5.42
-      esbuild: 0.28.0
-      pathe: 2.0.3
       tinyglobby: 0.2.17
       vue: 3.5.42(typescript@5.9.3)
     optionalDependencies:
       '@volar/typescript': 2.4.28
       '@vue/language-core': 3.3.11
+      esbuild: 0.28.0
       rolldown: 1.2.8
       typescript: 5.9.3
 
