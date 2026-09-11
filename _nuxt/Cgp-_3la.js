@@ -1,1 +1,0 @@
-import{g as t,ab as n,y as a,ak as o}from"./Bq8_0GiS.js";const r={};function c(e,s){return n(),a("thead",null,[o(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",c],["__scopeId","data-v-eb92792f"]]);export{d as default};
