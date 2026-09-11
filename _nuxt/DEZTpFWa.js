@@ -1,1 +1,0 @@
-import{g as t,ab as n,y as a,ak as o}from"./DeWghXTl.js";const r={};function c(e,s){return n(),a("tr",null,[o(e.$slots,"default",{},void 0,!0)])}const d=t(r,[["render",c],["__scopeId","data-v-dd3ca592"]]);export{d as default};
