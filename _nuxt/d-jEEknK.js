@@ -1,1 +1,0 @@
-import{g as t,ab as a,y as s,u as n,ak as o}from"./CfkiDERZ.js";const c={},r={class:"table-wrapper"};function _(e,d){return a(),s("div",r,[n("table",null,[o(e.$slots,"default",{},void 0,!0)])])}const u=t(c,[["render",_],["__scopeId","data-v-8853c874"]]);export{u as default};
