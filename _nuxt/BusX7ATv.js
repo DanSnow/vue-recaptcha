@@ -1,1 +1,0 @@
-import{g as o,ab as r,y as t,ak as a}from"./DIss22xy.js";const n={};function s(e,c){return r(),t("ol",null,[a(e.$slots,"default",{},void 0,!0)])}const d=o(n,[["render",s],["__scopeId","data-v-3e572011"]]);export{d as default};
