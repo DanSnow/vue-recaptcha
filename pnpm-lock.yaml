@@ -68,7 +68,7 @@ importers:
         version: 3.21.11(@oxc-project/types@0.149.0)(@parcel/watcher@2.5.6)(@types/node@26.2.0)(@vue/compiler-sfc@3.5.42)(commander@14.0.3)(db0@0.3.4)(esbuild@0.28.0)(eslint@10.0.3(jiti@2.7.0))(ioredis@5.10.1)(lightningcss@1.32.0)(magicast@0.5.4)(optionator@0.9.4)(oxlint@1.82.0(oxlint-tsgolint@0.25.0))(rolldown@1.2.8)(rollup-plugin-visualizer@7.0.1(rolldown@1.2.8)(rollup@3.30.0))(rollup@3.30.0)(terser@5.49.2)(tsx@4.20.5)(typescript@5.9.3)(vite@8.1.4(@types/node@26.2.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0))(vue-tsc@2.2.12(typescript@5.9.3))(webpack@5.101.3(esbuild@0.28.0)(lightningcss@1.32.0)(postcss@8.5.26))(yaml@2.9.0)
       vitest:
         specifier: 4.1.11
-        version: 4.1.11(@types/node@26.2.0)(happy-dom@20.14.3)(vite@8.1.4(@types/node@26.2.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0))
+        version: 4.1.11(@types/node@26.2.0)(happy-dom@20.14.5)(vite@8.1.4(@types/node@26.2.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0))
       zx:
         specifier: 8.8.5
         version: 8.8.5
@@ -157,8 +157,8 @@ importers:
         specifier: 2.5.0
         version: 2.5.0(@vue/compiler-dom@3.5.42)(@vue/server-renderer@3.5.42)(vue@3.5.42(typescript@5.9.3))
       happy-dom:
-        specifier: 20.14.3
-        version: 20.14.3
+        specifier: 20.14.5
+        version: 20.14.5
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -191,7 +191,7 @@ importers:
         version: 7.3.6(@types/node@26.2.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0)
       vitest:
         specifier: 4.1.11
-        version: 4.1.11(@types/node@26.2.0)(happy-dom@20.14.3)(vite@7.3.6(@types/node@26.2.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0))
+        version: 4.1.11(@types/node@26.2.0)(happy-dom@20.14.5)(vite@7.3.6(@types/node@26.2.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0))
       vue:
         specifier: 3.5.42
         version: 3.5.42(typescript@5.9.3)
@@ -5201,8 +5201,8 @@ packages:
   hachure-fill@0.5.2:
     resolution: {integrity: sha512-3GKBOn+m2LX9iq+JC1064cSFprJY4jL1jCXTcpnfER5HYE2l/4EfWSGzkPa/ZDBmYI0ZOEj5VHV/eKnPGkHuOg==}
 
-  happy-dom@20.14.3:
-    resolution: {integrity: sha512-0KMb/Eh8rsd+aMNkOk5h8LkAjo9Na1aksnEGmsuZf+GXl6UkAdIi0VbUHU7d59lXhNmawODgwwuCMiZpCxwwCw==}
+  happy-dom@20.14.5:
+    resolution: {integrity: sha512-x/RzkpWO40bTjIoT30iQtt64FLLmH/iRcUCN2X//bLx7H3ifkdfPXyqsro/OYtqzIAhiLMMA7mmiOR9C3NOKjQ==}
     engines: {node: '>=20.0.0'}
 
   has-bigints@1.1.0:
@@ -14076,7 +14076,7 @@ snapshots:
 
   hachure-fill@0.5.2: {}
 
-  happy-dom@20.14.3:
+  happy-dom@20.14.5:
     dependencies:
       '@types/node': 26.2.0
       '@types/whatwg-mimetype': 3.0.2
@@ -18029,7 +18029,7 @@ snapshots:
       tsx: 4.20.5
       yaml: 2.9.0
 
-  vitest@4.1.11(@types/node@26.2.0)(happy-dom@20.14.3)(vite@7.3.6(@types/node@26.2.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0)):
+  vitest@4.1.11(@types/node@26.2.0)(happy-dom@20.14.5)(vite@7.3.6(@types/node@26.2.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0)):
     dependencies:
       '@vitest/expect': 4.1.11
       '@vitest/mocker': 4.1.11(vite@7.3.6(@types/node@26.2.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0))
@@ -18053,11 +18053,11 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 26.2.0
-      happy-dom: 20.14.3
+      happy-dom: 20.14.5
     transitivePeerDependencies:
       - msw
 
-  vitest@4.1.11(@types/node@26.2.0)(happy-dom@20.14.3)(vite@8.1.4(@types/node@26.2.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0)):
+  vitest@4.1.11(@types/node@26.2.0)(happy-dom@20.14.5)(vite@8.1.4(@types/node@26.2.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0)):
     dependencies:
       '@vitest/expect': 4.1.11
       '@vitest/mocker': 4.1.11(vite@8.1.4(@types/node@26.2.0)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.49.2)(tsx@4.20.5)(yaml@2.9.0))
@@ -18081,7 +18081,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 26.2.0
-      happy-dom: 20.14.3
+      happy-dom: 20.14.5
     transitivePeerDependencies:
       - msw
 
