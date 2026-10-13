@@ -60,6 +60,18 @@ tasks:
     inputs:
       - .output/public/_nuxt
     toolchains: system
+  generate-github-pages-fallback:
+    command:
+      - cp
+      - .output/public/200.html
+      - .output/public/404.html
+    deps:
+      - ~:check-200-html
+    inputs:
+      - .output/public/200.html
+    outputs:
+      - .output/public/404.html
+    toolchains: system
   generate-with-nojekyll:
     command:
       - touch
@@ -67,6 +79,7 @@ tasks:
     deps:
       - ~:check-200-html
       - ~:check-nuxt-dir
+      - ~:generate-github-pages-fallback
     outputs:
       - .output/public/.nojekyll
     toolchains: system
