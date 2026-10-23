@@ -175,11 +175,11 @@ importers:
         specifier: 3.9.10
         version: 3.9.10
       publint:
-        specifier: 0.3.24
-        version: 0.3.24
+        specifier: 0.3.25
+        version: 0.3.25
       tsdown:
         specifier: 0.23.0
-        version: 0.23.0(@volar/typescript@2.4.28)(publint@0.3.24)(tsx@4.20.5)(typescript@5.9.3)(unrun@0.2.34(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(synckit@0.11.12))(vue-tsc@3.3.11(typescript@5.9.3))
+        version: 0.23.0(@volar/typescript@2.4.28)(publint@0.3.25)(tsx@4.20.5)(typescript@5.9.3)(unrun@0.2.34(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(synckit@0.11.12))(vue-tsc@3.3.11(typescript@5.9.3))
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -6879,8 +6879,8 @@ packages:
   protocols@2.0.2:
     resolution: {integrity: sha512-hHVTzba3wboROl0/aWRRG9dMytgH6ow//STBZh43l/wQgmMhYhOFi0EHWAPtoCz9IAUymsyP0TSBHkhgMEGNnQ==}
 
-  publint@0.3.24:
-    resolution: {integrity: sha512-9zS56KrKBoqi5Qt8h92uMP8TTM9AYZSgnmCo4u2priMqkOZvQnTsziZ2p5LJ2ywbYkAjoCDp2jda9u4cgFefIw==}
+  publint@0.3.25:
+    resolution: {integrity: sha512-WMMbn/d7JqRlfXQL/JUI4n5skC8cJ5WVr8/wT5mmiYWkUdENkZr1I5rgs2+dQPVRgoJd+JRYtB46MTsuDylw9g==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -8549,7 +8549,7 @@ snapshots:
   '@antfu/install-pkg@1.1.0':
     dependencies:
       package-manager-detector: 1.8.0
-      tinyexec: 1.3.0
+      tinyexec: 1.3.1
 
   '@babel/code-frame@7.29.7':
     dependencies:
@@ -8809,7 +8809,7 @@ snapshots:
       h3: 2.0.1-rc.31(crossws@0.4.12(srvx@1.0.3))
       pathe: 2.0.3
       perfect-debounce: 2.1.0
-      tinyexec: 1.3.0
+      tinyexec: 1.3.1
       ufo: 1.6.4
       zigpty: 0.2.1
     transitivePeerDependencies:
@@ -10969,7 +10969,7 @@ snapshots:
 
   '@publint/pack@0.1.7':
     dependencies:
-      tinyexec: 1.3.0
+      tinyexec: 1.3.1
 
   '@quansync/fs@1.0.0':
     dependencies:
@@ -16517,7 +16517,7 @@ snapshots:
 
   protocols@2.0.2: {}
 
-  publint@0.3.24:
+  publint@0.3.25:
     dependencies:
       '@publint/pack': 0.1.7
       package-manager-detector: 1.8.0
@@ -17420,7 +17420,7 @@ snapshots:
 
   ts-dedent@2.3.0: {}
 
-  tsdown@0.23.0(@volar/typescript@2.4.28)(publint@0.3.24)(tsx@4.20.5)(typescript@5.9.3)(unrun@0.2.34(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(synckit@0.11.12))(vue-tsc@3.3.11(typescript@5.9.3)):
+  tsdown@0.23.0(@volar/typescript@2.4.28)(publint@0.3.25)(tsx@4.20.5)(typescript@5.9.3)(unrun@0.2.34(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(synckit@0.11.12))(vue-tsc@3.3.11(typescript@5.9.3)):
     dependencies:
       cac: 7.0.0
       defu: 6.1.7
@@ -17437,7 +17437,7 @@ snapshots:
       unconfig-core: 7.5.0
       verkit: 0.4.0
     optionalDependencies:
-      publint: 0.3.24
+      publint: 0.3.25
       tsx: 4.20.5
       typescript: 5.9.3
       unrun: 0.2.34(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(synckit@0.11.12)
