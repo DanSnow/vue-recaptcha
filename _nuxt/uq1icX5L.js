@@ -1,0 +1,1 @@
+import{g as r,ab as t,y as a,ak as n}from"./EJJeq4ty.js";const o={};function s(e,c){return t(),a("em",null,[n(e.$slots,"default",{},void 0,!0)])}const l=r(o,[["render",s],["__scopeId","data-v-d39963db"]]);export{l as default};
